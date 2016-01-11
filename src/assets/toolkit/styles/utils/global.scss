@@ -1,0 +1,18 @@
+body .m-wrapper {
+  @include block(g) {
+    @include element(no-margin) {
+      @include modifier(bottom) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include element(one-line) {
+      @include modifier(top) {
+        margin-top: $base-line-height-rem;
+      }
+      @include modifier(bottom) {
+        margin-bottom: $base-line-height-rem;
+      }
+    }
+  }
+}

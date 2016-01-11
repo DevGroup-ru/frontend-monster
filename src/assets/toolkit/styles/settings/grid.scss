@@ -1,0 +1,45 @@
+// Breakpoints based on min-width
+
+$flint: (
+  "breakpoints": (
+    "desktop-large": (
+      "columns": 12,
+      "breakpoint": 84em
+    ),
+
+    "desktop-wide": (
+      "columns": 12,
+      "breakpoint": 75em
+    ),
+
+    "desktop": (
+      "columns": 12,
+      "breakpoint": 60em
+    ),
+
+    "tablet": (
+      "columns": 8,
+      "breakpoint": 40em
+    ),
+
+    "mobile": (
+      "columns": 4,
+      "breakpoint": 20em
+    ),
+  ),
+  "settings": (
+    "default": "mobile",
+    "grid": "fixed",
+    "gutter": 0.625em,
+    "float-direction": "left",
+    "max-width": true,
+    "center-container": true,
+    "border-box-sizing": true,
+    "instance-maps": true,
+    "support-syntax": "bem",
+    "debug-mode": false // debug mode fails on nested grids(flint bug)
+  ),
+);
+html:after {
+  opacity: 0.09;
+}

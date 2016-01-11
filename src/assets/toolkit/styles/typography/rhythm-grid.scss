@@ -1,0 +1,32 @@
+.vertical-rhythm-grid {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -2;
+
+  .guide {
+    //margin-bottom: 6.25rem;
+
+    &{
+      height: $base-line-height-rem;
+      width: 100%;
+      //outline: 1em solid rgba(64, 224, 208, 0.3);
+      border-bottom: 1px solid rgba(150,50,200,0.3);
+    }
+
+    //&:before, &:after {
+    //  content: '';
+    //  display: block;
+    //  position: absolute;
+    //  top: 200%;
+    //}
+    //
+    //&:after {
+    //  top: 400%;
+    //}
+  }
+}

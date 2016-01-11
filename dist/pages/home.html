@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+    
+
+    <!-- toolkit styles -->
+    <link rel="stylesheet" href="../assets/toolkit/styles/toolkit.css">
+    <!-- /toolkit styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" class="bootstrap-switcher" value="1" />
+
+    <div class="m-wrapper">
+    
+
+
+<div class="m-container">
+    <div class="content">
+        content here
+    </div>
+    <div class="sidebar">
+        sidebar
+    </div>
+    <div class="one-col">
+        one-col
+    </div>
+</div>
+<h1>Hello, World!</h1>
+
+<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
+<div>
+    <form action="">
+    	<div>
+    		<label for="textInput">Text input</label>
+    		<input type="text" id="textInput" />	</div>
+    	<button class="button">Submit</button></form></div>
+<div class="vertical-rhythm-grid">
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+    <div class="guide"></div>
+
+</div>
+    </div>
+
+
+
+    <!-- toolkit scripts -->
+    <script src="../assets/toolkit/scripts/toolkit.js"></script>
+    <!-- /toolkit scripts -->
+    <style type="text/css">
+        .bootstrap-switcher {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            right: 0;
+            top: 0;
+            border: 1px solid #666;
+            color: #666;
+            background: #eee;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $(".bootstrap-switcher").change(function(){
+                if ($(this).prop('checked') === true) {
+                    var link = $('<link>')
+                        .attr('rel', 'stylesheet')
+                        .attr('href','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css')
+                        .attr('id', 'bootstrap-css');
+                    $('head').append(link);
+                } else {
+                    $('head > #bootstrap-css').remove();
+                }
+            })
+        })
+    </script>
+</body>
+</html>

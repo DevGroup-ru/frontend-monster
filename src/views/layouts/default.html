@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+
+    {{#if fabricator}}<link rel="stylesheet" href="{{baseurl}}/assets/fabricator/styles/f.css">{{/if}}
+
+    <!-- toolkit styles -->
+    <link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/toolkit.css">
+    <!-- /toolkit styles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" class="bootstrap-switcher" value="1" />
+    {{#if fabricator}}
+        {{> f-icons}}
+        {{> f-menu}}
+        <div class="f-container">
+            {{> f-control-bar}}
+    {{/if}}
+
+    <div class="m-wrapper">
+    {% body %}
+    </div>
+
+
+    {{#if fabricator}}
+        </div>
+    <script src="{{baseurl}}/assets/fabricator/scripts/f.js"></script>
+    {{/if}}
+
+    <!-- toolkit scripts -->
+    <script src="{{baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
+    <!-- /toolkit scripts -->
+    <style type="text/css">
+        .bootstrap-switcher {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            right: 0;
+            top: 0;
+            border: 1px solid #666;
+            color: #666;
+            background: #eee;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $(".bootstrap-switcher").change(function(){
+                if ($(this).prop('checked') === true) {
+                    var link = $('<link>')
+                        .attr('rel', 'stylesheet')
+                        .attr('href','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css')
+                        .attr('id', 'bootstrap-css');
+                    $('head').append(link);
+                } else {
+                    $('head > #bootstrap-css').remove();
+                }
+            })
+        })
+    </script>
+</body>
+</html>

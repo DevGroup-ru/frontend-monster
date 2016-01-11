@@ -1,0 +1,81 @@
+@import "rhythm-grid";
+
+// Text related helpers
+%heading {
+   @include type-setting(heading);
+   margin: 0;
+ }
+
+%sub-heading {
+  @include type-setting(sub-heading);
+  margin: 0;
+}
+
+%slider-heading {
+  @include type-setting(slider-heading);
+}
+
+%section-type {
+  @include type-setting(section);
+  margin: 0;
+}
+
+%accent-text {
+  @include type-setting(accent-text);
+  margin: 0;
+}
+
+// Reset standard formatting tags to our toolkit's vertical rhythm styles
+.m-wrapper {
+  @include type-setting('text');
+  margin: 0;
+
+  @include tag(img) {
+    vertical-align: middle;
+  }
+
+  @include tag(p) {
+    margin: 0;
+    margin-bottom: $base-line-height-rem;
+  }
+
+  @include tag(h1) {
+    @extend %heading;
+  }
+
+  @include tag(h2) {
+    @extend %sub-heading;
+  }
+
+  @include tag(h3) {
+    @extend %section-type;
+  }
+
+  @include tag(h4) {
+    @extend %accent-text;
+  }
+
+  @include tag(h5) {
+    @include type-setting('text');
+    margin: 0;
+  }
+
+  @include tag(h6) {
+    @include type-setting('small-text');
+    margin: 0;
+  }
+  .small-text {
+    @include type-setting('small-text');
+  }
+
+
+  ul, ol {
+    margin: 0;
+    padding-left: 2rem;
+  }
+
+  .slider-heading {
+    @extend %slider-heading;
+  }
+
+}

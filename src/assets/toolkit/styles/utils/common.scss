@@ -1,0 +1,7 @@
+@mixin tag($tag-name) {
+  @at-root {
+    & #{$tag-name}, & .#{$tag-name} {
+      @content
+    }
+  }
+}

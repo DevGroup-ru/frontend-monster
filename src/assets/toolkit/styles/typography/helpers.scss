@@ -1,0 +1,27 @@
+@function type-scale($level) {
+  @return map-get(map-get($type-settings, $level), 'font-size');
+}
+
+@function line-height($level) {
+  @return map-get(map-get($type-settings, $level), 'line-height');
+}
+
+@function type-weight($level) {
+  @return map-get(map-get($type-settings, $level), 'font-weight');
+}
+
+@mixin type-setting($level, $line-multiplier: 1) {
+  font-size: type-scale($level);
+  line-height: line-height($level) * $line-multiplier;
+
+  $tw: type-weight($level);
+  @if $tw {
+    font-weight: $tw;
+  }
+
+  @if $debug-vertical-rhythm == true {
+    outline: rgba(random(200)+50, random(100)+50, random(100)+50, 0.8) dotted 4px;
+  }
+}
+
+$base-line-height-rem: #{$base-line-height};

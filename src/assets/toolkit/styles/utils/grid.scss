@@ -1,0 +1,122 @@
+// Base grid/layout parts
+html, body, .m-container {
+  @include _(mobile) {
+    min-width: 20em;
+  }
+}
+@include _(foundation);
+
+@include block(m-container) {
+  @include _(container, clear);
+}
+
+// Helper function for shifting @see https://github.com/ezekg/flint/issues/41
+/**
+ * Shift columns
+ *
+ * @param {String} $breakpoint        - Breakpoint to apply shift to
+ * @param {Number} $columns           - Amount to shift columns
+ * @param {Bool}   $has-gutter (true) - Add gutter value to shift
+ */
+@mixin shift($breakpoint, $columns, $has-gutter: true) {
+  // Get width
+  $width-map: flint-calc-width($breakpoint, $columns);
+  // Get gutter
+  $gutter: if($has-gutter, flint-get-gutter(), 0);
+  // Calculate
+  @include _($breakpoint) {
+    @if flint-map-fetch($flint, "settings", "grid") == "fluid" {
+      margin-left: (map-get($width-map, "target") + $gutter) / map-get($width-map, "context") * 100%;
+    } @else {
+      margin-left: map-get($width-map, "target") + $gutter;
+    }
+  }
+}
+
+
+// Variables for most usable grid configurations
+$full-row-configuration: 12 12 12 8 4;
+$half-row-configuration: 6 6 6 4 2;
+
+// Example blocks
+@include block(content) {
+  @include _(8 8 8 6 2);
+}
+@include block(sidebar) {
+  @include _(4 4 4 2 2);
+}
+
+// Reusable standard grid blocks
+
+@include block(grid-clear) {
+  @include _(clear);
+}
+
+%standard-column {
+  overflow: auto;
+}
+
+@mixin standard-column-modifiers($row-configuration) {
+  @include _($row-configuration, auto);
+
+  @include modifier(no-gutter) {
+    @include _($row-configuration, auto, $gutter: row);
+  }
+
+  @include modifier(no-gutter-left) {
+    @include _($row-configuration, auto, $gutter: alpha);
+  }
+
+  @include modifier(no-gutter-right) {
+    @include _($row-configuration, auto, $gutter: omega);
+  }
+
+  @include modifier(center) {
+    @include _($row-configuration, auto, $gutter: center);
+  }
+}
+.m-wrapper {
+  @include block(grid-full) {
+    @extend %standard-column;
+
+
+    @include modifier(green) {
+      padding: $base-line-height;
+
+      background: green;
+      > h1 {
+        @include type-setting(heading-test);
+      }
+    }
+    @include modifier(red) {
+      padding: $base-line-height;
+      background: red;
+      > h1 {
+        @include type-setting(text);
+      }
+    }
+
+    @include _($full-row-configuration);
+
+    @include element(nested) {
+      @include standard-column-modifiers($full-row-configuration);
+    }
+
+    @include element(half) {
+      @extend %standard-column;
+
+      @include standard-column-modifiers($half-row-configuration);
+
+      @include modifier(equal-height) {
+        height: 400px;
+      }
+
+    }
+  }
+}
+
+// Debug class outlines column
+.grid-background {
+  background: rgba(244, 230, 77, 0.25);
+  outline: 1px solid rgba(244, 30, 240, 0.25);
+}
