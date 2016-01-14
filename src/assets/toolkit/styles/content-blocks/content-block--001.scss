@@ -35,7 +35,7 @@ $content001-icon-min: 5rem;
 
     @include element(icon) {
       font-size: $content001-icon-min;
-      line-height: $content001-icon-min;
+      line-height: $base-line-height * 8;
       margin-bottom: $base-line-height;
       display: block;
 
@@ -45,7 +45,7 @@ $content001-icon-min: 5rem;
 
       @include _(greater than desktop) {
         font-size: $content001-icon-max;
-        line-height: $content001-icon-max;
+        line-height: $base-line-height * 10;
       }
     }
 

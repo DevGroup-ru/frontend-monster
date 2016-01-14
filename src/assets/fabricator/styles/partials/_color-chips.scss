@@ -15,7 +15,7 @@
 	font-weight: 700;
 	font-size: 0.75em;
 	padding: 1em;
-	margin-bottom: 2em;
+	margin-bottom: $f-base-line-height;
 
 	@media (min-width: 60em) {
 		flex-basis: 13em;

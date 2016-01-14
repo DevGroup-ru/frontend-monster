@@ -1,9 +1,14 @@
+$f-base-line-height: 0.625rem;
+$f-gutter-standart: 1em;
+$f-one-px-bd: 0.0625rem;
+
+
 .f-item-group {
 	@include clearfix;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-	padding-bottom: 3rem;
-	border-bottom: 1px solid map-get($colors, light);
+	margin-top: $f-base-line-height * 5;
+	margin-bottom: $f-base-line-height * 5;
+	padding-bottom: $f-base-line-height * 5 - $f-one-px-bd;
+	border-bottom: 1px solid map-get($colors, darck);
 
 	&:last-child {
 		border-bottom: 0;
@@ -15,8 +20,8 @@
 	}
 
 	& > & {
-		padding-bottom: 1.5rem;
-		margin-bottom: 1.5rem;
+		padding-bottom: $f-base-line-height * 3;
+		margin-bottom: $f-base-line-height * 3;
 		border-bottom: 0;
 
 		&:first-of-type {
@@ -31,7 +36,7 @@
 }
 
 .f-item-code {
-	margin-top: 2rem;
+	margin-top: $f-base-line-height * 3;
 }
 
 .f-item-preview {
@@ -44,7 +49,7 @@
 
 .f-item-heading-group {
 	@include clearfix;
-	margin-bottom: 2rem;
+	margin-bottom: $f-base-line-height * 3;
 	vertical-align: middle;
 }
 
@@ -60,7 +65,7 @@
 .f-item-controls {
 	display: inline-block;
 	vertical-align: middle;
-	margin-left: 0.5rem;
+	margin-left: $f-gutter-standart;
 
 	.f-control {
 		width: 14px;
@@ -85,5 +90,5 @@
 }
 
 .f-item-notes {
-	font-size: 0.875rem;
+	font-size: $f-gutter-standart;
 }
