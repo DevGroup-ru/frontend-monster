@@ -1,6 +1,4 @@
-$f-base-line-height: 0.625rem;
-$f-gutter-standart: 1em;
-$f-one-px-bd: 0.0625rem;
+
 
 
 .f-item-group {
@@ -8,7 +6,7 @@ $f-one-px-bd: 0.0625rem;
 	margin-top: $f-base-line-height * 5;
 	margin-bottom: $f-base-line-height * 5;
 	padding-bottom: $f-base-line-height * 5 - $f-one-px-bd;
-	border-bottom: 1px solid map-get($colors, darck);
+	border-bottom: 1px solid map-get($colors, dark);
 
 	&:last-child {
 		border-bottom: 0;
@@ -71,7 +69,7 @@ $f-one-px-bd: 0.0625rem;
 		width: 14px;
 		height: 14px;
 		display: block;
-		float: left;
+		float: left; 
 
 		&:hover {
 			use {

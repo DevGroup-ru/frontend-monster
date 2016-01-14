@@ -23,6 +23,10 @@ $colors: map-merge($base-colors, $theme);
 
 $menu-width: 14rem;
 
+$f-base-line-height: 0.625rem;
+$f-gutter-standart: 1em;
+$f-one-px-bd: 0.0625rem;
+
 
 // mixins
 @mixin clearfix {

@@ -28,7 +28,7 @@ $content001-icon-min: 5rem;
         text-decoration: underline;
       }
 
-      @include _(greater than tablet) {
+      @include _(greater than tablet) {  
         margin-bottom: $base-line-height * 2;
       }
     }
