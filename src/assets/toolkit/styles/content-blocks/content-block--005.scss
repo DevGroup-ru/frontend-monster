@@ -1,10 +1,10 @@
 .m-wrapper {
 
-  @include block(content001) {
-    text-align: center;
+  @include block(content005) {
+    text-align: left;
 
     @include element(nested) {
-      @include _(3 3 6 8 4);
+      @include _(4 4 12 8 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
     }
@@ -32,19 +32,14 @@
     }
 
     @include element(icon) {
-      font-size: $base-line-height * 7;
-      line-height: $base-line-height * 7;
-      margin-bottom: $base-line-height;
+      width: $base-line-height * 5;
+      font-size: $base-line-height * 4;
+      float: left;
       display: block;
+    }
 
-      @include _(greater than tablet) {
-        margin-bottom: $base-line-height * 2;
-      }
-
-      @include _(greater than desktop) {
-        font-size: $base-line-height * 9;
-        line-height: $base-line-height * 9;
-      }
+    @include element(text-wrap) {
+      margin-left: $base-line-height * 7;
     }
 
     @include element(text) {

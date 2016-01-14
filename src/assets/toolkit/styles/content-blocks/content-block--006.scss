@@ -1,12 +1,16 @@
+$content006-icon-fon: #eee;
+
 .m-wrapper {
 
-  @include block(content001) {
+  @include block(content006) {
     text-align: center;
 
     @include element(nested) {
-      @include _(3 3 6 8 4);
-      margin-top: $base-line-height * 2;
+      @include _(3 6 6 8 4);
+      margin-top: $base-line-height * 6;
       margin-bottom: $base-line-height * 2;
+      background: $content006-icon-fon;
+      padding: $base-line-height * 2;
     }
 
     @include element(title) {
@@ -32,18 +36,14 @@
     }
 
     @include element(icon) {
-      font-size: $base-line-height * 7;
-      line-height: $base-line-height * 7;
+      font-size: $base-line-height * 6;
+      line-height: $base-line-height * 6;
+      margin-top: -($base-line-height * 6);
       margin-bottom: $base-line-height;
       display: block;
 
       @include _(greater than tablet) {
         margin-bottom: $base-line-height * 2;
-      }
-
-      @include _(greater than desktop) {
-        font-size: $base-line-height * 9;
-        line-height: $base-line-height * 9;
       }
     }
 

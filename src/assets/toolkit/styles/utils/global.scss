@@ -24,5 +24,11 @@ body .m-wrapper {
         text-align: center;
       }
     }
+
+    @include element(grid-nested) {
+      @include modifier(half) {
+        @include _(6 12 12 8 4);
+      }
+    }
   }
 }

@@ -1,5 +1,3 @@
-$content002-img: 8.125rem;
-
 .m-wrapper {
 
   @include block(content002) {
@@ -11,7 +9,8 @@ $content002-img: 8.125rem;
 
     @include element(nested) {
       @include _(3 3 6 8 4);
-      margin-top: $base-line-height;
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
     }
 
     @include element(title) {
@@ -38,7 +37,7 @@ $content002-img: 8.125rem;
 
     @include element(img) {
       margin-bottom: $base-line-height;
-      height: $content002-img;
+      height: $base-line-height * 12;
       overflow: hidden;
       position: relative;
 

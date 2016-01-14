@@ -1,10 +1,12 @@
+$content004-icon-fon: #eee;
+
 .m-wrapper {
 
-  @include block(content003) {
+  @include block(content004) {
     text-align: left;
 
     @include element(nested) {
-      @include _(6 6 12 8 4);
+      @include _(3 6 6 8 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
     }
@@ -26,41 +28,36 @@
         text-decoration: underline;
       }
 
-      @include _(greater than tablet) {
+      @include _(greater than tablet) {  
         margin-bottom: $base-line-height * 2;
       }
     }
 
-    @include element(img) {
-      @include _(6 6 6 8 4, $gutter: row);
-      height: $base-line-height * 12;
-      overflow: hidden;
-      position: relative;
+    @include element(icon-wrap) {
+      height: $base-line-height * 4;
+      width: $base-line-height * 4;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $content004-icon-fon;
 
-      img {
-        position: absolute;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: auto;
-        min-height: 100%;
-        min-width: 100%;
-      }
-
-      @include _(greater than tablet) {
-        @include _(6 6 6 8 4, $gutter: alpha);
+      @include _(greater than desktop) {
+        height: $base-line-height * 5;
+        line-height: $base-line-height * 5;
+        width: $base-line-height * 5;
       }
     }
 
-    @include element(wrap-text) {
-      @include _(6 6 6 8 4, $gutter: row);
-      @include type-setting(text);
+    @include element(icon) {
+      font-size: $base-line-height * 3;
+    }
 
-      @include _(greater than tablet) {
-        @include _(6 6 6 8 4, $gutter: omega);
+    @include element(text-wrap) {
+      margin-left: $base-line-height * 6;
+
+      @include _(greater than desktop) {
+        margin-left: $base-line-height * 7;
       }
     }
 
