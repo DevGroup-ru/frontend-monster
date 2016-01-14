@@ -17,16 +17,27 @@
       //outline: 1em solid rgba(64, 224, 208, 0.3);
       border-bottom: 1px solid rgba(150,50,200,0.3);
     }
-
-    //&:before, &:after {
-    //  content: '';
-    //  display: block;
-    //  position: absolute;
-    //  top: 200%;
-    //}
-    //
-    //&:after {
-    //  top: 400%;
-    //}
   }
 }
+
+.m-wrapper .grid-full{
+ 
+}
+
+@mixin XYi($row, $gutter-custom: row) {
+  @include _($row, $gutter: $gutter-custom);
+}
+ 
+@include block(like_row) {
+  @include _(clear);
+  // @include _(12 12 12 8 4, $gutter: row);
+}
+
+@include block(responsiv-grid) {
+  @include XYi(12 12 8 4 4);
+
+  @include _(desktop) {
+    background: red;
+  }
+}
+

@@ -4,14 +4,24 @@ body .m-wrapper {
       @include modifier(bottom) {
         margin-bottom: 0;
       }
+      @include modifier(top) {
+        margin-top: 0;
+      }
     }
 
     @include element(one-line) {
       @include modifier(top) {
-        margin-top: $base-line-height-rem;
+        margin-top: $base-line-height * 2;
       }
       @include modifier(bottom) {
-        margin-bottom: $base-line-height-rem;
+        margin-bottom: $base-line-height * 2;
+      }
+      @include modifier(top-bottom) {
+        margin-top: $base-line-height * 6;
+        margin-bottom: $base-line-height * 6;
+      }
+      @include modifier(center) {
+        text-align: center;
       }
     }
   }

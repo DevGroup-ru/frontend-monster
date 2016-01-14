@@ -104,6 +104,13 @@ gulp.task('favicon', function () {
 		.pipe(gulp.dest(config.dest));
 });
 
+//fonts
+
+gulp.task('fonts', function() {
+  return gulp.src('./fonts/**/*')
+    .pipe(gulp.dest(config.dest + '/fonts/'));
+});
+
 
 // assemble
 gulp.task('assemble', function (done) {
@@ -159,6 +166,9 @@ gulp.task('serve', function () {
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
 
+	gulp.task('fonts:watch', ['fonts'], reload);
+	gulp.watch('fonts/*', ['fonts:watch']);
+
 });
 
 
@@ -170,6 +180,7 @@ gulp.task('default', ['clean'], function () {
 		'styles',
 		'scripts',
 		'images',
+		'fonts',
 		'assemble'
 	];
 

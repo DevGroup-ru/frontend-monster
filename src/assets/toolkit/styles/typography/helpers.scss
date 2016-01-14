@@ -2,17 +2,48 @@
   @return map-get(map-get($type-settings, $level), 'font-size');
 }
 
+@function type-scale-desktop($level) {
+  @return map-get(map-get($type-settings, $level), 'font-size-desktop');
+}
+
+@function type-scale-desktop-wide($level) {
+  @return map-get(map-get($type-settings, $level), 'font-size-desktop-wide');
+}
+
 @function line-height($level) {
   @return map-get(map-get($type-settings, $level), 'line-height');
+}
+
+@function line-height-desktop-wide($level) {
+  @return map-get(map-get($type-settings, $level), 'line-height-desktop-wide');
 }
 
 @function type-weight($level) {
   @return map-get(map-get($type-settings, $level), 'font-weight');
 }
 
-@mixin type-setting($level, $line-multiplier: 1) {
+@mixin type-setting($level) {
   font-size: type-scale($level);
-  line-height: line-height($level) * $line-multiplier;
+  line-height: line-height($level);
+
+  @include _(greater than tablet) {
+    $fzd: type-scale-desktop($level);
+    @if $fzd {
+      font-size: $fzd;
+    }
+  }
+
+  @include _(greater than desktop) {
+    $fzdw: type-scale-desktop-wide($level);
+    $lhdw: line-height-desktop-wide($level);
+    @if $fzdw {
+      font-size: $fzdw;
+    }
+
+    @if $lhdw {
+      line-height: $lhdw;
+    }
+  }
 
   $tw: type-weight($level);
   @if $tw {

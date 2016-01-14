@@ -8,6 +8,7 @@
 @import "settings/grid";
 @import "settings/typography";
 
+
 @import "typography/helpers";
 
 @import "utils/global";
@@ -18,8 +19,9 @@
 @import "utils/grid";
 
 @import "typography/base";
+@import "content-blocks/content-blocks";
 
-
+@import "icons";
 body {
 	font-family: sans-serif;
 }

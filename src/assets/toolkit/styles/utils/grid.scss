@@ -4,10 +4,32 @@ html, body, .m-container {
     min-width: 20em;
   }
 }
+
 @include _(foundation);
 
 @include block(m-container) {
+  @include _(clear);
+}
+
+@include block(m-row) {
   @include _(container, clear);
+
+  $window-gutter: 1em;
+  @include _(greater than mobile) {
+    width: map-get(map-get(map-get($flint, 'breakpoints'), 'mobile'), 'breakpoint');
+  }
+  @include _(greater than tablet) {
+    width: map-get(map-get(map-get($flint, 'breakpoints'), 'tablet'), 'breakpoint');
+  }
+  @include _(greater than desktop) {
+    width: map-get(map-get(map-get($flint, 'breakpoints'), 'desktop'), 'breakpoint') - $window-gutter;
+  }
+  @include _(greater than desktop-wide) {
+    width: map-get(map-get(map-get($flint, 'breakpoints'), 'desktop-wide'), 'breakpoint') - $window-gutter;
+  }
+  @include _(greater than desktop-large) {
+    width: map-get(map-get(map-get($flint, 'breakpoints'), 'desktop-large'), 'breakpoint') - $window-gutter;
+  }
 }
 
 // Helper function for shifting @see https://github.com/ezekg/flint/issues/41
@@ -110,7 +132,6 @@ $half-row-configuration: 6 6 6 4 2;
       @include modifier(equal-height) {
         height: 400px;
       }
-
     }
   }
 }

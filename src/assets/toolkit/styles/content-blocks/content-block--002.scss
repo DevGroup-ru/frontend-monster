@@ -1,0 +1,69 @@
+$content002-img: 8.125rem;
+
+.m-wrapper {
+
+  @include block(content002) {
+    text-align: center;
+
+    @include modifier(left) {
+      text-align: left;
+    }
+
+    @include element(nested) {
+      @include _(3 3 6 8 4);
+      margin-top: $base-line-height;
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(title-nested) {
+      @include type-setting(accent-text);
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 4;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      @include _(greater than tablet) {
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(img) {
+      margin-bottom: $base-line-height;
+      height: $content002-img;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+      }
+
+      @include _(greater than tablet) {
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      height: $base-line-height * 6;
+      overflow: hidden;
+    }
+  }
+}

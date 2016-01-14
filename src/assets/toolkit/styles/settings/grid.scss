@@ -1,5 +1,7 @@
 // Breakpoints based on min-width
 
+$gutter-standart: 1.25em;
+
 $flint: (
   "breakpoints": (
     "desktop-large": (
@@ -29,10 +31,10 @@ $flint: (
   ),
   "settings": (
     "default": "mobile",
-    "grid": "fixed",
-    "gutter": 0.625em,
+    "grid": "fluid",
+    "gutter": $gutter-standart,
     "float-direction": "left",
-    "max-width": true,
+    "max-width": false,
     "center-container": true,
     "border-box-sizing": true,
     "instance-maps": true,
