@@ -27,7 +27,7 @@ body .m-wrapper {
 
     @include element(grid-nested) {
       @include modifier(half) {
-        @include _(6 6 8 4 4);
+        @include _(3 3 2 4 4, 6 6 4 4 4);
       }
     }
   }

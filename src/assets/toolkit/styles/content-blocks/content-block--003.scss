@@ -4,6 +4,7 @@
     text-align: left;
 
     @include element(nested) {
+      //@include _(3 3 2 1 1, 6 6 4 2 2);
       @include _(6 6 8 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
@@ -32,7 +33,7 @@
     }
 
     @include element(img) {
-      @include _(6 6 4 4 4, $gutter: row);
+      @include _(3 3 4 4 4, $gutter: row);
       height: $base-line-height * 12;
       overflow: hidden;
       position: relative;
@@ -51,17 +52,17 @@
       }
 
       @include _(greater than mobile) {
-        @include _(6 6 4 4 4, $gutter: alpha);
+        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: alpha);
       }
     }
 
     @include element(wrap-text) {
-      @include _(6 6 4 4 4, $gutter: row);
+      @include _(3 3 4 4 4, $gutter: row);
       @include type-setting(text);
       margin-top: $base-line-height;
 
       @include _(greater than mobile) {
-        @include _(6 6 4 4 4, $gutter: omega);
+        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: omega);
         margin-top: 0;
       }
     }
