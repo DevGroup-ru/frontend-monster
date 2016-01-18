@@ -8,20 +8,23 @@
 @import "settings/grid";
 @import "settings/typography";
 
-
 @import "typography/helpers";
 
 @import "utils/reset";
 
 @import "../../../../bower_components/flint/stylesheets/flint";
 @import "utils/grid";
-
 @import "utils/global";
 
 @import "typography/base";
-@import "content-blocks/content-blocks";
+@import "typography/icons";
 
-@import "icons";
+@import "components/components";
+
+@import "content-blocks/content-blocks";
+@import "reviews/reviews";
+
+
 body {
 	font-family: sans-serif;
 }

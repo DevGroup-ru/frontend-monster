@@ -43,6 +43,7 @@
 // Reset standard formatting tags to our toolkit's vertical rhythm styles
 .m-wrapper {
   @include type-setting('text');
+  font-size: 1rem !important;
   margin: 0;
 
   @include tag(img) {

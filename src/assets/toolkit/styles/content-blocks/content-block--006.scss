@@ -6,7 +6,7 @@ $content006-icon-fon: #eee;
     text-align: center;
 
     @include element(nested) {
-      @include _(3 6 6 8 4);
+      @include _(3 3 4 4 4);
       margin-top: $base-line-height * 6;
       margin-bottom: $base-line-height * 2;
       background: $content006-icon-fon;

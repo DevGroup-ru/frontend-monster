@@ -20,6 +20,36 @@
   }
 }
 
+.m-row--horisontal-rhythm-grid{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  z-index: -3;
+
+
+  .m-row{
+    height: 100%;
+  }
+}
+
+.horisontal-rhythm-grid {
+  content: " ";
+  opacity: 1;
+  height: 100%;
+  background: rgba(150,50,200,0.1);
+  position: relative;
+  @include _(12 12 8 4 4, $gutter: row);
+
+  .h-guide {
+    height: 100%;
+    background: rgba(50, 82, 200, 0.2);
+    @include _(1 1 1 1 1, auto);
+  }
+}
+
 .m-wrapper .grid-full{
  
 }

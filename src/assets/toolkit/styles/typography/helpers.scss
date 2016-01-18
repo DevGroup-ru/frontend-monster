@@ -28,20 +28,20 @@
 
   @include _(greater than tablet) {
     $fzd: type-scale-desktop($level);
+    $lhdw: line-height-desktop-wide($level);
     @if $fzd {
       font-size: $fzd;
+    }
+
+    @if $lhdw {
+      line-height: $lhdw;
     }
   }
 
   @include _(greater than desktop) {
     $fzdw: type-scale-desktop-wide($level);
-    $lhdw: line-height-desktop-wide($level);
     @if $fzdw {
       font-size: $fzdw;
-    }
-
-    @if $lhdw {
-      line-height: $lhdw;
     }
   }
 

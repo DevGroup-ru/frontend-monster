@@ -15,20 +15,20 @@ html, body, .m-container {
   @include _(container, clear);
 
   $window-gutter: 1em;
+  @include _(greater than null-breakpoint) {
+    width: 320px;
+  }
   @include _(greater than mobile) {
     width: map-get(map-get(map-get($flint, 'breakpoints'), 'mobile'), 'breakpoint');
   }
   @include _(greater than tablet) {
-    width: map-get(map-get(map-get($flint, 'breakpoints'), 'tablet'), 'breakpoint');
+    width: map-get(map-get(map-get($flint, 'breakpoints'), 'tablet'), 'breakpoint') - $window-gutter * 2;
   }
   @include _(greater than desktop) {
-    width: map-get(map-get(map-get($flint, 'breakpoints'), 'desktop'), 'breakpoint') - $window-gutter;
+    width: map-get(map-get(map-get($flint, 'breakpoints'), 'desktop'), 'breakpoint') - $window-gutter * 2;
   }
   @include _(greater than desktop-wide) {
-    width: map-get(map-get(map-get($flint, 'breakpoints'), 'desktop-wide'), 'breakpoint') - $window-gutter;
-  }
-  @include _(greater than desktop-large) {
-    width: map-get(map-get(map-get($flint, 'breakpoints'), 'desktop-large'), 'breakpoint') - $window-gutter;
+    width: map-get(map-get(map-get($flint, 'breakpoints'), 'desktop-wide'), 'breakpoint') - $window-gutter * 2;
   }
 }
 
@@ -57,15 +57,17 @@ html, body, .m-container {
 
 
 // Variables for most usable grid configurations
-$full-row-configuration: 12 12 12 8 4;
-$half-row-configuration: 6 6 6 4 2;
+$full-row-configuration: 12 12 8 4 4;
+$half-row-configuration: 6 6 4 4 4;
 
 // Example blocks
 @include block(content) {
-  @include _(8 8 8 6 2);
+  @include _(8 8 6 2 2);
+  background: red;
 }
 @include block(sidebar) {
-  @include _(4 4 4 2 2);
+  @include _(4 4 2 2 2);
+  background: green;
 }
 
 // Reusable standard grid blocks

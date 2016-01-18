@@ -4,7 +4,7 @@
     text-align: left;
 
     @include element(nested) {
-      @include _(4 4 12 8 4);
+      @include _(4 4 8 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
     }

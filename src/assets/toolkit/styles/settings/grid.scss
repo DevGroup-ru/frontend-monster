@@ -1,32 +1,33 @@
 // Breakpoints based on min-width
 
 $gutter-standart: 1.25em;
+$breakpoint-width-fix: 0.0625em;
 
 $flint: (
   "breakpoints": (
-    "desktop-large": (
-      "columns": 12,
-      "breakpoint": 84em
-    ),
-
     "desktop-wide": (
       "columns": 12,
-      "breakpoint": 75em
+      "breakpoint": 84em - $breakpoint-width-fix
     ),
 
     "desktop": (
       "columns": 12,
-      "breakpoint": 60em
+      "breakpoint": 75em - $breakpoint-width-fix
     ),
 
     "tablet": (
       "columns": 8,
-      "breakpoint": 40em
+      "breakpoint": 60em - $breakpoint-width-fix
     ),
 
     "mobile": (
       "columns": 4,
-      "breakpoint": 20em
+      "breakpoint": 40em - $breakpoint-width-fix
+    ),
+
+    "null-breakpoint": (
+      "columns": 4,
+      "breakpoint": 1em
     ),
   ),
   "settings": (

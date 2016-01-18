@@ -1,0 +1,55 @@
+$rate-star-grey: #ddd;
+$rate-star-black: #000;
+$rate-star-gold: #ffd700;
+
+$rateitem: ".rating__label .rating__icon:before";
+
+@include block(rating) {
+  position: relative;
+  text-align: center;
+  direction: rtl;
+  border: none;
+  display: inline-block;
+
+  @include element(label) {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  @include element(icon) {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      font-size: $base-line-height * 2;
+      line-height: $base-line-height * 2;
+      color: $rate-star-grey;
+    }
+  }
+
+  @include element(input) {
+    position: absolute;
+    left: -9999px;
+
+    &:hover ~ #{$rateitem} {
+      color: $rate-star-black;
+    }
+
+    &:disabled:hover ~ #{$rateitem} {
+      color: $rate-star-grey;
+    }
+
+    :checked ~ #{$rateitem} {
+      color: $rate-star-gold;
+    }
+
+    &.rating__input--active ~ #{$rateitem} {
+      color: $rate-star-gold;
+    }
+
+    &.rating__input--active:hover ~ #{$rateitem},
+    &.rating__input--active:disabled ~ #{$rateitem} {
+      color: $rate-star-gold;
+    }
+  }
+}

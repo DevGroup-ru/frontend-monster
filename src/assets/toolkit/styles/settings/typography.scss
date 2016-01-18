@@ -12,7 +12,7 @@ $type-settings: (
   ),
   text: (
     font-size: 0.875rem,
-    font-size-desktop: 1rem,
+    font-size-desktop-wide: 1rem,
     line-height: $base-line-height * 2,
   ),
   accent-text: (
@@ -57,6 +57,6 @@ $type-settings: (
   ),
   slider-heading: (
     font-size: 3.5rem,
-    line-height: $base-line-height * 5,
+    line-height: $base-line-height * 6,
   ),
 );
