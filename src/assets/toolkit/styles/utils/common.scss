@@ -5,3 +5,7 @@
     }
   }
 }
+
+@mixin border-setting($border, $padding) {
+	padding: $padding - $border;
+}

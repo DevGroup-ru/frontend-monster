@@ -1,0 +1,82 @@
+$m-pagination-background: #eee;
+$m-pagination-background-active: #aaa;
+$m-pagination-border-width: $base-line-height/10;
+$m-pagination-border-color: #aaa;
+$m-pagination-border-color-active: #aaa;
+
+@include block(m-pagination) {
+  text-align: left;
+  @include _($full-row-configuration);
+  @include type-setting(text);
+
+  @include modifier(center) {
+    text-align: center;
+  }
+
+  @include modifier(right) {
+    text-align: right;
+  }
+
+  @include element(number) {
+    display: none;
+    float: left;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    @include modifier(active) {
+      background: $m-pagination-background-active;
+      border: $m-pagination-border-width solid $m-pagination-border-color-active;
+    }
+
+    @include _(greater than mobile) {  
+      display: block;
+    }
+  }
+
+  @include element(arrow) {
+    display: block;
+    float: left;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+  }
+
+  @include element(show-more) {
+    display: none;
+    float: left;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+  }
+
+  @include modifier(btn-show) {
+    > .m-pagination__number, > .m-pagination__arrow{
+      display: none;
+
+      @include _(greater than mobile) {  
+        display: block;
+      }
+    }
+
+    .m-pagination__show-more{
+      display: block;
+
+      @include _(greater than mobile) {  
+        display: none;
+      }
+    }
+  }
+}

@@ -39,7 +39,7 @@ $rateitem: ".rating__label .rating__icon:before";
       color: $rate-star-grey;
     }
 
-    :checked ~ #{$rateitem} {
+    &:checked ~ #{$rateitem} {
       color: $rate-star-gold;
     }
 
