@@ -1,5 +1,5 @@
 $review001-background: #eee;
-$review001-border-width: 2px;
+$review001-border-width: $base-line-height/10;
 $review001-border-style: solid;
 $review001-border-color: #aaa;
 
@@ -12,11 +12,12 @@ $review001-border-color: #aaa;
       @include _(12 12 8 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
-      padding: $base-line-height * 2;
       background: $review001-background;
+      border: $review001-border-width $review001-border-style $review001-border-color;
+      @include border-setting($review001-border-width, $base-line-height * 2);
 
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 4;
+      @include modifier(half) {
+        @include _(6 6 4 4 4);
       }
     }
 
@@ -27,54 +28,48 @@ $review001-border-color: #aaa;
 
     @include element(title-nested) {
       @include type-setting(accent-text);
-      margin-bottom: $base-line-height;
+      margin-bottom: $base-line-height * 2;
       height: $base-line-height * 2;
       overflow: hidden;
-      display: block;
-      text-decoration: none;
-
-      &:hover{
-        text-decoration: underline;
-      }
-
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 2;
-      }
     }
 
     @include element(rating-line) {
-      margin-bottom: $base-line-height * 2;
       @include _(clear);
     }
 
     @include element(rating-col) {
-      display: flex;
       float: left;
-      align-items: center;
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 2;
+      overflow: hidden;
     }
 
     @include element(rating-name) {
-      display: block;
+      @include type-setting(text);
+      display: table-cell;
+      vertical-align: middle;
       float: left;
       margin-right: $base-line-height;
     }
 
     @include element(rating) {
-      display: block;
+      display: table-cell;
+      vertical-align: middle;
       float: left;
       margin-right: $base-line-height * 2;
     }
 
     @include element(person) {
-      display: flex;
-      align-items: center;
+      display: table;
       height: $base-line-height * 6;
       overflow: hidden;
       text-align: left;
+      margin-top: $base-line-height * 2;
     }
 
     @include element(person-img) {
       width: $base-line-height * 6;
+      min-width: $base-line-height * 6;
       height: $base-line-height * 6;
       border-radius: $base-line-height * 3;
       overflow: hidden;
@@ -91,7 +86,9 @@ $review001-border-color: #aaa;
 
     @include element(person-text) {
       @include type-setting(text);
-      
+      display: table-cell;
+      vertical-align: middle;
+
       span {
         display: block;
       }
@@ -101,7 +98,7 @@ $review001-border-color: #aaa;
       @include type-setting(text);
       height: $base-line-height * 6;
       overflow: hidden;
-      margin-bottom: $base-line-height * 2;
+      margin-top: $base-line-height;
     }
   }
 }
