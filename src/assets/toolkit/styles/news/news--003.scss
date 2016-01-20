@@ -1,0 +1,121 @@
+$news003-fon: #eff;
+
+.m-wrapper {
+
+  @include block(news003) {
+    text-align: left;
+
+    @include element(nested) {
+      @include _(6 6 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      background: $news003-fon;
+      padding: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        padding: $base-line-height * 3;
+      }
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(link-in-title) {
+      @include type-setting(text);
+      display: block;
+      text-decoration: none;
+      margin-left: 0;
+      margin-top: $base-line-height;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      @include _(greater than mobile) {  
+        display: inline-block;
+        margin-left: $base-line-height * 2;
+        margin-top: 0;
+      }
+    }
+
+    @include element(time) {
+      @include type-setting(text);
+      display: inline-block;
+      margin-right: $base-line-height * 2;
+    }
+
+    @include element(day) {
+      @include type-setting(text);
+      display: inline-block;
+    }
+
+    @include element(title-nested) {
+      @include type-setting(accent-text);
+      margin-top: $base-line-height;
+      height: $base-line-height * 6;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      @include _(greater than tablet) {  
+        margin-top: $base-line-height * 2;
+      }
+    }
+
+    @include element(img) {
+      height: $base-line-height * 16;
+      overflow: hidden;
+      position: relative;
+      @include _(3 3 4 4 4, $gutter: row);
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+      }
+
+      @include _(greater than mobile) {
+        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: alpha);
+      }
+    }
+
+    @include element(wrap-text) {
+      @include _(3 3 4 4 4, $gutter: row);
+      margin-top: $base-line-height;
+
+      @include _(greater than mobile) {
+        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: omega);
+        margin-top: 0;
+      }
+    }
+
+    @include element(link-full) {
+      margin-top: $base-line-height;
+      display: block;
+
+      @include _(greater than tablet) {  
+        margin-top: $base-line-height * 2;
+      }
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+}
+

@@ -1,0 +1,10 @@
+@include block(accordion-tabs) {
+
+  @include element(content) {
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+}

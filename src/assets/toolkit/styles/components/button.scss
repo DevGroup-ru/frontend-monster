@@ -1,0 +1,50 @@
+$button-simple-fon: #eee;
+$button-simple-fon-hover: #aaa;
+$button-simple-border-radius: 1.25rem;
+
+$button-ghost-border-width: $base-line-height/10;
+$button-ghost-border-color: #aaa;
+$button-ghost-fon: transparent;
+$button-ghost-fon-hover: #aaa;
+$button-ghost-border-radius: 1.25rem;
+
+@include block(button-simple) {
+  @include type-setting(text);
+  display: inline-block;  
+  outline: none;
+  border: none;
+  background: $button-simple-fon;
+  min-width: $base-line-height * 12;
+  text-align: center;
+  text-decoration: none;
+  padding: $base-line-height;
+
+  &:hover{
+    background: $button-simple-fon-hover;
+  }
+
+  @include modifier(round) {
+    border-radius: $button-simple-border-radius;
+  }
+}
+
+@include block(button-ghost) {
+  @include type-setting(text);
+  display: inline-block;  
+  outline: none;
+  border: none;
+  min-width: $base-line-height * 12;
+  text-align: center;
+  text-decoration: none;
+  background: $button-ghost-fon;
+  border: $button-ghost-border-width solid $button-ghost-border-color;
+  @include border-setting($button-ghost-border-width, $base-line-height);
+
+  &:hover{
+    background: $button-ghost-fon-hover;
+  }
+
+  @include modifier(round) {
+    border-radius: $button-ghost-border-radius;
+  }
+}

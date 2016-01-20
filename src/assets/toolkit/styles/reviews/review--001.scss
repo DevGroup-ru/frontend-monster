@@ -1,6 +1,5 @@
 $review001-background: #eee;
 $review001-border-width: $base-line-height/10;
-$review001-border-style: solid;
 $review001-border-color: #aaa;
 
 .m-wrapper {
@@ -13,11 +12,15 @@ $review001-border-color: #aaa;
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
       background: $review001-background;
-      border: $review001-border-width $review001-border-style $review001-border-color;
+      border: $review001-border-width solid $review001-border-color;
       @include border-setting($review001-border-width, $base-line-height * 2);
 
       @include modifier(half) {
         @include _(6 6 4 4 4);
+      }
+
+      @include _(greater than mobile) {  
+        @include border-setting($review001-border-width, $base-line-height * 3);
       }
     }
 

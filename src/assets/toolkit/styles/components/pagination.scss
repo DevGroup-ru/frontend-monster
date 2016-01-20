@@ -4,7 +4,7 @@ $m-pagination-border-width: $base-line-height/10;
 $m-pagination-border-color: #aaa;
 $m-pagination-border-color-active: #aaa;
 
-@include block(m-pagination) {
+@include block(m-pagination-arrow) {
   text-align: left;
   @include _($full-row-configuration);
   @include type-setting(text);
@@ -49,8 +49,22 @@ $m-pagination-border-color-active: #aaa;
     min-width: $base-line-height * 6;
     text-align: center;
   }
+}
 
-  @include element(show-more) {
+@include block(m-pagination-btn) {
+  text-align: left;
+  @include _($full-row-configuration);
+  @include type-setting(text);
+
+  @include modifier(center) {
+    text-align: center;
+  }
+
+  @include modifier(right) {
+    text-align: right;
+  }
+
+  @include element(number) {
     display: none;
     float: left;
     margin-right: $gutter-standart / 2;
@@ -60,23 +74,46 @@ $m-pagination-border-color-active: #aaa;
     @include border-setting($m-pagination-border-width, $base-line-height * 2);
     min-width: $base-line-height * 6;
     text-align: center;
-  }
 
-  @include modifier(btn-show) {
-    > .m-pagination__number, > .m-pagination__arrow{
-      display: none;
-
-      @include _(greater than mobile) {  
-        display: block;
-      }
+    @include modifier(active) {
+      background: $m-pagination-background-active;
+      border: $m-pagination-border-width solid $m-pagination-border-color-active;
     }
 
-    .m-pagination__show-more{
+    @include _(greater than mobile) {  
       display: block;
+    }
+  }
 
-      @include _(greater than mobile) {  
-        display: none;
-      }
+  @include element(arrow) {
+    display: none;
+    float: left;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    @include _(greater than mobile) {  
+      display: block;
+    }
+  }
+
+  @include element(show-more) {
+    display: block;
+    float: left;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    @include _(greater than mobile) {  
+      display: none;
     }
   }
 }
