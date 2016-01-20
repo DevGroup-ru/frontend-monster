@@ -1,0 +1,20 @@
+.owl-carousel{
+
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+
+  .item{
+    width: 200px;
+    border: solid 1px gray;
+    height: 200px;
+    background: pink;
+    float: left;
+  }
+}
+
+@import 'owl/owl.core';
+@import 'owl/owl.animate';
+@import 'owl/owl.autoheight';
+@import 'owl/owl.lazyload';
+@import 'owl/owl.video';

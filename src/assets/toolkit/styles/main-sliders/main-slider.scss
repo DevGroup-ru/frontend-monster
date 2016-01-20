@@ -1,0 +1,19 @@
+	
+.m-wrapper{
+	.owl-carousel{
+
+		clear: both;
+		overflow: hidden;
+		width: 100%;
+
+	    @include block('item'){
+	    	width: 100%;
+		    border: solid 1px gray;
+		    height: 200px;
+		    background: pink;
+
+		    @include _(12 12 8 4 4, $gutter: row);
+	    }
+
+	}
+}
