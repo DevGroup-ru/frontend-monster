@@ -1,5 +1,9 @@
 .m-wrapper {
 
+  /*.main-carousel--001 .owl-item {
+    @include _(3 3 4 4 4);
+  }*/
+
   @include block(news002) {
     text-align: left;
 
@@ -7,6 +11,10 @@
       @include _(3 3 4 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
+
+      @include modifier(for-slider) {
+        @include _(3 3 4 4 4, 3 3 4 4 4);
+      }
     }
 
     @include element(title) {

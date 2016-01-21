@@ -11,6 +11,10 @@ $news004-border-color: #aaa;
       margin-top: $base-line-height * 2 - $news004-border-width;
       margin-bottom: $base-line-height * 2 - $news004-border-width;;
       border: $news004-border-width solid $news004-border-color;
+
+      @include modifier(for-slider) {
+        @include _(6 6 8 4 4, 6 6 8 4 4);
+      }
     }
 
     @include element(title) {

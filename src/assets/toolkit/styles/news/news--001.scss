@@ -15,6 +15,10 @@ $news001-fon: #eee;
       @include _(greater than mobile) {  
         padding: $base-line-height * 3;
       }
+
+      @include modifier(for-slider) {
+        @include _(3 3 4 4 4, 3 3 4 4 4);
+      }
     }
 
     @include element(title) {
