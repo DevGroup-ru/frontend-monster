@@ -40,6 +40,12 @@
   margin: 0;
 }
 
+%text-bold {
+  @include type-setting(text-bold);
+  padding: 0;
+  margin: 0;
+}
+
 // Reset standard formatting tags to our toolkit's vertical rhythm styles
 .m-wrapper {
   @include type-setting('text');

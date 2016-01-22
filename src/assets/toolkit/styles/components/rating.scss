@@ -2,9 +2,40 @@ $rate-star-grey: #ddd;
 $rate-star-black: #000;
 $rate-star-gold: #ffd700;
 
-$rateitem: ".rating__label .rating__icon:before";
+$rateitem: ".rating__item .rating__icon:before";
 
 @include block(rating) {
+  position: relative;
+  text-align: center;
+  border: none;
+  direction: rtl;
+  display: inline-block;
+
+  @include element(icon) {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      font-size: $base-line-height * 2;
+      line-height: $base-line-height * 2;
+      color: $rate-star-grey;
+    }
+  }
+
+  @include element(item) {
+    display: inline-block;
+    cursor: pointer;  
+
+    &.rating__item--chosen .rating__icon:before,
+    &.rating__item--chosen ~ #{$rateitem} {
+        color: $rate-star-gold;
+    }
+  }
+}
+
+$rateitem-css: ".rating-css__label .rating-css__icon:before";
+
+@include block(rating-css) {
   position: relative;
   text-align: center;
   direction: rtl;
@@ -31,25 +62,64 @@ $rateitem: ".rating__label .rating__icon:before";
     position: absolute;
     left: -9999px;
 
-    &:hover ~ #{$rateitem} {
+    &:hover ~ #{$rateitem-css} {
       color: $rate-star-black;
     }
 
-    &:disabled:hover ~ #{$rateitem} {
+    &:disabled:hover ~ #{$rateitem-css} {
       color: $rate-star-grey;
     }
 
-    &:checked ~ #{$rateitem} {
+    &[type="radio"]:checked ~ #{$rateitem-css} {
       color: $rate-star-gold;
     }
 
-    &.rating__input--active ~ #{$rateitem} {
+    &.rating-css__input--active ~ #{$rateitem-css} {
       color: $rate-star-gold;
     }
 
-    &.rating__input--active:hover ~ #{$rateitem},
-    &.rating__input--active:disabled ~ #{$rateitem} {
+    &.rating-css__input--active:hover ~ #{$rateitem-css},
+    &.rating-css__input--active:disabled ~ #{$rateitem-css} {
       color: $rate-star-gold;
     }
   }
 }
+
+$rateitem-js: ".rating-js__icon:before";
+
+@include block(rating-js) {
+  position: relative;
+  text-align: center;
+  border: none;
+  display: inline-block;
+
+  @include element(icon) {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+      font-size: $base-line-height * 2;
+      line-height: $base-line-height * 2;
+      color: $rate-star-grey;
+    }
+  }
+
+  @include element(item) {
+    display: inline-block;
+    cursor: pointer;  
+
+    @include modifier(hover) {
+      #{$rateitem-js} {
+        color: $rate-star-black;
+      }
+    }
+
+    @include modifier(chosen) {
+      #{$rateitem-js} {
+        color: $rate-star-gold;
+      }
+    }
+  }
+}
+
+

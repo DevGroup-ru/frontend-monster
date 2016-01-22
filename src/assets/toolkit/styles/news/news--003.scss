@@ -21,6 +21,10 @@ $news003-fon: #eff;
       }
     }
 
+    @include element(carousel) {
+      margin-bottom: $base-line-height * 2;
+    }
+
     @include element(title) {
       @extend %heading;
       @include _($full-row-configuration);

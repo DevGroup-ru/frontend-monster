@@ -51,12 +51,7 @@ $news008-fon-opacity: rgba(238,238,238,0.5);
       .owl-nav .owl-prev, 
       .owl-nav .owl-next {
         display: inline-block;
-        margin-right: $base-line-height;
-
-        i{
-          font-size: $base-line-height * 3;
-          line-height:  $base-line-height * 2;
-        }
+        float: none;
       }
 
       @include _(greater than mobile) {  
@@ -67,11 +62,6 @@ $news008-fon-opacity: rgba(238,238,238,0.5);
         margin: 0;
         min-width: $base-line-height * 10;
         background: linear-gradient(to left, $news008-fon, $news008-fon-opacity);
-
-        .owl-nav .owl-prev, 
-        .owl-nav .owl-next {
-          margin-left: $base-line-height;
-        }
       }
     }
   }

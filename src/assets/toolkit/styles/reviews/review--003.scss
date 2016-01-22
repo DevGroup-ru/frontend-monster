@@ -1,22 +1,18 @@
-$review001-background: #eee;
-$review001-border-width: $base-line-height/10;
-$review001-border-color: #aaa;
 
 .m-wrapper {
 
-  @include block(review001) {
-    text-align: left;
+  @include block(review003) {
+    text-align: center;
+    position: relative;
 
     @include element(nested) {
-      @include _(12 12 8 4 4);
+      @include _(10 10 8 4 4, $gutter: center);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
-      background: $review001-background;
-      border: $review001-border-width solid $review001-border-color;
-      @include border-setting($review001-border-width, $base-line-height * 2);
+      padding: $base-line-height * 2;
 
       @include _(greater than mobile) {  
-        @include border-setting($review001-border-width, $base-line-height * 3);
+        padding: $base-line-height * 3;
       }
     }
 
@@ -34,10 +30,13 @@ $review001-border-color: #aaa;
 
     @include element(rating-line) {
       @include _(clear);
+      font-size: 0;
+      overflow: hidden;
     }
 
     @include element(rating-col) {
-      float: left;
+      display: inline-block;
+      font-size: $base-font-size;
       margin-bottom: $base-line-height;
       height: $base-line-height * 2;
       overflow: hidden;
@@ -63,6 +62,7 @@ $review001-border-color: #aaa;
       height: $base-line-height * 6;
       overflow: hidden;
       text-align: left;
+      margin: 0 auto;
       margin-top: $base-line-height * 2;
     }
 
@@ -102,6 +102,32 @@ $review001-border-color: #aaa;
 
     .owl-nav {
       display: none;
+
+      @include _(greater than tablet) {  
+        display: block;
+      }
+    }
+
+    .owl-prev {
+      position: absolute;
+      top: 50%;
+      left: $gutter-standart;
+    }
+
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      right: $gutter-standart;
     }
   }
+}
+
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
 }

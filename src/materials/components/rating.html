@@ -1,55 +1,101 @@
-<p>Rating with a choice</p>
+<p>Simple rating</p>
 
 <div class="f-item-group">
-	<form class="rating"> 
-	  <input id="rating-1-5" class="rating__input" name="rating" type="radio" value="5"/>
-	  <label for="rating-1-5" data-value="5" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
-	  </label>
-	  <input id="rating-1-4" class="rating__input" name="rating" type="radio" value="4"/>
-	  <label for="rating-1-4" data-value="4" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
-	  </label>
-	  <input id="rating-1-3" class="rating__input" name="rating" type="radio" value="3"/>
-	  <label for="rating-1-3" data-value="3" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
-	  </label>
-	  <input id="rating-1-2" class="rating__input" name="rating" type="radio" value="2"/>
-	  <label for="rating-1-2" data-value="2" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
-	  </label>
-	  <input id="rating-1-1" class="rating__input" name="rating" type="radio" value="1"/>
-	  <label for="rating-1-1" data-value="1" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
-	  </label>        
-	</form>
+	<div class="rating">
+		<div class="rating__item">
+		    <i class="rating__icon demo-icon icon-basic-star"></i> 
+		</div>
+		<div class="rating__item rating__item--chosen">
+		    <i class="rating__icon demo-icon icon-basic-star"></i> 
+		</div>
+		<div class="rating__item">
+		    <i class="rating__icon demo-icon icon-basic-star"></i> 
+		</div>
+		<div class="rating__item">
+		    <i class="rating__icon demo-icon icon-basic-star"></i> 
+		</div>
+		<div class="rating__item">
+		    <i class="rating__icon demo-icon icon-basic-star"></i> 
+		</div>
+	</div>
 </div>
 
-<p>Rating without a choice</p>
+<p>Rating (js) with a choice</p>
+
+<div class="f-item-group">
+	<div class="rating-js">
+		<div class="rating-js__item">
+		    <i class="rating-js__icon demo-icon icon-basic-star"></i> 
+		</div>
+		<div class="rating-js__item">
+		    <i class="rating-js__icon demo-icon icon-basic-star"></i> 
+		</div>
+		<div class="rating-js__item">
+		    <i class="rating-js__icon demo-icon icon-basic-star"></i> 
+		</div>
+		<div class="rating-js__item">
+		    <i class="rating-js__icon demo-icon icon-basic-star"></i> 
+		</div>
+		<div class="rating-js__item">
+		    <i class="rating-js__icon demo-icon icon-basic-star"></i> 
+		</div>
+	</div>
+</div>
+
+<p>Rating (css) with a choice</p>
 
 <!--you should add 'rating--noselect' in <form> and add 'rating__input--active' in <input> to use a static rating-form-->
 
 <div class="f-item-group">
-	<form class="rating rating--noselect"> 
-	  <input id="rating-2-5" class="rating__input" name="rating" type="radio" value="5"/>
-	  <label for="rating-2-5" data-value="5" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
+	<form class="rating-css"> 
+	  <input id="rating-1-5" class="rating-css__input" name="rating" type="radio" value="5"/>
+	  <label for="rating-1-5" data-value="5" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
 	  </label>
-	  <input id="rating-2-4" class="rating__input rating__input--active" name="rating" type="radio" value="4"/>
-	  <label for="rating-2-4" data-value="4" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
+	  <input id="rating-1-4" class="rating-css__input" name="rating" type="radio" value="4"/>
+	  <label for="rating-1-4" data-value="4" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
 	  </label>
-	  <input id="rating-2-3" class="rating__input" name="rating" type="radio" value="3"/>
-	  <label for="rating-2-3" data-value="3" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
+	  <input id="rating-1-3" class="rating-css__input" name="rating" type="radio" value="3"/>
+	  <label for="rating-1-3" data-value="3" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
 	  </label>
-	  <input id="rating-2-2" class="rating__input" name="rating" type="radio" value="2"/>
-	  <label for="rating-2-2" data-value="2" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
+	  <input id="rating-1-2" class="rating-css__input" name="rating" type="radio" value="2"/>
+	  <label for="rating-1-2" data-value="2" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
 	  </label>
-	  <input id="rating-2-1" class="rating__input" name="rating" type="radio" value="1"/>
-	  <label for="rating-2-1" data-value="1" class="rating__label">
-	    <i class="rating__icon demo-icon icon-basic-star"></i> 
+	  <input id="rating-1-1" class="rating-css__input" name="rating" type="radio" value="1"/>
+	  <label for="rating-1-1" data-value="1" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
+	  </label>        
+	</form>
+</div>
+
+<p>Rating (css) without a choice</p>
+
+<!--you should add 'rating--noselect' in <form> and add 'rating__input--active' in <input> to use a static rating-form-->
+
+<div class="f-item-group">
+	<form class="rating-css rating-css--noselect"> 
+	  <input id="rating-2-5" class="rating-css__input" name="rating" type="radio" value="5"/>
+	  <label for="rating-2-5" data-value="5" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
+	  </label>
+	  <input id="rating-2-4" class="rating-css__input" name="rating" type="radio" value="4"/>
+	  <label for="rating-2-4" data-value="4" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
+	  </label>
+	  <input id="rating-2-3" class="rating-css__input rating-css__input--active" name="rating" type="radio" value="3"/>
+	  <label for="rating-2-3" data-value="3" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
+	  </label>
+	  <input id="rating-2-2" class="rating-css__input" name="rating" type="radio" value="2"/>
+	  <label for="rating-2-2" data-value="2" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
+	  </label>
+	  <input id="rating-2-1" class="rating-css__input" name="rating" type="radio" value="1"/>
+	  <label for="rating-2-1" data-value="1" class="rating-css__label">
+	    <i class="rating-css__icon demo-icon icon-basic-star"></i> 
 	  </label>        
 	</form>
 </div>

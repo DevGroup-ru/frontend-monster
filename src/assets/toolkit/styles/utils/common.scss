@@ -9,3 +9,11 @@
 @mixin border-setting($border, $padding) {
 	padding: $padding - $border;
 }
+
+@function set-notification-text-color($color) {
+  	@if (lightness($color) > 50) {
+    	@return #000000;
+  	} @else {
+    	@return #ffffff;
+  	}
+}

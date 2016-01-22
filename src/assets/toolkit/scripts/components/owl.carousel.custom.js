@@ -8,9 +8,19 @@ $(function() {
 	  items: 1
 	});
 
+	$('.carousel--full').owlCarousel({
+	  	loop:true,
+  		nav:true,
+  		navText: [
+	      "<i class='demo-icon icon-basic-arrow-left'></i>",
+	      "<i class='demo-icon icon-basic-arrow-right'></i>"
+	      ],
+	  	items: 1
+	});
+
 	$('.carousel--two-items').owlCarousel({
 	  	loop:true,
-	  	nav:true,
+	  	nav:false,
   		responsive:{
 	        320:{
 	            items:1
@@ -32,7 +42,7 @@ $(function() {
 
 	$('.carousel--four-items').owlCarousel({
 	  	loop:true,
-	  	nav:true,
+	  	nav:false,
   		responsive:{
 	        320:{
 	            items:1
@@ -56,6 +66,7 @@ $(function() {
 	  	loop:true,
 	  	margin:0,
 	  	nav:true,
+	  	dots:false,
 	    navText: [
 	      "<i class='demo-icon icon-basic-arrow-left'></i>",
 	      "<i class='demo-icon icon-basic-arrow-right'></i>"
@@ -78,5 +89,4 @@ $(function() {
 	        }
 	    }
 	});
-
 });

@@ -103,7 +103,6 @@ $font-color-path-7: rgb(156, 156, 157);
 .icon-basic-star:before {
   content: "\e800";
   font-size: 20px;
-  color: $font-color-defalt;
 }
 
 .icon-basic-arrow-right:before {
@@ -138,6 +137,66 @@ $font-color-path-7: rgb(156, 156, 157);
   content: "\e808";
 }
 
+.icon-basic-help-circled:before {
+  content: "\e809";
+}
+
+.icon-basic-play:before {
+  content: "\e80a";
+}
+
+.icon-basic-megaphone:before {
+  content: "\e80b";
+}
+
+.icon-basic-eye:before {
+  content: "\e80c";
+}
+
+.icon-basic-info-circled:before {
+  content: "\e80d";
+}
+
+.icon-basic-pencil:before {
+  content: "\e80e";
+}
+
+.icon-basic-leanpub:before {
+  content: "\e80f";
+}
+
+.icon-basic-twitter:before {
+  content: "\e810";
+}
+
+.icon-basic-vkontakte:before {
+  content: "\e811";
+}
+
+.icon-basic-facebook:before {
+  content: "\e812";
+}
+
+.icon-basic-gplus:before {
+  content: "\e813";
+}
+
+.icon-basic-mail-alt:before {
+  content: "\e814";
+}
+
+.icon-basic-angle-up:before {
+  content: "\e815";
+}
+
+.icon-basic-angle-down:before {
+  content: "\e816";
+}
+
+.icon-basic-download:before {
+  content: "\e817";
+}
+
 .icon-select-alph-up:before {
   content: "i";
 }
@@ -154,43 +213,6 @@ $font-color-path-7: rgb(156, 156, 157);
   content: "j";
 }
 
-.icon-project-color-001-consultation .path1:before {
-  content: "\e600";
-  color: $font-color-path-1;
-}
-
-.icon-project-color-001-consultation .path2:before {
-  content: "\e601";
-  margin-left: -1.3330078125em;
-  color: $font-color-path-2;
-}
-
-.icon-project-color-001-consultation .path3:before {
-  content: "\e602";
-  margin-left: -1.3330078125em;
-  color: $font-color-path-3;
-}
-
-.icon-project-color-001-consultation .path4:before {
-  content: "\e603";
-  margin-left: -1.3330078125em;
-  color: $font-color-path-4;
-}
-
-.icon-project-color-001-consultation .path5:before {
-  content: "\e604";
-  margin-left: -1.3330078125em;
-  color: $font-color-path-5;
-}
-
-.icon-project-color-001-consultation .path6:before {
-  content: "\e605";
-  margin-left: -1.3330078125em;
-  color: $font-color-path-6;
-}
-
-.icon-project-color-001-consultation .path7:before {
-  content: "\e606";
-  margin-left: -1.3330078125em;
-  color: $font-color-path-7;
+.icon-project-bw-user:before {
+  content: "a";
 }

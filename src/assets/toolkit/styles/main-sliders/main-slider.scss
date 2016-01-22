@@ -1,19 +1,81 @@
-	
+$carousel-nav-color: #aaa;
+$carousel-nav-color-hover: #666;
+
+$carousel-dot-fon: #eee;
+$carousel-dot-fon-hover: #aaa;
+$carousel-dot-fon-active: #000;
+
 .m-wrapper{
 	.owl-carousel{
-
 		clear: both;
 		overflow: hidden;
 		width: 100%;
+
+		.owl-wrapper,
+		.owl-item {
+		  -webkit-backface-visibility: hidden;
+		  -moz-backface-visibility:    hidden;
+		  -ms-backface-visibility:     hidden;
+		  -webkit-transform: translate3d(0,0,0);
+		  -moz-transform: translate3d(0,0,0);
+		  -ms-transform: translate3d(0,0,0);
+		}
 
 	    @include block('item'){
 	    	width: 100%;
 		    border: solid 1px gray;
 		    height: 200px;
 		    background: pink;
-
 		    @include _(12 12 8 4 4, $gutter: row);
 	    }
 
+	    .owl-nav {
+	    	@include _($full-row-configuration);
+
+	      	.owl-prev, 
+	      	.owl-next {
+	        	display: block;
+	        	float: left;
+	        	color: $carousel-nav-color;
+
+		        i{
+		          font-size: $base-line-height * 3;
+		          line-height:  $base-line-height * 2;
+		        }
+
+		        &:hover {
+	      			color: $carousel-nav-color-hover;
+	      		}
+		    }
+
+		    .owl-prev {
+		    	margin-right: $base-line-height;
+		    }
+      	}
+
+      	.owl-dots {
+	      	text-align: center;
+	      	display: flex;
+	      	justify-content: center;
+	      	width: 100%;
+
+	      	.owl-dot {
+	      		display: block;
+	      		float: left;
+				width: $base-line-height * 2;
+				height: $base-line-height * 2;
+				border-radius: $base-line-height;
+	      		background: $carousel-dot-fon;
+	      		margin: 0 $base-line-height / 2;
+
+	      		&:hover {
+	      			background: $carousel-dot-fon-hover;
+	      		}
+
+	      		&.active {
+	      			background: $carousel-dot-fon-active;
+	      		}
+	      	}
+      	}
 	}
 }

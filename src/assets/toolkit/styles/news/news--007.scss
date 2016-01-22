@@ -5,18 +5,19 @@ $news007-border-color: #000;
 
   @include block(news007) {
     text-align: left;
-    @include _(6 6 8 4 4);
 
     @include element(accordion-tabs) {
+      @include _(6 6 8 4 4);
       border: $news007-border-width solid $news007-border-color;
-      margin-top: -$news007-border-width * 2;
+      margin-top: $base-line-height * 2 - $news007-border-width * 2;
+      margin-bottom: $base-line-height * 2;
       overflow: hidden;
       @include _(clear);
     }
 
     @include element(title) {
       @extend %heading;
-      margin-bottom: $base-line-height * 4;
+      @include _($full-row-configuration);
     }
 
     @include element(link-in-title) {
@@ -125,7 +126,7 @@ $news007-border-color: #000;
     @include element(btn-wrap) {
       text-align: center;
       @include _(clear);
-      margin-top: $base-line-height * 4;
+      @include _($full-row-configuration);
     }
   }
 }

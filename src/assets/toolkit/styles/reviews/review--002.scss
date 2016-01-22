@@ -1,22 +1,26 @@
-$review001-background: #eee;
-$review001-border-width: $base-line-height/10;
-$review001-border-color: #aaa;
+$review002-background: #eee;
+$review002-border-width: $base-line-height/10;
+$review002-border-color: #aaa;
 
 .m-wrapper {
 
-  @include block(review001) {
+  @include block(review002) {
     text-align: left;
 
     @include element(nested) {
-      @include _(12 12 8 4 4);
+      @include _(6 6 8 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
-      background: $review001-background;
-      border: $review001-border-width solid $review001-border-color;
-      @include border-setting($review001-border-width, $base-line-height * 2);
+      background: $review002-background;
+      border: $review002-border-width solid $review002-border-color;
+      @include border-setting($review002-border-width, $base-line-height * 2);
 
       @include _(greater than mobile) {  
         @include border-setting($review001-border-width, $base-line-height * 3);
+      }
+
+      @include modifier(for-slider) {
+        @include _(6 6 8 4 4, 6 6 8 4 4);
       }
     }
 
@@ -99,9 +103,6 @@ $review001-border-color: #aaa;
       overflow: hidden;
       margin-top: $base-line-height;
     }
-
-    .owl-nav {
-      display: none;
-    }
   }
 }
+

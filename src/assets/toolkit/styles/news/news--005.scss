@@ -5,7 +5,12 @@ $news005-border-color: #000;
 
   @include block(news005) {
     text-align: left;
-    @include _(3 3 8 4 4);
+
+    @include element(nested-wrap) {
+      @include _(3 3 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+    }
 
     @include element(nested) {
       border: $news005-border-width solid $news005-border-color;
@@ -27,7 +32,7 @@ $news005-border-color: #000;
 
     @include element(title) {
       @extend %heading;
-      margin-bottom: $base-line-height * 4;
+      @include _($full-row-configuration);
     }
 
     @include element(link-in-title) {
@@ -126,9 +131,9 @@ $news005-border-color: #000;
     }
 
     @include element(btn-wrap) {
-      text-align: center;
-      @include _(clear);
+      text-align: left;
       margin-top: $base-line-height * 4;
+      @include _(clear);
     }
   }
 }

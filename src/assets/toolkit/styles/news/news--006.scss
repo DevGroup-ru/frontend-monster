@@ -4,17 +4,19 @@ $news006-fon: #eff;
 
   @include block(news006) {
     text-align: left;
-    @include _(6 6 8 4 4);
 
     @include element(nested) {
+      @include _(6 6 8 4 4);
       background: $news006-fon;
       overflow: hidden;
       @include _(clear);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
     }
 
     @include element(title) {
       @extend %heading;
-      margin-bottom: $base-line-height * 4;
+      @include _($full-row-configuration);
     }
 
     @include element(link-in-title) {
@@ -122,7 +124,7 @@ $news006-fon: #eff;
     @include element(btn-wrap) {
       text-align: center;
       @include _(clear);
-      margin-top: $base-line-height * 4;
+      @include _($full-row-configuration);
     }
   }
 }

@@ -1,0 +1,215 @@
+.m-wrapper {
+
+  @include block(employees002) {
+    text-align: center;
+    position: relative;
+
+    @include element(nested) {
+      @include _(4 4 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(title) {
+      text-align: left;
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(link-in-title) {
+      @include type-setting(text);
+      display: block;
+      text-decoration: none;
+      margin-left: 0;
+      margin-top: $base-line-height;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      @include _(greater than mobile) {  
+        display: inline-block;
+        margin-left: $base-line-height * 2;
+        margin-top: 0;
+      }
+    }
+
+    @include element(name) {
+      @include type-setting(accent-text);
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 2;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      @include _(greater than tablet) {  
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(position) {
+      @include type-setting(text-bold);
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 2;
+      overflow: hidden;
+
+      @include _(greater than tablet) {  
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 8;
+      overflow: hidden;
+
+      @include _(greater than tablet) {  
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(contacts) {
+      margin-bottom: $base-line-height;
+      @include _(clear);
+
+      @include _(greater than tablet) {  
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(phone) {
+      display: block;
+      float: none;
+      @include type-setting(text);
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 2;
+      overflow: hidden;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include _(greater than tablet) {
+        float: left;
+        margin-bottom: 0;
+      }
+    }
+
+    @include element(mail) {
+      display: block;
+      float: none;
+      @include type-setting(text);
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 2;
+      overflow: hidden;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @include _(greater than tablet) {
+        float: right;
+        margin-bottom: 0;
+      }
+    }
+
+    @include element(social-wrap) {
+      margin-top: $base-line-height;
+      margin-bottom: $base-line-height;
+      overflow: hidden;
+      font-size: 0px;
+
+      @include _(greater than tablet) {  
+        margin-top: $base-line-height * 2;
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(social-item) {
+      display: inline-block;
+      margin: 0 $base-line-height;
+      font-size: $base-line-height * 2;
+      line-height: $base-line-height * 2;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    @include element(link-full) {
+      margin-top: $base-line-height;
+
+      @include _(greater than tablet) {  
+        margin-top: $base-line-height * 2;
+      }
+    }
+
+    @include element(photo) {
+      display: block;
+      height: $base-line-height * 14;
+      width: $base-line-height * 14;
+      border-radius: $base-line-height * 7;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: $base-line-height;
+      position: relative;
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+      }
+
+      @include _(greater than tablet) {  
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(main-info) {
+      @include _(12 12 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {
+        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: alpha);
+      }
+
+      @include _(greater than tablet) {
+        @include _(12 12 8 4 4, $gutter: row);
+      }
+    }
+
+    @include element(other-info) {
+      text-align: center;
+      @include _(12 12 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {
+        text-align: left;
+        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: omega);
+      }
+
+      @include _(greater than tablet) {
+        text-align: center;
+        @include _(12 12 8 4 4, $gutter: row);
+      }
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+}
+

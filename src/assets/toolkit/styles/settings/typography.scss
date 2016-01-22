@@ -10,6 +10,12 @@ $type-settings: (
     font-size: 0.75rem,
     line-height: $base-line-height * 2,
   ),
+  text-bold: (
+    font-size: 0.875rem,
+    font-size-desktop-wide: 1rem,
+    line-height: $base-line-height * 2,
+    font-weight: 700,
+  ),
   text: (
     font-size: 0.875rem,
     font-size-desktop-wide: 1rem,
