@@ -1,0 +1,214 @@
+/*IN WORK!!*/
+
+$select-single-fon: #fff;
+$select-single-fon-h: #aaa;
+$select-single-border-width: $base-line-height / 10;
+$select-single-border-color: #000;
+$select-single-color: #000;
+$select-single-color-h: #000;
+$select-single-arr-color: #000;
+$select-single-arr-width: $base-line-height / 10;
+$select-single-arr-size: $base-line-height;
+
+$select-result-fon: #aaa;
+$select-result-fon-h: #a89;
+$select-result-fon-no: #aaa;
+$select-result-border-width: $base-line-height / 10;
+$select-result-border-color: #000;
+$select-result-border-color-no: #000;
+$select-result-fon-noactive: #a89;
+$select-result-color: #000;
+$select-result-color-h: #000;
+$select-result-color-no: rgba(0, 0, 0, 0.2);
+
+$select-with-drop-fon: #ddd;
+$select-with-drop-color: #000;
+
+$select-group-fon: #000;
+$select-group-color: #fff;
+
+$num-result-scroll: 6;
+
+.chosen-container {
+  position: relative;
+  width: 100% !important;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active,
+a:focus {
+  &.chosen-single {
+    display: block;
+    @include type-setting(text);
+    padding: $base-line-height - $select-single-border-width;
+    border: $select-single-border-width solid $select-single-border-color;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    text-decoration: none;
+    background: $select-single-fon;
+    color: $select-single-color;
+
+    div {
+      display: inline-block;
+      margin-left: 24px;
+    }
+
+    b {
+      display: block;
+      height: $select-single-arr-size;
+      width: $select-single-arr-size;
+      border-top: $select-single-arr-width solid $select-single-arr-color;
+      border-right: $select-single-arr-width solid $select-single-arr-color;
+      transform: rotate(135deg);
+      cursor: pointer;
+      margin-top: -($select-single-arr-size + 4);
+    }
+
+    span {
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background: $select-single-fon-h;
+      color: $select-single-color-h;
+    }
+  }
+}
+
+.chosen-drop {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 500;
+  display: none;
+  width: 100%;
+  //max-height: ($sct-res-height * $num-result-scroll) - $num-result-scroll;
+
+  .chosen-results {
+    position: relative;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    @include type-setting(text);
+    padding: $base-line-height - $select-result-border-width;
+    border: $select-result-border-width solid $select-result-border-color;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    background: $select-result-fon;
+    color: $select-result-color;
+    width: 100%;
+    margin: -1px 0 0;
+    display: block;
+
+    &.result-selected {
+      background: $select-result-fon-h;
+      z-index: 20;
+    }
+  }
+
+  li:hover {
+    color: $select-result-color-h;
+    background: $select-result-fon-h;
+  }
+
+  .disabled-result {
+    border: $select-result-border-width solid $select-result-border-color-no;
+    background: $select-result-fon-no;
+    color: $select-result-color-no;
+    cursor: inherit;
+
+    &:hover {
+      border: $select-result-border-width solid $select-result-border-color-no;
+      background: $select-result-fon-no;
+      color: $select-result-color-no;
+    }
+  }
+}
+
+.chosen-search {
+  display: none;
+}
+
+.chosen-with-drop {
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus {
+    &.chosen-single {
+      background: $select-with-drop-fon;
+      color: $select-with-drop-color;
+    }
+  }
+
+  a.chosen-single b {
+    transform: rotate(-45deg);
+    margin-top: 0;
+  }
+
+  .chosen-drop {
+    display: block;
+  }
+}
+
+.chosenIcon-container {
+  a.chosen-single {
+    [data-icon]:before {
+      line-height: inherit;
+    }
+  }
+
+  .chosen-drop li {
+    overflow: hidden;
+  }
+
+  [data-icon]:before {
+    display: block;
+    float: left;
+    margin-right: $base-line-height * 2;
+    @include type-setting(text);
+  }
+}
+
+.chosen--search-show {
+  .chosen-search {
+    display: block;
+    margin-top: -1px;
+  }
+}
+
+.chosen--group {
+
+  .group-result {
+    cursor: inherit;
+    background: $select-group-fon;
+    color: $select-group-color;
+    @include type-setting(text);
+
+    &:hover {
+      background: $select-group-fon;
+      color: $select-group-color;
+    }
+  }
+}

@@ -1,12 +1,16 @@
+$employees005-border-width: $base-line-height/10;
+$employees005-border-color: #000;
+
 .m-wrapper {
 
-  @include block(employees002) {
-    text-align: center;
+  @include block(employees005) {
+    text-align: left;
     position: relative;
 
     @include element(nested) {
-      @include _(4 4 8 4 4);
-      margin-top: $base-line-height * 2;
+      @include _(12 12 8 4 4);
+      border: $employees005-border-width solid $employees005-border-color;
+      margin-top: $base-line-height * 2 - $employees005-border-width * 2;
       margin-bottom: $base-line-height * 2;
     }
 
@@ -45,78 +49,47 @@
       &:hover{
         text-decoration: underline;
       }
-
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 2;
-      }
     }
 
     @include element(position) {
       @include type-setting(text-bold);
-      margin-bottom: $base-line-height;
       height: $base-line-height * 2;
       overflow: hidden;
+      margin-bottom: $base-line-height;
 
-      @include _(greater than tablet) {  
+      @include _(greater than mobile) {  
         margin-bottom: $base-line-height * 2;
       }
     }
 
     @include element(text) {
       @include type-setting(text);
-      margin-bottom: $base-line-height;
       height: $base-line-height * 8;
       overflow: hidden;
-
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 2;
-      }
-    }
-
-    @include element(contacts) {
-      margin-bottom: $base-line-height;
-      @include _(clear);
-
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 2;
-      }
     }
 
     @include element(phone) {
       display: block;
-      float: none;
       @include type-setting(text);
-      margin-bottom: $base-line-height;
       height: $base-line-height * 2;
       overflow: hidden;
       text-decoration: none;
+      margin-bottom: $base-line-height;
 
       &:hover {
         text-decoration: underline;
-      }
-
-      @include _(greater than tablet) {
-        float: left;
-        margin-bottom: 0;
       }
     }
 
     @include element(mail) {
       display: block;
-      float: none;
       @include type-setting(text);
-      margin-bottom: $base-line-height;
       height: $base-line-height * 2;
       overflow: hidden;
       text-decoration: underline;
 
       &:hover {
         text-decoration: none;
-      }
-
-      @include _(greater than tablet) {
-        float: right;
-        margin-bottom: 0;
       }
     }
 
@@ -126,14 +99,15 @@
       overflow: hidden;
       font-size: 0px;
 
-      @include _(greater than tablet) {  
+      @include _(greater than mobile) {  
         margin-top: $base-line-height * 2;
-        margin-bottom: $base-line-height * 2;
+        margin-bottom: 0;
       }
     }
 
     @include element(social-item) {
       display: inline-block;
+      vertical-align: middle;
       margin: 0 $base-line-height;
       font-size: $base-line-height * 2;
       line-height: $base-line-height * 2;
@@ -142,22 +116,34 @@
     }
 
     @include element(link-full) {
+      display: block;
       margin-top: $base-line-height;
-
-      @include _(greater than tablet) {  
+      
+      @include _(greater than mobile) {  
         margin-top: $base-line-height * 2;
+      }
+    }    
+
+    @include element(main-info) {  
+      @include _(6 6 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {
+        padding-top: $base-line-height * 2;
+        padding-bottom: $base-line-height * 2;
+      }
+
+      @include _(greater than tablet) {
+        padding-left: $gutter-standart / 2;
+        padding-right: $gutter-standart / 2;
+        border-right: $employees005-border-width solid $employees005-border-color;
       }
     }
 
     @include element(photo) {
       display: block;
-      height: $base-line-height * 14;
-      width: $base-line-height * 14;
-      border-radius: $base-line-height * 7;
+      height: $base-line-height * 21;
+      width: 100%;
       overflow: hidden;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: $base-line-height;
       position: relative;
 
       img {
@@ -173,35 +159,80 @@
         transform: translateX(-50%);
       }
 
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 2;
+      @include _(greater than mobile) {
+        @include _(6 6 4 4 4, 12 12 8 4 4);
       }
     }
 
-    @include element(main-info) {
-      @include _(12 12 8 4 4, $gutter: row);
+    @include element(main-info-text) {
+      text-align: center;
+      padding: $gutter-standart;
+      @include _(6 6 4 4 4, 12 12 8 4 4, $gutter: row);
 
       @include _(greater than mobile) {
-        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: alpha);
-      }
-
-      @include _(greater than tablet) {
-        @include _(12 12 8 4 4, $gutter: row);
+        @include _(6 6 4 4 4, 12 12 8 4 4);
+        text-align: left;
+        padding: 0;
       }
     }
 
     @include element(other-info) {
+      margin-top: -$employees005-border-width;
+      border-top: $employees005-border-width solid $employees005-border-color;
+      @include _(6 6 8 4 4, $gutter: row);
+
+      @include _(greater than tablet) {
+        text-align: left;
+        border-top: none;
+        margin-top: 0;
+      }
+    }    
+
+    @include element(hours-wrap) {
       text-align: center;
-      @include _(12 12 8 4 4, $gutter: row);
+      padding-left: $gutter-standart / 2;
+      padding-top: $base-line-height * 2;
+      padding-bottom: $base-line-height * 2;
+      @include _(6 6 4 4 4, 12 12 8 4 4, $gutter: row);
+
+      @include _(greater than tablet) {
+        @include _(6 6 4 4 4, 12 12 8 4 4);
+      }
+    }
+
+    @include element(title-hours) {
+      @include type-setting(text-bold);
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 2;
+      overflow: hidden;
+    }
+
+    @include element(hours) {
+      @include type-setting(text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+    }
+
+    @include element(contacts) {
+      text-align: center;
+      padding-left: $gutter-standart;
+      padding-right: $gutter-standart / 2;
+      padding-top: $base-line-height * 2;
+      padding-bottom: $base-line-height * 2;
+      height: auto;
+      border-left: none;
+      margin-top: -$employees005-border-width;
+      border-top: $employees005-border-width solid $employees005-border-color;
+      @include _(6 6 4 4 4, 12 12 8 4 4, $gutter: row);
 
       @include _(greater than mobile) {
-        text-align: left;
-        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: omega);
+        height: $base-line-height * 25;
+        border-top: none;
+        border-left: $employees005-border-width solid $employees005-border-color;
       }
 
       @include _(greater than tablet) {
-        text-align: center;
-        @include _(12 12 8 4 4, $gutter: row);
+        @include _(6 6 4 4 4, 12 12 8 4 4);
       }
     }
 

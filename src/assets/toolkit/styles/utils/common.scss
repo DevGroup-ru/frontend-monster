@@ -10,10 +10,46 @@
 	padding: $padding - $border;
 }
 
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+
+  &:-moz-placeholder {
+    @content
+  }
+
+  &::-moz-placeholder {
+    @content
+  }
+
+  &:-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin placeholder-focus {
+  &:focus::-webkit-input-placeholder {
+    @content
+  }
+
+  &:focus:-moz-placeholder {
+    @content
+  }
+
+  &:focus::-moz-placeholder {
+    @content
+  }
+
+  &:focus:-ms-input-placeholder {
+    @content
+  }
+}
+
 @function set-notification-text-color($color) {
-  	@if (lightness($color) > 50) {
-    	@return #000000;
-  	} @else {
-    	@return #ffffff;
-  	}
+	@if (lightness($color) > 50) {
+  	@return #000000;
+	} @else {
+  	@return #ffffff;
+	}
 }

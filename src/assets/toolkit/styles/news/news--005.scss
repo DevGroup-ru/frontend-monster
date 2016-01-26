@@ -16,16 +16,10 @@ $news005-border-color: #000;
       border: $news005-border-width solid $news005-border-color;
       border-top: none;
       margin-top: -$news005-border-width;
-      padding: $base-line-height * 2;
       overflow: hidden;
 
-      @include _(greater than mobile) {  
-        padding: $base-line-height * 3;
-      }
-
-      @include modifier(block-img) {  
+      &:first-child {
         border-top: $news005-border-width solid $news005-border-color;
-        padding: 0;
         margin-top: -$news005-border-width;
       }
     }
@@ -85,12 +79,12 @@ $news005-border-color: #000;
         margin: auto;
         top: 0;
         bottom: 0;
-        left: 0;
+        left: 50%;
         right: 0;
-        width: 100%;
         height: auto;
         min-height: 100%;
         min-width: 100%;
+        transform: translateX(-50%);
       }
 
       @include _(greater than mobile) {  

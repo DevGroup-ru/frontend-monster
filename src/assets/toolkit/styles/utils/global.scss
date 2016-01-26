@@ -20,6 +20,9 @@ body .m-wrapper {
         margin-top: $base-line-height * 6;
         margin-bottom: $base-line-height * 6;
       }
+    }
+
+    @include element(element) {
       @include modifier(center) {
         text-align: center;
       }

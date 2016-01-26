@@ -1,11 +1,11 @@
 .m-wrapper {
 
-  @include block(employees001) {
+  @include block(employees004) {
     text-align: center;
     position: relative;
 
     @include element(nested) {
-      @include _(3 3 4 4 4);
+      @include _(6 6 8 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
     }
@@ -45,59 +45,34 @@
       &:hover{
         text-decoration: underline;
       }
-
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 2;
-      }
     }
 
     @include element(position) {
       @include type-setting(text-bold);
-      margin-bottom: $base-line-height;
       height: $base-line-height * 2;
       overflow: hidden;
-
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 2;
-      }
     }
 
     @include element(text) {
       @include type-setting(text);
-      margin-bottom: $base-line-height;
-      height: $base-line-height * 10;
+      height: $base-line-height * 8;
       overflow: hidden;
+    }
+
+    @include element(contacts) {
+      margin-top: $base-line-height;
+      margin-bottom: $base-line-height;
+      @include _(clear);
 
       @include _(greater than tablet) {  
+        margin-top: $base-line-height * 2;
         margin-bottom: $base-line-height * 2;
       }
-    }
-
-    @include element(hours-wrap) {
-      margin-bottom: $base-line-height;
-
-      @include _(greater than tablet) {  
-        margin-bottom: $base-line-height * 2;
-      }
-    }
-
-    @include element(title-hours) {
-      @include type-setting(text-bold);
-      margin-bottom: $base-line-height;
-      height: $base-line-height * 2;
-      overflow: hidden;
-    }
-
-    @include element(hours) {
-      @include type-setting(text);
-      height: $base-line-height * 2;
-      overflow: hidden;
     }
 
     @include element(phone) {
       display: block;
       @include type-setting(text);
-      margin-bottom: $base-line-height;
       height: $base-line-height * 2;
       overflow: hidden;
       text-decoration: none;
@@ -110,7 +85,7 @@
     @include element(mail) {
       display: block;
       @include type-setting(text);
-      margin-bottom: $base-line-height;
+      margin-top: $base-line-height;
       height: $base-line-height * 2;
       overflow: hidden;
       text-decoration: underline;
@@ -126,14 +101,15 @@
       overflow: hidden;
       font-size: 0px;
 
-      @include _(greater than tablet) {  
+      @include _(greater than mobile) {  
         margin-top: $base-line-height * 2;
-        margin-bottom: $base-line-height * 2;
+        margin-bottom: 0;
       }
     }
 
     @include element(social-item) {
       display: inline-block;
+      vertical-align: middle;
       margin: 0 $base-line-height;
       font-size: $base-line-height * 2;
       line-height: $base-line-height * 2;
@@ -143,17 +119,16 @@
 
     @include element(link-full) {
       margin-top: $base-line-height;
-      display: block;
-
-      @include _(greater than tablet) {  
+      
+      @include _(greater than mobile) {  
         margin-top: $base-line-height * 2;
       }
     }
 
     @include element(photo) {
-      height: $base-line-height * 10;
-      width: $base-line-height * 10;
-      border-radius: $base-line-height * 5;
+      display: block;
+      height: $base-line-height * 22;
+      width: 100%;
       overflow: hidden;
       margin-left: auto;
       margin-right: auto;
@@ -174,7 +149,26 @@
       }
 
       @include _(greater than tablet) {  
+        height: $base-line-height * 24;
         margin-bottom: $base-line-height * 2;
+      }
+    }
+    
+    @include element(main-info) {
+      @include _(12 12 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {
+        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: alpha);
+      }
+    }
+
+    @include element(other-info) {
+      text-align: center;
+      @include _(12 12 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {
+        text-align: left;
+        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: omega);
       }
     }
 

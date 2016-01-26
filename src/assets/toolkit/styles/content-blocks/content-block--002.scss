@@ -23,12 +23,6 @@
       margin-bottom: $base-line-height;
       height: $base-line-height * 4;
       overflow: hidden;
-      display: block;
-      text-decoration: none;
-
-      &:hover{
-        text-decoration: underline;
-      }
 
       @include _(greater than tablet) {
         margin-bottom: $base-line-height * 2;
@@ -46,12 +40,12 @@
         margin: auto;
         top: 0;
         bottom: 0;
-        left: 0;
+        left: 50%;
         right: 0;
-        width: 100%;
         height: auto;
         min-height: 100%;
         min-width: 100%;
+        transform: translateX(-50%);
       }
 
       @include _(greater than tablet) {
@@ -63,6 +57,24 @@
       @include type-setting(text);
       height: $base-line-height * 6;
       overflow: hidden;
+    }
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.content002__title-nested {
+      @extend .content002__title-nested;
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

@@ -19,12 +19,6 @@
       margin-bottom: $base-line-height;
       height: $base-line-height * 4;
       overflow: hidden;
-      display: block;
-      text-decoration: none;
-
-      &:hover{
-        text-decoration: underline;
-      }
 
       @include _(greater than tablet) {  
         margin-bottom: $base-line-height * 2;
@@ -51,6 +45,24 @@
       @include type-setting(text);
       height: $base-line-height * 6;
       overflow: hidden;
+    }
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.content001__title-nested {
+      @extend .content001__title-nested;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
