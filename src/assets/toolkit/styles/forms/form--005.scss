@@ -1,0 +1,63 @@
+$form005-input-border-width: $base-line-height / 10;
+$form005-input-border-color: #aaa;
+
+.m-wrapper {
+
+  @include block(form005) {
+    text-align: left;
+    position: relative;  
+
+    @include element(title) {
+      @include type-setting(sub-heading);
+      @include _(6 12 8 4 4);
+    }
+
+    @include element(line) {
+      @include _(clear);
+    }
+
+    @include element(col) {
+      @include _(3 6 4 4 4);
+      line-height: 0;
+      overflow: hidden;
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than desktop) {
+        margin-top: 0;
+      }
+    }
+
+    @include element(label) {
+    	display: block;
+      margin-bottom: $base-line-height;
+      @include type-setting(text);
+    }
+
+    @include element(input) {
+    	resize: vertical;
+    	outline: none;
+    	@include type-setting(text);
+    	padding: $base-line-height - $form005-input-border-width;
+      border: $form005-input-border-width solid $form005-input-border-color;
+    	width: 100%;
+
+    	@include placeholder {
+		    @include type-setting(text);
+  			text-overflow: ellipsis;
+  		}
+
+		  @include placeholder-focus {
+		    color: transparent;
+		  }
+    }
+
+    textarea {
+      min-height: $base-line-height * 6;
+    }
+
+    @include element(button) {
+    	display: block;
+    }
+  }
+}
+

@@ -7,6 +7,10 @@ body .m-wrapper {
       @include modifier(top) {
         margin-top: 0;
       }
+      @include modifier(top-bottom) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
 
     @include element(one-line) {

@@ -111,6 +111,14 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest(config.dest + '/fonts/'));
 });
 
+//libs
+
+gulp.task('libs', function() {
+  return gulp.src('./libs/**/*')
+    .pipe(gulp.dest(config.dest + '/libs/'));
+});
+
+
 
 // assemble
 gulp.task('assemble', function (done) {
@@ -169,6 +177,9 @@ gulp.task('serve', function () {
 	gulp.task('fonts:watch', ['fonts'], reload);
 	gulp.watch('fonts/*', ['fonts:watch']);
 
+	gulp.task('libs:watch', ['libs'], reload);
+	gulp.watch('libs/*', ['libs:watch']);
+
 });
 
 
@@ -181,6 +192,7 @@ gulp.task('default', ['clean'], function () {
 		'scripts',
 		'images',
 		'fonts',
+		'libs',
 		'assemble'
 	];
 

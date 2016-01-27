@@ -3,18 +3,18 @@
 $select-single-fon: #fff;
 $select-single-fon-h: #aaa;
 $select-single-border-width: $base-line-height / 10;
-$select-single-border-color: #000;
+$select-single-border-color: #aaa;
 $select-single-color: #000;
 $select-single-color-h: #000;
 $select-single-arr-color: #000;
 $select-single-arr-width: $base-line-height / 10;
 $select-single-arr-size: $base-line-height;
 
-$select-result-fon: #aaa;
+$select-result-fon: #eee;
 $select-result-fon-h: #a89;
 $select-result-fon-no: #aaa;
 $select-result-border-width: $base-line-height / 10;
-$select-result-border-color: #000;
+$select-result-border-color: #aaa;
 $select-result-border-color-no: #000;
 $select-result-fon-noactive: #a89;
 $select-result-color: #000;
@@ -27,7 +27,7 @@ $select-with-drop-color: #000;
 $select-group-fon: #000;
 $select-group-color: #fff;
 
-$num-result-scroll: 6;
+$num-result-scroll: 5;
 
 .chosen-container {
   position: relative;
@@ -42,19 +42,20 @@ a:active,
 a:focus {
   &.chosen-single {
     display: block;
+    position: relative;
+    width: 100%;
     @include type-setting(text);
     padding: $base-line-height - $select-single-border-width;
     border: $select-single-border-width solid $select-single-border-color;
-    position: relative;
     z-index: 5;
-    width: 100%;
     text-decoration: none;
     background: $select-single-fon;
     color: $select-single-color;
 
     div {
       display: inline-block;
-      margin-left: 24px;
+      vertical-align: middle;
+      margin-left: $base-line-height * 2;
     }
 
     b {
@@ -65,7 +66,7 @@ a:focus {
       border-right: $select-single-arr-width solid $select-single-arr-color;
       transform: rotate(135deg);
       cursor: pointer;
-      margin-top: -($select-single-arr-size + 4);
+      margin-top: - $base-line-height;
     }
 
     span {
@@ -89,7 +90,7 @@ a:focus {
   z-index: 500;
   display: none;
   width: 100%;
-  //max-height: ($sct-res-height * $num-result-scroll) - $num-result-scroll;
+  height: ($base-line-height * 4 - $select-result-border-width) * $num-result-scroll;
 
   .chosen-results {
     position: relative;
@@ -117,7 +118,7 @@ a:focus {
     background: $select-result-fon;
     color: $select-result-color;
     width: 100%;
-    margin: -1px 0 0;
+    margin: -$select-result-border-width 0 0;
     display: block;
 
     &.result-selected {
@@ -194,7 +195,7 @@ a:focus {
 .chosen--search-show {
   .chosen-search {
     display: block;
-    margin-top: -1px;
+    margin-top: -$select-result-border-width;
   }
 }
 

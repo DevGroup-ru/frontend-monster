@@ -1,0 +1,66 @@
+$form004-input-border-width: $base-line-height / 10;
+$form004-input-border-color: #aaa;
+
+.m-wrapper {
+
+  @include block(form004) {
+    text-align: left;
+    position: relative;  
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+      @include _(clear);
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      @include _($full-row-configuration);
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(line) {
+      @include _(clear);
+    }
+
+    @include element(col) {
+      @include _(3 3 4 4 4);
+      line-height: 0;
+      overflow: hidden;
+      margin-top: $base-line-height * 2;
+    }
+
+    @include element(label) {
+    	display: block;
+      margin-bottom: $base-line-height;
+      @include type-setting(text);
+    }
+
+    @include element(input) {
+    	resize: vertical;
+    	outline: none;
+    	@include type-setting(text);
+    	padding: $base-line-height - $form004-input-border-width;
+      border: $form004-input-border-width solid $form004-input-border-color;
+    	width: 100%;
+
+    	@include placeholder {
+		    @include type-setting(text);
+  			text-overflow: ellipsis;
+  		}
+
+		  @include placeholder-focus {
+		    color: transparent;
+		  }
+    }
+
+    textarea {
+      min-height: $base-line-height * 6;
+    }
+
+    @include element(button) {
+    	display: block;
+    }
+  }
+}
+

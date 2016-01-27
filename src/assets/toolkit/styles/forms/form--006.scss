@@ -1,0 +1,105 @@
+$form006-input-border-width: $base-line-height / 10;
+$form006-input-border-color: #aaa;
+$form006-nav-color: #aaa;
+$form006-nav-color-active: #000;
+
+.m-wrapper {
+
+  @include block(form006) {
+    text-align: center;
+    position: relative;  
+    @include _(4 4 4 4 4, $gutter: center);
+
+    @include element(title) {
+      @include type-setting(sub-heading);
+      margin-bottom: $base-line-height;
+
+      @include _(greater than tablet) {
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(step) {
+      display: none;
+
+      @include modifier(active) {
+        display: block;
+      }
+    }
+
+    @include element(line) {
+      @include _(clear);
+    }
+
+    @include element(col) {
+      line-height: 0;
+      overflow: hidden;
+      margin-top: $base-line-height;
+
+      @include _(greater than tablet) {
+        margin-top: $base-line-height * 2;
+      }
+    }
+
+    @include element(title-step) {
+      @include type-setting(text);
+    }
+
+    @include element(label) {
+    	display: block;
+      margin-bottom: $base-line-height;
+      @include type-setting(text);
+    }
+
+    @include element(input) {
+    	resize: vertical;
+    	outline: none;
+    	@include type-setting(text);
+    	padding: $base-line-height - $form006-input-border-width;
+      border: $form006-input-border-width solid $form006-input-border-color;
+    	width: 100%;
+
+    	@include placeholder {
+		    @include type-setting(text);
+  			text-overflow: ellipsis;
+  		}
+
+		  @include placeholder-focus {
+		    color: transparent;
+		  }
+    }
+
+    textarea {
+      min-height: $base-line-height * 6;
+    }
+
+    @include element(text-info) {
+      @include type-setting(text);
+    }
+
+    @include element(nav) {
+      line-height: 0;
+    }
+
+    @include element(nav-step) {
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: $base-line-height * 2;
+      height: $base-line-height * 2;
+      border-radius: $base-line-height;
+      margin: 0 $base-line-height;
+      background: $form006-nav-color;
+      margin-top: $base-line-height;
+
+      @include _(greater than tablet) {
+        margin-top: $base-line-height * 2;
+      }
+
+      @include modifier(active) {
+        background: $form006-nav-color-active;
+      }
+    }
+  }
+}
+
