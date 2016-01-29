@@ -1,8 +1,7 @@
 {
-  "name": "fabricator",
-  "version": "1.2.2",
+  "name": "Frontend monster",
+  "version": "0.0.1",
   "description": "A tool for building website UI toolkits",
-  "homepage": "http://fbrctr.github.io/",
   "main": "README.md",
   "scripts": {
     "gulp": "gulp",
@@ -19,12 +18,8 @@
     "patterns",
     "library"
   ],
-  "author": "Luke Askew",
+  "author": "DevGroup.ru",
   "licenses": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fbrctr/fabricator.git"
-  },
   "engines": {
     "node": ">=0.10.0",
     "npm": ">=2.0.0"
