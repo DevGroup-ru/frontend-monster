@@ -21,7 +21,7 @@ $carousel-dot-fon-active: #000;
 		  -ms-transform: translate3d(0,0,0);
 		}
 
-	    @include block('item'){
+	    @include element('item'){
 	    	width: 100%;
 		    border: solid 1px gray;
 		    height: 200px;

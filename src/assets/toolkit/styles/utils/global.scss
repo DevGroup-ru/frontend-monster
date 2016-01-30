@@ -1,38 +1,51 @@
 body .m-wrapper {
+  // @group global
   @include block(g) {
+
+    // @desc No margin helper
     @include element(no-margin) {
+      // @desc No margin from bottom
       @include modifier(bottom) {
         margin-bottom: 0;
       }
+      // @desc No margin from top
       @include modifier(top) {
         margin-top: 0;
       }
+      // @desc No margin from both top and bottom
       @include modifier(top-bottom) {
         margin-top: 0;
         margin-bottom: 0;
       }
     }
 
+    // @desc Vertical rhythm one line margin helper
     @include element(one-line) {
+      // @desc One vertical rhythm line margin from top
       @include modifier(top) {
         margin-top: $base-line-height * 2;
       }
+      // @desc One vertical rhythm line margin from bottom
       @include modifier(bottom) {
         margin-bottom: $base-line-height * 2;
       }
+      // @desc One vertical rhythm line margin from both top and bottom
       @include modifier(top-bottom) {
         margin-top: $base-line-height * 6;
         margin-bottom: $base-line-height * 6;
       }
     }
 
-    @include element(element) {
+    // @desc Text alignment helper
+    @include element(text) {
       @include modifier(center) {
         text-align: center;
       }
     }
 
+    // @desc Nested grid helper
     @include element(grid-nested) {
+      // @desc Nested grid in half of parent(one-level)
       @include modifier(half) {
         @include _(3 3 2 4 4, 6 6 4 4 4);
       }
