@@ -2,9 +2,6 @@
   "block": "m-container",
   "content": {
     "block": "content001",
-    "mods": {
-      "foo": "bar"
-    },
     "row": true,
     "utils": [
       "one-line--top-bottom"
@@ -15,11 +12,8 @@
         "utils": [
           "no-margin--top"
         ],
-        "mods": [
-          "test",
-          "new"
-        ],
-        "content": "Наши преимущества"
+        "content": "Наши преимущества",
+        "editable": true
       },
       {
         "elem": "nested",
@@ -35,7 +29,8 @@
           },
           {
             "elem": "text",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!"
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
           }
         ]
       },
@@ -53,7 +48,8 @@
           },
           {
             "elem": "text",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!"
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
           }
         ]
       },
@@ -67,11 +63,12 @@
           {
             "elem": "title-nested",
             "content": "Классное преимущество, всем нравится",
-            "link": "/"
+            "link": true
           },
           {
             "elem": "text",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!"
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
           }
         ]
       },
@@ -85,11 +82,12 @@
           {
             "elem": "title-nested",
             "content": "Классное преимущество, всем нравится",
-            "link": "/"
+            "link": true
           },
           {
             "elem": "text",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!"
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
           }
         ]
       }
