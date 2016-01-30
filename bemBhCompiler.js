@@ -6,17 +6,30 @@ module.exports = function() {
   bh.match('$before', function(ctx, json) {
     // convert listed mods to mod->true
     if (json.mods) {
-
+      // for blocks
       if (json.mods.length > 1) {
         if (json.mods[0]) {
           var newMods = {};
           for (mod of json.mods) {
             newMods[mod] = true;
           }
+          //ctx.mods(newMods, true);
           json.mods = newMods;
         }
       }
-
+    }
+    if (json.elemMods) {
+      // for elements
+      if (json.elemMods.length > 1) {
+        if (json.elemMods[0]) {
+          var newElemMods = {};
+          for (mod of json.elemMods) {
+            newElemMods[mod] = true;
+          }
+          //ctx.mods(newMods, true);
+          json.elemMods = newElemMods;
+        }
+      }
     }
     // make icons
     if (json.icon) {

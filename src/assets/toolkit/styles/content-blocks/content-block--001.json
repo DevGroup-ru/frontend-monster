@@ -2,6 +2,9 @@
   "block": "m-container",
   "content": {
     "block": "content001",
+    "mods": {
+      "foo": "bar"
+    },
     "row": true,
     "utils": [
       "one-line--top-bottom"
@@ -11,6 +14,10 @@
         "elem": "title",
         "utils": [
           "no-margin--top"
+        ],
+        "mods": [
+          "test",
+          "new"
         ],
         "content": "Наши преимущества"
       },
@@ -24,7 +31,7 @@
           {
             "elem": "title-nested",
             "content": "Классное преимущество, всем нравится",
-            "link": "/"
+            "link": true
           },
           {
             "elem": "text",
@@ -42,7 +49,7 @@
           {
             "elem": "title-nested",
             "content": "Классное преимущество, всем нравится",
-            "link": "/"
+            "link": true
           },
           {
             "elem": "text",

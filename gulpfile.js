@@ -126,7 +126,7 @@ gulp.task('compile-bh', function() {
 });
 
 // assemble
-gulp.task('assemble', ['compile-bh'], function (done) {
+gulp.task('assemble'/*, ['compile-bh']*/, function (done) {
 	assemble({
 		logErrors: config.dev
 	});
