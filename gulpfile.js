@@ -16,7 +16,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('webpack');
-
+var bemBhCompiler = require('./bemBhCompiler');
 
 // configuration
 var config = {
@@ -118,10 +118,15 @@ gulp.task('libs', function() {
     .pipe(gulp.dest(config.dest + '/libs/'));
 });
 
-
+// compile bemjson to html
+gulp.task('compile-bh', function() {
+  return gulp.src('./src/assets/toolkit/styles/**/*.json')
+    .pipe(bemBhCompiler())
+    .pipe(gulp.dest('./src/materials/'));
+});
 
 // assemble
-gulp.task('assemble', function (done) {
+gulp.task('assemble', ['compile-bh'], function (done) {
 	assemble({
 		logErrors: config.dev
 	});
