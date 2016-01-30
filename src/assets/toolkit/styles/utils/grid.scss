@@ -60,16 +60,6 @@ html, body, .m-container {
 $full-row-configuration: 12 12 8 4 4;
 $half-row-configuration: 6 6 4 4 4;
 
-// Example blocks
-@include block(content) {
-  @include _(8 8 6 2 2);
-  background: red;
-}
-@include block(sidebar) {
-  @include _(4 4 2 2 2);
-  background: green;
-}
-
 // Reusable standard grid blocks
 
 @include block(grid-clear) {
