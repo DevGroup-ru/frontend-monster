@@ -6,7 +6,7 @@ $carousel-dot-fon-hover: #aaa;
 $carousel-dot-fon-active: #000;
 
 .m-wrapper{
-	.owl-carousel{
+	@include block(owl-carousel) {
 		clear: both;
 		overflow: hidden;
 		width: 100%;
