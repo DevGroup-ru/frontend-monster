@@ -17,6 +17,7 @@
       },
       {
         "elem": "nested",
+        "editableGroup": "nested-1",
         "content": [
           {
             "elem": "icon",
@@ -36,6 +37,7 @@
       },
       {
         "elem": "nested",
+        "editableGroup": "nested-2",
         "content": [
           {
             "elem": "icon",
@@ -55,6 +57,7 @@
       },
       {
         "elem": "nested",
+        "editableGroup": "nested-3",
         "content": [
           {
             "elem": "icon",
@@ -74,6 +77,7 @@
       },
       {
         "elem": "nested",
+        "editableGroup": "nested-4",
         "content": [
           {
             "elem": "icon",

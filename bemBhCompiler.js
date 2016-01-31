@@ -7,7 +7,7 @@ module.exports = function() {
     // convert listed mods to mod->true
     if (json.mods) {
       // for blocks
-      if (json.mods.length > 1) {
+      if (json.mods.length > 0) {
         if (json.mods[0]) {
           var newMods = {};
           for (mod of json.mods) {
@@ -20,13 +20,16 @@ module.exports = function() {
     }
     if (json.elemMods) {
       // for elements
-      if (json.elemMods.length > 1) {
+
+      if (json.elemMods.length > 0) {
+
         if (json.elemMods[0]) {
           var newElemMods = {};
           for (mod of json.elemMods) {
             newElemMods[mod] = true;
           }
           //ctx.mods(newMods, true);
+
           json.elemMods = newElemMods;
         }
       }
