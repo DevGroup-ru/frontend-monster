@@ -1,6 +1,7 @@
 var through = require('through2');
 var File = require('vinyl');
 var bh = new (require('bh').BH);
+bh.setOptions({ delimMod: '--' });
 
 module.exports = function() {
   bh.match('$before', function(ctx, json) {
