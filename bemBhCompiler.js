@@ -39,7 +39,7 @@ module.exports = function() {
       ctx.tag('span');
       if (json.icon === true) {
 
-        ctx.content('<span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>', true);
+        ctx.content('<span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>', true);
         ctx.cls('icon-project-color-001-consultation');
       }
     }
@@ -73,7 +73,10 @@ module.exports = function() {
       attrs['href'] = json.link === true ? '#' : json.link;
     }
 
-
+    if (json.image) {
+      ctx.tag('img');
+      attrs['src'] = json.image;
+    }
 
     if (json.block) {
       //$attrs['data-bem-match'] = $json->block . ($json->elem ? '__' . $json->elem : '');
