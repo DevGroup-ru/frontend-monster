@@ -1,0 +1,408 @@
+$header001-fon: transparent;
+$header001-menu-fon: #3b8a91;
+$header001-sub-menu-fon: #eee;
+
+  // @desc Header
+  // @group header
+  // @bemJson header--001.json
+
+.m-wrapper {
+
+  @include block(m-container) {
+    @include modifier(white) {
+      background: $header001-fon;
+    }
+  }
+
+  @include block(header001) {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+
+    @include element(wrap) {
+      position: relative;   
+    }   
+
+    @include element(logo-promo) { 
+
+      @include _(greater than tablet) {  
+        @include _(6 5 8 4 4); 
+        display: flex;
+        align-items: center;  
+      } 
+    }
+
+    @include element(burger) {
+      display: block;
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      @include _(1 1 1 1 1);
+      text-decoration: none;
+
+      i {
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than mobile) {  
+          font-size: $base-line-height * 4; 
+        }
+      }
+
+      @include _(greater than tablet) {  
+        display: none;
+      }
+    }
+
+    @include element(phone-button) {
+      text-decoration: none;
+      display: block;
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      @include _(1 1 1 1 1);
+
+      i {
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than mobile) {  
+          font-size: $base-line-height * 4; 
+        }
+      }
+
+      @include _(greater than tablet) {  
+        display: none;
+      }
+    }
+
+    @include element(phone-call) {
+      display: none;
+
+      @include modifier(show) {
+        display: block;
+        position: absolute;
+        top: $base-line-height * 8; 
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 5;
+      }
+
+      @include _(greater than tablet) {  
+        display: block;
+      }
+    }
+
+    @include element(phone) {
+      margin-top: $base-line-height * 3;
+      margin-bottom: $base-line-height * 3;
+      @include type-setting(section);
+      @include _(3 4 4 4 4);   
+    }
+
+    @include element(add-call) {
+      margin-top: $base-line-height * 3;
+      margin-bottom: $base-line-height * 3;
+      @include _(3 3 4 4 4);    
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        display: block;
+      }  
+    } 
+
+    @include element(logo) {
+      display: block;
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      background-image: url('../images/logo.jpg');
+      height: $base-line-height * 3; 
+      background-repeat: no-repeat;
+      background-position-x: 50%;
+      overflow: hidden;
+      @include _(5 10 6 2 2, $gutter: row); 
+      background-size: contain;
+      text-indent: 9999px;
+      text-align: center;
+
+      @include _(greater than mobile) {  
+        height: $base-line-height * 4; 
+      }
+
+      @include _(greater than tablet) {  
+        background-position-x: 0;
+        margin-top: $base-line-height * 3;
+        margin-bottom: $base-line-height * 3;
+      }
+    }
+
+    @include element(promotext) { 
+      @include type-setting(text); 
+      margin-left: $base-line-height * 2; 
+      display: none;
+
+      @include _(greater than desktop) {  
+        display: block;
+      }
+    }
+
+    @include element(menu-2lvl-item-back) { 
+      display: block;
+
+      @include _(greater than tablet) {  
+        display: none;
+      }
+    }
+
+    @include element(menu-1lvl-wrap) {
+      position: relative;
+      @include _(12 12 4 4 4);
+      left: -100%;
+      transition: left 0.3s ease-out 0s;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: $header001-menu-fon;
+        height: 1000%;
+        z-index: -1;
+      }
+
+      @include modifier(show) {
+        left: 0;
+        transition: left 0.3s ease-out 0s;
+      }
+
+      @include _(greater than tablet) { 
+        position: static; 
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    @include element(menu-1lvl) {
+      padding: 0;
+      list-style: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      background: $header001-menu-fon;
+      overflow: hidden;
+      height: 100vh;
+
+      @include _(greater than tablet) { 
+        height: auto; 
+        @include _(12 12 4 4 4);
+        display: block;
+        overflow: inherit;
+        background: transparent;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -400%;
+          width: 1000%;
+          background: $header001-menu-fon;
+          height: 100%;
+          z-index: -1;
+        }
+      }
+    }  
+
+    @include element(menu-1lvl-item) {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: block;
+      float: left;
+      text-align: left;
+      width: 100%;
+
+     @include _(greater than tablet) {  
+        width: auto;
+      }
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        display: block;
+        padding: $base-line-height * 2;
+        width: 100%;
+        @include type-setting(text);
+        color: #fff;
+        text-decoration: none;
+
+        @include _(greater than tablet) { 
+          padding: $base-line-height * 2; 
+          padding-left: 0;
+          padding-right: $base-line-height * 6;
+          width: auto;
+        }
+      }
+
+      &:hover {
+        @include _(greater than tablet) {
+          .header001__menu-2lvl {
+            display: block;
+          }
+        }
+      }
+    }  
+
+    @include element(menu-2lvl) {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 100%;
+      width: 100%;
+      background: $header001-menu-fon;
+      padding: 0;
+      z-index: 2;
+      height: 100vh;
+      overflow: scroll;
+      transition: left 0.3s ease-out 0s;
+
+      @include _(greater than tablet) {
+        left: 0;
+        height: auto;
+        overflow: inherit;
+        padding-top: $base-line-height * 2;
+        padding-bottom: $base-line-height * 4;
+        background: $header001-sub-menu-fon;
+      }
+
+      @include modifier(show) {
+        top: 0;
+        left: 0;
+        display: block;
+        transition: left 0.3s ease-out 0s;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -400%;
+        width: 1000%;
+        background: $header001-menu-fon;
+        height: 100%;
+        z-index: -1;
+        display: none;
+
+        @include _(greater than tablet) {
+          display: block;
+          background: $header001-sub-menu-fon;
+        }
+      }
+    } 
+
+    @include element(menu-2lvl-item) {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: left;
+
+      @include _(greater than tablet) {
+        @include _(4 4 8 4 4, $gutter: alpha);
+      }
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        @include type-setting(text);
+        color: #000;
+        text-decoration: none;
+        padding: $base-line-height * 2;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        @include _(greater than tablet) {
+          padding: $base-line-height 0;
+        }
+      }
+    }
+
+    @include modifier(fixed) {
+
+      @include _(greater than tablet) {  
+
+        .header001__logo-promo {
+          @include _(2 2 8 4 4);
+        }
+
+        .header001__logo {
+          @include _(12 12 8 4 4);
+          margin: 0;
+          background-position-y: 50%;
+          height: $base-line-height * 6;
+        }
+
+        .header001__promotext {
+          display: none;
+        }
+
+        .header001__phone {
+          display: none;
+        }
+
+        .header001__add-call {
+          float: right;
+          margin-top: $base-line-height;
+          margin-bottom: $base-line-height;
+        }
+
+        .header001__menu-1lvl-wrap {
+          @include _(7 7 8 4 4);
+          position: static;
+        }
+
+        .header001__menu-1lvl {
+          @include _(7 7 8 4 4);
+          position: static;
+
+          &:after {
+            display: none;
+          }
+
+          a,
+          a:link,
+          a:hover,
+          a:visited,
+          a:active,
+          a:focus,
+          button {
+            padding-right: $base-line-height * 3;
+            color: #000;
+          }
+        }
+
+        .header001__menu-2lvl {
+
+          li {
+            @include _(4 4 8 4 4, 12 12 8 4 4);
+          }
+        }
+      }
+    }
+  }
+}
