@@ -1,0 +1,101 @@
+$header002-fon: #3b8a91;
+$logo: 'logo.jpg';
+
+$header002-height: $base-line-height * 8;
+
+  // @desc Header - header with simple menu (menu--001)
+  // @group header
+  // @bemJson header--002.json
+
+.m-wrapper {
+
+  @include block(header002) {
+    text-align: center;
+    //position: fixed;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background: $header002-fon;
+    height: $header002-height;
+
+    @include element(wrap) {
+      position: relative;   
+      @include _(12 12 8 4 4); 
+    }   
+
+    @include element(burger) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-decoration: none;
+      z-index: 10;
+      width: 50%;
+      height: $header002-height;
+
+      @include _(greater than mobile) {  
+        width: 20%;
+      }
+
+      @include _(greater than desktop) {  
+        display: none;
+      }
+
+      i {
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than mobile) {  
+          font-size: $base-line-height * 4; 
+        }
+      }      
+    }
+
+    @include element(logo-wrap) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+
+      @include _(greater than mobile) {  
+        width: 20%;
+      }
+    }
+
+    @include element(logo) {
+      display: block;
+      background-image: url('../images/' + $logo);
+      background-repeat: no-repeat;
+      background-position-y: 50%;
+      background-size: contain;
+      max-width: $base-line-height * 300;
+      min-height: $base-line-height * 6; 
+      margin-top: $base-line-height; 
+      margin-bottom: $base-line-height; 
+      overflow: hidden;
+      text-indent: 9999px;
+      text-align: left;
+    }
+
+    @include element(menu) {
+      position: absolute;
+      top: $header002-height;
+      right: 0;
+      width: 80%;
+
+      @include _(greater than desktop) {  
+        top: 0;
+      }
+
+      .menu {
+        float: right;
+
+        @include _(greater than desktop) {  
+          float: left;
+        }
+      }
+    }
+  }
+}
