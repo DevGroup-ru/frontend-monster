@@ -41,7 +41,7 @@
                   {
                     "elem": "add-call-button",
                     "content": "Заказать звонок",
-                    "cls": "button-simple button-accent",
+                    "cls": "button-simple",
                     "editable": true,
                     "link": true
                   }

@@ -1,23 +1,24 @@
-$header002-fon: #3b8a91;
+$header003-fon: #3b8a91;
+$header003-user-fon: #eee;
 $logo: 'logo.jpg';
 
-$header002-height: $base-line-height * 8;
+$header003-height: $base-line-height * 8;
 
-  // @desc Header - header with simple menu (menu--001)
+  // @desc Header - header with mega and simple menu (menu--001)
   // @group header
-  // @bemJson header--002.json
+  // @bemJson header--003.json
 
 .m-wrapper {
 
-  @include block(header002) {
+  @include block(header003) {
     text-align: center;
     //position: fixed;
     position: static;
     top: 0;
     left: 0;
     width: 100%; 
-    background: $header002-fon;
-    height: $header002-height;
+    background: $header003-fon;
+    height: $header003-height;
 
     @include element(wrap) {
       position: relative;   
@@ -34,7 +35,7 @@ $header002-height: $base-line-height * 8;
       text-decoration: none;
       z-index: 10;
       width: 50%;
-      height: $header002-height;
+      height: $header003-height;
 
       @include _(greater than mobile) {  
         width: 20%;
@@ -61,6 +62,7 @@ $header002-height: $base-line-height * 8;
 
       @include _(greater than mobile) {  
         width: 20%;
+        margin-right: -20%;
       }
     }
 
@@ -81,7 +83,7 @@ $header002-height: $base-line-height * 8;
 
     @include element(menu) {
       position: absolute;
-      top: $header002-height;
+      top: $header003-height;
       right: 0;
       width: 100%;
       float: none;
@@ -89,7 +91,11 @@ $header002-height: $base-line-height * 8;
       @include _(greater than desktop) {  
         position: static;
         float: right;
-        width: 80%;
+        width: 100%;
+
+        & > div{
+          margin: 0 10% 0 20%;
+        }
 
         .menu001__1lvl-link,
         .menu001__1lvl-sub-link {
@@ -105,6 +111,56 @@ $header002-height: $base-line-height * 8;
         @include _(greater than desktop) {  
           float: left;
         }
+      }
+    }
+
+    @include element(search-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 5%;
+      width: 5%;
+      margin-left: -5%;
+      text-align: right;
+      text-decoration: none;
+      z-index: 10;
+      height: $header003-height;
+
+      i {
+        font-size: $base-line-height * 2; 
+      }  
+
+      @include _(greater than desktop) {  
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+
+    @include element(search-wrap) {
+      display: none;
+    }
+
+    @include element(user-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5%;
+      margin-left: -5%;
+      text-align: right;
+      text-decoration: none;
+      z-index: 10;
+      height: $header003-height;
+
+      i {
+        font-size: $base-line-height * 2; 
+      }  
+
+      @include _(greater than desktop) {  
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
       }
     }
   }

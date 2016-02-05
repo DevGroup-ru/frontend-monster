@@ -1,7 +1,7 @@
 {
   "block": "m-container",
   "content": {
-    "block": "header002",
+    "block": "header003",
     "content": [
       {
         "row": true,
@@ -32,6 +32,21 @@
                 "block": "menu001",
                 "content": [
                   {
+                    "block": "search-wrap-top",
+                    "content": [
+                      {
+                        "elem": "search-input",
+                        "html": "<input type='text' class='head_srch_input' name='Search' value='' placeholder='Введите данные для поиска' autocomplete='off'>"
+                      },
+                      {
+                        "elem": "search-button",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Найти"
+                      }
+                    ]
+                  },
+                  {
                     "elem": "1lvl-wrap",
                     "cls": "menu",
                     "content": [
@@ -44,7 +59,7 @@
                             "elem": "1lvl-sub-link",
                             "cls": "sub-link",
                             "editableGroup": "1lvl-link-1",
-                            "content": "Пункт 1 много слов много",
+                            "content": "Пункт 1",
                             "link": true
                           },
                           {
@@ -343,7 +358,7 @@
                         },
                         {
                         "elem": "1lvl-item",
-                        "cls": "sub-item",
+                        "cls": "sub-mega-item",
                         "editableGroup": "1lvl-item-3",
                         "content": [
                           {
@@ -355,7 +370,7 @@
                           },
                           {
                             "elem": "2lvl",
-                            "cls": "sub-menu",
+                            "cls": "sub-menu sub-menu--mega",
                             "editableGroup": "2lvl-3",
                             "content": [
                               {
@@ -418,6 +433,30 @@
                                       "link": true
                                     }
                                   ]
+                                },
+                                {
+                                  "elem": "2lvl-item",
+                                  "editableGroup": "2lvl-item-13",
+                                  "content": [
+                                    {
+                                      "elem": "2lvl-link",
+                                      "editableGroup": "2lvl-link-18",
+                                      "content": "Пункт 3",
+                                      "link": true
+                                    }
+                                  ]
+                                },
+                                {
+                                  "elem": "2lvl-item",
+                                  "editableGroup": "2lvl-item-14",
+                                  "content": [
+                                    {
+                                      "elem": "2lvl-link",
+                                      "editableGroup": "2lvl-link-19",
+                                      "content": "Пункт 4",
+                                      "link": true
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -447,7 +486,7 @@
                                   {
                                     "elem": "2lvl-link",
                                     "cls": "menu-item-back",
-                                    "editableGroup": "2lvl-link-18",
+                                    "editableGroup": "2lvl-link-20",
                                     "content": "Назад",
                                     "link": true
                                   }
@@ -459,7 +498,7 @@
                                 "content": [
                                     {
                                       "elem": "2lvl-link",
-                                      "editableGroup": "2lvl-link-19",
+                                      "editableGroup": "2lvl-link-21",
                                       "content": "Пункт 1",
                                       "link": true
                                     }
@@ -471,7 +510,7 @@
                                   "content": [
                                     {
                                       "elem": "2lvl-link",
-                                      "editableGroup": "2lvl-link-20",
+                                      "editableGroup": "2lvl-link-22",
                                       "content": "Пункт 2",
                                       "link": true
                                     }
@@ -483,7 +522,7 @@
                                   "content": [
                                     {
                                       "elem": "2lvl-link",
-                                      "editableGroup": "2lvl-link-21",
+                                      "editableGroup": "2lvl-link-23",
                                       "content": "Пункт 3",
                                       "link": true
                                     }
@@ -506,10 +545,37 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "block": "user-wrap-bottom",
+                    "content": [
+                      {
+                        "elem": "sign-link",
+                        "link": true,
+                        "content": "Войти"
+                      },
+                      {
+                        "elem": "registration-link",
+                        "link": true,
+                        "content": "Зарегистрироваться"
+                      }
+                    ]
                   }
                 ]
               }
               ]
+              },
+              {
+                "elem": "search-icon",
+                "cls": "header-search-icon",
+                "link": true,
+                "html": "<i class='demo-icon icon-basic-search'></i>"
+              },
+              {
+                "elem": "user-icon",
+                "cls": "header-user-icon",
+                "link": true,
+                "html": "<i class='demo-icon icon-basic-lock'></i>"
               }
             ]
           }

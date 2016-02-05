@@ -1,5 +1,7 @@
 $menu001-item-num: 5; //write the number of menu items
+$menu001-sub-item-num: 4; //write the number of sub-menu items
 $menu001-fon: #3b8a91;
+$menu001-item-hover: #33777d;
 $menu001-sub-fon: #eee;
 $menu001-sub-fon-hover: #aaa;
 
@@ -9,7 +11,7 @@ $menu001-sub-fon-hover: #aaa;
 
 .m-wrapper {
 
-  @include block(menu) {
+  @include block(menu-mobile) {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
@@ -17,7 +19,6 @@ $menu001-sub-fon-hover: #aaa;
     @include modifier(show) {
       opacity: 1;
       visibility: visible;
-      background: $menu001-sub-fon;
       transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
     }
 
@@ -25,6 +26,78 @@ $menu001-sub-fon-hover: #aaa;
       opacity: 1;
       visibility: visible;
     }  
+
+    .menu {
+      background: $menu001-sub-fon;
+    }
+  }
+
+  @include block(user-wrap-bottom) {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: $menu001-sub-fon;
+    text-align: left;
+
+    @include _(greater than mobile) {  
+      width: 50%;
+    }
+
+    @include _(greater than tablet) {  
+      width: 25%;
+    }
+
+    @include _(greater than desktop) {  
+      display: none;
+    }
+
+    @include element(sign-link) {
+      display: block;
+      padding: $base-line-height * 2;
+      width: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+
+      &:hover {
+        background: $menu001-item-hover;
+      }
+    }
+
+    @include element(registration-link) {
+      display: block;
+      padding: $base-line-height * 2;
+      width: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+
+      &:hover {
+        background: $menu001-item-hover;
+      }
+    }
+  }
+
+  @include block(search-wrap-top) {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: $menu001-sub-fon;
+    text-align: left;
+
+    @include _(greater than mobile) {  
+      width: 50%;
+    }
+
+    @include _(greater than tablet) {  
+      width: 25%;
+    }
+
+    @include _(greater than desktop) {  
+      display: none;
+    }
   }
 
   @include block(menu001) {
@@ -100,17 +173,26 @@ $menu001-sub-fon-hover: #aaa;
         text-decoration: none;
 
         @include _(greater than desktop) { 
-          padding: $base-line-height * 3;
+          display: flex;
+          align-items: center;
           padding-right: $base-line-height * 4;
           width: auto;
+        }
+
+        &:hover {
+          background: $menu001-item-hover;
         }
       }
 
       &:hover {
+        background: $menu001-item-hover;
+
         @include _(greater than desktop) {
           & > .sub-menu {
-            display: block;
+            opacity: 1;
+            visibility: visible;
             overflow: inherit;
+            transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
           }
         }
       }
@@ -131,6 +213,10 @@ $menu001-sub-fon-hover: #aaa;
         height: auto;
         overflow: inherit;
         width: 100%;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
       }
     } 
 
@@ -161,9 +247,13 @@ $menu001-sub-fon-hover: #aaa;
       }
 
       &:hover {
+        background: $menu001-sub-fon-hover;
+
         @include _(greater than desktop) {
           & > .sub-menu {
-            display: block;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
           }
         }
       }
@@ -227,10 +317,16 @@ $menu001-sub-fon-hover: #aaa;
     }
   }
 
-
   @include block(sub-menu) {
     display: none;
     overflow: hidden;
+
+    @include _(greater than desktop) {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+    }
     
     @include modifier(show) {
       display: block;
@@ -240,6 +336,15 @@ $menu001-sub-fon-hover: #aaa;
     @include modifier(scroll) {
       overflow: auto;
       position: absolute;
+    }
+
+    @include modifier(mega) {
+      @include _(greater than desktop) {
+        .menu001__2lvl-item {
+          width: calculate-width($menu001-sub-item-num);
+          float: left;
+        }
+      }
     }
   }
 
@@ -265,6 +370,18 @@ $menu001-sub-fon-hover: #aaa;
   }
 
   @include block(sub-item) {
+    &:hover > .sub-link {
+      &:after {
+        content: "\e816";
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include block(sub-mega-item) {
+    position: static;
+    overflow: hidden;
+
     &:hover > .sub-link {
       &:after {
         content: "\e816";
