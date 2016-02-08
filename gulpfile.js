@@ -17,6 +17,8 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('webpack');
 var bemBhCompiler = require('./bemBhCompiler');
+var debug = require('gulp-debug');
+var watch = require('gulp-watch');
 
 // configuration
 var config = {
@@ -40,7 +42,6 @@ var config = {
 // webpack
 var webpackConfig = require('./webpack.config')(config);
 var webpackCompiler = webpack(webpackConfig);
-
 
 // clean
 gulp.task('clean', function (cb) {
@@ -126,7 +127,7 @@ gulp.task('compile-bh', function() {
 });
 
 // assemble
-gulp.task('assemble', ['compile-bh'], function (done) {
+gulp.task('assemble', function (done) {
 	assemble({
 		logErrors: config.dev
 	});
@@ -164,8 +165,35 @@ gulp.task('serve', function () {
 		}
 	}
 
+  gulp.task('compile-bh:watch', ['compile-bh']);
+  gulp.watch('src/assets/toolkit/styles/**/*.json', ['compile-bh:watch']);
+
 	gulp.task('assemble:watch', ['assemble'], reload);
-	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
+
+  var assembleTimer = null;
+  var assembleIntervalMs = 1000;
+
+  watch('src/**/*.{html,md,yml}', {verbose: config.dev}, function() {
+    if (assembleTimer === null) {
+      console.log('Setting timeout');
+      assembleTimer = setTimeout(function() {
+        console.log('Assembling');
+        var start = Date.now();
+        assemble({
+          logErrors: config.dev
+        });
+        console.log('Assembled ^_^ in ' + (Date.now() - start) + ' ms.');
+        assembleTimer = null;
+      }, assembleIntervalMs);
+    }
+  });
+
+
+	//gulp.watch('src/**/*.{html,md,yml}', watchOpts, ['assemble:watch']);
+  //gulp.watch('src/**/*', watchOpts, function(event) {
+   // console.log('watcher!');
+   // console.log(event);
+  //});
 
 	gulp.task('styles:fabricator:watch', ['styles:fabricator']);
 	gulp.watch('src/assets/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);

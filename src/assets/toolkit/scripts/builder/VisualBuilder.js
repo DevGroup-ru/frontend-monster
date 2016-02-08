@@ -18,6 +18,7 @@ class VisualBuilder {
       }
     }
     this.settings = settings;
+
   }
 }
 
