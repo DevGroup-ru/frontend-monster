@@ -1,0 +1,89 @@
+<div class="monster-visual-builder" data-bem-match="monster-visual-builder"><div class="monster-visual-builder__top-pane" data-bem-match="monster-visual-builder__top-pane"><div class="resolution-switcher" data-bem-match="resolution-switcher"><a class="resolution-switcher__resolution-link resolution-switcher__resolution-link--active" data-resolution-width="100%" data-bem-match="resolution-switcher__resolution-link">100%</a><a class="resolution-switcher__resolution-link" data-resolution-width="83.9375em" title="desktop-wide" data-bem-match="resolution-switcher__resolution-link">dw</a><a class="resolution-switcher__resolution-link" data-resolution-width="74.9375em" title="desktop" data-bem-match="resolution-switcher__resolution-link">d</a><a class="resolution-switcher__resolution-link" data-resolution-width="59.9375em" title="tablet" data-bem-match="resolution-switcher__resolution-link">t</a><a class="resolution-switcher__resolution-link" data-resolution-width="39.9375em" title="mobile" data-bem-match="resolution-switcher__resolution-link">m</a></div></div><div class="monster-visual-builder__left-pane" data-bem-match="monster-visual-builder__left-pane"><div class="monster-stackable-container" data-bem-match="monster-stackable-container">Stackable here</div><div class="monster-section-selector" data-bem-match="monster-section-selector"><div></div></div></div><iframe class="monster-visual-frame" src="/" data-bem-match="monster-visual-frame"></iframe></div>
+<div class="f-item-code" data-f-toggle="code">BEM JSON<pre class=" language-markup">{
+  "block": "monster-visual-builder",
+  "content": [
+    {
+      "elem": "top-pane",
+      "content": [
+        {
+          "block": "resolution-switcher",
+          "content": [
+            {
+              "elem": "resolution-link",
+              "mods": ["active"],
+              "content": "100%",
+              "tag": "a",
+              "attrs": {
+                "data-resolution-width": "100%"
+              }
+            },
+            {
+              "elem": "resolution-link",
+              "content": "dw",
+              "tag": "a",
+              "attrs": {
+                "data-resolution-width": "83.9375em",
+                "title": "desktop-wide"
+              }
+            },
+            {
+              "elem": "resolution-link",
+              "content": "d",
+              "tag": "a",
+              "attrs": {
+                "data-resolution-width": "74.9375em",
+                "title": "desktop"
+              }
+            },
+            {
+              "elem": "resolution-link",
+              "content": "t",
+              "tag": "a",
+              "attrs": {
+                "data-resolution-width": "59.9375em",
+                "title": "tablet"
+              }
+            },
+            {
+              "elem": "resolution-link",
+              "content": "m",
+              "tag": "a",
+              "attrs": {
+                "data-resolution-width": "39.9375em",
+                "title": "mobile"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "elem": "left-pane",
+      "content": [
+        {
+          "block": "monster-stackable-container",
+          "content": "Stackable here"
+        },
+        {
+          "block": "monster-section-selector",
+          "content":
+            {
+              "repeatable": {
+                "block": "monster-section-selector",
+                "elem": "section-link",
+                "iterateOver": "sections"
+              }
+            }
+
+        }
+      ]
+    },
+    {
+      "block": "monster-visual-frame",
+      "tag": "iframe",
+      "attrs": {
+        "src": "/"
+      }
+    }
+  ]
+}</pre></div>

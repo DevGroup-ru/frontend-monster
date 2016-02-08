@@ -1,0 +1,112 @@
+$top-pane-height: 40px;
+$left-pane-width: 64px;
+$base-z-index: 12000;
+
+$editor-base-bg: #1E1B35;
+$editor-light-bg: #3B3752;
+
+$editor-text-color: #F7F7FC;
+$editor-inactive-color: #666773;
+$editor-link-color: #3FB2FF;
+$editor-section-color: #4FD18A;
+$editor-accent-color: #EC5035;
+
+.m-wrapper {
+  // @group internal
+  // @desc Monster visual builder block
+  // @bemJson visual-builder.json
+  @include block(monster-visual-builder) {
+    line-height: $base-line-height * 2;
+    font-size: $base-font-size;
+    z-index: $base-z-index;
+
+    @include element(top-pane) {
+      position: fixed;
+      top: 0;
+      right:0;
+      left: 0;
+      line-height: $top-pane-height;
+      height: $top-pane-height;
+      padding-left: $left-pane-width;
+      background: $editor-light-bg;
+    }
+
+
+    @include element(left-pane) {
+      background: $editor-base-bg;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: $left-pane-width;
+    }
+
+  }
+
+  // @group internal
+  // @desc Stackable container for dynamic editor tools
+  @include block(monster-stackable-container) {
+    background: $editor-light-bg;
+    position: fixed;
+    left: $left-pane-width;
+    top: $top-pane-height;
+    bottom: 0;
+    min-width: 200px;
+  }
+
+  // @group internal
+  // @desc Selects current toolbox section
+  @include block(monster-section-selector) {
+
+    // @group internal
+    // @desc Exact section link
+    // @bemJson section-link.json
+    @include element(section-link) {
+      text-align: center;
+      width: $left-pane-width;
+      height: $left-pane-width;
+      line-height: $left-pane-width;
+      color: $editor-inactive-color;
+      cursor: pointer;
+      text-decoration: none;
+
+      @include modifier(active) {
+        color: $editor-text-color;
+      }
+    }
+  }
+
+  // @group internal
+  // @desc Guess what? It switches resolution!
+  @include block(resolution-switcher) {
+    background: $editor-text-color;
+    float: left;
+    padding: 0 20px;
+
+    @include element(resolution-link) {
+      color: $editor-base-bg;
+      cursor: pointer;
+
+      @include modifier(active) {
+        color: $editor-link-color;
+      }
+    }
+  }
+
+  // @group internal
+  @include block(monster-visual-frame) {
+    position: fixed;
+    right: 10px;
+    top: $top-pane-height+1px;
+    height: 90%;
+    outline: 1px solid $editor-inactive-color;
+    min-width: 340px;
+    background: #fff;
+    width: 990px;
+    border: 0;
+  }
+
+
+
+
+}
