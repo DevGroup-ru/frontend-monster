@@ -9,13 +9,18 @@
 
 @import "components/components";
 
+
+@import "visual-builder/visual-builder";
+
+
 @import "content-blocks/content-blocks";
 @import "main-sliders/main-slider";
 @import "reviews/reviews";
 @import "news/news";
 @import "employees/employees";
 @import "forms/forms";
-@import "visual-builder/visual-builder";
+@import "header/header";
+@import "menu/menu";
 
 body {
 	font-family: sans-serif;

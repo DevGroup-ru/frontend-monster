@@ -109,7 +109,7 @@ $font-color-path-7: rgb(156, 156, 157);
   content: "\e801";
 }
 
-.icon-basic-arrow-left:before {
+%icon-basic-arrow-left:before {
   content: "\e802";
 }
 
@@ -195,6 +195,22 @@ $font-color-path-7: rgb(156, 156, 157);
 
 .icon-basic-download:before {
   content: "\e817";
+}
+
+.icon-basic-menu:before {
+  content: "\e818";
+}
+
+.icon-basic-phone:before {
+  content: "\e819";
+}
+
+.icon-basic-search:before {
+  content: "\e81a";
+}
+
+.icon-basic-lock:before {
+  content: "\e81b";
 }
 
 .icon-select-alph-up:before {

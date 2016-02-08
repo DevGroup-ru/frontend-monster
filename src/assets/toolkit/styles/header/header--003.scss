@@ -1,0 +1,167 @@
+$header003-fon: #3b8a91;
+$header003-user-fon: #eee;
+$logo: 'logo.jpg';
+
+$header003-height: $base-line-height * 8;
+
+  // @desc Header - header with mega and simple menu (menu--001)
+  // @group header
+  // @bemJson header--003.json
+
+.m-wrapper {
+
+  @include block(header003) {
+    text-align: center;
+    //position: fixed;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background: $header003-fon;
+    height: $header003-height;
+
+    @include element(wrap) {
+      position: relative;   
+      @include _(12 12 8 4 4); 
+    }   
+
+    @include element(burger) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-decoration: none;
+      z-index: 10;
+      width: 50%;
+      height: $header003-height;
+
+      @include _(greater than mobile) {  
+        width: 20%;
+      }
+
+      @include _(greater than desktop) {  
+        display: none;
+      }
+
+      i {
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than mobile) {  
+          font-size: $base-line-height * 4; 
+        }
+      }      
+    }
+
+    @include element(logo-wrap) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+
+      @include _(greater than mobile) {  
+        width: 20%;
+        margin-right: -20%;
+      }
+    }
+
+    @include element(logo) {
+      display: block;
+      background-image: url('../images/' + $logo);
+      background-repeat: no-repeat;
+      background-position-y: 50%;
+      background-size: contain;
+      max-width: $base-line-height * 300;
+      min-height: $base-line-height * 6; 
+      margin-top: $base-line-height; 
+      margin-bottom: $base-line-height; 
+      overflow: hidden;
+      text-indent: 9999px;
+      text-align: left;
+    }
+
+    @include element(menu) {
+      position: absolute;
+      top: $header003-height;
+      right: 0;
+      width: 100%;
+      float: none;
+
+      @include _(greater than desktop) {  
+        position: static;
+        float: right;
+        width: 100%;
+
+        & > div{
+          margin: 0 10% 0 20%;
+        }
+
+        .menu001__1lvl-link,
+        .menu001__1lvl-sub-link {
+          min-height: $header002-height;
+          max-height: $header002-height;
+          overflow: hidden;
+        }
+      }
+
+      .menu {
+        float: right;
+
+        @include _(greater than desktop) {  
+          float: left;
+        }
+      }
+    }
+
+    @include element(search-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 5%;
+      width: 5%;
+      margin-left: -5%;
+      text-align: right;
+      text-decoration: none;
+      z-index: 10;
+      height: $header003-height;
+
+      i {
+        font-size: $base-line-height * 2; 
+      }  
+
+      @include _(greater than desktop) {  
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+
+    @include element(search-wrap) {
+      display: none;
+    }
+
+    @include element(user-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5%;
+      margin-left: -5%;
+      text-align: right;
+      text-decoration: none;
+      z-index: 10;
+      height: $header003-height;
+
+      i {
+        font-size: $base-line-height * 2; 
+      }  
+
+      @include _(greater than desktop) {  
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+  }
+}
