@@ -32,17 +32,22 @@
                 "block": "menu001",
                 "content": [
                   {
-                    "block": "search-wrap-top",
+                    "block": "block-on-menu",
                     "content": [
                       {
-                        "elem": "search-input",
-                        "html": "<input type='text' class='head_srch_input' name='Search' value='' placeholder='Введите данные для поиска' autocomplete='off'>"
-                      },
-                      {
-                        "elem": "search-button",
-                        "link": true,
-                        "cls": "button-simple",
-                        "content": "Найти"
+                        "block": "search",
+                        "content": [
+                          {
+                            "elem": "input-wrap",
+                            "html": "<input type='text' class='search__input' name='Search' value='' placeholder='Введите данные для поиска' autocomplete='off'>"
+                          },
+                          {
+                            "elem": "button",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Найти"
+                          }
+                        ]
                       }
                     ]
                   },
@@ -547,17 +552,22 @@
                     ]
                   },
                   {
-                    "block": "user-wrap-bottom",
+                    "block": "block-bottom-menu",
                     "content": [
                       {
-                        "elem": "sign-link",
-                        "link": true,
-                        "content": "Войти"
-                      },
-                      {
-                        "elem": "registration-link",
-                        "link": true,
-                        "content": "Зарегистрироваться"
+                        "block": "header-user",
+                        "content": [
+                          {
+                            "elem": "sign-link",
+                            "link": true,
+                            "content": "Войти"
+                          },
+                          {
+                            "elem": "registration-link",
+                            "link": true,
+                            "content": "Зарегистрироваться"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -568,8 +578,7 @@
               {
                 "elem": "search-icon",
                 "cls": "header-search-icon",
-                "link": true,
-                "html": "<i class='demo-icon icon-basic-search'></i>"
+                "link": true
               },
               {
                 "elem": "user-icon",

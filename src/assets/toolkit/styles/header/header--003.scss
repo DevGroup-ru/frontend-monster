@@ -126,10 +126,6 @@ $header003-height: $base-line-height * 8;
       z-index: 10;
       height: $header003-height;
 
-      i {
-        font-size: $base-line-height * 2; 
-      }  
-
       @include _(greater than desktop) {  
         display: flex;
         justify-content: flex-end;

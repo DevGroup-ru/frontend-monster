@@ -14,6 +14,28 @@ $(function() {
       $('[class="'+menuView+'"]').css('display','block');
   });
 
+  //open/close header search
+
+  $('.header-search-icon').click(function(){
+    if ($(this).hasClass('header-search-icon--selected')) { 
+      $('.header-search-icon').removeClass('header-search-icon--selected');
+      $('.search').fadeOut();
+    } else{
+      $('.header-search-icon').addClass('header-search-icon--selected');
+      $('.search').fadeIn();
+      $('.search__input').focus();
+    };
+    return false;
+  });
+
+  $(document).click( function(event){
+    if( $(event.target).closest('.search').length ) 
+      return;
+      $('.header-search-icon').removeClass('header-search-icon--selected');
+      $('.search').fadeOut();
+      event.stopPropagation();
+  });
+
   //open/close mobile menu
 
   var menuBurger = false; 

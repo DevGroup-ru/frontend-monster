@@ -6,6 +6,8 @@
   }
 }
 
+// @desc Fix of vertical rhythm
+
 @mixin border-setting($border, $padding) {
 	padding: $padding - $border;
 }
@@ -46,10 +48,18 @@
   }
 }
 
+// @desc not sure that will be used
+
 @function set-notification-text-color($color) {
 	@if (lightness($color) > 50) {
   	@return #000000;
 	} @else {
   	@return #ffffff;
 	}
+}
+
+// @desc Calculate of width menu
+
+@function calculate-width ($menu-item) {
+  @return 100% / $menu-item;
 }
