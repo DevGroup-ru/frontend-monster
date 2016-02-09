@@ -1,9 +1,18 @@
 import VisualBuilder from './builder/VisualBuilder';
+import VisualFrame from './builder/VisualFrame';
+import HashApi from './utils/HashApi';
 
 class FrontendMonster {
-  construct() {
+  constructor() {
     this.params();
-    this.visualBulder = new VisualBuilder();
+    this.visualBulder = null;
+    this.hashApi = new HashApi();
+
+    if (window.parent !== window && window.parent.FrontendMonster) {
+      if (window.parent.FrontendMonster.hasBuilder) {
+        this.VisualFrame = new VisualFrame();
+      }
+    }
   }
 
   /**
@@ -11,7 +20,18 @@ class FrontendMonster {
    * @returns VisualBuilder
    */
   get builder() {
+    if (this.visualBulder === null) {
+      this.visualBulder = new VisualBuilder();
+    }
     return this.visualBulder;
+  }
+
+  /**
+   * If this FrontendMonster instance has Visual Builder on page
+   * @returns {boolean}
+   */
+  get hasBuilder() {
+    return this.builder.$builder.length === 1;
   }
 
   /**

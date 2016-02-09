@@ -1,6 +1,6 @@
 $(function() {
   "use strict";	
-
+try {
 	$('.main-carousel--001').owlCarousel({
 	  loop:true,
 	  margin:10,
@@ -89,4 +89,6 @@ $(function() {
 	        }
 	    }
 	});
+} catch (e) {
+}
 });

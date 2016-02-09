@@ -82,7 +82,7 @@
       
       "tag": "iframe",
       "attrs": {
-        "src": "/"
+        "src": "/#hashApi:%5B%7B%22func%22%3A%22VisualFrame-init%22%2C%22args%22%3A%7B%7D%7D%5D:/hashApi"
       }
     }
   ]

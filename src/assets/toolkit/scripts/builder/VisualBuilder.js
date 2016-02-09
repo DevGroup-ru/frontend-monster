@@ -1,6 +1,7 @@
 class VisualBuilder {
-  construct() {
+  constructor() {
     this.params();
+    this.resolutionSwitcher();
   }
 
   /**
@@ -10,7 +11,8 @@ class VisualBuilder {
   params() {
     const userSettings = window.VisualBuilderSettings || {};
     const settings = {
-      'element-selector': '.visual-builder',
+      'element-selector': '.monster-visual-builder',
+      'frame-selector': '.monster-visual-frame',
     };
     for (const key in userSettings) {
       if (userSettings.hasOwnProperty(key)) {
@@ -18,7 +20,19 @@ class VisualBuilder {
       }
     }
     this.settings = settings;
+    this.$builder = $(this.settings['element-selector']);
+  }
 
+  resolutionSwitcher() {
+    const that = this;
+    const bemBlock = 'resolution-switcher__resolution-link';
+    const activeModifier = `${bemBlock}--active`;
+    const $resolutionLinks = $(`.${bemBlock}`);
+    $resolutionLinks.click(function callback() {
+      $resolutionLinks.removeClass(activeModifier);
+      $(that.settings['frame-selector']).width($(this).data('resolutionWidth'));
+      $(this).addClass(activeModifier);
+    });
   }
 }
 
