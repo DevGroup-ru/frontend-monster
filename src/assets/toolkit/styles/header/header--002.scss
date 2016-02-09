@@ -44,7 +44,7 @@ $header002-height: $base-line-height * 8;
         display: none;
       }
 
-      i {
+      &:before {
         font-size: $base-line-height * 3; 
 
         @include _(greater than mobile) {  

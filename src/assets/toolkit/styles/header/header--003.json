@@ -22,20 +22,21 @@
               {
                 "elem": "burger",
                 "cls": "menu-burger",
-                "link": true,
-                "html": "<i class='demo-icon icon-basic-menu'></i>"
+                "link": true
               },
               {
                 "elem": "menu",
                 "content": [
                 {
                 "block": "menu001",
+                "mods": ["mobile-right"],
                 "content": [
                   {
                     "block": "block-on-menu",
                     "content": [
                       {
                         "block": "search",
+                        "mods": ["overmenu"],
                         "content": [
                           {
                             "elem": "input-wrap",
@@ -577,6 +578,7 @@
               },
               {
                 "elem": "search-icon",
+                "mods": ["overmenu"],
                 "cls": "header-search-icon",
                 "link": true
               },

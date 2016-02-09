@@ -22,14 +22,14 @@
               {
                 "elem": "burger",
                 "cls": "menu-burger",
-                "link": true,
-                "html": "<i class='demo-icon icon-basic-menu'></i>"
+                "link": true
               },
               {
                 "elem": "menu",
                 "content": [
                 {
                 "block": "menu001",
+                "mods": ["mobile-right"],
                 "content": [
                   {
                     "elem": "1lvl-wrap",
