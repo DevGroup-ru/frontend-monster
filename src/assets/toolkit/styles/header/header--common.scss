@@ -8,9 +8,18 @@ $menu001-sub-fon-hover: #aaa;
 $header-search-input-border-width: $base-line-height / 10;
 $header-search-input-border-color: #aaa;
 
-  // @desc Menu - simple one-column menu
-  // @group menu
-  // @bemJson menu--001.json
+$header-search-icon: "\e81a";
+$header-search-icon-close: "\e808";
+
+$header-burger-icon: "\e818";
+$header-burger-icon-close: "\e808";
+
+$header-mobile-breakpoint: desktop;
+
+
+// @desc Menu - simple one-column menu
+// @group menu
+// @bemJson menu--001.json
 
 .m-wrapper {
 
@@ -25,7 +34,7 @@ $header-search-input-border-color: #aaa;
       transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
     }
 
-    @include _(greater than desktop) {  
+    @include _(greater than $header-mobile-breakpoint) {  
       opacity: 1;
       visibility: visible;
     }  
@@ -35,35 +44,37 @@ $header-search-input-border-color: #aaa;
     }
   }
 
+  @include block(menu-burger) {
+    &:before{
+      @extend %basic-icon;
+      content: $header-burger-icon;
+    }  
+
+    @include modifier(selected) {
+      &:before{
+        content: $header-burger-icon-close;
+      }
+    }
+  }
+
   @include block(block-bottom-menu) {
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
     background: $menu001-sub-fon;
     text-align: left;
 
-    @include _(greater than mobile) {  
-      width: 50%;
-    }
-
-    @include _(greater than tablet) {  
-      width: 25%;
-    }
-
-    @include _(greater than desktop) {  
+    @include _(greater than $header-mobile-breakpoint) {  
       display: none;
     }
   }
 
   @include block(header-user) {
-   @include element(sign-link) {
+
+    @include element(sign-link) {
       display: block;
       padding: $base-line-height * 2;
       width: 100%;
       @include type-setting(text);
       text-decoration: none;
+      overflow: hidden;
 
       &:hover {
         background: $menu001-item-hover;
@@ -76,6 +87,7 @@ $header-search-input-border-color: #aaa;
       width: 100%;
       @include type-setting(text);
       text-decoration: none;
+      overflow: hidden;
 
       &:hover {
         background: $menu001-item-hover;
@@ -84,45 +96,45 @@ $header-search-input-border-color: #aaa;
   }
 
   @include block(block-on-menu) { 
-    width: 50%;
-
-    @include _(greater than tablet) {  
-      width: 25%;
-    }
-
-    @include _(greater than desktop) {  
-      width: 100%;
-    }
+    width: 100%;
   }
 
   @include block(header-search-icon) {
     &:before{
       @extend %basic-icon;
-      content: "\e81a";
+      content: $header-search-icon;
       font-size: $base-line-height * 2; 
     }  
 
     @include modifier(selected) {
       &:before{
-        content: "\e808";
+        content: $header-search-icon-close;
       }
     }
   }
 
   @include block(search) {
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
     background: $menu001-sub-fon;
     text-align: left;
     padding: $base-line-height * 2;
+    overflow: hidden;
 
-    @include element(input-wrap) {
-      width: 90%;
+    @include _(greater than $header-mobile-breakpoint) {  
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      right: 0;
+    }
+
+    @include element(input-wrap) {  
+      width: 100%;
+      margin-right: 0;
       float: left;
-      margin-right: 10%;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        width: 90%;
+        margin-right: 10%;
+      }
     }
 
     @include element(input) {
@@ -147,40 +159,64 @@ $header-search-input-border-color: #aaa;
       width: 10%;
       margin-left: -10%;
       min-width: auto;
+      display: none;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: inline-block;
+      }
     }
 
-    @include _(greater than desktop) {  
+    @include _(greater than $header-mobile-breakpoint) {  
       display: none;
     }
 
-    @include modifier(search-over-menu) {
-      top: 0;
+    @include modifier(overmenu) {
       z-index: 11;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        top: 0;
+      }
+
+      .search__input-wrap {
+        width: 100%;
+
+        @include _(greater than $header-mobile-breakpoint) {  
+          width: 85%;
+        }
+      }
     }
   }
 
   @include block(menu001) {
     text-align: center;
-    //position: fixed;
-    position: static;
-    top: 0;
-    left: 0;
+    width: 100%;
+
+    @include _(greater than mobile) {  
+      width: 50%;
+    }
+
+    @include _(greater than tablet) {  
+      width: 25%;
+    }
+
+    @include _(greater than $header-mobile-breakpoint) {  
+      width: auto;
+    }
+
+    @include modifier(mobile-right) {  
+      float: right;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+       float: none;
+      }
+    }
 
     @include element(1lvl-wrap) {
       position: relative;
-      width: 100%;
       float: left;
       overflow: hidden;
 
-      @include _(greater than mobile) {  
-        width: 50%;
-      }
-
-      @include _(greater than tablet) {  
-        width: 25%;
-      }
-
-      @include _(greater than desktop) { 
+      @include _(greater than $header-mobile-breakpoint) { 
         position: static; 
         width: 100%;
         overflow: inherit;
@@ -213,7 +249,7 @@ $header-search-input-border-color: #aaa;
       text-align: left;
       width: 100%;
 
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         position: relative;
         width: calculate-width($menu001-item-num);
       }
@@ -231,10 +267,9 @@ $header-search-input-border-color: #aaa;
         @include type-setting(text);
         text-decoration: none;
 
-        @include _(greater than desktop) { 
+        @include _(greater than $header-mobile-breakpoint) { 
           display: flex;
           align-items: center;
-          padding-right: $base-line-height * 4;
           width: auto;
         }
 
@@ -246,7 +281,7 @@ $header-search-input-border-color: #aaa;
       &:hover {
         background: $menu001-item-hover;
 
-        @include _(greater than desktop) {
+        @include _(greater than $header-mobile-breakpoint) {
           & > .sub-menu {
             opacity: 1;
             visibility: visible;
@@ -266,7 +301,7 @@ $header-search-input-border-color: #aaa;
       z-index: 2;
       background: $menu001-sub-fon;
 
-      @include _(greater than desktop) {
+      @include _(greater than $header-mobile-breakpoint) {
         top: 100%;
         left: 0;
         height: auto;
@@ -299,16 +334,12 @@ $header-search-input-border-color: #aaa;
         &:hover {
           background: $menu001-sub-fon-hover;
         }
-
-        @include _(greater than tablet) {
-
-        }
       }
 
       &:hover {
         background: $menu001-sub-fon-hover;
 
-        @include _(greater than desktop) {
+        @include _(greater than $header-mobile-breakpoint) {
           & > .sub-menu {
             opacity: 1;
             visibility: visible;
@@ -321,7 +352,7 @@ $header-search-input-border-color: #aaa;
     @include element(2lvl-item-back) {
       display: block;
 
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         display: none;
       }
     }
@@ -336,7 +367,7 @@ $header-search-input-border-color: #aaa;
       overflow: auto;
       background: $menu001-sub-fon;
 
-      @include _(greater than desktop) {
+      @include _(greater than $header-mobile-breakpoint) {
         left: 100%;
         height: auto;
         overflow: inherit;
@@ -360,17 +391,13 @@ $header-search-input-border-color: #aaa;
         @include type-setting(text);
         text-decoration: none;
         padding: $base-line-height * 2;
-
-        @include _(greater than tablet) {
-
-        }
       }
     }  
 
     @include element(3lvl-item-back) {
       display: block;
 
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         display: none;
       }
     }
@@ -380,7 +407,7 @@ $header-search-input-border-color: #aaa;
     display: none;
     overflow: hidden;
 
-    @include _(greater than desktop) {
+    @include _(greater than $header-mobile-breakpoint) {
       display: block;
       opacity: 0;
       visibility: hidden;
@@ -398,7 +425,7 @@ $header-search-input-border-color: #aaa;
     }
 
     @include modifier(mega) {
-      @include _(greater than desktop) {
+      @include _(greater than $header-mobile-breakpoint) {
         .menu001__2lvl-item {
           width: calculate-width($menu001-sub-item-num);
           float: left;
@@ -409,13 +436,7 @@ $header-search-input-border-color: #aaa;
 
   @include block(sub-link) {
     &:after {
-      font-family: "basic";
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
+      @extend %basic-icon;
       content: "\e801";
       padding-left: $base-line-height * 2;
     }

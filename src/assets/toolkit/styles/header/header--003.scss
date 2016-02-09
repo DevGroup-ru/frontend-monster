@@ -3,8 +3,9 @@ $header003-user-fon: #eee;
 $logo: 'logo.jpg';
 
 $header003-height: $base-line-height * 8;
+$header003-search: $base-line-height * 8;
 
-  // @desc Header - header with mega and simple menu (menu--001)
+  // @desc Header - header with mega and simple menu, search and button of personal account (menu--001)
   // @group header
   // @bemJson header--003.json
 
@@ -41,11 +42,11 @@ $header003-height: $base-line-height * 8;
         width: 20%;
       }
 
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         display: none;
       }
 
-      i {
+      &:before {
         font-size: $base-line-height * 3; 
 
         @include _(greater than mobile) {  
@@ -88,7 +89,7 @@ $header003-height: $base-line-height * 8;
       width: 100%;
       float: none;
 
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         position: static;
         float: right;
         width: 100%;
@@ -108,7 +109,7 @@ $header003-height: $base-line-height * 8;
       .menu {
         float: right;
 
-        @include _(greater than desktop) {  
+        @include _(greater than $header-mobile-breakpoint) {  
           float: left;
         }
       }
@@ -126,15 +127,19 @@ $header003-height: $base-line-height * 8;
       z-index: 10;
       height: $header003-height;
 
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
         justify-content: flex-end;
         align-items: center;
       }
-    }
 
-    @include element(search-wrap) {
-      display: none;
+      @include modifier(overmenu) {
+        &.header-search-icon--selected {
+          z-index: 11;
+          right: 0;
+          justify-content: center;
+        }
+      }
     }
 
     @include element(user-icon) {
@@ -153,7 +158,7 @@ $header003-height: $base-line-height * 8;
         font-size: $base-line-height * 2; 
       }  
 
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
         justify-content: flex-end;
         align-items: center;
