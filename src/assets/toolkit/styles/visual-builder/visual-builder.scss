@@ -104,7 +104,9 @@ $editor-accent-color: #EC5035;
     position: fixed;
     right: 10px;
     top: $top-pane-height+1px;
-    height: 90%;
+
+    height: calc(100% - #{$top-pane-height + 2px});
+
     outline: 1px solid $editor-inactive-color;
     min-width: 340px;
     background: #fff;
