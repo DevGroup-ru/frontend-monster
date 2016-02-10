@@ -1,409 +1,286 @@
-$header001-menu-fon: #3b8a91;
-$header001-sub-menu-fon: #eee;
+$header003-fon: #3b8a91;
+$header003-user-fon: #eee;
 
-$logo_bet: url('../images/logo_bet.jpg');
+$logo: 'logo.jpg';
 
-  // @desc Header
+
+$header000-height: $base-line-height * 8;
+
+
+@import "header--for_betrezen--mod";
+
+  // @desc Header - header with mega and simple menu, search and button of personal account (menu--001)
   // @group header
-  // @bemJson header--001.json
+  // @bemJson header--for_betrezen.json
 
 .m-wrapper {
 
-  @include block(header00n) {
-    display: none;
+  @include block(header000) {
     text-align: center;
     //position: fixed;
-    position: static;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%; 
-
-    @include element(wrap) {
-      position: relative;   
-    }   
-
-    @include element(logo-promo) { 
-
-      @include _(greater than tablet) {  
-        @include _(6 5 8 4 4); 
-        display: flex;
-        align-items: center;  
-      } 
-    }
-
-    @include element(burger) {
-      display: block;
-      margin-top: $base-line-height * 2;
-      margin-bottom: $base-line-height * 2;
-      @include _(1 1 1 1 1);
-      text-decoration: none;
-
-      i {
-        font-size: $base-line-height * 3; 
-
-        @include _(greater than mobile) {  
-          font-size: $base-line-height * 4; 
-        }
-      }
-
-      @include _(greater than tablet) {  
-        display: none;
-      }
-    }
 
     @include element(phone-button) {
       text-decoration: none;
       display: block;
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
+      @include _(3 3 2 1 1);
+
+      i {
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than $header-mobile-breakpoint) {  
+          font-size: $base-line-height * 4; 
+        }
+      }
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: none;
+      }
+    }
+
+    @include element(phone-block) {
+      display: none;
+
+      @include modifier(show) {
+        display: block;
+        top: $base-line-height * 8; 
+        width: 320px;
+        right: 0;
+        background: #fff;
+        z-index: 5; 
+        right: 0;
+        position: absolute;
+        padding: $base-line-height $base-line-height * 2;
+        width: 320px;
+      }
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include _(5 5 4 4 4, $gutter: row);  
+      }
+    }
+
+    @include element(phone) {
+      margin-top: $base-line-height * 2;
+      line-height: $base-line-height * 2;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        @include _(2.5 2.5 2 4 4, 5 5 4 4 4);
+        float: left;
+      }
+    }
+
+    @include element(text-phone) {  
+      margin-bottom: $base-line-height * 2;    
+      line-height: $base-line-height * 2;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        @include _(2.5 2.5 2 4 4, 5 5 4 4 4);
+        float: left;
+      }
+    }
+
+    @include element(call-back) {
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        @include _(2.5 2.5 2 4 4, 5 5 4 4 4);
+        float: right;
+      }
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        display: block;
+      }
+    }
+
+    @include element(wrap) {
+      position: relative;   
+      padding-top: 0;
+      @include _(12 12 8 4 4, $gutter: row); 
+
+      @include _(greater than $header-mobile-breakpoint) { 
+        padding-top: $base-line-height * 8;
+      }
+    }   
+
+    @include element(burger) {
+      position: static;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-decoration: none;
+      z-index: 10;
+      height: $header003-height;      
+      @include _(3 1 1 1 1);
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: none;
+      }
+
+      &:before {
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than $header-mobile-breakpoint) {  
+          font-size: $base-line-height * 4; 
+        }
+      }      
+    }
+
+    @include element(logo-wrap) {
+      @include _(3 10 6 2 2);
+      position: relative;
+      text-align: center;
+      margin-top: $base-line-height;
+      margin-bottom: $base-line-height;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+      }
+    }
+    @include element(promotext) {
+      display: none;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        @include _(4 4 4 4 4);
+        display: block;
+        position: absolute;
+        margin-top: $base-line-height * 2;
+        margin-bottom: $base-line-height * 2;
+        left: 25%;
+        top: 0;
+      }
+    }
+     @include element(phone-button) {
+      text-decoration: none;
+      display: block;
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      line-height: $base-line-height * 4;
       @include _(1 1 1 1 1);
 
       i {
         font-size: $base-line-height * 3; 
 
-        @include _(greater than mobile) {  
+        @include _(greater than $header-mobile-breakpoint) {  
           font-size: $base-line-height * 4; 
         }
       }
 
-      @include _(greater than tablet) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         display: none;
       }
     }
-
-    @include element(phone-call) {
-      display: none;
-
-      @include modifier(show) {
-        display: block;
-        position: absolute;
-        top: $base-line-height * 8; 
-        left: 0;
-        width: 100%;
-        background: #fff;
-        z-index: 5;
-      }
-
-      @include _(greater than tablet) {  
-        display: block;
-      }
-    }
-
-    @include element(phone) {
-      margin-top: $base-line-height * 3;
-      margin-bottom: $base-line-height * 3;
-      @include type-setting(section);
-      @include _(3 4 4 4 4);   
-    }
-
-    @include element(add-call) {
-      margin-top: $base-line-height * 3;
-      margin-bottom: $base-line-height * 3;
-      @include _(3 3 4 4 4);    
-
-      a,
-      a:link,
-      a:hover,
-      a:visited,
-      a:active,
-      a:focus,
-      button {
-        display: block;
-      }  
-    } 
 
     @include element(logo) {
       display: block;
-      margin-top: $base-line-height * 2;
-      margin-bottom: $base-line-height * 2;
-      background-image: $logo_bet;
-      height: $base-line-height * 3; 
+      background-image: url('../images/' + $logo);
       background-repeat: no-repeat;
-      background-position-x: 50%;
-      overflow: hidden;
-      @include _(5 10 6 2 2, $gutter: row); 
       background-size: contain;
-      text-indent: 9999px;
-      text-align: center;
-
-      @include _(greater than mobile) {  
-        height: $base-line-height * 4; 
-      }
-
-      @include _(greater than tablet) {  
-        background-position-x: 0;
-        margin-top: $base-line-height * 3;
-        margin-bottom: $base-line-height * 3;
-      }
-    }
-
-    @include element(promotext) { 
-      @include type-setting(text); 
-      margin-left: $base-line-height * 2; 
-      display: none;
-
-      @include _(greater than desktop) {  
-        display: block;
-      }
-    }
-
-    @include element(menu-2lvl-item-back) { 
-      display: block;
-
-      @include _(greater than tablet) {  
-        display: none;
-      }
-    }
-
-    @include element(menu-1lvl-wrap) {
-      position: relative;
-      @include _(12 12 4 4 4);
-      left: -1000%;
-      transition: left 0.3s ease-out 0s;
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: $header001-menu-fon;
-        height: 1000%;
-        z-index: -1;
-      }
-
-      @include modifier(show) {
-        left: 0;
-        transition: left 0.3s ease-out 0s;
-      }
-
-      @include _(greater than tablet) { 
-        position: static; 
-
-        &:after {
-          display: none;
-        }
-      }
-    }
-
-    @include element(menu-1lvl) {
-      padding: 0;
-      list-style: none;
-      position: relative;
-      top: 0;
-      left: 0;
-      background: $header001-menu-fon;
+      max-width: 100%;
+      height: $base-line-height * 6; 
       overflow: hidden;
-      height: 100vh;
+      text-indent: -99999px;
+      background-position: center center;
 
-      @include _(greater than tablet) { 
-        height: auto; 
-        @include _(12 12 4 4 4);
-        display: block;
-        overflow: inherit;
-        background: transparent;
-
-        &:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -400%;
-          width: 1000%;
-          background: $header001-menu-fon;
-          height: 100%;
-          z-index: -1;
-        }
+      @include _(greater than $header-mobile-breakpoint) { 
+        background-position: left center;
       }
-    }  
+    }
 
-    @include element(menu-1lvl-item) {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: block;
-      float: left;
-      text-align: left;
-      width: 100%;
-
-     @include _(greater than tablet) {  
-        width: auto;
-      }
-
-      a,
-      a:link,
-      a:hover,
-      a:visited,
-      a:active,
-      a:focus,
-      button {
-        display: block;
-        padding: $base-line-height * 2;
-        width: 100%;
-        @include type-setting(text);
-        color: #fff;
-        text-decoration: none;
-
-        @include _(greater than tablet) { 
-          padding: $base-line-height * 2; 
-          padding-left: 0;
-          padding-right: $base-line-height * 6;
-          width: auto;
-        }
-      }
-
-      &:hover {
-        @include _(greater than tablet) {
-          .header001__menu-2lvl {
-            display: block;
-          }
-        }
-      }
-    }  
-
-    @include element(menu-2lvl) {
-      display: none;
+    @include element(menu) {
       position: absolute;
       top: 100%;
-      left: 100%;
+      left: 0;
       width: 100%;
-      background: $header001-menu-fon;
-      padding: 0;
-      z-index: 2;
-      height: 100vh;
-      overflow: scroll;
-      transition: left 0.3s ease-out 0s;
+      float: none;
 
-      @include _(greater than tablet) {
-        left: 0;
-        height: auto;
-        overflow: inherit;
-        padding-top: $base-line-height * 2;
-        padding-bottom: $base-line-height * 4;
-        background: $header001-sub-menu-fon;
-      }
+      @include _(greater than $header-mobile-breakpoint) {  
+        position: relative;
+        clear: both;
 
-      @include modifier(show) {
-        top: 0;
-        left: 0;
-        display: block;
-        transition: left 0.3s ease-out 0s;
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -400%;
-        width: 1000%;
-        background: $header001-menu-fon;
-        height: 100%;
-        z-index: -1;
-        display: none;
-
-        @include _(greater than tablet) {
-          display: block;
-          background: $header001-sub-menu-fon;
+        .menu001__1lvl-link,
+        .menu001__1lvl-sub-link {
+          min-height: $header002-height;
+          max-height: $header002-height;
+          overflow: hidden;
         }
       }
-    } 
 
-    @include element(menu-2lvl-item) {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      text-align: left;
+      .menu {
+        float: right;
 
-      @include _(greater than tablet) {
-        @include _(4 4 8 4 4, $gutter: alpha);
-      }
-
-      a,
-      a:link,
-      a:hover,
-      a:visited,
-      a:active,
-      a:focus,
-      button {
-        @include type-setting(text);
-        color: #000;
-        text-decoration: none;
-        padding: $base-line-height * 2;
-
-        &:hover {
-          text-decoration: underline;
-        }
-
-        @include _(greater than tablet) {
-          padding: $base-line-height 0;
+        @include _(greater than $header-mobile-breakpoint) {  
+          float: left;
         }
       }
     }
 
-    @include modifier(fixed) {
+    @include element(search-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 5%;
+      width: 5%;
+      margin-left: -5%;
+      text-align: right;
+      text-decoration: none;
+      z-index: 10;
+      height: $header003-height;
 
-      @include _(greater than tablet) {  
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
 
-        .header001__logo-promo {
-          @include _(2 2 8 4 4);
-        }
-
-        .header001__logo {
-          @include _(12 12 8 4 4);
-          margin: 0;
-          background-position-y: 50%;
-          height: $base-line-height * 6;
-        }
-
-        .header001__promotext {
-          display: none;
-        }
-
-        .header001__phone {
-          display: none;
-        }
-
-        .header001__add-call {
-          float: right;
-          margin-top: $base-line-height;
-          margin-bottom: $base-line-height;
-        }
-
-        .header001__menu-1lvl-wrap {
-          @include _(7 7 8 4 4);
-          position: static;
-        }
-
-        .header001__menu-1lvl {
-          @include _(7 7 8 4 4);
-          position: static;
-
-          &:after {
-            display: none;
-          }
-
-          a,
-          a:link,
-          a:hover,
-          a:visited,
-          a:active,
-          a:focus,
-          button {
-            padding-right: $base-line-height * 3;
-            color: #000;
-          }
-        }
-
-        .header001__menu-2lvl {
-
-          li {
-            @include _(4 4 8 4 4, 12 12 8 4 4);
-          }
+      @include modifier(overmenu) {
+        &.header-search-icon--selected {
+          z-index: 11;
+          right: 0;
+          justify-content: center;
         }
       }
     }
 
-    @include modifier(betrezen){
+    @include element(user-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5%;
+      margin-left: -5%;
+      text-align: right;
+      text-decoration: none;
+      z-index: 10;
+      height: $header003-height;
 
+      i {
+        font-size: $base-line-height * 2; 
+      }  
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
     }
   }
 }
