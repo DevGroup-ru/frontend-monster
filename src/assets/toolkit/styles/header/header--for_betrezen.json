@@ -1,0 +1,654 @@
+
+{
+  "block": "m-container",
+  "content": {
+    "block": "header000",
+    "mods": ["beauty"],
+   
+    "content": [
+      {
+        "row": true,
+        "content": [
+          {
+            "elem": "wrap",
+            "content": [
+              {
+                "elem": "burger",
+                "cls": "menu-burger",
+                "link": true
+              }, 
+              {
+                "elem": "promotext",
+                "editable": true, 
+                "content": [
+                  {
+                    "elem": "promotext-simple",
+                    "content": "Актуальных предложений <a href='/izbrannoe/'>В избранном</a>"
+                  },
+                  {
+                    "elem": "promotext-right",
+                    "content": "<span>821</span><span>0</span>"
+                  }
+                ]
+              },
+              {
+                "elem": "logo-wrap",
+                "content": [
+                  {
+                    "elem": "logo",
+                    "content": "Logo",
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "phone-button",
+                "link": true,
+                "html": "<i class='header001__phone-icon demo-icon icon-basic-phone'></i>"
+              },
+              {
+                "elem": "phone-block",
+                "content": [
+                  {
+                    "elem": "call-back",
+                    "content": [
+                      {
+                        "elem": "add-call-button",
+                        "content": "Заказать звонок",
+                        "cls": "button-simple",
+                        "editable": true,
+                        "link": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "phone",
+                    "content": "8-800-200-15-56",
+                    "editable": true
+                  },
+                  {
+                    "elem": "text-phone",
+                    "content": "Звонок бесплатный",
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "menu",
+                "content": [
+                  {
+                    "block": "menu001",
+                    "content": [
+                      {
+                        "elem": "1lvl-wrap",
+                        "cls": "menu",
+                        "content": [
+                          {
+                            "elem": "1lvl-item",
+                            "cls": "sub-item",
+                            "editableGroup": "1lvl-item-1",
+                            "content": [
+                              {
+                                "elem": "1lvl-sub-link",
+                                "cls": "sub-link",
+                                "editableGroup": "1lvl-link-1",
+                                "content": "Аренда",
+                                "link": true
+                              },
+                              {
+                                "elem": "2lvl",
+                                "cls": "sub-menu",
+                                "editableGroup": "2lvl-1",
+                                "content": [
+                                  {
+                                    "elem": "2lvl-item-back",
+                                    "editableGroup": "2lvl-item-back-1",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "cls": "menu-item-back",
+                                        "editableGroup": "2lvl-link-1",
+                                        "content": "Назад",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-1",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-2",
+                                        "content": "Апартаменты",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item-1",
+                                    "editableGroup": "2lvl-item-2",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-sub-link",
+                                        "editableGroup": "2lvl-link-3",
+                                        "content": "Бунгало",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item-1",
+                                    "editableGroup": "2lvl-item-2",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-sub-link",
+                                        "editableGroup": "2lvl-link-4",
+                                        "content": "Виллы",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-2",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-sub-link",
+                                        "editableGroup": "2lvl-link-5",
+                                        "content": "Жилье",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-2",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-sub-link",
+                                        "editableGroup": "2lvl-link-6",
+                                        "content": "Квартира",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-2",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-sub-link",
+                                        "editableGroup": "2lvl-link-7",
+                                        "content": "Дома",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-2",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-sub-link",
+                                        "editableGroup": "2lvl-link-8",
+                                        "content": "Квартиры на Кароне",
+                                        "link": true
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "1lvl-item",
+                            "cls": "sub-item",
+                            "editableGroup": "1lvl-item-2",
+                            "content": [
+                              {
+                                "elem": "1lvl-sub-link",
+                                "editableGroup": "1lvl-link-2",
+                                "content": "Продажа",
+                                "link": true
+                              },
+                              {
+                                "elem": "2lvl",
+                                "cls": "sub-menu",
+                                "editableGroup": "2lvl-2",
+                                "content": [
+                                  {
+                                    "elem": "2lvl-item-back",
+                                    "editableGroup": "2lvl-item-back-2",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "cls": "menu-item-back",
+                                        "editableGroup": "2lvl-link-8",
+                                        "content": "Назад",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-7",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-9",
+                                        "content": "Виллы",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-8",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-10",
+                                        "content": "Дома",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-9",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-11",
+                                        "content": "Квартиры",
+                                        "link": true
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "1lvl-item",
+                            "cls": "sub-item",
+                            "editableGroup": "1lvl-item-3",
+                            "content": [
+                              {
+                                "elem": "1lvl-sub-link",
+                                "editableGroup": "1lvl-link-3",
+                                "content": "Премиум класс",
+                                "link": true
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "1lvl-item",
+                            "cls": "sub-item",
+                            "editableGroup": "1lvl-item-4",
+                            "content": [
+                              {
+                                "elem": "1lvl-sub-link",
+                                "cls": "sub-link",
+                                "editableGroup": "1lvl-link-4",
+                                "content": "СКИДКИ!",
+                                "link": true
+                              },
+                              {
+                                "elem": "2lvl",
+                                "cls": "sub-menu",
+                                "editableGroup": "2lvl-4",
+                                "content": [
+                                  {
+                                    "elem": "2lvl-item-back",
+                                    "editableGroup": "2lvl-item-back-4",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "cls": "menu-item-back",
+                                        "editableGroup": "2lvl-link-18",
+                                        "content": "Назад",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-15",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-19",
+                                        "content": "Антикризисные предложения",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-16",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-20",
+                                        "content": "Жилье со скидкой",
+                                        "link": true
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "1lvl-item",
+                            "cls": "sub-item",
+                            "editableGroup": "1lvl-item-5",
+                            "content": [
+                              {
+                                "elem": "1lvl-link",
+                                "editableGroup": "1lvl-link-5",
+                                "content": "Добавить виллу",
+                                "link": true
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "1lvl-item",
+                            "cls": "sub-item",
+                            "editableGroup": "1lvl-item-6",
+                            "content": [
+                              {
+                                "elem": "1lvl-link",
+                                "editableGroup": "1lvl-link-6",
+                                "content": "Услуги на Пхукете",
+                                "link": true
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "1lvl-item",
+                            "cls": "sub-item",
+                            "editableGroup": "1lvl-item-7",
+                            "content": [
+                              {
+                                "elem": "1lvl-sub-link",
+                                "cls": "sub-link",
+                                "editableGroup": "1lvl-link-7",
+                                "content": "О Нас",
+                                "link": true
+                              },
+                              {
+                                "elem": "2lvl",
+                                "cls": "sub-menu sub-menu--right",
+                                "editableGroup": "2lvl-7",
+                                "content": [
+                                  {
+                                    "elem": "2lvl-item-back",
+                                    "editableGroup": "2lvl-item-back-7",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "cls": "menu-item-back",
+                                        "editableGroup": "2lvl-link-7",
+                                        "content": "Назад",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-71",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-71",
+                                        "content": "Отзывы",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-72",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-72",
+                                        "content": "Вакансии",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-73",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-73",
+                                        "content": "Лицензии и достижения",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-74",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-74",
+                                        "content": "Наши партнеры",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-75",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-75",
+                                        "content": "Контакты",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-76",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-76",
+                                        "content": "Вопросы и ответы",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-77",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-77",
+                                        "content": "Фотогалерея",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-78",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-78",
+                                        "content": "Новости",
+                                        "link": true
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "1lvl-item",
+                            "cls": "sub-item",
+                            "editableGroup": "1lvl-item-8",
+                            "content": [
+                              {
+                                "elem": "1lvl-sub-link",
+                                "cls": "sub-link",
+                                "editableGroup": "1lvl-link-8",
+                                "content": "Таиланд",
+                                "link": true
+                              },
+                              {
+                                "elem": "2lvl",
+                                "cls": "sub-menu sub-menu--right",
+                                "editableGroup": "2lvl-8",
+                                "content": [
+                                  {
+                                    "elem": "2lvl-item-back",
+                                    "editableGroup": "2lvl-item-back-8",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "cls": "menu-item-back",
+                                        "editableGroup": "2lvl-link-8",
+                                        "content": "Назад",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-81",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-81",
+                                        "content": "Аренда яхты в Тайланде",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-82",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-82",
+                                        "content": "Визы в Таиланде",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-83",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-83",
+                                        "content": "Медицинская страховка в Таиланде",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-84",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-84",
+                                        "content": "Образование на Пхукете",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-85",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-85",
+                                        "content": "Оформление собственности на недвижимость",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-86",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-86",
+                                        "content": "Рекомендации по аренде недвижимости на Пхукете",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-87",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-87",
+                                        "content": "Туристическая полиция на Пхукете",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-88",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-88",
+                                        "content": "Немного о Laguna Outrigger village",
+                                        "link": true
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "elem": "2lvl-item",
+                                    "editableGroup": "2lvl-item-89",
+                                    "content": [
+                                      {
+                                        "elem": "2lvl-link",
+                                        "editableGroup": "2lvl-link-89",
+                                        "content": "Приобретение недвижимости в Таиланде",
+                                        "link": true
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
