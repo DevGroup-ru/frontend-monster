@@ -1,0 +1,288 @@
+$header006-fon: #3b8a91;
+$header006-top-fon: #33777d;
+$header006-user-fon: #eee;
+$header006-phone-button-fon: #fff;
+$logo: 'logo.jpg';
+
+$header006-height: $base-line-height * 6;
+$header006-height-mobile: $base-line-height * 8;
+$header006-top-height: $base-line-height * 9;
+
+  // @desc Header - header with menu, search, button of personal account, top line and phone
+  // @group header
+  // @bemJson header--006.json
+
+.m-wrapper {
+
+  @include block(header006) {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: $header006-height-mobile;
+    background: $header006-fon;
+
+    &:before {
+      display: none;
+      content: "";
+      background: $header006-top-fon;
+      height: $header006-top-height;
+      width: 100%;
+    }
+
+    @include _(greater than $header-mobile-breakpoint) {  
+      height: $header006-height + $header006-top-height;
+      overflow: inherit;
+
+      &:before {
+        display: block;
+      }
+    }
+
+    @include element(wrap) {
+      position: relative;   
+    }   
+
+    @include element(burger) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      z-index: 10;
+      @include _(3 1 1 1 1);
+      height: $header006-height-mobile;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: none;
+      }
+
+      &:before {
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than mobile) {  
+          font-size: $base-line-height * 4; 
+        }
+      }      
+    }
+
+    @include element(logo-wrap) {
+      position: absolute;
+      left: 0;
+      @include _(3 3 3 2 2);
+      margin: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include _(greater than mobile) {  
+        @include _(3 3 3 2 2, $gutter: row);
+      }
+
+      @include _(greater than $header-mobile-breakpoint) {
+        transform: translateX(0);  
+        top: -$header006-top-height;
+        left: 0;
+        @include _(3 3 3 2 2);
+      }
+    }
+
+    @include element(logo) {
+      display: block;
+      background-image: url('../images/' + $logo);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      max-width: $base-line-height * 300;
+      min-height: $header006-height-mobile - $base-line-height * 2; 
+      margin-top: $base-line-height; 
+      margin-bottom: $base-line-height; 
+      overflow: hidden;
+      text-indent: 9999px;
+
+      @include _(greater than $header-mobile-breakpoint) {
+        min-height: $header006-top-height - $base-line-height * 2; 
+        background-position: 0 50%;
+      }
+    }
+
+    @include element(menu) {
+      position: absolute;
+      top: $header006-height-mobile;
+      left: 0;
+      @include _(12 4 4 4 4);
+      float: none;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        top: 0;
+        float: right;
+        @include _(12 12 4 4 4);
+
+        & > div{
+          margin: 0 16.6% 0 0;
+        }
+
+        .menu001__1lvl-link,
+        .menu001__1lvl-sub-link {
+          height: $header006-height;
+          overflow: hidden;
+        }
+      }
+
+      .menu-mobile {
+        height: calc(100vh - #{$header006-height-mobile});
+        overflow: auto;
+      }
+    }
+
+    @include element(search-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 8.3%;
+      @include _(1 1 1 1 1);
+      text-align: right;
+      text-decoration: none;
+      z-index: 10;
+      height: $header006-height-mobile;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $header006-height;
+      }
+
+      @include modifier(overmenu) {
+        &.header-search-icon--selected {
+          z-index: 11;
+          right: 0;
+          justify-content: center;
+        }
+      }
+    }
+
+    @include element(user-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include _(1 1 1 1 1);
+      text-align: right;
+      text-decoration: none;
+      z-index: 10;
+      height: $header006-height;
+
+      i {
+        font-size: $base-line-height * 2; 
+      }  
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+     @include element(button-wrap) {
+      position: absolute;
+      @include _(6 6 1 1 1);
+      right: 0;
+      top: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: $header006-height-mobile;
+      overflow: hidden;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        width: 50%;
+        right: 0;
+        top: -$header006-top-height;
+        height: $header006-top-height;
+      }
+    }
+
+    @include element(text-for-button) {
+      display: none;
+      @include type-setting(text);
+      padding-right: $base-line-height * 2;
+      max-width: $base-line-height * 30;
+      text-align: right;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: block;
+      }
+    }
+
+    @include element(button) {
+      width: 100%;
+      min-width: auto;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        display: none;
+      }
+
+      &:before {
+        @extend %basic-icon;
+        content: "\e814";
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than mobile) {  
+          font-size: $base-line-height * 4; 
+        }
+      }
+
+      @include _(greater than tablet) {  
+        display: block;
+        width: 50%;
+
+        span {
+          display: block;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        width: auto;
+      }
+    }
+
+    @include block(header-phone) {
+      @include type-setting(accent-text);
+      padding: $base-line-height * 2; 
+      overflow: hidden;
+
+      span{
+        display: none;
+        @include type-setting(text);
+      }
+
+      @include _(greater than $header-mobile-breakpoint) {
+        position: absolute;  
+        @include _(3 3 1 1 1);
+        left: 25%;
+        top: -$header006-top-height;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: $header006-top-height;
+        padding: 0;
+
+        span{
+          display: block;
+        }
+      }
+    }
+  }
+}

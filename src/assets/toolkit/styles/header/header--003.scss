@@ -13,8 +13,7 @@ $header003-search: $base-line-height * 8;
 
   @include block(header003) {
     text-align: center;
-    //position: fixed;
-    position: static;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%; 
@@ -23,7 +22,6 @@ $header003-search: $base-line-height * 8;
 
     @include element(wrap) {
       position: relative;   
-      @include _(12 12 8 4 4); 
     }   
 
     @include element(burger) {
@@ -31,16 +29,12 @@ $header003-search: $base-line-height * 8;
       top: 0;
       right: 0;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       text-decoration: none;
       z-index: 10;
-      width: 50%;
+      @include _(3 1 1 1 1);
       height: $header003-height;
-
-      @include _(greater than mobile) {  
-        width: 20%;
-      }
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: none;
@@ -59,19 +53,14 @@ $header003-search: $base-line-height * 8;
       position: absolute;
       top: 0;
       left: 0;
-      width: 50%;
-
-      @include _(greater than mobile) {  
-        width: 20%;
-        margin-right: -20%;
-      }
+      @include _(3 3 6 2 2);
     }
 
     @include element(logo) {
       display: block;
       background-image: url('../images/' + $logo);
       background-repeat: no-repeat;
-      background-position-y: 50%;
+      background-position: 0 50%;
       background-size: contain;
       max-width: $base-line-height * 300;
       min-height: $base-line-height * 6; 
@@ -79,23 +68,24 @@ $header003-search: $base-line-height * 8;
       margin-bottom: $base-line-height; 
       overflow: hidden;
       text-indent: 9999px;
-      text-align: left;
     }
 
     @include element(menu) {
       position: absolute;
       top: $header003-height;
       right: 0;
-      width: 100%;
+      @include _(7 4 4 4 4);
       float: none;
 
       @include _(greater than $header-mobile-breakpoint) {  
-        position: static;
+        position: relative;
+        top: 0;
         float: right;
         width: 100%;
+        margin: 0;
 
         & > div{
-          margin: 0 10% 0 20%;
+          margin: 0 16.6% 0 25%;
         }
 
         .menu001__1lvl-link,
@@ -106,12 +96,9 @@ $header003-search: $base-line-height * 8;
         }
       }
 
-      .menu {
-        float: right;
-
-        @include _(greater than $header-mobile-breakpoint) {  
-          float: left;
-        }
+      .menu-mobile {
+        height: calc(100vh - #{$header003-height});
+        overflow: auto;
       }
     }
 
@@ -119,17 +106,15 @@ $header003-search: $base-line-height * 8;
       display: none;
       position: absolute;
       top: 0;
-      right: 5%;
-      width: 5%;
-      margin-left: -5%;
-      text-align: right;
+      right: 8.3%;
+      @include _(1 1 1 1 1);
       text-decoration: none;
       z-index: 10;
       height: $header003-height;
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
       }
 
@@ -147,9 +132,7 @@ $header003-search: $base-line-height * 8;
       position: absolute;
       top: 0;
       right: 0;
-      width: 5%;
-      margin-left: -5%;
-      text-align: right;
+      @include _(1 1 1 1 1);
       text-decoration: none;
       z-index: 10;
       height: $header003-height;
@@ -160,7 +143,7 @@ $header003-search: $base-line-height * 8;
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
       }
     }

@@ -133,3 +133,7 @@ $half-row-configuration: 6 6 4 4 4;
   background: rgba(244, 230, 77, 0.25);
   outline: 1px solid rgba(244, 30, 240, 0.25);
 }
+
+.helper-check {
+  margin-top: $base-line-height * 20;
+}

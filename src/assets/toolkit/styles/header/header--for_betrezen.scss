@@ -211,6 +211,7 @@ $header000-height: $base-line-height * 8;
       left: 0;
       width: 100%;
       float: none;
+      @include _(12 4 4 4 4);
 
       @include _(greater than $header-mobile-breakpoint) {  
         position: relative;
