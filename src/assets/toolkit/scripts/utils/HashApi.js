@@ -4,7 +4,7 @@ class HashApi {
 
     if (document.location.hash) {
       const matches = document.location.hash.match(/#hashApi:(.*?):\/hashApi/);
-      if (matches.length === 2) {
+      if (matches && matches.length === 2) {
         const functionCalls = JSON.parse(decodeURIComponent(matches[1]));
 
         for (const item of functionCalls) {

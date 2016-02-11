@@ -1,9 +1,0 @@
-{
-  "block": "monster-section-selector",
-  "elem": "section-link",
-  "tag": "a",
-  "content": "{{phpParam:text}}",
-  "attrs": {
-    "href": "{{phpParam:link}}"
-  }
-}

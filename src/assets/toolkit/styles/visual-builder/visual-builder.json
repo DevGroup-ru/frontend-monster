@@ -64,13 +64,13 @@
           "content": "Stackable here"
         },
         {
-          "block": "monster-section-selector",
+          "block": "monster-environment-selector",
           "content":
             {
               "repeatable": {
-                "block": "monster-section-selector",
-                "elem": "section-link",
-                "iterateOver": "sections"
+                "block": "monster-environment-selector",
+                "elem": "environment-link",
+                "iterateOver": "environments"
               }
             }
 

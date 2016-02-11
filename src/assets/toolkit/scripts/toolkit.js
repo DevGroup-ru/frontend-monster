@@ -1,6 +1,7 @@
 /**
  * Toolkit JavaScript
  */
+import 'babel-polyfill';
 
 import FrontendMonster from './FrontendMonster';
 

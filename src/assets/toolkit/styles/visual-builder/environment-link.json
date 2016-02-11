@@ -1,0 +1,10 @@
+{
+  "block": "monster-environment-selector",
+  "elem": "environment-link",
+  "tag": "a",
+  "content": "{{phpParam:icon}}",
+  "attrs": {
+    "href": "#",
+    "data-environment-name": "{{phpParam:environment}}"
+  }
+}

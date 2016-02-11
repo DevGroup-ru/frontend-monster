@@ -53,16 +53,17 @@ $editor-accent-color: #EC5035;
     bottom: 0;
     min-width: 200px;
     overflow-y: scroll;
+    color: $editor-text-color;
   }
 
   // @group internal
   // @desc Selects current toolbox section
-  @include block(monster-section-selector) {
+  @include block(monster-environment-selector) {
 
     // @group internal
-    // @desc Exact section link
-    // @bemJson section-link.json
-    @include element(section-link) {
+    // @desc Exact environment link
+    // @bemJson environment-link.json
+    @include element(environment-link) {
       display: block;
       text-align: center;
       width: $left-pane-width;
@@ -73,11 +74,11 @@ $editor-accent-color: #EC5035;
       text-decoration: none;
 
       &:hover {
-        background-color: $editor-light-bg;
         color: $editor-text-color;
       }
 
       @include modifier(active) {
+        background-color: $editor-light-bg;
         color: $editor-text-color;
       }
     }
