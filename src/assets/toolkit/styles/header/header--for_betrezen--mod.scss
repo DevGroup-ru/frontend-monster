@@ -9,7 +9,7 @@ $header-bg--beauty: 'header-bg--beauty.png';
   @include block(header000) {
 	@include modifier(beauty){
 		font-family: 'Open Sans Condensed', sans-serif;
-		display: block !important;
+		//display: block !important;
 		background: url('../images/' + $header-bg--beauty) center top repeat-x;
 		background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.3) 80px, rgba(0, 0, 0, 0.4) 80px, rgba(0, 0, 0, 0.4) 120px);
 

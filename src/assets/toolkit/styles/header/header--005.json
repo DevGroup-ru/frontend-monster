@@ -1,7 +1,7 @@
 {
   "block": "m-container",
   "content": {
-    "block": "header003",
+    "block": "header005",
     "content": [
       {
         "row": true,
@@ -29,13 +29,13 @@
                 "content": [
                 {
                 "block": "menu001",
-                "mods": ["mobile-right"],
                 "content": [
                   {
                     "block": "block-on-menu",
                     "content": [
                       {
                         "block": "search",
+                        "mods": ["overmenu"],
                         "content": [
                           {
                             "elem": "wrap",
@@ -555,26 +555,6 @@
                         ]
                       }
                     ]
-                  },
-                  {
-                    "block": "block-bottom-menu",
-                    "content": [
-                      {
-                        "block": "header-user",
-                        "content": [
-                          {
-                            "elem": "sign-link",
-                            "link": true,
-                            "content": "Войти"
-                          },
-                          {
-                            "elem": "registration-link",
-                            "link": true,
-                            "content": "Зарегистрироваться"
-                          }
-                        ]
-                      }
-                    ]
                   }
                 ]
               }
@@ -582,14 +562,34 @@
               },
               {
                 "elem": "search-icon",
+                "mods": ["overmenu"],
                 "cls": "header-search-icon",
                 "link": true
               },
               {
-                "elem": "user-icon",
-                "cls": "header-user-icon",
-                "link": true,
-                "html": "<i class='demo-icon icon-basic-lock'></i>"
+                "elem": "phone-button-icon",
+                "cls": "header-phone-button-icon",
+                "link": true
+              },
+              {
+                "elem": "phone-button-wrap",
+                "cls": "header-phone-button-wrap",
+                "content": [
+                  {
+                    "elem": "phone-text",
+                    "content": "Телефон отдела продаж:"
+                  },
+                  {
+                    "elem": "phone",
+                    "content": "8 (953) 123-78-96"
+                  },
+                  {
+                    "elem": "button-call",
+                    "cls": "button-simple",
+                    "link": true,
+                    "content": "Заказать обратный звонок"
+                  }
+                ]
               }
             ]
           }

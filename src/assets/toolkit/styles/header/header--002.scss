@@ -11,8 +11,7 @@ $header002-height: $base-line-height * 8;
 
   @include block(header002) {
     text-align: center;
-    //position: fixed;
-    position: static;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%; 
@@ -21,7 +20,6 @@ $header002-height: $base-line-height * 8;
 
     @include element(wrap) {
       position: relative;   
-      @include _(12 12 8 4 4); 
     }   
 
     @include element(burger) {
@@ -29,18 +27,14 @@ $header002-height: $base-line-height * 8;
       top: 0;
       right: 0;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       text-decoration: none;
       z-index: 10;
-      width: 50%;
+      @include _(3 1 1 1 1);
       height: $header002-height;
 
-      @include _(greater than mobile) {  
-        width: 20%;
-      }
-
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         display: none;
       }
 
@@ -57,18 +51,14 @@ $header002-height: $base-line-height * 8;
       position: absolute;
       top: 0;
       left: 0;
-      width: 50%;
-
-      @include _(greater than mobile) {  
-        width: 20%;
-      }
+      @include _(3 3 6 2 2);
     }
 
     @include element(logo) {
       display: block;
       background-image: url('../images/' + $logo);
       background-repeat: no-repeat;
-      background-position-y: 50%;
+      background-position: 0 50%;
       background-size: contain;
       max-width: $base-line-height * 300;
       min-height: $base-line-height * 6; 
@@ -76,20 +66,19 @@ $header002-height: $base-line-height * 8;
       margin-bottom: $base-line-height; 
       overflow: hidden;
       text-indent: 9999px;
-      text-align: left;
     }
 
     @include element(menu) {
       position: absolute;
       top: $header002-height;
       right: 0;
-      width: 100%;
+      @include _(9 6 4 4 4);
       float: none;
 
-      @include _(greater than desktop) {  
+      @include _(greater than $header-mobile-breakpoint) {  
         position: static;
+        @include _(9 9 4 4 4);
         float: right;
-        width: 80%;
 
         .menu001__1lvl-link,
         .menu001__1lvl-sub-link {
@@ -99,12 +88,9 @@ $header002-height: $base-line-height * 8;
         }
       }
 
-      .menu {
-        float: right;
-
-        @include _(greater than desktop) {  
-          float: left;
-        }
+      .menu-mobile {
+        height: calc(100vh - #{$header002-height});
+        overflow: auto;
       }
     }
   }
