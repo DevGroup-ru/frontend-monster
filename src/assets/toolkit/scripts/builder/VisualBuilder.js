@@ -29,6 +29,9 @@ class VisualBuilder {
     const settings = {
       'element-selector': '.monster-visual-builder',
       'frame-selector': '.monster-visual-frame',
+      'materials': {},
+      'groups': {},
+      'stackable-container-class': 'monster-stackable-container',
     };
     for (const key in userSettings) {
       if (userSettings.hasOwnProperty(key)) {
@@ -37,6 +40,7 @@ class VisualBuilder {
     }
     this.settings = settings;
     this.$builder = $(this.settings['element-selector']);
+    this.$stackable = $('.' + this.settings['stackable-container-class']);
   }
 
   resolutionSwitcher() {
@@ -68,6 +72,18 @@ class VisualBuilder {
   switchEnvironment(environmentName) {
     this.environments.get(environmentName).activate();
     this.currentEnvironment = environmentName;
+  }
+
+  clearStackable() {
+    this.$stackable.empty();
+  }
+
+  createStackablePane() {
+    const paneClass = `${this.settings['stackable-container-class']}__pane`;
+    const modifier = this.$stackable.find('.' + paneClass).length === 0 ? `${paneClass}--first` : '';
+    const $newPane = $(`<div class="${paneClass} ${modifier}"></div>`);
+    this.$stackable.append($newPane);
+    return $newPane;
   }
 }
 

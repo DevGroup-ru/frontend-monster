@@ -18,7 +18,7 @@ $editor-accent-color: #EC5035;
   @include block(monster-visual-builder) {
     line-height: $base-line-height * 2;
     font-size: $base-font-size;
-    z-index: $base-z-index;
+
 
     @include element(top-pane) {
       position: fixed;
@@ -46,14 +46,27 @@ $editor-accent-color: #EC5035;
   // @group internal
   // @desc Stackable container for dynamic editor tools
   @include block(monster-stackable-container) {
-    background: $editor-light-bg;
+    z-index: $base-z-index;
     position: fixed;
     left: $left-pane-width;
     top: $top-pane-height;
     bottom: 0;
     min-width: 200px;
-    overflow-y: scroll;
     color: $editor-text-color;
+    @include element(pane) {
+      background: $editor-base-bg;
+      min-width: 300px;
+      float: left;
+      height: 100%;
+      bottom: 0;
+      top: 0;
+      overflow-y: auto;
+      @include modifier(first) {
+        background: $editor-light-bg;
+        min-width: 200px;
+      }
+    }
+
   }
 
   // @group internal
@@ -103,6 +116,7 @@ $editor-accent-color: #EC5035;
 
   // @group internal
   @include block(monster-visual-frame) {
+    z-index: -10;
     position: fixed;
     right: 10px;
     top: $top-pane-height+1px;
