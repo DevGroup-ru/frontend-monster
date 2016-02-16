@@ -212,7 +212,12 @@ $header-mobile-breakpoint: desktop;
     padding: $base-line-height * 2; 
     overflow: hidden;
 
-    @include element(input) {
+    label {
+      position: relative;
+      width: 100%;
+    }
+
+    input {
       resize: vertical;
       outline: none;
       @include type-setting(text);
@@ -253,12 +258,12 @@ $header-mobile-breakpoint: desktop;
 
     @include element(1lvl-wrap) {
       position: relative;
-      float: left;
       overflow: hidden;
 
       @include _(greater than $header-mobile-breakpoint) { 
         position: static; 
         width: 100%;
+        float: left;
         overflow: inherit;
       }
     }
@@ -339,12 +344,13 @@ $header-mobile-breakpoint: desktop;
       top: 0;
       left: 0;
       z-index: 2;
-      width: 320px;
+      width: 100%;
       background: $menu001-sub-fon;
 
       @include _(greater than $header-mobile-breakpoint) {
         top: 100%;
         left: 0;
+        width: 320px;
         height: auto;
         overflow: inherit;
         display: block;
@@ -383,6 +389,7 @@ $header-mobile-breakpoint: desktop;
           & > .sub-menu {
             opacity: 1;
             visibility: visible;
+            overflow: inherit;
             transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
           }
         }
@@ -432,9 +439,66 @@ $header-mobile-breakpoint: desktop;
         text-decoration: none;
         padding: $base-line-height * 2;
       }
+
+      &:hover {
+        background: $menu001-sub-fon-hover;
+
+        @include _(greater than $header-mobile-breakpoint) {
+          & > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+          }
+        }
+      }
     }  
 
     @include element(3lvl-item-back) {
+      display: block;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: none;
+      }
+    }
+
+    @include element(4lvl) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      overflow: auto;
+      background: $menu001-sub-fon;
+
+      @include _(greater than $header-mobile-breakpoint) {
+        left: 100%;
+        height: auto;
+        overflow: inherit;
+        width: 100%;
+      }
+    } 
+
+    @include element(4lvl-item) {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: left;
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        @include type-setting(text);
+        text-decoration: none;
+        padding: $base-line-height * 2;
+      }
+    }  
+
+    @include element(4lvl-item-back) {
       display: block;
 
       @include _(greater than $header-mobile-breakpoint) {  
@@ -471,6 +535,7 @@ $header-mobile-breakpoint: desktop;
 
     @include modifier(mega) {
       width: 100%;
+
       @include _(greater than $header-mobile-breakpoint) {
         .menu001__2lvl-item {
           width: calculate-width($menu001-sub-item-num);
@@ -478,10 +543,66 @@ $header-mobile-breakpoint: desktop;
         }
       }
     }
+
+    @include modifier(tabs) {
+      width: 100%;
+      font-size: 0;
+      
+      @include _(greater than $header-mobile-breakpoint) {
+        display: none;
+
+        & > div {
+          width: calculate-width($menu001-sub-item-num);
+          position: relative;
+          display: inline;
+          vertical-align: top;
+
+          a,
+          a:link,
+          a:hover,
+          a:visited,
+          a:active,
+          a:focus,
+          button {
+            display: inline-block;
+            width: calculate-width($menu001-sub-item-num);
+          }
+
+          .sub-menu {
+            left: 0;
+            float: left;
+            width: 100%;
+            height: 100%;
+            position: static;
+
+            & > div {
+              width: calculate-width($menu001-sub-item-num);
+              float: left;
+
+              a,
+              a:link,
+              a:hover,
+              a:visited,
+              a:active,
+              a:focus,
+              button {
+                width: 100%;
+                display: block;              
+              }
+            }
+          }
+        }
+
+        .menu001__2lvl-item-back {
+          display: none;
+        }
+      }
+    }
   }
 
   @include block(sub-link) {
     &:after {
+      display: inline-block;
       @extend %basic-icon;
       content: "\e801";
       width: $base-line-height * 2;
@@ -517,6 +638,51 @@ $header-mobile-breakpoint: desktop;
     }
   }
 
+  @include block(sub-tabs-item) {
+    position: static;
+    overflow: hidden;
+
+    &:hover > .sub-link {
+      &:after {
+        content: "\e816";
+        text-decoration: none;
+      }
+    }
+
+    @include _(greater than $header-mobile-breakpoint) {
+
+      .sub-item--show .sub-link{
+        background: $menu001-sub-fon-hover;
+
+        &:after {
+          content: "\e816";
+        }
+      }
+
+      &:hover {
+        .sub-menu--tabs {
+          display: block;
+        }
+
+        .sub-menu--tabs .sub-menu{
+          display: none;
+          height: 0px;
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        .sub-item--show{
+          .sub-menu{
+            display: block;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
   @include block(header-phone-button-wrap) {
     opacity: 0;
     visibility: hidden;
@@ -531,6 +697,57 @@ $header-mobile-breakpoint: desktop;
     @include _(greater than $header-mobile-breakpoint) {
       opacity: 1;
       visibility: visible;
+    }
+  }
+
+  @include block(menu-column) {
+    @include _(greater than $header-mobile-breakpoint) {
+      width: calculate-width($menu001-sub-item-num);
+      float: left;
+
+      & > div {
+        width: 100%;
+      }
+    }
+
+    @include modifier(padding) {
+      @include _(greater than $header-mobile-breakpoint) {
+        padding-left: $base-line-height * 2;
+        padding-right: $base-line-height * 2;
+      }
+    }
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.menu-photo-link {
+      display: none;
+      padding: 0;
+      height: $base-line-height * 12;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translateX(-50%);
+      }
+
+      @include _(greater than $header-mobile-breakpoint) {
+        display: block;
+      }
     }
   }
 }

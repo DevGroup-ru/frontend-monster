@@ -35,7 +35,7 @@
                     "content": [
                       {
                         "block": "search-simple",
-                        "html": "<input type='text' class='search__input' name='Search' value='' placeholder='Введите данные для поиска' autocomplete='off'>"
+                        "html": "<label><input type='text' name='Search' value='' placeholder='Введите данные для поиска' autocomplete='off'></label>"
                       }
                     ]
                   },

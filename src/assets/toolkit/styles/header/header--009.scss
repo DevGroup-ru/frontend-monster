@@ -1,39 +1,38 @@
-$header007-fon: #3b8a91;
-$header007-top-fon: #33777d;
-$header007-user-fon: #eee;
-$header007-phone-button-fon: #fff;
+$header009-fon: #3b8a91;
+$header009-top-fon: #33777d;
+$header009-user-fon: #eee;
 $logo: 'logo.jpg';
 
-$header007-height: $base-line-height * 6;
-$header007-height-mobile: $base-line-height * 8;
-$header007-top-height: $base-line-height * 9;
+$header009-height: $base-line-height * 6;
+$header009-height-mobile: $base-line-height * 8;
+$header009-top-height: $base-line-height * 9;
 
-  // @desc Header - header with menu, open search in top line, button of personal account, and phone
+  // @desc Header - header with menu, search, button of personal account and top line
   // @group header
-  // @bemJson header--007.json
+  // @bemJson header--009.json
 
 .m-wrapper {
 
-  @include block(header007) {
+  @include block(header009) {
     text-align: center;
     position: fixed;
     //position: static;
     top: 0;
     left: 0;
     width: 100%; 
-    height: $header007-height-mobile;
-    background: $header007-fon;
+    height: $header009-height-mobile;
+    background: $header009-fon;
 
     &:before {
       display: none;
       content: "";
-      background: $header007-top-fon;
-      height: $header007-top-height;
+      background: $header009-top-fon;
+      height: $header009-top-height;
       width: 100%;
     }
 
     @include _(greater than $header-mobile-breakpoint) {  
-      height: $header007-height + $header007-top-height;
+      height: $header009-height + $header009-top-height;
       overflow: inherit;
 
       &:before {
@@ -55,7 +54,7 @@ $header007-top-height: $base-line-height * 9;
       text-decoration: none;
       z-index: 10;
       @include _(3 1 1 1 1);
-      height: $header007-height-mobile;
+      height: $header009-height-mobile;
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: none;
@@ -72,21 +71,18 @@ $header007-top-height: $base-line-height * 9;
 
     @include element(logo-wrap) {
       position: absolute;
-      left: 0;
+      top: 0;
       @include _(3 3 3 2 2);
       margin: 0;
       left: 50%;
       transform: translateX(-50%);
 
-      @include _(greater than mobile) {  
+      @include _(greater than mobile) {
         @include _(3 3 3 2 2, $gutter: row);
       }
 
       @include _(greater than $header-mobile-breakpoint) {
-        transform: translateX(0);  
-        top: -$header007-top-height;
-        left: 0;
-        @include _(3 3 3 2 2);
+        top: -$header009-top-height;
       }
     }
 
@@ -97,27 +93,28 @@ $header007-top-height: $base-line-height * 9;
       background-size: contain;
       background-position: 50% 50%;
       max-width: $base-line-height * 300;
-      min-height: $header007-height-mobile - $base-line-height * 2; 
+      min-height: $header009-height-mobile - $base-line-height * 2; 
       margin-top: $base-line-height; 
       margin-bottom: $base-line-height; 
       overflow: hidden;
       text-indent: 9999px;
 
-      @include _(greater than $header-mobile-breakpoint) {
-        min-height: $header007-top-height - $base-line-height * 2; 
-        background-position: 0 50%;
+      @include _(greater than $header-mobile-breakpoint) {  
+        top: -$header009-top-height;
+        min-height: $header009-top-height - $base-line-height * 2;
       }
     }
 
     @include element(menu) {
       position: absolute;
-      top: $header007-height-mobile;
-      left: 0; 
-      float: none;
+      top: $header009-height-mobile;
+      left: 0;
       @include _(12 4 4 4 4);
+      float: none;
 
       @include _(greater than $header-mobile-breakpoint) {  
         top: 0;
+        float: right;
         @include _(12 12 4 4 4);
 
         & > div{
@@ -126,36 +123,64 @@ $header007-top-height: $base-line-height * 9;
 
         .menu001__1lvl-link,
         .menu001__1lvl-sub-link {
-          height: $header007-height;
+          height: $header009-height;
           overflow: hidden;
         }
       }
 
       .menu-mobile {
-        height: calc(100vh - #{$header007-height-mobile});
+        height: calc(100vh - #{$header009-height-mobile});
         overflow: auto;
+      }
+    }
+
+    @include element(search-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 8.3%;
+      @include _(1 1 1 1 1);
+      text-decoration: none;
+      z-index: 10;
+      height: $header009-height-mobile;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -$header009-top-height;
+        height: $header009-top-height;
+      }
+
+      @include modifier(overmenu) {
+        &.header-search-icon--selected {
+          z-index: 11;
+          right: 0;
+          justify-content: center;
+        }
       }
     }
 
     @include element(user-icon) {
       display: none;
       position: absolute;
-      top: -$header007-top-height;
+      top: 0;
       right: 0;
       @include _(1 1 1 1 1);
-      text-align: right;
       text-decoration: none;
       z-index: 10;
-      height: $header007-top-height;
+      height: $header009-height-mobile;
 
       i {
-        font-size: $base-line-height * 3; 
+        font-size: $base-line-height * 2; 
       }  
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
         justify-content: center;
         align-items: center;
+        top: -$header009-top-height;
+        height: $header009-top-height;
       }
     }
 
@@ -167,16 +192,16 @@ $header007-top-height: $base-line-height * 9;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      height: $header007-height-mobile;
+      height: $header009-height-mobile;
       overflow: hidden;
 
       @include _(greater than $header-mobile-breakpoint) {  
-        height: $header007-height;
+        height: $header009-height;
       }
     }
 
+
     @include element(button) {
-      display: block;
       width: 100%;
       min-width: auto;
       text-decoration: none;
@@ -223,14 +248,14 @@ $header007-top-height: $base-line-height * 9;
 
       @include _(greater than $header-mobile-breakpoint) {
         position: absolute;  
-        @include _(3 3 1 1 1);
-        left: 25%;
-        top: -$header007-top-height;
+        @include _(4 4 4 1 1);
+        left: 0;
+        top: -$header009-top-height;
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
+        flex-direction: column;
         justify-content: center;
-        height: $header007-top-height;
+        height: $header009-top-height;
         padding: 0;
 
         span{
@@ -239,37 +264,15 @@ $header007-top-height: $base-line-height * 9;
       }
     }
 
-    @include block(search-simple) {
+    @include block(search) {
+      @include modifier(overmenu) {
 
-      @include _(greater than $header-mobile-breakpoint) {
-        position: absolute;
-        top: -$header007-top-height;
-        right: 6.8%; 
-        @include _(5 5 1 1 1, $gutter: omega);
-        height: $header007-top-height;
-        display: flex;
-        align-items: center;
-      }
+        .search__input-wrap {
 
-      input {
-        padding-left: $base-line-height * 4;
-      }
-
-      label {
-
-        &:before{
-          @extend %basic-icon;
-          content: $header-search-icon;
-          font-size: $base-line-height * 2; 
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          padding: 0 $base-line-height; 
-          width: $base-line-height * 2;
-        } 
+          @include _(greater than $header-mobile-breakpoint) {  
+            width: 100%;
+          }
+        }
       }
     }
   }

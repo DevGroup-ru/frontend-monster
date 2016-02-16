@@ -1,38 +1,39 @@
-$header005-fon: #3b8a91;
-$header005-top-fon: #33777d;
-$header005-user-fon: #eee;
-$header005-phone-button-fon: #fff;
+$header010-fon: #3b8a91;
+$header010-top-fon: #33777d;
+$header010-user-fon: #eee;
+$header010-phone-button-fon: #fff;
 $logo: 'logo.jpg';
 
-$header005-height: $base-line-height * 6;
-$header005-height-mobile: $base-line-height * 8;
-$header005-top-height: $base-line-height * 9;
+$header010-height: $base-line-height * 6;
+$header010-height-mobile: $base-line-height * 8;
+$header010-top-height: $base-line-height * 9;
 
-  // @desc Header - header with menu, search, top line and block with phone and button 
+  // @desc Header - header with menu, search, button of personal account and top line
   // @group header
-  // @bemJson header--005.json
+  // @bemJson header--010.json
 
 .m-wrapper {
 
-  @include block(header005) {
+  @include block(header010) {
     text-align: center;
     position: fixed;
+    //position: static;
     top: 0;
     left: 0;
     width: 100%; 
-    height: $header005-height-mobile;
-    background: $header005-fon;
+    height: $header010-height-mobile;
+    background: $header010-fon;
 
     &:before {
       display: none;
       content: "";
-      background: $header005-top-fon;
-      height: $header005-top-height;
+      background: $header010-top-fon;
+      height: $header010-top-height;
       width: 100%;
     }
 
     @include _(greater than $header-mobile-breakpoint) {  
-      height: $header005-height + $header005-top-height;
+      height: $header010-height + $header010-top-height;
       overflow: inherit;
 
       &:before {
@@ -54,7 +55,7 @@ $header005-top-height: $base-line-height * 9;
       text-decoration: none;
       z-index: 10;
       @include _(3 1 1 1 1);
-      height: $header005-height-mobile;
+      height: $header010-height-mobile;
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: none;
@@ -71,7 +72,7 @@ $header005-top-height: $base-line-height * 9;
 
     @include element(logo-wrap) {
       position: absolute;
-      left: 0;
+      top: 0;
       @include _(3 3 3 2 2);
       margin: 0;
       left: 50%;
@@ -83,7 +84,7 @@ $header005-top-height: $base-line-height * 9;
 
       @include _(greater than $header-mobile-breakpoint) {
         transform: translateX(0);  
-        top: -$header005-top-height;
+        top: -$header010-top-height;
         left: 0;
         @include _(3 3 3 2 2);
       }
@@ -96,42 +97,43 @@ $header005-top-height: $base-line-height * 9;
       background-size: contain;
       background-position: 50% 50%;
       max-width: $base-line-height * 300;
-      min-height: $header005-height-mobile - $base-line-height * 2; 
+      min-height: $header010-height-mobile - $base-line-height * 2; 
       margin-top: $base-line-height; 
       margin-bottom: $base-line-height; 
       overflow: hidden;
       text-indent: 9999px;
 
-      @include _(greater than $header-mobile-breakpoint) {
-        min-height: $header005-top-height - $base-line-height * 2; 
+      @include _(greater than $header-mobile-breakpoint) {  
+        top: -$header010-top-height;
+        min-height: $header010-top-height - $base-line-height * 2;
       }
     }
 
     @include element(menu) {
       position: absolute;
-      top: $header005-height-mobile;
+      top: $header010-height-mobile;
       left: 0;
       @include _(12 4 4 4 4);
       float: none;
 
       @include _(greater than $header-mobile-breakpoint) {  
-        @include _(12 12 4 4 4);
         top: 0;
-        float: right;
+        @include _(12 12 4 4 4);
+        margin: 0;
 
         & > div{
-          margin: 0 8.3% 0 0;
+          margin: 0 33.3% 0 0;
         }
 
         .menu001__1lvl-link,
         .menu001__1lvl-sub-link {
-          height: $header005-height;
+          height: $header010-height;
           overflow: hidden;
         }
       }
 
       .menu-mobile {
-        height: calc(100vh - #{$header005-height-mobile});
+        height: calc(100vh - #{$header010-height-mobile});
         overflow: auto;
       }
     }
@@ -140,18 +142,17 @@ $header005-top-height: $base-line-height * 9;
       display: none;
       position: absolute;
       top: 0;
-      right: 0;
+      right: 25%;
       @include _(1 1 1 1 1);
-      text-align: right;
       text-decoration: none;
       z-index: 10;
-      height: $header005-height-mobile;
+      height: $header010-height-mobile;
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
         justify-content: center;
         align-items: center;
-        height: $header005-height;
+        height: $header010-height;
       }
 
       @include modifier(overmenu) {
@@ -160,6 +161,29 @@ $header005-top-height: $base-line-height * 9;
           right: 0;
           justify-content: center;
         }
+      }
+    }
+
+    @include element(user-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include _(1 1 1 1 1);
+      text-decoration: none;
+      z-index: 10;
+      height: $header010-height-mobile;
+
+      i {
+        font-size: $base-line-height * 2; 
+      }  
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -$header010-top-height;
+        height: $header010-top-height;
       }
     }
 
@@ -172,7 +196,7 @@ $header005-top-height: $base-line-height * 9;
       right: 0;
       @include _(1 1 1 1 1);
       text-decoration: none;
-      height: $header005-height-mobile;
+      height: $header010-height-mobile;
 
       &:before {
         @extend %basic-icon;
@@ -193,28 +217,36 @@ $header005-top-height: $base-line-height * 9;
       display: block;
       position: absolute;
       right: 0;
-      top: $header005-height-mobile;
+      top: $header010-height-mobile;
       @include _(9 4 4 4 4);
       justify-content: flex-end;
       align-items: center;
       padding: $base-line-height * 2;
-      background: $header005-phone-button-fon;
+      background: $header010-phone-button-fon;
 
       @include _(greater than $header-mobile-breakpoint) {  
         @include _(9 9 4 4 4);
         display: flex;
         top: 0;
         right: 0;
-        top: -$header005-top-height;
-        height: $header005-top-height;
+        top: -$header010-top-height;
+        height: $header010-top-height;
         background: transparent;
         padding: 0;
       }
     }
 
+    @include element(phone-days-wrap) {
+      padding-right: 0; 
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        padding-right: $base-line-height * 3;
+        text-align: right;
+      }
+    }
+
     @include element(phone) {
       @include type-setting(accent-text);
-      padding-right: 0; 
 
       &:before {
         @extend %basic-icon;
@@ -223,10 +255,10 @@ $header005-top-height: $base-line-height * 9;
         vertical-align: middle;
         padding-right: $base-line-height;
       }
+    }
 
-      @include _(greater than $header-mobile-breakpoint) {  
-        padding-right: $base-line-height * 3;
-      }
+    @include element(days) {
+      @include type-setting(text);
     }
 
     @include element(button-call) {
@@ -234,16 +266,33 @@ $header005-top-height: $base-line-height * 9;
 
       @include _(greater than $header-mobile-breakpoint) {  
         margin-top: 0;
+        @include _(4 4 1 1 1, 12 12 4 4 4, $gutter: omega);
       }
     }
 
-    @include element(phone-text) {
-      @include type-setting(text);
-      display: block;
-      padding-bottom: $base-line-height; 
+    @include block(block-bottom-menu) {
+      @include element(button-wrap) {
+        
+        @include _(greater than $header-mobile-breakpoint) {  
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: $header010-height;
+          @include _(3 3 1 1 1, 12 12 8 4 4, $gutter: omega);
+        }
+      }
 
-      @include _(greater than $header-mobile-breakpoint) {  
-        display: none;
+      @include element(button) {
+        display: block;
+        width: 100%;
+        padding: $base-line-height * 2;
+
+        @include _(greater than $header-mobile-breakpoint) {  
+          padding: $base-line-height;
+        }
       }
     }
   }

@@ -81,7 +81,7 @@ $header003-search: $base-line-height * 8;
         position: relative;
         top: 0;
         float: right;
-        width: 100%;
+        @include _(12 12 8 1 1);
         margin: 0;
 
         & > div{
@@ -90,8 +90,7 @@ $header003-search: $base-line-height * 8;
 
         .menu001__1lvl-link,
         .menu001__1lvl-sub-link {
-          min-height: $header002-height;
-          max-height: $header002-height;
+          height: $header002-height;
           overflow: hidden;
         }
       }

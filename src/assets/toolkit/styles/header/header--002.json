@@ -109,15 +109,133 @@
                                               },
                                               {
                                                 "elem": "3lvl-item",
+                                                "cls": "sub-item",
                                                 "editableGroup": "3lvl-item-1",
                                                 "content": [
-                                                  {
-                                                    "elem": "3lvl-link",
-                                                    "editableGroup": "3lvl-link-2",
-                                                    "content": "Пункт 3-1",
-                                                    "link": true
-                                                  }
-                                                ]
+                                                {
+                                                  "elem": "3lvl-sub-link",
+                                                  "cls": "sub-link",
+                                                  "editableGroup": "3lvl-link-2",
+                                                  "content": "Пункт 3-1",
+                                                  "link": true
+                                                },
+                                                {
+                                                  "elem": "4lvl",
+                                                  "cls": "sub-menu",
+                                                  "editableGroup": "4lvl-1",
+                                                  "content": [
+                                                    {
+                                                      "elem": "4lvl-item-back",
+                                                      "editableGroup": "4lvl-item-back-1",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "cls": "menu-item-back",
+                                                          "editableGroup": "4lvl-link-1",
+                                                          "content": "Назад",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "elem": "4lvl-item",
+                                                      "editableGroup": "4lvl-item-1",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "editableGroup": "4lvl-link-2",
+                                                          "content": "Пункт 4-1",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "elem": "4lvl-item",
+                                                      "editableGroup": "4lvl-item-2",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "editableGroup": "4lvl-link-3",
+                                                          "content": "Пункт 4-2",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "elem": "4lvl-item",
+                                                      "editableGroup": "4lvl-item-3",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "editableGroup": "4lvl-link-4",
+                                                          "content": "Пункт 4-3",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "elem": "4lvl-item",
+                                                      "editableGroup": "4lvl-item-4",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "editableGroup": "4lvl-link-5",
+                                                          "content": "Пункт 4-4",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "elem": "4lvl-item",
+                                                      "editableGroup": "4lvl-item-5",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "editableGroup": "4lvl-link-6",
+                                                          "content": "Пункт 4-5",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "elem": "4lvl-item",
+                                                      "editableGroup": "4lvl-item-6",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "editableGroup": "4lvl-link-7",
+                                                          "content": "Пункт 4-6",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "elem": "4lvl-item",
+                                                      "editableGroup": "4lvl-item-7",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "editableGroup": "4lvl-link-8",
+                                                          "content": "Пункт 4-7",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "elem": "4lvl-item",
+                                                      "editableGroup": "4lvl-item-8",
+                                                      "content": [
+                                                        {
+                                                          "elem": "4lvl-link",
+                                                          "editableGroup": "4lvl-link-9",
+                                                          "content": "Пункт 4-8",
+                                                          "link": true
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
                                               },
                                               {
                                                 "elem": "3lvl-item",

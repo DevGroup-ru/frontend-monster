@@ -368,7 +368,7 @@
                         },
                         {
                         "elem": "1lvl-item",
-                        "cls": "sub-mega-item",
+                        "cls": "sub-tabs-item",
                         "editableGroup": "1lvl-item-3",
                         "content": [
                           {
@@ -380,7 +380,7 @@
                           },
                           {
                             "elem": "2lvl",
-                            "cls": "sub-menu sub-menu--mega",
+                            "cls": "sub-menu sub-menu--tabs",
                             "editableGroup": "2lvl-3",
                             "content": [
                               {
@@ -398,25 +398,391 @@
                               },
                               {
                                 "elem": "2lvl-item",
+                                "cls": "sub-item",
                                 "editableGroup": "2lvl-item-11",
                                 "content": [
                                     {
-                                      "elem": "2lvl-link",
+                                      "elem": "2lvl-sub-link",
+                                      "cls": "sub-link",
                                       "editableGroup": "2lvl-link-14",
                                       "content": "Пункт 1",
                                       "link": true
+                                    },
+                                    {
+                                      "elem": "3lvl",
+                                      "cls": "sub-menu",
+                                      "editableGroup": "3lvl-2",
+                                      "content": [
+                                        {
+                                          "elem": "3lvl-item-back",
+                                          "editableGroup": "3lvl-item-back-2",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "cls": "menu-item-back",
+                                              "editableGroup": "3lvl-link-10",
+                                              "content": "Назад",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "cls": "menu-column",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-2",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-11",
+                                                  "content": "Пункт 3-1",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-3",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-12",
+                                                  "content": "Пункт 3-2",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-4",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-13",
+                                                  "content": "Пункт 3-3",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-5",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-14",
+                                                  "content": "Пункт 3-4",
+                                                  "link": true
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "cls": "menu-column menu-column--padding",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-6",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-photo-link",
+                                                  "editableGroup": "3lvl-photo-link-1",
+                                                  "cls": "menu-photo-link",
+                                                  "link": true,
+                                                  "content": [
+                                                    {
+                                                      "elem": "3lvl-photo",
+                                                      "editableGroup": "3lvl-photo-1",
+                                                      "image": "http://lorempixel.com/200/300"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-15",
+                                                  "content": "Наименование крутой работы из портфолио клиента",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-7",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-photo-link",
+                                                  "editableGroup": "3lvl-photo-link-2",
+                                                  "cls": "menu-photo-link",
+                                                  "link": true,
+                                                  "content": [
+                                                    {
+                                                      "elem": "3lvl-photo",
+                                                      "editableGroup": "3lvl-photo-2",
+                                                      "image": "http://lorempixel.com/200/300"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-16",
+                                                  "content": "Наименование крутой работы из портфолио клиента",
+                                                  "link": true
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "cls": "menu-column",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-10",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-17",
+                                                  "content": "Пункт 3-9",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-11",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-18",
+                                                  "content": "Пункт 3-10",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-12",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-19",
+                                                  "content": "Пункт 3-11",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-13",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-20",
+                                                  "content": "Пункт 3-12",
+                                                  "link": true
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "cls": "menu-column",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-14",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-21",
+                                                  "content": "Пункт 3-9",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-15",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-22",
+                                                  "content": "Пункт 3-10",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-16",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-23",
+                                                  "content": "Пункт 3-11",
+                                                  "link": true
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "elem": "3lvl-item",
+                                              "editableGroup": "3lvl-item-17",
+                                              "content": [
+                                                {
+                                                  "elem": "3lvl-link",
+                                                  "editableGroup": "3lvl-link-24",
+                                                  "content": "Пункт 3-12",
+                                                  "link": true
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
                                 {
                                   "elem": "2lvl-item",
+                                  "cls": "sub-item",
                                   "editableGroup": "2lvl-item-12",
                                   "content": [
                                     {
                                       "elem": "2lvl-link",
+                                      "cls": "sub-link",
                                       "editableGroup": "2lvl-link-15",
                                       "content": "Пункт 2",
                                       "link": true
+                                    },
+                                    {
+                                      "elem": "3lvl",
+                                      "cls": "sub-menu",
+                                      "editableGroup": "3lvl-3",
+                                      "content": [
+                                        {
+                                          "elem": "3lvl-item-back",
+                                          "editableGroup": "3lvl-item-back-3",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "cls": "menu-item-back",
+                                              "editableGroup": "3lvl-link-25",
+                                              "content": "Назад",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-18",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-26",
+                                              "content": "Пункт 3-1",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-19",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-27",
+                                              "content": "Пункт 3-2",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-20",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-28",
+                                              "content": "Пункт 3-3",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-21",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-29",
+                                              "content": "Пункт 3-4",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-22",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-30",
+                                              "content": "Пункт 3-5",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-23",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-31",
+                                              "content": "Пункт 3-6",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-24",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-32",
+                                              "content": "Пункт 3-7",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-25",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-33",
+                                              "content": "Пункт 3-8",
+                                              "link": true
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "elem": "3lvl-item",
+                                          "editableGroup": "3lvl-item-26",
+                                          "content": [
+                                            {
+                                              "elem": "3lvl-link",
+                                              "editableGroup": "3lvl-link-34",
+                                              "content": "Пункт 3-9",
+                                              "link": true
+                                            }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
@@ -439,30 +805,6 @@
                                     {
                                       "elem": "2lvl-link",
                                       "editableGroup": "2lvl-link-17",
-                                      "content": "Пункт 4",
-                                      "link": true
-                                    }
-                                  ]
-                                },
-                                {
-                                  "elem": "2lvl-item",
-                                  "editableGroup": "2lvl-item-13",
-                                  "content": [
-                                    {
-                                      "elem": "2lvl-link",
-                                      "editableGroup": "2lvl-link-18",
-                                      "content": "Пункт 3",
-                                      "link": true
-                                    }
-                                  ]
-                                },
-                                {
-                                  "elem": "2lvl-item",
-                                  "editableGroup": "2lvl-item-14",
-                                  "content": [
-                                    {
-                                      "elem": "2lvl-link",
-                                      "editableGroup": "2lvl-link-19",
                                       "content": "Пункт 4",
                                       "link": true
                                     }

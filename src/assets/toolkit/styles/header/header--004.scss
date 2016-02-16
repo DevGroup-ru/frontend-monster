@@ -6,7 +6,7 @@ $logo: 'logo.jpg';
 $header004-height: $base-line-height * 8;
 $header004-top-height: $base-line-height * 4;
 
-  // @desc Header - header with menu, search, button of personal account and top line
+  // @desc Header - header with mega menu tabs, search, button of personal account and top line
   // @group header
   // @bemJson header--004.json
 
@@ -115,7 +115,7 @@ $header004-top-height: $base-line-height * 4;
       @include _(greater than $header-mobile-breakpoint) {  
         top: 0;
         float: right;
-        width: 100%;
+        @include _(12 12 8 1 1);
         margin: 0;
 
         & > div{
@@ -250,7 +250,7 @@ $header004-top-height: $base-line-height * 4;
       }
     }
 
-    .header-phone {
+    @include block(header-phone) {
       @include type-setting(text);
       padding: $base-line-height * 2; 
       overflow: hidden;

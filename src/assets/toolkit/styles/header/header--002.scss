@@ -72,7 +72,7 @@ $header002-height: $base-line-height * 8;
       position: absolute;
       top: $header002-height;
       right: 0;
-      @include _(9 6 4 4 4);
+      @include _(9 4 4 4 4);
       float: none;
 
       @include _(greater than $header-mobile-breakpoint) {  
@@ -82,8 +82,7 @@ $header002-height: $base-line-height * 8;
 
         .menu001__1lvl-link,
         .menu001__1lvl-sub-link {
-          min-height: $header002-height;
-          max-height: $header002-height;
+          height: $header002-height;
           overflow: hidden;
         }
       }
