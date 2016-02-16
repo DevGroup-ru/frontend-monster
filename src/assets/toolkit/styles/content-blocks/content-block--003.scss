@@ -1,5 +1,7 @@
 .m-wrapper {
-
+  // @desc Content block - advantages with photos on left
+  // @group content-blocks
+  // @bemJson content-block--003.json
   @include block(content003) {
     text-align: left;
 
@@ -50,7 +52,7 @@
       }
     }
 
-    @include element(wrap-text) {
+    @include element(text-wrap) {
       @include _(3 3 4 4 4, $gutter: row);
       @include type-setting(text);
       margin-top: $base-line-height;

@@ -1,0 +1,96 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "content005",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": "Наши преимущества",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "icon",
+            "icon": true
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "icon",
+            "icon": true
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-3",
+        "content": [
+          {
+            "elem": "icon",
+            "icon": true
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,9 @@
 $content006-icon-fon: #eee;
 
 .m-wrapper {
-
+  // @desc Content block - advantages with fon and icons on top
+  // @group content-blocks
+  // @bemJson content-block--006.json
   @include block(content006) {
     text-align: center;
 

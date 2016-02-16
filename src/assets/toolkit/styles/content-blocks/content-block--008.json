@@ -1,0 +1,207 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "content007",
+        "cls": "grid-full__half grid-full__half--no-gutter",
+        "content": [
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "block": "content002",
+        "cls": "grid-full__half grid-full__half--no-gutter",
+        "content": [
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

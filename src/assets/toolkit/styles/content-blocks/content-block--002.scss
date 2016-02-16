@@ -1,5 +1,7 @@
 .m-wrapper {
-
+  // @desc Content block - advantages with photos on top
+  // @group content-blocks
+  // @bemJson content-block--002.json
   @include block(content002) {
     text-align: center;
 

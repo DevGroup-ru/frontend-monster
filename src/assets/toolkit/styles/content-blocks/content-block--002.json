@@ -1,0 +1,116 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "content002",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": "Примеры работ",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "title-nested",
+            "content": "Классное преимущество, всем нравится",
+            "link": true
+          },
+          {
+            "elem": "text",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "title-nested",
+            "content": "Классное преимущество, всем нравится",
+            "link": true
+          },
+          {
+            "elem": "text",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-3",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "title-nested",
+            "content": "Классное преимущество, всем нравится",
+            "link": true
+          },
+          {
+            "elem": "text",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-4",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "title-nested",
+            "content": "Классное преимущество, всем нравится",
+            "link": true
+          },
+          {
+            "elem": "text",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,5 +1,7 @@
 .m-wrapper {
-
+  // @desc Content block - advantages with simple icons on left
+  // @group content-blocks
+  // @bemJson content-block--005.json
   @include block(content005) {
     text-align: left;
 

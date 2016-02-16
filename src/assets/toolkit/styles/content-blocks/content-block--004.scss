@@ -1,7 +1,9 @@
 $content004-icon-fon: #eee;
 
 .m-wrapper {
-
+  // @desc Content block - advantages with icons on left
+  // @group content-blocks
+  // @bemJson content-block--004.json
   @include block(content004) {
     text-align: left;
 
