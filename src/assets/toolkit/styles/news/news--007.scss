@@ -3,6 +3,10 @@ $news007-border-color: #000;
 
 .m-wrapper {
 
+  // @desc News - news in accordion
+  // @group news
+  // @bemJson news--007.json
+
   @include block(news007) {
     text-align: left;
 
@@ -18,6 +22,10 @@ $news007-border-color: #000;
     @include element(title) {
       @extend %heading;
       @include _($full-row-configuration);
+    }
+
+    @include element(title-text) {
+      float: left;
     }
 
     @include element(link-in-title) {
@@ -39,15 +47,14 @@ $news007-border-color: #000;
     }
 
     @include element(header) {
+      cursor: pointer;
       overflow: hidden;
       padding: $base-line-height * 2;
       border-top: $news007-border-width solid $news007-border-color;
-      @include border-setting($news007-border-width, $base-line-height * 2);
       margin-top: -$news007-border-width;
 
       @include _(greater than mobile) {  
         padding: $base-line-height * 3;
-        //@include border-setting($news007-border-width, $base-line-height * 3);
       }
     }
 

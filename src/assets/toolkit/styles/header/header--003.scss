@@ -5,7 +5,7 @@ $logo: 'logo.jpg';
 $header003-height: $base-line-height * 8;
 $header003-search: $base-line-height * 8;
 
-  // @desc Header - header with mega and simple menu, search and button of personal account (menu--001)
+  // @desc Header - header with title mega menu (3lvl), search and button of personal account (menu--001)
   // @group header
   // @bemJson header--003.json
 
@@ -111,6 +111,10 @@ $header003-search: $base-line-height * 8;
       z-index: 10;
       height: $header003-height;
 
+      &:before{
+        font-size: $base-line-height * 2; 
+      } 
+
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
         justify-content: center;
@@ -136,9 +140,9 @@ $header003-search: $base-line-height * 8;
       z-index: 10;
       height: $header003-height;
 
-      i {
-        font-size: $base-line-height * 2; 
-      }  
+      &:before {
+        font-size: $base-line-height * 2;
+      }   
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;

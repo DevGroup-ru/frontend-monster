@@ -3,6 +3,10 @@ $news004-border-color: #aaa;
 
 .m-wrapper {
 
+  // @desc News - news with photo on left
+  // @group news
+  // @bemJson news--004.json
+
   @include block(news004) {
     text-align: left;
 
@@ -24,6 +28,10 @@ $news004-border-color: #aaa;
     @include element(title) {
       @extend %heading;
       @include _($full-row-configuration);
+    }
+
+    @include element(title-text) {
+      float: left;
     }
 
     @include element(link-in-title) {
@@ -73,6 +81,7 @@ $news004-border-color: #aaa;
     }
 
     @include element(img) {
+      display: block;
       height: $base-line-height * 22;
       overflow: hidden;
       position: relative;

@@ -6,7 +6,7 @@ $(function() {
   //helper to change the menu view
 
   $('.m-container > div[class*="header"]').css('display','none');
-  $('.m-container > .header004').css('display','block');
+  $('.m-container > .header003').css('display','block');
   $('.helper-check input').on('change', function(){
       var menuView = $(this).attr('id');
       $('.helper-check input').removeAttr("checked").prop("checked", false);
@@ -25,6 +25,28 @@ $(function() {
     );
   }
 
+  if (window.innerWidth > headerMobileBreakpoint) {
+    $('.sub-action').hover(
+      function() {       
+        $('.actions').addClass('actions--show');
+        $('.sub-action').addClass('hover');
+      },
+      function(){
+        $('.actions').removeClass('actions--show');
+        $('.sub-action').removeClass('hover');
+      }
+    );
+
+    $('.actions').hover( 
+      function() {            
+        $('.sub-action').mouseenter();
+      },
+      function(){
+        $('.sub-action').mouseleave();
+      }
+    );
+  }
+  
   if (window.innerWidth < headerMobileBreakpoint) {
     $('.menu').parent().addClass('menu-mobile');
   } else {
@@ -127,10 +149,15 @@ $(function() {
   }); 
 
   $('.menu-item-back').click(function(){
-    $('.sub-menu').addClass('sub-menu--scroll');
+    $(this).closest('.sub-item').closest('.sub-menu').addClass('sub-menu--scroll');
     $(this).closest('.sub-menu').removeClass('sub-menu--show sub-menu--scroll');
     return false;
-  });  
+  });
+
+  //for beautiful scroll
+  if (window.innerWidth > headerMobileBreakpoint) {
+    $('.sub-menu--custom-scroll').mCustomScrollbar();
+  }
 
   $(window).resize(function() {
 

@@ -8,18 +8,28 @@ $menu001-sub-fon-hover: #aaa;
 $header-search-input-border-width: $base-line-height / 10;
 $header-search-input-border-color: #aaa;
 
+$sub-menu-custom-scroll: $base-line-height * 38; //height of beautiful scroll
+
 $header-search-icon: "\e81a";
 $header-search-icon-close: "\e808";
 
 $header-burger-icon: "\e818";
 $header-burger-icon-close: "\e808";
 
-$header-mobile-breakpoint: desktop;
+$header-user-icon: "\e81b";
+
+$header-arrow-left: "\e801";
+$header-arrow-down: "\e816";
+
+$header-button-icon: "\e814";
+
+$header-phone-icon: "\e819";
+
+$header-mobile-breakpoint: desktop; 
 
 
-// @desc Menu - simple one-column menu
-// @group menu
-// @bemJson menu--001.json
+// @desc Header - common elements for header and menu
+// @group header
 
 .m-wrapper {
 
@@ -104,6 +114,13 @@ $header-mobile-breakpoint: desktop;
     }
   }
 
+  @include block(header-user-icon) {
+    &:before{
+      @extend %basic-icon;
+      content: $header-user-icon;
+    }  
+  }
+
   @include block(block-on-menu) { 
     width: 100%;
   }
@@ -112,7 +129,6 @@ $header-mobile-breakpoint: desktop;
     &:before{
       @extend %basic-icon;
       content: $header-search-icon;
-      font-size: $base-line-height * 2; 
     }  
 
     @include modifier(selected) {
@@ -324,7 +340,7 @@ $header-mobile-breakpoint: desktop;
         }
       }
 
-      &:hover {
+      &:hover, &.hover {
         background: $menu001-item-hover;
 
         @include _(greater than $header-mobile-breakpoint) {
@@ -350,7 +366,7 @@ $header-mobile-breakpoint: desktop;
       @include _(greater than $header-mobile-breakpoint) {
         top: 100%;
         left: 0;
-        width: 320px;
+        width: 280px;
         height: auto;
         overflow: inherit;
         display: block;
@@ -544,6 +560,24 @@ $header-mobile-breakpoint: desktop;
       }
     }
 
+    @include modifier(title-mega) {
+      width: 100%;
+
+      @include _(greater than $header-mobile-breakpoint) {
+        .menu001__2lvl-item {
+          width: calculate-width($menu001-sub-item-num);
+          float: left;
+          padding: 0 0 9999rem 0;
+          margin: 0 0 -9999rem;
+          border-right: 1px solid;
+
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+    }
+
     @include modifier(tabs) {
       width: 100%;
       font-size: 0;
@@ -598,20 +632,27 @@ $header-mobile-breakpoint: desktop;
         }
       }
     }
+
+    @include modifier(custom-scroll) {
+
+      @include _(greater than $header-mobile-breakpoint) {
+        max-height: $sub-menu-custom-scroll;
+      }
+    }
   }
 
   @include block(sub-link) {
     &:after {
       display: inline-block;
       @extend %basic-icon;
-      content: "\e801";
+      content: $header-arrow-left;
       width: $base-line-height * 2;
       padding-left: $base-line-height * 2;
     }
 
     &:hover {
       &:after {
-        content: "\e816";
+        content: $header-arrow-down;
         text-decoration: none;
       }
     }
@@ -620,7 +661,7 @@ $header-mobile-breakpoint: desktop;
   @include block(sub-item) {
     &:hover > .sub-link {
       &:after {
-        content: "\e816";
+        content: $header-arrow-down;
         text-decoration: none;
       }
     }
@@ -632,8 +673,30 @@ $header-mobile-breakpoint: desktop;
 
     &:hover > .sub-link {
       &:after {
-        content: "\e816";
+        content: $header-arrow-down;
         text-decoration: none;
+      }
+    }
+  }
+
+  @include block(sub-title-mega-item) {
+    position: static;
+    overflow: hidden;
+
+    &:hover > .sub-link {
+      &:after {
+        content: $header-arrow-down;
+        text-decoration: none;
+      }
+    }
+
+    @include _(greater than $header-mobile-breakpoint) {
+      &:hover, &.hover {
+        .menu001__3lvl {
+          position: static;
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
@@ -644,7 +707,7 @@ $header-mobile-breakpoint: desktop;
 
     &:hover > .sub-link {
       &:after {
-        content: "\e816";
+        content: $header-arrow-down;
         text-decoration: none;
       }
     }
@@ -655,7 +718,7 @@ $header-mobile-breakpoint: desktop;
         background: $menu001-sub-fon-hover;
 
         &:after {
-          content: "\e816";
+          content: $header-arrow-down;
         }
       }
 
@@ -718,17 +781,81 @@ $header-mobile-breakpoint: desktop;
     }
   }
 
-  a,
-  a:link,
-  a:hover,
-  a:visited,
-  a:active,
-  a:focus,
-  button {
-    &.menu-photo-link {
+  @include block(menu-photo-item) {
+
+    &:hover {
+      background: transparent;
+    }
+
+    a,
+    a:link,
+    a:hover,
+    a:visited,
+    a:active,
+    a:focus,
+    button {
+
+      @include _(greater than $header-mobile-breakpoint) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      
+      &.menu-photo-link {
+        display: none;
+        padding: 0;
+        height: $base-line-height * 12;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          position: absolute;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+          left: 50%;
+          right: 0;
+          height: auto;
+          min-height: 100%;
+          min-width: 100%;
+          transform: translateX(-50%);
+        }
+
+        @include _(greater than $header-mobile-breakpoint) {
+          display: block;
+        }
+      }
+
+      &:hover {
+        background: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include block(actions) {
+    @include _(greater than $header-mobile-breakpoint) { 
       display: none;
-      padding: 0;
-      height: $base-line-height * 12;
+
+      @include modifier(show) {
+        display: block;
+      }
+    }
+  }
+
+  @include block(actions-simple) {
+    width: 100%;
+
+    @include _(greater than $header-mobile-breakpoint) {  
+      width: calculate-width($menu001-sub-item-num);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 5;
+    }
+
+    @include element(img) {
+      display: block;
+      height: $base-line-height * 14;
       overflow: hidden;
       position: relative;
 
@@ -743,10 +870,43 @@ $header-mobile-breakpoint: desktop;
         min-height: 100%;
         min-width: 100%;
         transform: translateX(-50%);
-      }
+      }     
+    }
 
-      @include _(greater than $header-mobile-breakpoint) {
+    @include element(title) {
+      display: block;
+      @include type-setting(accent-text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+      padding: $base-line-height * 2; 
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    /*@include element(text-wrap) {
+      display: none;
+      padding: $base-line-height * 2; 
+
+      @include _(greater than $header-mobile-breakpoint) {  
         display: block;
+      }
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      height: $base-line-height * 6;
+      overflow: hidden;
+    }*/
+
+    @include element(link-full) {
+      display: none;
+      margin: $base-line-height * 2; 
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: inline-block;
       }
     }
   }

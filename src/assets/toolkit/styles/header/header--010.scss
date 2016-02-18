@@ -148,6 +148,10 @@ $header010-top-height: $base-line-height * 9;
       z-index: 10;
       height: $header010-height-mobile;
 
+      &:before{
+        font-size: $base-line-height * 2; 
+      } 
+
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
         justify-content: center;
@@ -174,9 +178,9 @@ $header010-top-height: $base-line-height * 9;
       z-index: 10;
       height: $header010-height-mobile;
 
-      i {
-        font-size: $base-line-height * 2; 
-      }  
+      &:before {
+        font-size: $base-line-height * 2;
+      }    
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
@@ -200,7 +204,7 @@ $header010-top-height: $base-line-height * 9;
 
       &:before {
         @extend %basic-icon;
-        content: "\e819";
+        content: $header-phone-icon;
         font-size: $base-line-height * 3; 
 
         @include _(greater than mobile) {  
@@ -250,7 +254,7 @@ $header010-top-height: $base-line-height * 9;
 
       &:before {
         @extend %basic-icon;
-        content: "\e819";
+        content: $header-phone-icon;
         font-size: $base-line-height * 3; 
         vertical-align: middle;
         padding-right: $base-line-height;

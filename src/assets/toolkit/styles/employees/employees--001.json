@@ -1,0 +1,483 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "employees001",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": [
+          {
+            "elem": "title-text",
+            "content": "Наши сотрудники",
+            "editable": true
+          },
+          {
+            "elem": "link-in-title",
+            "content": "Посмотреть всех",
+            "editable": true,
+            "link": true
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "photo",
+            "link": true,
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "name",
+            "content": "Борис Борисов",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "position",
+            "content": "Специалист со стажем",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+            "editable": "wysiwyg"
+          },
+          {
+            "elem": "hours-wrap",
+            "content": [
+              {
+                "elem": "title-hours",
+                "content": "Часы приема:",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "пн 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "вт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "ср 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "чт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "пт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "сб-вс выходной",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "phone",
+            "content": "+7 999 000 00 00",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "mail",
+            "content": "bob.gubkin@bg.gov.uk",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "social-wrap",
+            "content": [
+              {
+                "elem": "social-item",
+                "mods": ["facebook"],
+                "link": true
+              },
+              {
+                "elem": "social-item",
+                "mods": ["vk"],
+                "link": true
+              },
+              {
+                "elem": "social-item",
+                "mods": ["twitter"],
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "link-full",
+            "cls": "button-simple",
+            "content": "Записаться на прием",
+            "editable": true,
+            "link": true
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "photo",
+            "link": true,
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "name",
+            "content": "Борис Борисов",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "position",
+            "content": "Специалист со стажем",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+            "editable": "wysiwyg"
+          },
+          {
+            "elem": "hours-wrap",
+            "content": [
+              {
+                "elem": "title-hours",
+                "content": "Часы приема:",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "пн 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "вт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "ср 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "чт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "пт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "сб-вс выходной",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "phone",
+            "content": "+7 999 000 00 00",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "mail",
+            "content": "bob.gubkin@bg.gov.uk",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "social-wrap",
+            "content": [
+              {
+                "elem": "social-item",
+                "mods": ["facebook"],
+                "link": true
+              },
+              {
+                "elem": "social-item",
+                "mods": ["vk"],
+                "link": true
+              },
+              {
+                "elem": "social-item",
+                "mods": ["twitter"],
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "link-full",
+            "cls": "button-simple",
+            "content": "Записаться на прием",
+            "editable": true,
+            "link": true
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-3",
+        "content": [
+          {
+            "elem": "photo",
+            "link": true,
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "name",
+            "content": "Борис Борисов",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "position",
+            "content": "Специалист со стажем",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+            "editable": "wysiwyg"
+          },
+          {
+            "elem": "hours-wrap",
+            "content": [
+              {
+                "elem": "title-hours",
+                "content": "Часы приема:",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "пн 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "вт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "ср 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "чт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "пт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "сб-вс выходной",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "phone",
+            "content": "+7 999 000 00 00",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "mail",
+            "content": "bob.gubkin@bg.gov.uk",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "social-wrap",
+            "content": [
+              {
+                "elem": "social-item",
+                "mods": ["facebook"],
+                "link": true
+              },
+              {
+                "elem": "social-item",
+                "mods": ["vk"],
+                "link": true
+              },
+              {
+                "elem": "social-item",
+                "mods": ["twitter"],
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "link-full",
+            "cls": "button-simple",
+            "content": "Записаться на прием",
+            "editable": true,
+            "link": true
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-4",
+        "content": [
+          {
+            "elem": "photo",
+            "link": true,
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "name",
+            "content": "Борис Борисов",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "position",
+            "content": "Специалист со стажем",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+            "editable": "wysiwyg"
+          },
+          {
+            "elem": "hours-wrap",
+            "content": [
+              {
+                "elem": "title-hours",
+                "content": "Часы приема:",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "пн 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "вт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "ср 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "чт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "пт 10:00 - 15:00",
+                "editable": true
+              },
+              {
+                "elem": "hours",
+                "content": "сб-вс выходной",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "phone",
+            "content": "+7 999 000 00 00",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "mail",
+            "content": "bob.gubkin@bg.gov.uk",
+            "editable": true,
+            "link": true
+          },
+          {
+            "elem": "social-wrap",
+            "content": [
+              {
+                "elem": "social-item",
+                "mods": ["facebook"],
+                "link": true
+              },
+              {
+                "elem": "social-item",
+                "mods": ["vk"],
+                "link": true
+              },
+              {
+                "elem": "social-item",
+                "mods": ["twitter"],
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "link-full",
+            "cls": "button-simple",
+            "content": "Записаться на прием",
+            "editable": true,
+            "link": true
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "mods": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Посмотреть других сотрудников",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

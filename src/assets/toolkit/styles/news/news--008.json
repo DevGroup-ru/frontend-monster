@@ -1,0 +1,74 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "news008",
+        "content": [
+          {
+            "elem": "title",
+            "content": "Новости",
+            "editable": true
+          },
+          {
+            "elem": "slider",
+            "content": [
+              {
+                "elem": "nested",
+                "editableGroup": "nested-1",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 1 строку",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-2",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 1 строку",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-3",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 1 строку",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-4",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 1 строку",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

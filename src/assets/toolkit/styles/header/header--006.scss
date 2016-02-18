@@ -148,6 +148,10 @@ $header006-top-height: $base-line-height * 9;
       z-index: 10;
       height: $header006-height-mobile;
 
+      &:before{
+        font-size: $base-line-height * 2; 
+      } 
+
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
         justify-content: center;
@@ -175,9 +179,9 @@ $header006-top-height: $base-line-height * 9;
       z-index: 10;
       height: $header006-height;
 
-      i {
-        font-size: $base-line-height * 2; 
-      }  
+      &:before {
+        font-size: $base-line-height * 2;
+      }   
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
@@ -231,7 +235,7 @@ $header006-top-height: $base-line-height * 9;
 
       &:before {
         @extend %basic-icon;
-        content: "\e814";
+        content: $header-button-icon;
         font-size: $base-line-height * 3; 
 
         @include _(greater than mobile) {  

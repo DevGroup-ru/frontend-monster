@@ -148,9 +148,9 @@ $header007-top-height: $base-line-height * 9;
       z-index: 10;
       height: $header007-top-height;
 
-      i {
-        font-size: $base-line-height * 3; 
-      }  
+      &:before {
+        font-size: $base-line-height * 2;
+      }    
 
       @include _(greater than $header-mobile-breakpoint) {  
         display: flex;
@@ -190,7 +190,7 @@ $header007-top-height: $base-line-height * 9;
 
       &:before {
         @extend %basic-icon;
-        content: "\e814";
+        content: $header-button-icon;
         font-size: $base-line-height * 3; 
 
         @include _(greater than mobile) {  

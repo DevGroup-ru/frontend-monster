@@ -1,0 +1,245 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "news004",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": [
+          {
+            "elem": "title-text",
+            "content": "Новости",
+            "editable": true
+          },
+          {
+            "elem": "link-in-title",
+            "content": "Все новости",
+            "editable": true,
+            "link": true
+          }
+        ]
+      },
+      {
+        "elem": "carousel",
+        "cls": "carousel--two-items",
+        "content" : [
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "wrap-text",
+                "content": [
+                  {
+                    "elem": "date",
+                    "content": [
+                      {
+                        "elem": "time",
+                        "content": "12:00",
+                        "editable": true
+                      },
+                      {
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "wrap-text",
+                "content": [
+                  {
+                    "elem": "date",
+                    "content": [
+                      {
+                        "elem": "time",
+                        "content": "12:00",
+                        "editable": true
+                      },
+                      {
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "wrap-text",
+                "content": [
+                  {
+                    "elem": "date",
+                    "content": [
+                      {
+                        "elem": "time",
+                        "content": "12:00",
+                        "editable": true
+                      },
+                      {
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "wrap-text",
+                "content": [
+                  {
+                    "elem": "date",
+                    "content": [
+                      {
+                        "elem": "time",
+                        "content": "12:00",
+                        "editable": true
+                      },
+                      {
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "mods": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все новости",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -2,6 +2,10 @@ $news006-fon: #eff;
 
 .m-wrapper {
 
+  // @desc News - half-column-news
+  // @group news
+  // @bemJson news--006.json
+
   @include block(news006) {
     text-align: left;
 
@@ -17,6 +21,10 @@ $news006-fon: #eff;
     @include element(title) {
       @extend %heading;
       @include _($full-row-configuration);
+    }
+
+    @include element(title-text) {
+      float: left;
     }
 
     @include element(link-in-title) {

@@ -1,0 +1,133 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "news005",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": [
+          {
+            "elem": "title-text",
+            "content": "Новости",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "elem": "nested-wrap",
+        "content": [
+          {
+            "elem": "nested",
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "wrap-text",
+                "content": [
+                  {
+                    "elem": "date",
+                    "content": "28 ноября 2015"
+                  },
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "wrap-text",
+                "content": [
+                  {
+                    "elem": "date",
+                    "content": "28 ноября 2015"
+                  },
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "wrap-text",
+                "content": [
+                  {
+                    "elem": "date",
+                    "content": "28 ноября 2015"
+                  },
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "wrap-text",
+                "content": [
+                  {
+                    "elem": "date",
+                    "content": "28 ноября 2015"
+                  },
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "btn-wrap",
+            "content": [
+              {
+                "cls": "button-simple",
+                "content": "Все новости",
+                "editable": true,
+                "link": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

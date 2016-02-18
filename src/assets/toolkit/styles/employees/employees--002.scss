@@ -1,4 +1,11 @@
 .m-wrapper {
+  // @desc Employees - blocks without time of work
+  // @group employees
+  // @bemJson employees--002.json
+
+  $employees002-facebook-icon: "\e812";
+  $employees002-vk-icon: "\e811";
+  $employees002-twitter-icon: "\e810";
 
   @include block(employees002) {
     text-align: center;
@@ -14,6 +21,10 @@
       text-align: left;
       @extend %heading;
       @include _($full-row-configuration);
+    }
+
+    @include element(title-text) {
+      float: left;
     }
 
     @include element(link-in-title) {
@@ -139,6 +150,28 @@
       line-height: $base-line-height * 2;
       overflow: hidden;
       text-decoration: none;
+
+      &:before{
+        @extend %basic-icon;
+      }
+
+      @include modifier(facebook) {
+        &:before{
+          content: $employees002-facebook-icon;
+        }
+      }
+
+      @include modifier(vk) {
+        &:before{
+          content: $employees002-vk-icon;
+        }
+      }
+
+      @include modifier(twitter) {
+        &:before{
+          content: $employees002-twitter-icon;
+        }
+      }
     }
 
     @include element(link-full) {

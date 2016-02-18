@@ -2,6 +2,10 @@ $news003-fon: #eff;
 
 .m-wrapper {
 
+  // @desc News - news with photo on left and fon
+  // @group news
+  // @bemJson news--003.json
+
   @include block(news003) {
     text-align: left;
 
@@ -28,6 +32,10 @@ $news003-fon: #eff;
     @include element(title) {
       @extend %heading;
       @include _($full-row-configuration);
+    }
+
+    @include element(title-text) {
+      float: left;
     }
 
     @include element(link-in-title) {
@@ -77,6 +85,7 @@ $news003-fon: #eff;
     }
 
     @include element(img) {
+      display: block;
       height: $base-line-height * 16;
       overflow: hidden;
       position: relative;

@@ -3,6 +3,10 @@ $news008-fon-opacity: rgba(238,238,238,0.5);
 
 .m-wrapper {
 
+  // @desc News - line news in slider
+  // @group news
+  // @bemJson news--008.json
+
   @include block(news008) {
     text-align: left;
     background: $news008-fon;
@@ -10,6 +14,7 @@ $news008-fon-opacity: rgba(238,238,238,0.5);
     overflow: hidden;
     display: block;
     position: relative;
+    @include _(12 12 8 4 4);
 
     @include _(greater than mobile) {  
       display: flex;
@@ -47,11 +52,14 @@ $news008-fon-opacity: rgba(238,238,238,0.5);
 
     .owl-controls {
       margin-top: $base-line-height;
+      font-size: 0px;
 
       .owl-nav .owl-prev, 
       .owl-nav .owl-next {
         display: inline-block;
         float: none;
+        height:  $base-line-height * 2;
+        overflow: hidden;
       }
 
       @include _(greater than mobile) {  

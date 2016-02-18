@@ -1,6 +1,13 @@
 $employees003-text-on-photo: #eee;
 
 .m-wrapper {
+  // @desc Employees - blocks with info on photo
+  // @group employees
+  // @bemJson employees--003.json
+
+  $employees003-facebook-icon: "\e812";
+  $employees003-vk-icon: "\e811";
+  $employees003-twitter-icon: "\e810";
 
   @include block(employees003) {
     text-align: center;
@@ -16,6 +23,10 @@ $employees003-text-on-photo: #eee;
       text-align: left;
       @extend %heading;
       @include _($full-row-configuration);
+    }
+
+    @include element(title-text) {
+      float: left;
     }
 
     @include element(link-in-title) {
@@ -132,6 +143,28 @@ $employees003-text-on-photo: #eee;
       line-height: $base-line-height * 2;
       overflow: hidden;
       text-decoration: none;
+
+      &:before{
+        @extend %basic-icon;
+      }
+
+      @include modifier(facebook) {
+        &:before{
+          content: $employees003-facebook-icon;
+        }
+      }
+
+      @include modifier(vk) {
+        &:before{
+          content: $employees003-vk-icon;
+        }
+      }
+
+      @include modifier(twitter) {
+        &:before{
+          content: $employees003-twitter-icon;
+        }
+      }
     }
 
     @include element(link-full) {
@@ -143,6 +176,7 @@ $employees003-text-on-photo: #eee;
     }
 
     @include element(photo) {
+      display: block;
       height: $base-line-height * 25;
       width: 100%;
       overflow: hidden;

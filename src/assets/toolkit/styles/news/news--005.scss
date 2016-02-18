@@ -3,41 +3,44 @@ $news005-border-color: #000;
 
 .m-wrapper {
 
+  // @desc News - column-news with one photo
+  // @group news
+  // @bemJson news--005.json
+
   @include block(news005) {
     text-align: left;
 
     @include element(nested-wrap) {
-      @include _(3 3 8 4 4);
+      @include _(3 4 8 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
     }
 
     @include element(nested) {
       border: $news005-border-width solid $news005-border-color;
-      border-top: none;
       margin-top: -$news005-border-width;
+      padding-bottom: $news005-border-width;
       overflow: hidden;
 
       &:first-child {
-        border-top: $news005-border-width solid $news005-border-color;
-        margin-top: -$news005-border-width;
+        padding-bottom: $news005-border-width;
+        border-bottom: $news005-border-width solid $news005-border-color;
+
+        @include _(greater than mobile) {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+        @include _(greater than tablet) {
+          padding-bottom: $news005-border-width;
+          border-bottom: $news005-border-width solid $news005-border-color;
+        }
       }
     }
 
     @include element(title) {
       @extend %heading;
       @include _($full-row-configuration);
-    }
-
-    @include element(link-in-title) {
-      @include type-setting(text);
-      display: block;
-      text-decoration: none;
-      margin-top: $base-line-height;
-
-      &:hover{
-        text-decoration: underline;
-      }
     }
 
     @include element(time) {
@@ -97,21 +100,27 @@ $news005-border-color: #000;
         margin: -$base-line-height * 3;
         margin-bottom: 0;
       }
+
+      & + .news005__wrap-text {
+        @include _(greater than mobile) {
+          @include _(12 12 4 4 4, 6 6 8 4 4, $gutter: omega);
+          padding: $base-line-height * 3 - $news005-border-width;
+          padding-left: 0;
+        }
+
+        @include _(greater than tablet) {
+         @include _(12 12 8 4 4, $gutter: row);
+          padding: $base-line-height * 3 - $news005-border-width;
+        }
+      }
     }
 
     @include element(wrap-text) {
-      @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: row);
-      padding: $base-line-height * 2;
-
-      @include _(greater than mobile) {
-        @include _(3 3 4 4 4, 6 6 8 4 4, $gutter: omega);
-        padding: $base-line-height * 3;
-        padding-left: 0;
-      }
+      @include _(12 12 8 4 4, $gutter: row);
+      padding: $base-line-height * 2 - $news005-border-width;
 
       @include _(greater than tablet) {
-        @include _(12 12 8 4 4, $gutter: row);
-        padding-left: $base-line-height * 3;
+        padding: $base-line-height * 3 - $news005-border-width;
       }
     }
 

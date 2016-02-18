@@ -3,6 +3,10 @@ $employees005-border-color: #000;
 
 .m-wrapper {
 
+  $employees005-facebook-icon: "\e812";
+  $employees005-vk-icon: "\e811";
+  $employees005-twitter-icon: "\e810";
+
   @include block(employees005) {
     text-align: left;
     position: relative;
@@ -18,6 +22,10 @@ $employees005-border-color: #000;
       text-align: left;
       @extend %heading;
       @include _($full-row-configuration);
+    }
+
+    @include element(title-text) {
+      float: left;
     }
 
     @include element(link-in-title) {
@@ -113,6 +121,28 @@ $employees005-border-color: #000;
       line-height: $base-line-height * 2;
       overflow: hidden;
       text-decoration: none;
+
+      &:before{
+        @extend %basic-icon;
+      }
+
+      @include modifier(facebook) {
+        &:before{
+          content: $employees005-facebook-icon;
+        }
+      }
+
+      @include modifier(vk) {
+        &:before{
+          content: $employees005-vk-icon;
+        }
+      }
+
+      @include modifier(twitter) {
+        &:before{
+          content: $employees005-twitter-icon;
+        }
+      }
     }
 
     @include element(link-full) {
