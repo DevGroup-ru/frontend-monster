@@ -1,0 +1,99 @@
+<div class="m-container" data-bem-match="m-container"><div class="portfolio002 m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom" data-bem-match="portfolio002"><div class="portfolio002__title g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top" data-bem-match="portfolio002__title">Портфолио</div><div class="portfolio002__nested" data-bem-match="portfolio002__nested"><a class="portfolio002__img" href="#" data-bem-match="portfolio002__img"><img src="http://lorempixel.com/200/300"/></a><div class="portfolio002__text-wrap" data-bem-match="portfolio002__text-wrap"><a class="portfolio002__title-nested" href="#" data-bem-match="portfolio002__title-nested">Тут наименование работы пишем, можно в две строки, но не более.</a><a class="portfolio002__link-full button-simple" href="#" data-bem-match="portfolio002__link-full">Подробнее</a></div></div><div class="portfolio002__nested" data-bem-match="portfolio002__nested"><a class="portfolio002__img" href="#" data-bem-match="portfolio002__img"><img src="http://lorempixel.com/200/300"/></a><div class="portfolio002__text-wrap" data-bem-match="portfolio002__text-wrap"><a class="portfolio002__title-nested" href="#" data-bem-match="portfolio002__title-nested">Тут наименование работы пишем, можно в две строки, но не более.</a><a class="portfolio002__link-full button-simple" href="#" data-bem-match="portfolio002__link-full">Подробнее</a></div></div><div class="portfolio002__btn-wrap g__one-line--top g__one-line--top g__one-line--top g__one-line--top" data-bem-match="portfolio002__btn-wrap"><a class="button-simple" href="#">Все работы</a></div></div></div>
+<div class="f-item-code" data-f-toggle="code">BEM JSON<pre class=" language-markup">{
+  "block": "m-container",
+  "content": {
+    "block": "portfolio002",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": "Портфолио",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "img",
+            "link": true,
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Тут наименование работы пишем, можно в две строки, но не более.",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "link-full",
+                "cls": "button-simple",
+                "content": "Подробнее",
+                "editable": true,
+                "link": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "img",
+            "link": true,
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Тут наименование работы пишем, можно в две строки, но не более.",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "link-full",
+                "cls": "button-simple",
+                "content": "Подробнее",
+                "editable": true,
+                "link": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все работы",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}</pre></div>

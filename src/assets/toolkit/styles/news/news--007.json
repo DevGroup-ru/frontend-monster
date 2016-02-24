@@ -31,250 +31,275 @@
             "elem": "accordion-tabs",
             "content": [
               {
-                "elem": "header",
-                "editableGroup": "header-1",
-                "cls": "accordion-tabs__header active",
+                "cls": "accordion-tabs__wrap",
                 "content": [
                   {
-                    "elem": "day",
-                    "content": "28 ноября 2015",
-                    "editable": true
-                  },
-                  {
-                    "elem": "title-nested",
-                    "content": "Краткий заголовок, умещающийся в 1 строку",
-                    "editable": true
-                  }
-                ]
-              },
-              {
-                "elem": "content",
-                "editableGroup": "content-1",
-                "cls": "accordion-tabs__content active",
-                "content": [
-                  {
-                    "elem": "img",
-                    "link": true,
+                    "elem": "header",
+                    "editableGroup": "header-1",
+                    "cls": "accordion-tabs__header active",
                     "content": [
                       {
-                        "image": "http://lorempixel.com/200/300"
-                      }
-                    ]
-                  },
-                  {
-                    "elem": "wrap-text",
-                    "content": [
-                      {
-                        "elem": "text",
-                        "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
-                        "editable": "wysiwyg"
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
                       },
                       {
-                        "elem": "link-full",
-                        "cls": "button-simple",
-                        "content": "Подробнее",
-                        "editable": true,
-                        "link": true
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "elem": "header",
-                "editableGroup": "header-2",
-                "cls": "accordion-tabs__header",
-                "content": [
-                  {
-                    "elem": "day",
-                    "content": "28 ноября 2015",
-                    "editable": true
-                  },
-                  {
-                    "elem": "title-nested",
-                    "content": "Краткий заголовок, умещающийся в 1 строку",
-                    "editable": true
-                  }
-                ]
-              },
-              {
-                "elem": "content",
-                "editableGroup": "content-2",
-                "cls": "accordion-tabs__content",
-                "content": [
-                  {
-                    "elem": "img",
-                    "link": true,
-                    "content": [
-                      {
-                        "image": "http://lorempixel.com/200/300"
+                        "elem": "title-nested",
+                        "content": "Краткий заголовок, умещающийся в 1 строку",
+                        "editable": true
                       }
                     ]
                   },
                   {
-                    "elem": "wrap-text",
+                    "elem": "content",
+                    "editableGroup": "content-1",
+                    "cls": "accordion-tabs__content active",
                     "content": [
                       {
-                        "elem": "text",
-                        "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
-                        "editable": "wysiwyg"
+                        "elem": "img",
+                        "link": true,
+                        "content": [
+                          {
+                            "image": "http://lorempixel.com/200/300"
+                          }
+                        ]
                       },
                       {
-                        "elem": "link-full",
-                        "cls": "button-simple",
-                        "content": "Подробнее",
-                        "editable": true,
-                        "link": true
+                        "elem": "wrap-text",
+                        "content": [
+                          {
+                            "elem": "text",
+                            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "link-full",
+                            "cls": "button-simple",
+                            "content": "Подробнее",
+                            "editable": true,
+                            "link": true
+                          }
+                        ]
                       }
                     ]
                   }
                 ]
               },
               {
-                "elem": "header",
-                "editableGroup": "header-3",
-                "cls": "accordion-tabs__header",
+                "cls": "accordion-tabs__wrap",
                 "content": [
                   {
-                    "elem": "day",
-                    "content": "28 ноября 2015",
-                    "editable": true
-                  },
-                  {
-                    "elem": "title-nested",
-                    "content": "Краткий заголовок, умещающийся в 1 строку",
-                    "editable": true
-                  }
-                ]
-              },
-              {
-                "elem": "content",
-                "editableGroup": "content-3",
-                "cls": "accordion-tabs__content",
-                "content": [
-                  {
-                    "elem": "img",
-                    "link": true,
+                    "elem": "header",
+                    "editableGroup": "header-2",
+                    "cls": "accordion-tabs__header",
                     "content": [
                       {
-                        "image": "http://lorempixel.com/200/300"
-                      }
-                    ]
-                  },
-                  {
-                    "elem": "wrap-text",
-                    "content": [
-                      {
-                        "elem": "text",
-                        "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
-                        "editable": "wysiwyg"
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
                       },
                       {
-                        "elem": "link-full",
-                        "cls": "button-simple",
-                        "content": "Подробнее",
-                        "editable": true,
-                        "link": true
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "elem": "header",
-                "editableGroup": "header-4",
-                "cls": "accordion-tabs__header",
-                "content": [
-                  {
-                    "elem": "day",
-                    "content": "28 ноября 2015",
-                    "editable": true
-                  },
-                  {
-                    "elem": "title-nested",
-                    "content": "Краткий заголовок, умещающийся в 1 строку",
-                    "editable": true
-                  }
-                ]
-              },
-              {
-                "elem": "content",
-                "editableGroup": "content-4",
-                "cls": "accordion-tabs__content",
-                "content": [
-                  {
-                    "elem": "img",
-                    "link": true,
-                    "content": [
-                      {
-                        "image": "http://lorempixel.com/200/300"
+                        "elem": "title-nested",
+                        "content": "Краткий заголовок, умещающийся в 1 строку",
+                        "editable": true
                       }
                     ]
                   },
                   {
-                    "elem": "wrap-text",
+                    "elem": "content",
+                    "editableGroup": "content-2",
+                    "cls": "accordion-tabs__content",
                     "content": [
                       {
-                        "elem": "text",
-                        "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
-                        "editable": "wysiwyg"
+                        "elem": "img",
+                        "link": true,
+                        "content": [
+                          {
+                            "image": "http://lorempixel.com/200/300"
+                          }
+                        ]
                       },
                       {
-                        "elem": "link-full",
-                        "cls": "button-simple",
-                        "content": "Подробнее",
-                        "editable": true,
-                        "link": true
+                        "elem": "wrap-text",
+                        "content": [
+                          {
+                            "elem": "text",
+                            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "link-full",
+                            "cls": "button-simple",
+                            "content": "Подробнее",
+                            "editable": true,
+                            "link": true
+                          }
+                        ]
                       }
                     ]
                   }
                 ]
               },
               {
-                "elem": "header",
-                "editableGroup": "header-5",
-                "cls": "accordion-tabs__header",
+                "cls": "accordion-tabs__wrap",
                 "content": [
                   {
-                    "elem": "day",
-                    "content": "28 ноября 2015",
-                    "editable": true
-                  },
-                  {
-                    "elem": "title-nested",
-                    "content": "Краткий заголовок, умещающийся в 1 строку",
-                    "editable": true
-                  }
-                ]
-              },
-              {
-                "elem": "content",
-                "editableGroup": "content-5",
-                "cls": "accordion-tabs__content",
-                "content": [
-                  {
-                    "elem": "img",
-                    "link": true,
+                    "elem": "header",
+                    "editableGroup": "header-3",
+                    "cls": "accordion-tabs__header",
                     "content": [
                       {
-                        "image": "http://lorempixel.com/200/300"
-                      }
-                    ]
-                  },
-                  {
-                    "elem": "wrap-text",
-                    "content": [
-                      {
-                        "elem": "text",
-                        "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
-                        "editable": "wysiwyg"
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
                       },
                       {
-                        "elem": "link-full",
-                        "cls": "button-simple",
-                        "content": "Подробнее",
-                        "editable": true,
-                        "link": true
+                        "elem": "title-nested",
+                        "content": "Краткий заголовок, умещающийся в 1 строку",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "editableGroup": "content-3",
+                    "cls": "accordion-tabs__content",
+                    "content": [
+                      {
+                        "elem": "img",
+                        "link": true,
+                        "content": [
+                          {
+                            "image": "http://lorempixel.com/200/300"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "wrap-text",
+                        "content": [
+                          {
+                            "elem": "text",
+                            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "link-full",
+                            "cls": "button-simple",
+                            "content": "Подробнее",
+                            "editable": true,
+                            "link": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "editableGroup": "header-4",
+                    "cls": "accordion-tabs__header",
+                    "content": [
+                      {
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
+                      },
+                      {
+                        "elem": "title-nested",
+                        "content": "Краткий заголовок, умещающийся в 1 строку",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "editableGroup": "content-4",
+                    "cls": "accordion-tabs__content",
+                    "content": [
+                      {
+                        "elem": "img",
+                        "link": true,
+                        "content": [
+                          {
+                            "image": "http://lorempixel.com/200/300"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "wrap-text",
+                        "content": [
+                          {
+                            "elem": "text",
+                            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "link-full",
+                            "cls": "button-simple",
+                            "content": "Подробнее",
+                            "editable": true,
+                            "link": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "editableGroup": "header-5",
+                    "cls": "accordion-tabs__header",
+                    "content": [
+                      {
+                        "elem": "day",
+                        "content": "28 ноября 2015",
+                        "editable": true
+                      },
+                      {
+                        "elem": "title-nested",
+                        "content": "Краткий заголовок, умещающийся в 1 строку",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "editableGroup": "content-5",
+                    "cls": "accordion-tabs__content",
+                    "content": [
+                      {
+                        "elem": "img",
+                        "link": true,
+                        "content": [
+                          {
+                            "image": "http://lorempixel.com/200/300"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "wrap-text",
+                        "content": [
+                          {
+                            "elem": "text",
+                            "content": "Многолетний опыт работы  - это всегда хорошо. С радостью берётся за любую работу вне зависимости от её пользы.  'Работает непокладая рук' - это точно про него.",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "link-full",
+                            "cls": "button-simple",
+                            "content": "Подробнее",
+                            "editable": true,
+                            "link": true
+                          }
+                        ]
                       }
                     ]
                   }

@@ -220,7 +220,7 @@
       },
       {
         "elem": "btn-wrap",
-        "mods": ["one-line--top"],
+        "utils": ["one-line--top"],
         "content": [
           {
             "cls": "button-simple",

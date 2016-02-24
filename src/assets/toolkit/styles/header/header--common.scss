@@ -2,16 +2,10 @@ $menu001-item-num: 5; //write the number of menu items
 $menu001-sub-item-num: 4; //write the number of sub-menu items
 $menu001-fon: #3b8a91;
 $menu001-item-hover: #33777d;
-$menu001-sub-fon: #eee;
+$menu001-sub-fon: #fafafa;
 $menu001-sub-fon-hover: #aaa;
 
-$header-search-input-border-width: $base-line-height / 10;
-$header-search-input-border-color: #aaa;
-
 $sub-menu-custom-scroll: $base-line-height * 38; //height of beautiful scroll
-
-$header-search-icon: "\e81a";
-$header-search-icon-close: "\e808";
 
 $header-burger-icon: "\e818";
 $header-burger-icon-close: "\e808";
@@ -123,138 +117,6 @@ $header-mobile-breakpoint: desktop;
 
   @include block(block-on-menu) { 
     width: 100%;
-  }
-
-  @include block(header-search-icon) {
-    &:before{
-      @extend %basic-icon;
-      content: $header-search-icon;
-    }  
-
-    @include modifier(selected) {
-      &:before{
-        content: $header-search-icon-close;
-      }
-    }
-  }
-
-  @include block(search) {
-    background: $menu001-sub-fon;
-    text-align: left;
-    padding: $base-line-height * 2; 
-    overflow: hidden;
-
-    @include _(greater than $header-mobile-breakpoint) {  
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      padding: 0 $base-line-height * 2; 
-    }
-
-    @include element(wrap) { 
-      @include _(greater than $header-mobile-breakpoint) {
-        height: 100%;
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    @include element(input-wrap) {  
-      width: 100%;
-      margin-right: 0;
-      float: left;
-
-      @include _(greater than $header-mobile-breakpoint) {  
-        width: 90%;
-        margin-right: 10%;
-      }
-    }
-
-    @include element(input) {
-      resize: vertical;
-      outline: none;
-      @include type-setting(text);
-      padding: $base-line-height - $header-search-input-border-width;
-      border: $header-search-input-border-width solid $header-search-input-border-color;
-      width: 100%;
-
-      @include placeholder {
-        @include type-setting(text);
-        text-overflow: ellipsis;
-      }
-
-      @include placeholder-focus {
-        color: transparent;
-      }
-    }
-
-    @include element(button) {
-      width: 10%;
-      margin-left: -10%;
-      min-width: auto;
-      display: none;
-
-      @include _(greater than $header-mobile-breakpoint) {  
-        display: inline-block;
-      }
-    }
-
-    @include _(greater than $header-mobile-breakpoint) {  
-      display: none;
-    }
-
-    @include modifier(overmenu) {
-      z-index: 11;
-
-      @include _(greater than $header-mobile-breakpoint) {  
-        top: 0;
-      }
-
-      .search__input-wrap {
-        width: 100%;
-
-        @include _(greater than $header-mobile-breakpoint) {  
-          width: 85%;
-        }
-      }
-    }
-  }
-
-  @include block(search-simple) {
-    background: $menu001-sub-fon;
-    text-align: left;
-    padding: $base-line-height * 2; 
-    overflow: hidden;
-
-    label {
-      position: relative;
-      width: 100%;
-    }
-
-    input {
-      resize: vertical;
-      outline: none;
-      @include type-setting(text);
-      padding: $base-line-height - $header-search-input-border-width;
-      border: $header-search-input-border-width solid $header-search-input-border-color;
-      width: 100%;
-
-      @include placeholder {
-        @include type-setting(text);
-        text-overflow: ellipsis;
-      }
-
-      @include placeholder-focus {
-        color: transparent;
-      }
-    }
-
-    @include _(greater than $header-mobile-breakpoint) {  
-      background: transparent;
-      padding: 0;
-    }
   }
 
   @include block(menu001) {
@@ -547,6 +409,7 @@ $header-mobile-breakpoint: desktop;
     @include modifier(right) {
       right: 0;
       left: initial;
+      left: auto;
     }
 
     @include modifier(mega) {
@@ -746,23 +609,6 @@ $header-mobile-breakpoint: desktop;
     }
   }
 
-  @include block(header-phone-button-wrap) {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
-
-    @include modifier(show) {
-      opacity: 1;
-      visibility: visible;
-      transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
-    }
-
-    @include _(greater than $header-mobile-breakpoint) {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-
   @include block(menu-column) {
     @include _(greater than $header-mobile-breakpoint) {
       width: calculate-width($menu001-sub-item-num);
@@ -832,82 +678,20 @@ $header-mobile-breakpoint: desktop;
     }
   }
 
-  @include block(actions) {
-    @include _(greater than $header-mobile-breakpoint) { 
-      display: none;
+  @include block(header-phone-button-wrap) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
 
-      @include modifier(show) {
-        display: block;
-      }
-    }
-  }
-
-  @include block(actions-simple) {
-    width: 100%;
-
-    @include _(greater than $header-mobile-breakpoint) {  
-      width: calculate-width($menu001-sub-item-num);
-      position: absolute;
-      top: 100%;
-      right: 0;
-      z-index: 5;
+    @include modifier(show) {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
     }
 
-    @include element(img) {
-      display: block;
-      height: $base-line-height * 14;
-      overflow: hidden;
-      position: relative;
-
-      img {
-        position: absolute;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        right: 0;
-        height: auto;
-        min-height: 100%;
-        min-width: 100%;
-        transform: translateX(-50%);
-      }     
-    }
-
-    @include element(title) {
-      display: block;
-      @include type-setting(accent-text);
-      height: $base-line-height * 2;
-      overflow: hidden;
-      padding: $base-line-height * 2; 
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    /*@include element(text-wrap) {
-      display: none;
-      padding: $base-line-height * 2; 
-
-      @include _(greater than $header-mobile-breakpoint) {  
-        display: block;
-      }
-    }
-
-    @include element(text) {
-      @include type-setting(text);
-      height: $base-line-height * 6;
-      overflow: hidden;
-    }*/
-
-    @include element(link-full) {
-      display: none;
-      margin: $base-line-height * 2; 
-
-      @include _(greater than $header-mobile-breakpoint) {  
-        display: inline-block;
-      }
+    @include _(greater than $header-mobile-breakpoint) {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

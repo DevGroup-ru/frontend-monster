@@ -1,0 +1,168 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "portfolio003",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": "Портфолио",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              },
+              {
+                "elem": "img-link",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Тут наименование работы пишем, можно в две строки, но не более.",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              },
+              {
+                "elem": "img-link",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Тут наименование работы пишем, можно в две строки, но не более.",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              },
+              {
+                "elem": "img-link",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Тут наименование работы пишем, можно в две строки, но не более.",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              },
+              {
+                "elem": "img-link",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Тут наименование работы пишем, можно в две строки, но не более.",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все работы",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

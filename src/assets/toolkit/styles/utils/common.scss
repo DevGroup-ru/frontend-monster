@@ -60,6 +60,6 @@
 
 // @desc Calculate of width menu
 
-@function calculate-width ($menu-item) {
-  @return 100% / $menu-item;
+@function calculate-width ($item) {
+  @return 100% / $item;
 }

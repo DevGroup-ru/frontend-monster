@@ -1,0 +1,168 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "tabs001",
+        "cls": "accordion-tabs",
+        "content": [
+          {
+            "elem": "tab-wrap",
+            "cls": "accordion-tabs__wrap",
+            "content": [
+              {
+                "elem": "header",
+                "mods": ["full-width"],
+                "editableGroup": "header-1",
+                "cls": "accordion-tabs__header active",
+                "content": "Длинный таб 1",
+                "editable": true
+              },
+              {
+                "elem": "content",
+                "mods": ["fon", "sub"],
+                "editableGroup": "content-1",
+                "cls": "accordion-tabs__content active",
+                "content": [
+                  {
+                    "elem": "tab-wrap",
+                    "cls": "accordion-tabs__wrap",
+                    "content": [
+                      {
+                        "elem": "header",
+                        "editableGroup": "header-1",
+                        "cls": "accordion-tabs__header active",
+                        "content": "Длинный таб 1-1",
+                        "editable": true
+                      },
+                      {
+                        "elem": "content",
+                        "mods": ["fon"],
+                        "editableGroup": "content-1",
+                        "cls": "accordion-tabs__content active",
+                        "content": "1-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                        "editable": "wysiwyg"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "tab-wrap",
+                    "cls": "accordion-tabs__wrap",
+                    "content": [
+                      {
+                        "elem": "header",
+                        "editableGroup": "header-1",
+                        "cls": "accordion-tabs__header",
+                        "content": "Длинный таб 1-2",
+                        "editable": true
+                      },
+                      {
+                        "elem": "content",
+                        "mods": ["fon"],
+                        "editableGroup": "content-1",
+                        "cls": "accordion-tabs__content",
+                        "content": "1-2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                        "editable": "wysiwyg"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "tab-wrap",
+                    "cls": "accordion-tabs__wrap",
+                    "content": [
+                      {
+                        "elem": "header",
+                        "editableGroup": "header-1",
+                        "cls": "accordion-tabs__header",
+                        "content": "Длинный таб 1-3",
+                        "editable": true
+                      },
+                      {
+                        "elem": "content",
+                        "mods": ["fon"],
+                        "editableGroup": "content-1",
+                        "cls": "accordion-tabs__content",
+                        "content": "1-3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                        "editable": "wysiwyg"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "tab-wrap",
+            "cls": "accordion-tabs__wrap",
+            "content": [
+              {
+                "elem": "header",
+                "mods": ["full-width"],
+                "editableGroup": "header-2",
+                "cls": "accordion-tabs__header",
+                "content": "Длинный таб 2",
+                "editable": true
+              },
+              {
+                "elem": "content",
+                "mods": ["fon"],
+                "editableGroup": "content-2",
+                "cls": "accordion-tabs__content",
+                "content": "2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "tab-wrap",
+            "cls": "accordion-tabs__wrap",
+            "content": [
+              {
+                "elem": "header",
+                "mods": ["full-width"],
+                "editableGroup": "header-3",
+                "cls": "accordion-tabs__header",
+                "content": "Длинный таб 3",
+                "editable": true
+              },
+              {
+                "elem": "content",
+                "mods": ["fon"],
+                "editableGroup": "content-3",
+                "cls": "accordion-tabs__content",
+                "content": "3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "tab-wrap",
+            "cls": "accordion-tabs__wrap",
+            "content": [
+              {
+                "elem": "header",
+                "mods": ["full-width"],
+                "editableGroup": "header-4",
+                "cls": "accordion-tabs__header",
+                "content": "Длинный таб 4",
+                "editable": true
+              },
+              {
+                "elem": "content",
+                "mods": ["fon"],
+                "editableGroup": "content-4",
+                "cls": "accordion-tabs__content",
+                "content": "4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

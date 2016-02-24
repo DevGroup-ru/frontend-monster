@@ -1,0 +1,302 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "portfolio001",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": "Портфолио",
+        "editable": true
+      },
+      {
+        "elem": "carousel",
+        "cls": "carousel--four-items",
+        "content": [
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                    "editable": true,
+                    "link": true
+                  },
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все работы",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

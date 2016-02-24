@@ -1,0 +1,142 @@
+$tabs001-content-fon: #fff;
+$tabs001-content-border-width: 0;
+$tabs001-content-border-color: #aaa;
+
+$tabs001-header-height: $base-line-height * 8;
+
+$tabs001-header-icon-size: $base-line-height * 3;
+
+$tabs001-header-fon: #eee;
+$tabs001-header-border-width: $base-line-height / 5;
+$tabs001-header-border-color: transparent;
+
+$tabs001-header-fon-hover: #aaa;
+$tabs001-header-border-color-hover: transparent;
+
+$tabs001-header-fon-active: #aaa;
+$tabs001-header-border-color-active: #000;
+
+$tabs001-header-item: 4;  //write the number of tabs items
+
+.m-wrapper {
+
+  // @desc Tabs - other simple tabs
+  // @group tabs
+  // @bemJson tabs--001.json, tabs--002.json (with fon for contents and full-width header), tabs--003.json (with fon for contents and full-width and fix-height header with line on bottom and icon )
+
+  @include block(tabs001) {
+    text-align: left;
+    position: relative;
+    @include _(12 12 8 4 4);
+    @include _(clear);
+
+    @include element(tab-wrap) {
+      display: block;
+      vertical-align: middle;
+      font-size: 0px;
+
+      @include _(greater than tablet) {  
+        display: inline;
+        width: 100%;
+      }
+    }
+
+    @include element(header) {
+      width: 100%;
+      cursor: pointer;
+      overflow: hidden;
+      display: block;
+      padding: $base-line-height * 2 - $tabs001-header-border-width;
+      @include type-setting(text);
+      background: $tabs001-header-fon;
+      border: $tabs001-header-border-width solid $tabs001-header-border-color;
+
+      &:hover {
+        background: $tabs001-header-fon-hover;
+        border: $tabs001-header-border-width solid $tabs001-header-border-color-hover;
+      }
+
+      &.active {
+        background: $tabs001-header-fon-active;
+        border: $tabs001-header-border-width solid $tabs001-header-border-color-active;
+      }
+
+      @include _(greater than tablet) {  
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        max-width: calc(#{calculate-width($tabs001-header-item)} - #{$base-line-height * 2});
+        margin-right: $base-line-height * 2;
+      }
+
+      @include modifier(full-width) {
+        width: 100%;
+        max-width: 100%;
+
+        @include _(greater than tablet) {  
+          width: calculate-width($tabs001-header-item);
+          max-width: calculate-width($tabs001-header-item);
+          margin-right: 0;
+        }
+      }
+
+      @include modifier(line-bottom) {
+        border: none;
+        border-bottom: $tabs001-header-border-width solid $tabs001-header-border-color;
+        padding: $base-line-height * 2 - $tabs001-header-border-width / 2;
+
+        &:hover {
+          border: none;
+          border-bottom: $tabs001-header-border-width solid $tabs001-header-border-color-hover;
+        }
+
+        &.active {
+          border: none;
+          border-bottom: $tabs001-header-border-width solid $tabs001-header-border-color-active;
+        }
+      }
+
+      @include modifier(fix-height) {
+        padding: 0 $base-line-height * 2 - $tabs001-header-border-width;
+        height: $tabs001-header-height;
+
+        span, div {
+          display: flex;
+          align-items: center;
+          height: $tabs001-header-height;
+        }
+      }
+    }
+
+    @include element(header-icon) {
+      display: block;
+      float: left;
+      padding-right: $base-line-height;
+      font-size: $tabs001-header-icon-size;
+    }
+
+    @include element(content) {
+      left: 0;
+      float: left;
+      width: 100%;
+      padding: $base-line-height * 2 0;
+      @include type-setting(text);
+
+      @include _(greater than tablet) {  
+        position: absolute;
+        top: 100%;
+      }
+
+      @include modifier(fon) {
+        position: static;
+      }
+
+      @include modifier(fon) {
+        background: $tabs001-content-fon;
+        border: $tabs001-content-border-width solid $tabs001-content-border-color;
+        padding: $base-line-height * 2 - $tabs001-content-border-width;
+      }
+    }
+  }
+}
+

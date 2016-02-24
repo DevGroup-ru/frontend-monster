@@ -1,0 +1,118 @@
+$tabs001-content-fon: #fff;
+$tabs001-content-border-width: 0;
+$tabs001-content-border-color: #aaa;
+
+$tabs001-header-height: $base-line-height * 8;
+
+$tabs001-header-icon-size: $base-line-height * 3;
+
+$tabs001-header-fon: transparent;
+$tabs001-header-border-width: $base-line-height / 10;
+$tabs001-header-border-color: transparent;
+
+$tabs001-header-fon-hover: transparent;
+$tabs001-header-border-color-hover: #000;
+
+$tabs001-header-fon-active: transparent;
+$tabs001-header-border-color-active: #000;
+
+.m-wrapper {
+
+  // @desc Tabs - other simple tabs
+  // @group tabs
+  // @bemJson tabs--005.json
+
+  @include block(tabs005) {
+    text-align: left;
+    position: relative;
+    @include _(clear);
+
+    @include element(tab-wrap) {
+      display: block;
+      vertical-align: middle;
+      font-size: 0px;
+
+      @include _(greater than tablet) {  
+        display: inline;
+        width: 100%;
+      }
+    }
+
+    @include element(header) {
+      cursor: pointer;
+      overflow: hidden;
+      display: block;
+      padding: $base-line-height * 2 - $tabs001-header-border-width;
+      @include type-setting(text);
+      background: $tabs001-header-fon;
+      @include _(4 4 8 4 4);
+      float: none;
+      border: $tabs001-header-border-width solid $tabs001-header-border-color;
+
+      &:hover {
+        background: $tabs001-header-fon-hover;
+        border: $tabs001-header-border-width solid $tabs001-header-border-color-hover;
+      }
+
+      &.active {
+        background: $tabs001-header-fon-active;
+        border: $tabs001-header-border-width solid $tabs001-header-border-color-active;
+      }
+
+      @include modifier(line-bottom) {
+        border: none;
+        border-bottom: $tabs001-header-border-width solid $tabs001-header-border-color;
+        padding: $base-line-height * 2 - $tabs001-header-border-width / 2;
+
+        &:hover {
+          border: none;
+          border-bottom: $tabs001-header-border-width solid $tabs001-header-border-color-hover;
+        }
+
+        &.active {
+          border: none;
+          border-bottom: $tabs001-header-border-width solid $tabs001-header-border-color-active;
+        }
+      }
+
+      @include modifier(fix-height) {
+        padding: 0 $base-line-height * 2 - $tabs001-header-border-width;
+        height: $tabs001-header-height;
+
+        span, div {
+          display: flex;
+          align-items: center;
+          height: $tabs001-header-height;
+        }
+      }
+    }
+
+    @include element(header-icon) {
+      display: block;
+      float: left;
+      padding-right: $base-line-height;
+      font-size: $tabs001-header-icon-size;
+    }
+
+    @include element(content) {
+      left: 0;
+      float: left;
+      @include _(8 8 8 4 4);
+      padding: $base-line-height * 2 0;
+      @include type-setting(text);
+
+      @include _(greater than tablet) {  
+        position: absolute;
+        top: 0;
+        left: 33.3%;
+      }
+
+      @include modifier(fon) {
+        background: $tabs001-content-fon;
+        border: $tabs001-content-border-width solid $tabs001-content-border-color;
+        padding: $base-line-height * 2 - $tabs001-content-border-width;
+      }
+    }
+  }
+}
+

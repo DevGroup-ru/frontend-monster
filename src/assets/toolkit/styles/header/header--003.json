@@ -866,18 +866,20 @@
                         "block": "block-bottom-menu",
                         "content": [
                           { 
-                            "block": "actions-simple",
+                            "block": "actions",
+                            "mods": ["icon"],
                             "cls": "actions",
                             "content": [
                               {
                                 "elem": "img-wrap",
                                 "content": [
                                   {
-                                    "elem": "img",
+                                    "elem": "icon-wrap",
                                     "link": true,
                                     "content": [
                                       {
-                                        "image": "http://lorempixel.com/200/300"
+                                        "elem": "icon",
+                                        "icon": true
                                       }
                                     ]
                                   },
@@ -886,6 +888,16 @@
                                     "content": "Внимание акция!!!",
                                     "editable": true,
                                     "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "text-wrap",
+                                "content": [
+                                  {
+                                    "elem": "text",
+                                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus",
+                                    "editable": true
                                   },
                                   {
                                     "elem": "link-full",
