@@ -7,7 +7,8 @@
     ],
     "content": [
       {
-        "block": "tabs005",
+        "block": "tabs001",
+        "mods": ["header-left"],
         "cls": "accordion-tabs",
         "content": [
           {
@@ -17,18 +18,27 @@
             "content": [
               {
                 "elem": "header",
-                "mods": ["full-width", "fix-height"],
+                "mods": ["fix-width", "fix-height"],
                 "editableGroup": "header-1",
                 "cls": "accordion-tabs__header active",
                 "content": [
                   {
-                    "elem": "header-icon",
-                    "icon": true
-                  },
-                  {
-                    "elem": "header-span",
-                    "content": "Очень длинный таб",
-                    "editable": true
+                    "elem": "header-text",
+                    "content": [
+                      {
+                        "elem": "header-icon",
+                        "content": [
+                          {
+                            "icon": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "header-span",
+                        "content": "Очень длинный таб",
+                        "editable": true
+                      }
+                    ]
                   }
                 ]
               },
@@ -48,18 +58,27 @@
             "content": [
               {
                 "elem": "header",
-                "mods": ["full-width", "fix-height"],
+                "mods": ["fix-width", "fix-height"],
                 "editableGroup": "header-2",
                 "cls": "accordion-tabs__header",
                 "content": [
                   {
-                    "elem": "header-icon",
-                    "icon": true
-                  },
-                  {
-                    "elem": "header-span",
-                    "content": "Очень длинный таб",
-                    "editable": true
+                    "elem": "header-text",
+                    "content": [
+                      {
+                        "elem": "header-icon",
+                        "content": [
+                          {
+                            "icon": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "header-span",
+                        "content": "Очень длинный таб",
+                        "editable": true
+                      }
+                    ]
                   }
                 ]
               },
@@ -79,18 +98,27 @@
             "content": [
               {
                 "elem": "header",
-                "mods": ["full-width", "fix-height"],
+                "mods": ["fix-width", "fix-height"],
                 "editableGroup": "header-3",
                 "cls": "accordion-tabs__header",
                 "content": [
                   {
-                    "elem": "header-icon",
-                    "icon": true
-                  },
-                  {
-                    "elem": "header-span",
-                    "content": "Длинный таб",
-                    "editable": true
+                    "elem": "header-text",
+                    "content": [
+                      {
+                        "elem": "header-icon",
+                        "content": [
+                          {
+                            "icon": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "header-span",
+                        "content": "Длинный таб",
+                        "editable": true
+                      }
+                    ]
                   }
                 ]
               },
@@ -110,18 +138,27 @@
             "content": [
               {
                 "elem": "header",
-                "mods": ["full-width", "fix-height"],
+                "mods": ["fix-width", "fix-height"],
                 "editableGroup": "header-4",
                 "cls": "accordion-tabs__header",
                 "content": [
                   {
-                    "elem": "header-icon",
-                    "icon": true
-                  },
-                  {
-                    "elem": "header-span",
-                    "content": "Длинный таб",
-                    "editable": true
+                    "elem": "header-text",
+                    "content": [
+                      {
+                        "elem": "header-icon",
+                        "content": [
+                          {
+                            "icon": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "header-span",
+                        "content": "Длинный таб",
+                        "editable": true
+                      }
+                    ]
                   }
                 ]
               },

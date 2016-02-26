@@ -1,0 +1,189 @@
+$stepbar001-line-width: $base-line-height / 10;
+$stepbar001-line-color: #000;
+
+$stepbar001-arrow: "\e816";
+$stepbar001-arrow-size: $base-line-height * 3;
+$stepbar001-arrow-top: -$stepbar001-arrow-size / 2 - $base-line-height / 2;
+
+$stepbar001-number-fon: #eee;
+$stepbar001-number-fon-width: $base-line-height * 4;
+$stepbar001-number-fon-circle: $stepbar001-number-fon-width / 2;
+
+.m-wrapper {
+
+  // @desc Stepbar - with arrow
+  // @group stepbar
+  // @bemJson stepbar--001.json
+
+  @include block(stepbar001) {
+    text-align: center;
+    position: relative;
+
+    @include element(nested) {
+      	padding-top: $base-line-height * 2;
+      	padding-bottom: $base-line-height * 2;
+      	width: 100%;
+      	float: left;
+      	@include _(clear);
+      	position: relative;
+
+      	@include modifier(last) {
+
+		    .stepbar001__number {
+		    	&:after {
+		      		display: none;
+			    }
+		    }
+	    }
+
+      	@include _(greater than mobile) {
+      		padding-top: $base-line-height * 3;
+      		padding-bottom: $base-line-height * 3;
+
+	      	&:after {
+	      		content: "";
+	      		position: absolute;
+	      		bottom: 0;
+	      		left: 25%;
+	      		width: 50%;
+	      		height: $stepbar001-line-width;
+		      	background: $stepbar001-line-color;
+		    }
+
+		    @include modifier(first) {
+
+		    	.stepbar001__text-wrap {
+			    	&:before {
+			      		display: none;
+				    }
+			    }
+
+			    .stepbar001__number {
+			    	&:after {
+			      		display: none;
+				    }
+			    }
+		    }
+
+		    @include modifier(last) {
+		    	&:after {
+		      		display: none;
+			    }
+
+			    .stepbar001__text-wrap {
+			    	&:after {
+			      		display: none;
+				    }
+			    }
+
+			    .stepbar001__number {
+			    	&:after {
+			      		display: block;
+				    }
+			    }
+		    }
+		}
+    }
+
+    @include element(title) {
+      	@extend %heading;
+      	@include _($full-row-configuration);
+    }
+
+    @include element(text-wrap) {
+    	@include _(6 6 4 4 4);
+    	text-align: center;
+    	padding: $base-line-height * 2;
+    	position: relative;
+    	min-height: auto;
+
+    	@include _(greater than mobile) {
+    		min-height: $base-line-height * 24;
+
+	      	&:after {
+	      		content: "";
+	      		position: absolute;
+	      		bottom: - $base-line-height * 3;
+	      		left: 50%;
+	      		width: $stepbar001-line-width;
+	      		height: $base-line-height * 3;
+		      	background: $stepbar001-line-color;
+		    }
+
+		    &:before {
+	      		content: "";
+	      		position: absolute;
+	      		top: - $base-line-height * 3;
+	      		left: 50%;
+	      		width: $stepbar001-line-width;
+	      		height: $base-line-height * 3;
+		      	background: $stepbar001-line-color;
+		    }
+		}
+    }
+
+    @include element(text) {
+      	@include type-setting(text);
+      	height: $base-line-height * 8;
+      	overflow: hidden;
+    }
+
+    @include element(number) {
+      	@include type-setting(accent-text);
+      	width: $stepbar001-number-fon-width;
+      	height: $stepbar001-number-fon-width;
+      	line-height: $stepbar001-number-fon-width; 
+      	border-radius: $stepbar001-number-fon-circle;
+      	background: $stepbar001-number-fon;
+      	margin: 0 auto;
+      	margin-bottom: $base-line-height * 2;
+
+      	&:after {
+      		content: "";
+      		position: absolute;
+      		bottom: - $base-line-height * 2;
+      		left: calc(50% - #{$stepbar001-arrow-size / 2});
+      		@extend %basic-icon;
+      		font-size: $stepbar001-arrow-size;
+      		width: $stepbar001-arrow-size;
+      		height: $stepbar001-arrow-size;
+      		content: $stepbar001-arrow;
+
+      		@include _(greater than mobile) {
+      			bottom: inherit;
+      			top: $stepbar001-arrow-top;
+      		}
+	    }
+    }
+
+    @include element(img) {
+    	@include _(6 6 4 4 4);
+	    display: block;
+	    height: $base-line-height * 20;
+	    overflow: hidden;
+	    position: relative;
+
+	    img {
+	    	position: absolute;
+	    	margin: auto;
+	    	top: 0;
+	    	bottom: 0;
+	    	left: 50%;
+	    	right: 0;
+	    	height: auto;
+	    	min-height: 100%;
+	    	min-width: 100%;
+	    	transform: translateX(-50%);
+	    }
+
+	    @include modifier(right) {
+	        float: right;
+	    }
+
+	    @include _(greater than mobile) {
+    		min-height: $base-line-height * 24;
+    	}
+    }
+  }
+}
+

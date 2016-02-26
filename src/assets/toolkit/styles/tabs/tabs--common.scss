@@ -4,7 +4,7 @@ $tabs001-content-border-color: #aaa;
 
 $tabs001-header-height: $base-line-height * 8;
 
-$tabs001-header-icon-size: $base-line-height * 3;
+$tabs001-header-icon-size: $base-line-height * 4;
 
 $tabs001-header-fon: #eee;
 $tabs001-header-border-width: $base-line-height / 5;
@@ -16,18 +16,20 @@ $tabs001-header-border-color-hover: transparent;
 $tabs001-header-fon-active: #aaa;
 $tabs001-header-border-color-active: #000;
 
+$tab-arrow: "\e801";
+$tab-arrow-hover: "\e816";
+
 $tabs001-header-item: 4;  //write the number of tabs items
 
 .m-wrapper {
 
   // @desc Tabs - other simple tabs
   // @group tabs
-  // @bemJson tabs--001.json, tabs--002.json (with fon for contents and full-width header), tabs--003.json (with fon for contents and full-width and fix-height header with line on bottom and icon )
+  // @bemJson tabs--001.json, tabs--002.json, tabs--003.json, tabs--004.json, tabs--005.json, tabs--006.json
 
   @include block(tabs001) {
     text-align: left;
     position: relative;
-    @include _(12 12 8 4 4);
     @include _(clear);
 
     @include element(tab-wrap) {
@@ -69,13 +71,22 @@ $tabs001-header-item: 4;  //write the number of tabs items
         margin-right: $base-line-height * 2;
       }
 
-      @include modifier(full-width) {
-        width: 100%;
+      @include modifier(fix-width) {
         max-width: 100%;
 
         @include _(greater than tablet) {  
           width: calculate-width($tabs001-header-item);
           max-width: calculate-width($tabs001-header-item);
+          margin-right: 0;
+        }
+      }
+
+      @include modifier(full-width) {
+        max-width: 100%;
+
+        @include _(greater than tablet) {  
+          width: 100%;
+          max-width: 100%;
           margin-right: 0;
         }
       }
@@ -99,13 +110,39 @@ $tabs001-header-item: 4;  //write the number of tabs items
       @include modifier(fix-height) {
         padding: 0 $base-line-height * 2 - $tabs001-header-border-width;
         height: $tabs001-header-height;
+      }
 
-        span, div {
-          display: flex;
-          align-items: center;
-          height: $tabs001-header-height;
+      @include modifier(is-arrow) {
+
+        .tabs001__header-text {
+          &:after {
+            display: inline-block;
+            @extend %basic-icon;
+            content: $tab-arrow;
+            width: $base-line-height * 2;
+            padding: 0 $base-line-height * 2;
+          }
+        }
+
+        .tabs001__header-span {
+          width: calc(100% -  #{$base-line-height * 8});
+        }
+
+        &:hover, &.active {
+          .tabs001__header-text {
+            &:after {
+              content: $tab-arrow-hover;
+              text-decoration: none;
+            }
+          }
         }
       }
+    }
+
+    @include element(header-text) {
+      display: flex;
+      align-items: center;
+      height: 100%;
     }
 
     @include element(header-icon) {
@@ -113,6 +150,8 @@ $tabs001-header-item: 4;  //write the number of tabs items
       float: left;
       padding-right: $base-line-height;
       font-size: $tabs001-header-icon-size;
+      width: $base-line-height * 7;
+      text-align: center;
     }
 
     @include element(content) {
@@ -135,6 +174,29 @@ $tabs001-header-item: 4;  //write the number of tabs items
         background: $tabs001-content-fon;
         border: $tabs001-content-border-width solid $tabs001-content-border-color;
         padding: $base-line-height * 2 - $tabs001-content-border-width;
+      }
+    }
+
+    @include modifier(header-left) {
+      .tabs001__header {
+        @include _(4 4 8 4 4);
+        float: none;
+
+        @include _(greater than tablet) {  
+          display: block;
+          max-width: 100%;
+          @include _(4 4 8 4 4);
+          float: none;
+        }
+      }
+
+      .tabs001__content {
+        @include _(8 8 8 4 4);
+
+        @include _(greater than tablet) {  
+          top: 0;
+          left: 33.3%;
+        }
       }
     }
   }

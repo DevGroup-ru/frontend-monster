@@ -1,0 +1,112 @@
+<div class="m-container" data-bem-match="m-container"><div class="stepbar001 m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom" data-bem-match="stepbar001"><div class="stepbar001__title g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top" data-bem-match="stepbar001__title">Как мы работаем?</div><div class="stepbar001__nested stepbar001__nested--first" data-bem-match="stepbar001__nested"><div class="stepbar001__img stepbar001__img--right" data-bem-match="stepbar001__img"><img src="http://lorempixel.com/200/300"/></div><div class="stepbar001__text-wrap" data-bem-match="stepbar001__text-wrap"><div class="stepbar001__number" data-bem-match="stepbar001__number">1</div><div class="stepbar001__text" data-bem-match="stepbar001__text">В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.</div></div></div><div class="stepbar001__nested" data-bem-match="stepbar001__nested"><div class="stepbar001__img" data-bem-match="stepbar001__img"><img src="http://lorempixel.com/200/300"/></div><div class="stepbar001__text-wrap" data-bem-match="stepbar001__text-wrap"><div class="stepbar001__number" data-bem-match="stepbar001__number">2</div><div class="stepbar001__text" data-bem-match="stepbar001__text">В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.</div></div></div><div class="stepbar001__nested stepbar001__nested--last" data-bem-match="stepbar001__nested"><div class="stepbar001__img stepbar001__img--right" data-bem-match="stepbar001__img"><img src="http://lorempixel.com/200/300"/></div><div class="stepbar001__text-wrap" data-bem-match="stepbar001__text-wrap"><div class="stepbar001__number" data-bem-match="stepbar001__number">3</div><div class="stepbar001__text" data-bem-match="stepbar001__text">В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.</div></div></div></div></div>
+<div class="f-item-code" data-f-toggle="code">BEM JSON<pre class=" language-markup">{
+  "block": "m-container",
+  "content": {
+    "block": "stepbar001",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": "Как мы работаем?",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "mods": ["first"],
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "img",
+            "mods": ["right"],
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "number",
+                "content": "1",
+                "editable": true
+              },
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "img",
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "number",
+                "content": "2",
+                "editable": true
+              },
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "mods": ["last"],
+        "editableGroup": "nested-3",
+        "content": [
+          {
+            "elem": "img",
+            "mods": ["right"],
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "text-wrap",
+            "content": [
+              {
+                "elem": "number",
+                "content": "3",
+                "editable": true
+              },
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}</pre></div>

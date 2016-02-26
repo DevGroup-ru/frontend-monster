@@ -1,0 +1,140 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "stepbar002",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": "Чем занимается наша компания?",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "icon-number",
+            "content": [
+              {
+                "elem": "icon",
+                "icon": true
+              },
+              {
+                "elem": "number",
+                "content": "1",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "title-nested",
+            "content": "Собираем данные",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "icon-number",
+            "content": [
+              {
+                "elem": "icon",
+                "icon": true
+              },
+              {
+                "elem": "number",
+                "content": "2",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "title-nested",
+            "content": "Собираем данные",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-3",
+        "content": [
+          {
+            "elem": "icon-number",
+            "content": [
+              {
+                "elem": "icon",
+                "icon": true
+              },
+              {
+                "elem": "number",
+                "content": "3",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "title-nested",
+            "content": "Собираем данные",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-4",
+        "content": [
+          {
+            "elem": "icon-number",
+            "content": [
+              {
+                "elem": "icon",
+                "icon": true
+              },
+              {
+                "elem": "number",
+                "content": "4",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "title-nested",
+            "content": "Собираем данные",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+            "editable": "wysiwyg"
+          }
+        ]
+      }
+    ]
+  }
+}

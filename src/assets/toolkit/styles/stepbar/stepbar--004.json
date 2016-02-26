@@ -1,0 +1,165 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "stepbar004",
+      "content": {
+      "row": true,
+      "utils": [
+        "one-line--top-bottom"
+      ],
+      "content": [
+        {
+          "elem": "title",
+          "utils": [
+            "no-margin--top"
+          ],
+          "content": "Как мы работаем?",
+          "editable": true
+        },
+        {
+          "elem": "nested",
+          "mods": ["first"],
+          "editableGroup": "nested-1",
+          "content": [
+            {
+              "elem": "img",
+              "content": [
+                {
+                  "image": "http://lorempixel.com/200/300"
+                }
+              ]
+            },
+            {
+              "elem": "text-wrap",
+              "content": [
+                {
+                  "elem": "title-nested",
+                  "content": "Потом дождаться когда позвонят",
+                  "editable": true
+                },
+                {
+                  "elem": "text",
+                  "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                  "editable": "wysiwyg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "elem": "nested",
+          "editableGroup": "nested-2",
+          "content": [
+            {
+              "elem": "img",
+              "mods": ["right"],
+              "content": [
+                {
+                  "image": "http://lorempixel.com/200/300"
+                }
+              ]
+            },
+            {
+              "elem": "text-wrap",
+              "content": [
+                {
+                  "elem": "title-nested",
+                  "content": "Потом дождаться когда позвонят",
+                  "editable": true
+                },
+                {
+                  "elem": "text",
+                  "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                  "editable": "wysiwyg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "elem": "nested",
+          "mods": ["last"],
+          "editableGroup": "nested-3",
+          "content": [
+            {
+              "elem": "img",
+              "content": [
+                {
+                  "image": "http://lorempixel.com/200/300"
+                }
+              ]
+            },
+            {
+              "elem": "text-wrap",
+              "content": [
+                {
+                  "elem": "title-nested",
+                  "content": "Потом дождаться когда позвонят",
+                  "editable": true
+                },
+                {
+                  "elem": "text",
+                  "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                  "editable": "wysiwyg"
+                },
+                {
+                  "elem": "text-links-wrap",
+                  "content": [
+                    {
+                      "elem": "text-link",
+                      "content": "Список дел на текущую неделю",
+                      "link": true,
+                      "editable": true
+                    },
+                    {
+                      "elem": "text-link",
+                      "content": "Список дел на текущую неделю",
+                      "link": true,
+                      "editable": true
+                    },
+                    {
+                      "elem": "text-link",
+                      "content": "Список дел на текущую неделю",
+                      "link": true,
+                      "editable": true
+                    },
+                    {
+                      "elem": "text-link",
+                      "content": "Список дел на текущую неделю",
+                      "link": true,
+                      "editable": true
+                    },
+                    {
+                      "elem": "text-link",
+                      "content": "Список дел на текущую неделю",
+                      "link": true,
+                      "editable": true
+                    },
+                    {
+                      "elem": "text-link",
+                      "content": "Список дел на текущую неделю",
+                      "link": true,
+                      "editable": true
+                    },
+                    {
+                      "elem": "text-link",
+                      "content": "Список дел на текущую неделю",
+                      "link": true,
+                      "editable": true
+                    },
+                    {
+                      "elem": "text-link",
+                      "content": "Список дел на текущую неделю",
+                      "link": true,
+                      "editable": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

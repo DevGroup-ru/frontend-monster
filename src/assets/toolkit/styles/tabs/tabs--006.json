@@ -7,7 +7,7 @@
     ],
     "content": [
       {
-        "cls": "grid-full",
+        "cls": "grid-full__half",
         "content": [
           {
             "block": "tabs001",
@@ -20,7 +20,7 @@
                 "content": [
                   {
                     "elem": "header",
-                    "mods": ["fix-width", "line-bottom", "fix-height"],
+                    "mods": ["full-width", "is-arrow", "fix-height"],
                     "editableGroup": "header-1",
                     "cls": "accordion-tabs__header active",
                     "content": [
@@ -61,7 +61,7 @@
                 "content": [
                   {
                     "elem": "header",
-                    "mods": ["fix-width", "line-bottom", "fix-height"],
+                    "mods": ["full-width", "is-arrow", "fix-height"],
                     "editableGroup": "header-2",
                     "cls": "accordion-tabs__header",
                     "content": [
@@ -102,7 +102,7 @@
                 "content": [
                   {
                     "elem": "header",
-                    "mods": ["fix-width", "line-bottom", "fix-height"],
+                    "mods": ["full-width", "is-arrow", "fix-height"],
                     "editableGroup": "header-3",
                     "cls": "accordion-tabs__header",
                     "content": [
@@ -143,7 +143,7 @@
                 "content": [
                   {
                     "elem": "header",
-                    "mods": ["fix-width", "line-bottom", "fix-height"],
+                    "mods": ["full-width", "is-arrow", "fix-height"],
                     "editableGroup": "header-4",
                     "cls": "accordion-tabs__header",
                     "content": [

@@ -1,0 +1,147 @@
+$stepbar004-fon: #fff; //fon should has only one color
+
+$stepbar004-line-width: $base-line-height / 10;
+$stepbar004-line-color: #aaa;
+
+$stepbar004-arrow-size: $base-line-height * 2;
+$stepbar004-arrow-size-scale: $base-line-height * 4;
+
+.m-wrapper {
+
+  // @desc Stepbar - without number and with arrows
+  // @group stepbar
+  // @bemJson stepbar--004.json
+
+  @include block(stepbar004) {
+    text-align: center;
+    background: $stepbar004-fon;
+    overflow: hidden;
+
+    @include element(nested) {
+      padding-top: $base-line-height * 3 + $stepbar004-arrow-size;
+      padding-bottom: $base-line-height + $stepbar004-arrow-size;
+      width: 100%;
+      float: left;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: - $stepbar004-arrow-size + $stepbar004-line-width;
+        left: calc(50% - #{$stepbar004-arrow-size-scale});
+        width: 0;
+        height: 0;
+        border-top: $stepbar004-arrow-size solid $stepbar004-fon;
+        border-right: $stepbar004-arrow-size-scale solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: $stepbar004-arrow-size-scale solid transparent;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: - $stepbar004-arrow-size;
+        left: calc(50% - #{$stepbar004-arrow-size-scale});
+        width: 0;
+        height: 0;
+        border-top: $stepbar004-arrow-size solid $stepbar004-line-color;
+        border-right: $stepbar004-arrow-size-scale solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: $stepbar004-arrow-size-scale solid transparent;
+      }
+
+      @include _(greater than mobile) {
+        padding-top: $base-line-height * 3 + $stepbar004-arrow-size;
+        padding-bottom: $base-line-height * 3 + $stepbar004-arrow-size;
+      }
+
+      @include modifier(last) {
+        &:before, &:after, .stepbar004__text-wrap:after {
+          display: none;
+        }
+      }
+    }
+
+    @include element(title) {
+        @extend %heading;
+        @include _($full-row-configuration);
+    }
+
+    @include element(text-wrap) {
+      @include _(9 9 6 4 4);
+      text-align: center;
+      padding: $base-line-height * 2;
+      
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include _(12 12 8 4 4);
+        height: $stepbar004-line-width;
+        background: $stepbar004-line-color;
+      }
+
+      @include _(greater than mobile) {
+        text-align: left;
+        padding: 0;
+      }
+    }
+
+    @include element(title-nested) {
+      @include type-setting(accent-text);
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      margin-top: $base-line-height;
+
+      @include _(greater than tablet) {  
+        margin-top: $base-line-height * 2;
+      }
+    }
+
+    @include element(img) {
+      @include _(3 3 2 4 4);
+      display: block;
+      height: $base-line-height * 15;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translateX(-50%);
+      }
+
+      @include modifier(right) {
+          float: right;
+      }
+    }
+
+    @include element(text-links-wrap) {
+      @include _(clear);
+    }
+
+    @include element(text-link) {
+      @include _(3 3 4 2 2);
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;
+      height: $base-line-height * 4;
+      overflow: hidden;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
