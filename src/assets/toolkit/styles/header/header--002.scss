@@ -17,6 +17,7 @@ $header002-height: $base-line-height * 8;
     width: 100%; 
     background: $header002-fon;
     height: $header002-height;
+    z-index: 5;
 
     @include element(wrap) {
       position: relative;   

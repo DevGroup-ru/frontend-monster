@@ -23,6 +23,7 @@ $header008-top-height: $base-line-height * 9;
     width: 100%; 
     height: $header008-height-mobile;
     background: $header008-fon;
+    z-index: 5;
 
     &:before {
       display: none;

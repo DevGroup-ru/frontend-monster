@@ -399,7 +399,7 @@
                                   },
                                   {
                                     "elem": "2lvl-item",
-                                    "cls": "sub-item",
+                                    "cls": "sub-item sub-item--show",
                                     "editableGroup": "2lvl-item-11",
                                     "content": [
                                       {

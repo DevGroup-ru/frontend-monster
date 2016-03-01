@@ -6,7 +6,7 @@ $(function() {
   //helper to change the menu view
 
   $('.m-container > div[class*="header"]').css('display','none');
-  $('.m-container > .header003').css('display','block');
+  $('.m-container > .header002').css('display','block');
   $('.helper-check input').on('change', function(){
       var menuView = $(this).attr('id');
       $('.helper-check input').removeAttr("checked").prop("checked", false);
@@ -18,10 +18,9 @@ $(function() {
   //for tabs-menu
 
   if ($('.sub-menu').hasClass('sub-menu--tabs')) {
-    $('.sub-menu--tabs .sub-item:nth-child(2)').addClass('sub-item--show');
     $('.sub-menu--tabs .sub-item').hover(
         function() {
-          $('.sub-menu--tabs .sub-item').removeClass('sub-item--show');
+          $(this).closest('.sub-menu--tabs').find('.sub-item').removeClass('sub-item--show');
           $(this).addClass('sub-item--show');
         }
     );

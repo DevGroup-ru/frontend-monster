@@ -91,8 +91,6 @@ $half-row-configuration: 6 6 4 4 4;
 }
 .m-wrapper {
   @include block(grid-full) {
-    @extend %standard-column;
-
 
     @include modifier(green) {
       padding: $base-line-height;
@@ -117,7 +115,6 @@ $half-row-configuration: 6 6 4 4 4;
     }
 
     @include element(half) {
-      @extend %standard-column;
 
       @include standard-column-modifiers($half-row-configuration);
 

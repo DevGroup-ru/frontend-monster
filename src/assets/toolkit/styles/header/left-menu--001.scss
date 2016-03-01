@@ -1,0 +1,366 @@
+$left-menu001-fon: #3b8a91;
+$left-menu001-item-hover: #33777d;
+$left-menu001-sub-fon: #fafafa;
+$left-menu001-sub-fon-hover: #aaa;
+
+$left-menu001-height-item: $base-line-height * 6; //menu-item's height
+$left-menu001-height-item-num: 5; //number of menu items
+$left-menu001-height: $base-line-height * 7 + $left-menu001-height-item * $left-menu001-height-item-num;
+
+$left-menu001-arrow-left: "\e801";
+$left-menu001-arrow-down: "\e816";
+
+$left-mobile-breakpoint: desktop; 
+
+// @desc Left-menu 
+// @group left-menu
+// @bemJson left-menu--001.json
+
+.m-wrapper {
+
+  @include block(left-menu-mobile) {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+
+    @include modifier(show-one) {
+      display: block;
+    }
+
+    @include modifier(show) {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+    }
+
+    @include _(greater than $left-mobile-breakpoint) {  
+      opacity: 1;
+      visibility: visible;
+    }  
+  }
+
+  @include block(left-menu001) {
+    @include _(12 12 8 4 4); 
+    background: $left-menu001-fon;
+    position: relative;  
+
+    @include _(greater than $left-mobile-breakpoint) { 
+      @include _(3 4 8 4 4); 
+    }
+
+    @include element(title) {
+      @extend %section-type;
+      padding: $base-line-height * 2;  
+    } 
+
+    @include element(1lvl-wrap) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: $left-menu001-height-item * $left-menu001-height-item-num;
+      background: $left-menu001-fon;  
+      overflow: hidden;
+
+      @include _(greater than $left-mobile-breakpoint) { 
+        position: static;
+        width: 100%;
+        height: auto;
+        background: $left-menu001-fon;  
+        overflow: inherit;
+      }
+    } 
+
+    @include element(menu) {
+      position: relative;
+
+      @include _(greater than $left-mobile-breakpoint) { 
+        position: static; 
+        width: 100%;
+        float: left;
+      }
+    }
+
+    @include element(1lvl) {
+      padding: 0;
+      list-style: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+
+      @include _(greater than $left-mobile-breakpoint) { 
+        display: block;
+        overflow: inherit;
+        background: transparent;
+      }
+    }  
+
+    @include element(1lvl-item) {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: block;
+      float: left;
+      text-align: left;
+      width: 100%;
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        display: block;
+        padding: $base-line-height * 2;
+        width: 100%;
+        @include type-setting(text);
+        text-decoration: none;
+
+        @include _(greater than $left-mobile-breakpoint) { 
+          display: flex;
+          align-items: center;
+          width: auto;
+          height: $left-menu001-height-item;
+        }
+
+        &:hover {
+          background: $left-menu001-item-hover;
+        }
+      }
+
+      &:hover {
+        background: $left-menu001-item-hover;
+
+        @include _(greater than $left-mobile-breakpoint) {
+          & > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            overflow: inherit;
+            transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+          }
+        }
+      }
+    }  
+
+    @include element(2lvl) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      background: $left-menu001-sub-fon;
+
+      @include _(greater than $left-mobile-breakpoint) {
+        left: 100%;
+        height: $left-menu001-height;
+        overflow: inherit;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+      }
+    } 
+
+    @include element(2lvl-item) {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: left;
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        @include type-setting(text);
+        text-decoration: none;
+        padding: $base-line-height * 2;
+        height: $left-menu001-height-item;
+
+        &:hover {
+          background: $left-menu001-sub-fon-hover;
+        }
+      }
+
+      &:hover {
+        background: $left-menu001-sub-fon-hover;
+
+        @include _(greater than $left-mobile-breakpoint) {
+          & > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            overflow: inherit;
+            transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+          }
+        }
+      }
+    }
+
+    @include element(2lvl-item-back) {
+      display: block;
+
+      @include _(greater than $left-mobile-breakpoint) {  
+        display: none;
+      }
+    }
+
+    @include element(3lvl) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      overflow: auto;
+      background: $left-menu001-sub-fon;
+
+      @include _(greater than $left-mobile-breakpoint) {
+        left: 100%;
+        height: $left-menu001-height;
+        overflow: inherit;
+        width: 100%;
+      }
+    } 
+
+    @include element(3lvl-item) {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: left;
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        @include type-setting(text);
+        text-decoration: none;
+        padding: $base-line-height * 2;
+        height: $left-menu001-height-item;
+      }
+
+      &:hover {
+        background: $left-menu001-sub-fon-hover;
+
+        @include _(greater than $left-mobile-breakpoint) {
+          & > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+          }
+        }
+      }
+    }  
+
+    @include element(3lvl-item-back) {
+      display: block;
+
+      @include _(greater than $left-mobile-breakpoint) {  
+        display: none;
+      }
+    }
+
+    @include element(4lvl) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      overflow: auto;
+      background: $left-menu001-sub-fon;
+
+      @include _(greater than $left-mobile-breakpoint) {
+        left: 100%;
+        height: auto;
+        overflow: inherit;
+        width: 100%;
+        height: $left-menu001-height;
+      }
+    } 
+
+    @include element(4lvl-item) {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: left;
+
+      a,
+      a:link,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus,
+      button {
+        @include type-setting(text);
+        text-decoration: none;
+        padding: $base-line-height * 2;
+        height: $left-menu001-height-item;
+      }
+    }  
+
+    @include element(4lvl-item-back) {
+      display: block;
+
+      @include _(greater than $left-mobile-breakpoint) {  
+        display: none;
+      }
+    }
+
+    @include block(sub-menu) {
+      display: none;
+      overflow: hidden;
+
+      @include _(greater than $left-mobile-breakpoint) {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+      }
+      
+      @include modifier(show) {
+        display: block;
+        position: inherit;
+      }
+
+      @include modifier(scroll) {
+        overflow: auto;
+        position: absolute;
+      }
+    }
+
+    @include block(sub-link) {
+      &:after {
+        display: inline-block;
+        @extend %basic-icon;
+        content: $left-menu001-arrow-down;
+        width: $base-line-height * 2;
+        padding-left: $base-line-height * 2;
+      }
+
+      &:hover {
+        &:after {
+          content: $left-menu001-arrow-left;
+          text-decoration: none;
+        }
+      }
+    }
+
+    @include block(sub-item) {
+      &:hover > .sub-link {
+        &:after {
+          content: $left-menu001-arrow-left;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

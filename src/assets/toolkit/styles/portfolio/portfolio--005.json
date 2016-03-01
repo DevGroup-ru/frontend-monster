@@ -1,7 +1,7 @@
 {
   "block": "m-container",
   "content": {
-    "block": "portfolio003",
+    "block": "portfolio005",
     "row": true,
     "utils": [
       "one-line--top-bottom"
@@ -45,6 +45,13 @@
                 "elem": "text",
                 "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
                 "editable": "wysiwyg"
+              },
+              {
+                "elem": "link-full",
+                "cls": "button-simple",
+                "content": "Подробнее",
+                "editable": true,
+                "link": true
               }
             ]
           }
@@ -79,6 +86,13 @@
                 "elem": "text",
                 "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
                 "editable": "wysiwyg"
+              },
+              {
+                "elem": "link-full",
+                "cls": "button-simple",
+                "content": "Подробнее",
+                "editable": true,
+                "link": true
               }
             ]
           }
@@ -113,6 +127,13 @@
                 "elem": "text",
                 "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
                 "editable": "wysiwyg"
+              },
+              {
+                "elem": "link-full",
+                "cls": "button-simple",
+                "content": "Подробнее",
+                "editable": true,
+                "link": true
               }
             ]
           }
@@ -147,6 +168,13 @@
                 "elem": "text",
                 "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
                 "editable": "wysiwyg"
+              },
+              {
+                "elem": "link-full",
+                "cls": "button-simple",
+                "content": "Подробнее",
+                "editable": true,
+                "link": true
               }
             ]
           }

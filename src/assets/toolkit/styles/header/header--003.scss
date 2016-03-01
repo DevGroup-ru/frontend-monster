@@ -19,6 +19,7 @@ $header003-search: $base-line-height * 8;
     width: 100%; 
     background: $header003-fon;
     height: $header003-height;
+    z-index: 5;
 
     @include element(wrap) {
       position: relative;   

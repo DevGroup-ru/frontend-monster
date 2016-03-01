@@ -1,7 +1,7 @@
 {
   "block": "m-container",
   "content": {
-    "block": "portfolio002",
+    "block": "portfolio004",
     "row": true,
     "utils": [
       "one-line--top-bottom"
@@ -10,8 +10,7 @@
       {
         "elem": "title",
         "utils": [
-          "no-margin--top",
-          "text--center"
+          "no-margin--top"
         ],
         "content": "Портфолио",
         "editable": true
@@ -27,7 +26,6 @@
             "content": [
               {
                 "elem": "img",
-                "link": true,
                 "content": [
                   {
                     "image": "http://lorempixel.com/200/300"
@@ -44,9 +42,14 @@
                     "link": true
                   },
                   {
+                    "elem": "text",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
+                    "editable": "wysiwyg"
+                  },
+                  {
                     "elem": "link-full",
                     "cls": "button-simple",
-                    "content": "Подробнее",
+                    "content": "Смотреть",
                     "editable": true,
                     "link": true
                   }
@@ -61,7 +64,6 @@
             "content": [
               {
                 "elem": "img",
-                "link": true,
                 "content": [
                   {
                     "image": "http://lorempixel.com/200/300"
@@ -78,9 +80,14 @@
                     "link": true
                   },
                   {
+                    "elem": "text",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
+                    "editable": "wysiwyg"
+                  },
+                  {
                     "elem": "link-full",
                     "cls": "button-simple",
-                    "content": "Подробнее",
+                    "content": "Смотреть",
                     "editable": true,
                     "link": true
                   }
@@ -91,11 +98,10 @@
           {
             "elem": "nested",
             "mods": ["for-slider"],
-            "editableGroup": "nested-3",
+            "editableGroup": "nested-2",
             "content": [
               {
                 "elem": "img",
-                "link": true,
                 "content": [
                   {
                     "image": "http://lorempixel.com/200/300"
@@ -112,9 +118,14 @@
                     "link": true
                   },
                   {
+                    "elem": "text",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
+                    "editable": "wysiwyg"
+                  },
+                  {
                     "elem": "link-full",
                     "cls": "button-simple",
-                    "content": "Подробнее",
+                    "content": "Смотреть",
                     "editable": true,
                     "link": true
                   }
@@ -125,11 +136,10 @@
           {
             "elem": "nested",
             "mods": ["for-slider"],
-            "editableGroup": "nested-4",
+            "editableGroup": "nested-2",
             "content": [
               {
                 "elem": "img",
-                "link": true,
                 "content": [
                   {
                     "image": "http://lorempixel.com/200/300"
@@ -146,77 +156,14 @@
                     "link": true
                   },
                   {
-                    "elem": "link-full",
-                    "cls": "button-simple",
-                    "content": "Подробнее",
-                    "editable": true,
-                    "link": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "elem": "nested",
-            "mods": ["for-slider"],
-            "editableGroup": "nested-5",
-            "content": [
-              {
-                "elem": "img",
-                "link": true,
-                "content": [
-                  {
-                    "image": "http://lorempixel.com/200/300"
-                  }
-                ]
-              },
-              {
-                "elem": "text-wrap",
-                "content": [
-                  {
-                    "elem": "title-nested",
-                    "content": "Тут наименование работы пишем, можно в две строки, но не более.",
-                    "editable": true,
-                    "link": true
+                    "elem": "text",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
+                    "editable": "wysiwyg"
                   },
                   {
                     "elem": "link-full",
                     "cls": "button-simple",
-                    "content": "Подробнее",
-                    "editable": true,
-                    "link": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "elem": "nested",
-            "mods": ["for-slider"],
-            "editableGroup": "nested-6",
-            "content": [
-              {
-                "elem": "img",
-                "link": true,
-                "content": [
-                  {
-                    "image": "http://lorempixel.com/200/300"
-                  }
-                ]
-              },
-              {
-                "elem": "text-wrap",
-                "content": [
-                  {
-                    "elem": "title-nested",
-                    "content": "Тут наименование работы пишем, можно в две строки, но не более.",
-                    "editable": true,
-                    "link": true
-                  },
-                  {
-                    "elem": "link-full",
-                    "cls": "button-simple",
-                    "content": "Подробнее",
+                    "content": "Смотреть",
                     "editable": true,
                     "link": true
                   }
@@ -232,7 +179,7 @@
         "content": [
           {
             "cls": "button-simple",
-            "content": "Все работы",
+            "content": "Смотреть все работы",
             "editable": true,
             "link": true
           }

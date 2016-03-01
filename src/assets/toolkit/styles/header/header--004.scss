@@ -21,6 +21,7 @@ $header004-top-height: $base-line-height * 4;
     width: 100%; 
     height: $header004-height;
     background: $header004-fon;
+    z-index: 5;
 
     &:before {
       display: none;

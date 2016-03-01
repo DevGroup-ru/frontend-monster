@@ -11,7 +11,7 @@ $portfolio002-text-color: #fff;
     position: relative;
 
     @include element(nested) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 8 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
       height: $base-line-height * 44;
@@ -27,7 +27,7 @@ $portfolio002-text-color: #fff;
       }
 
       @include modifier(for-slider) {
-        @include _(6 6 4 4 4, 6 6 4 4 4);
+        @include _(6 6 8 4 4, 6 6 8 4 4);
       }
     }
 
@@ -83,10 +83,10 @@ $portfolio002-text-color: #fff;
     }
 
     @include element(link-full) {
-      margin-top: $base-line-height;
+      margin-top: $base-line-height * 2;
 
       @include _(greater than tablet) {  
-        margin-top: $base-line-height * 2;
+        margin-top: $base-line-height * 3;
       }
     }
 

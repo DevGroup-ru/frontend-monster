@@ -1,24 +1,24 @@
-$portfolio003-fon: rgba(0,0,0,0.5);
-$portfolio003-color-icon: #fff;
+$portfolio005-fon: rgba(0,0,0,0.5);
+$portfolio005-color-icon: #fff;
 
-$portfolio003-icon-zoom: "\e81c";
+$portfolio005-icon-zoom: "\e81c";
 
 .m-wrapper {
 
-  // @desc Portfolio - image with fancybox
+  // @desc Portfolio - image with fancybox and text on left
   // @group portfolio
-  // @bemJson portfolio--003.json
+  // @bemJson portfolio--005.json
 
-  @include block(portfolio003) {
+  @include block(portfolio005) {
     position: relative;
 
     @include element(nested) {
-      @include _(3 3 4 4 4);
+      @include _(6 6 8 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
 
       @include modifier(for-slider) {
-        @include _(3 3 4 4 4, 3 3 4 4 4);
+        @include _(6 6 8 4 4, 6 6 8 4 4);
       }
     }
 
@@ -33,7 +33,6 @@ $portfolio003-icon-zoom: "\e81c";
 
     @include element(title-nested) {
       @include type-setting(accent-text);
-      margin-top: $base-line-height;
       height: $base-line-height * 4;
       overflow: hidden;
       display: block;
@@ -42,16 +41,25 @@ $portfolio003-icon-zoom: "\e81c";
       &:hover{
         text-decoration: underline;
       }
-
-      @include _(greater than tablet) {  
-        margin-top: $base-line-height * 2;
-      }
     }
 
     @include element(img) {
       height: $base-line-height * 23;
       overflow: hidden;
       position: relative;
+      @include _(3 6 4 4 4, 6 6 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {  
+        @include _(3 6 4 4 4, 6 6 8 4 4, $gutter: alpha);
+      }
+
+      @include _(greater than tablet) {  
+        @include _(3 6 4 4 4, 6 6 8 4 4, $gutter: row);
+      }
+
+      @include _(greater than desktop) {  
+        @include _(3 6 4 4 4, 6 6 8 4 4, $gutter: alpha);
+      }
 
       img {
         position: absolute;
@@ -67,7 +75,7 @@ $portfolio003-icon-zoom: "\e81c";
       }
 
       &:hover {  
-        .portfolio003__img-link {
+        .portfolio005__img-link {
           opacity: 1;
           visibility: visible;
           transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
@@ -87,42 +95,56 @@ $portfolio003-icon-zoom: "\e81c";
       width: 100%;
       opacity: 0;
       visibility: hidden;
-      background: $portfolio003-fon;
-      color: $portfolio003-color-icon;
+      background: $portfolio005-fon;
+      color: $portfolio005-color-icon;
       transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
 
       &:before{
         @extend %basic-icon;
-        content: $portfolio003-icon-zoom;
+        content: $portfolio005-icon-zoom;
         font-size:  $base-line-height * 3;
       }
     }
 
     @include element(text-wrap) {
-      margin-top: $base-line-height;
+      @include _(3 6 4 4 4, 6 6 8 4 4, $gutter: row);
+      margin-top: $base-line-height * 2;
+      text-align: center;
+
+      @include _(greater than mobile) {  
+        @include _(3 6 4 4 4, 6 6 8 4 4, $gutter: omega);
+        text-align: left;
+      }
 
       @include _(greater than tablet) {  
-        margin-top: $base-line-height * 2;
+        @include _(3 6 4 4 4, 6 6 8 4 4, $gutter: row);
+        margin-top: $base-line-height * 3;
+        text-align: center;
+      }
+
+      @include _(greater than desktop) {  
+        @include _(3 6 4 4 4, 6 6 8 4 4, $gutter: omega);
+        text-align: left;
       }
     }
 
     @include element(text) {
       @include type-setting(text);
-      margin-top: $base-line-height;
+      margin-top: $base-line-height * 2;
       height: $base-line-height * 6;
       overflow: hidden;
 
       @include _(greater than tablet) {  
-        margin-top: $base-line-height * 2;
+        margin-top: $base-line-height * 3;
       }
     }
 
     @include element(link-full) {
-      margin-top: $base-line-height;
+      margin-top: $base-line-height * 2;
       display: block;
 
       @include _(greater than tablet) {  
-        margin-top: $base-line-height * 2;
+        margin-top: $base-line-height * 3;
       }
     }
 

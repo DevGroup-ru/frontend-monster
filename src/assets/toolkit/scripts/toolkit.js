@@ -14,4 +14,5 @@ require('./components/popup.custom');
 require('./components/chosen.custom');
 require('./forms/form--006');
 require('./header/header');
+require('./header/left-menu');
 require('./header/header--000');
