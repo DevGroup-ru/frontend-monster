@@ -10,8 +10,10 @@ $(function() {
 
   var leftMenuBurgerCl = false; 
   var leftMenuMobileCl = false; 
+  var thisLeftBtn;
 
   $('.left-menu-btn').click(function(e){
+    thisLeftBtn = $(this);
     if (leftMenuBurgerCl) {
       leftMenuBurgerCl = false; 
     }
@@ -28,9 +30,9 @@ $(function() {
   $(document).on('click tap', function (){
     if (window.innerWidth < leftMenuMobileBreakpoint) {
       if ((leftMenuBurgerCl && ! $('.left-menu-mobile').hasClass('left-menu-mobile--show')) || leftMenuMobileCl) { 
-        $('.left-menu-btn').addClass('left-menu-btn--selected');
+        thisLeftBtn.addClass('left-menu-btn--selected');
         $('body').addClass('body--show-menu'); 
-        $('.left-menu-mobile').addClass('left-menu-mobile--show-one')
+        thisLeftBtn.parent().find('.left-menu-mobile').addClass('left-menu-mobile--show-one')
         .delay(100)
         .queue( function(next){ 
           $(this).addClass('left-menu-mobile--show');

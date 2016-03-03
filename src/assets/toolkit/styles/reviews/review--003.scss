@@ -1,6 +1,10 @@
 
 .m-wrapper {
 
+  // @desc Review - review on full width without fon
+  // @group reviews
+  // @bemJson review--003.json
+
   @include block(review003) {
     text-align: center;
     position: relative;

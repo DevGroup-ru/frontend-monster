@@ -1,4 +1,5 @@
 $header002-fon: #3b8a91;
+$header002-z-index: 5;
 $logo: 'logo.jpg';
 
 $header002-height: $base-line-height * 8;
@@ -17,7 +18,7 @@ $header002-height: $base-line-height * 8;
     width: 100%; 
     background: $header002-fon;
     height: $header002-height;
-    z-index: 5;
+    z-index: $header002-z-index;
 
     @include element(wrap) {
       position: relative;   

@@ -1,0 +1,298 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "review003",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": "Отзывы покупателей",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "title-nested",
+            "content": "Классный товар и продавец отзывчивый!",
+            "editable": true
+          },
+          {
+            "elem": "rating-line",
+            "content": [
+              {
+                "elem": "rating-col",
+                "content": [
+                  {
+                    "elem": "rating-name",
+                    "content": "Обслуживание:",
+                    "editable": true
+                  },
+                  {
+                    "elem": "rating",
+                    "content": [
+                      {
+                        "block": "rating-js",
+                        "content": [
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "rating-col",
+                "content": [
+                  {
+                    "elem": "rating-name",
+                    "content": "Доставка:",
+                    "editable": true
+                  },
+                  {
+                    "elem": "rating",
+                    "content": [
+                      {
+                        "block": "rating-js",
+                        "content": [
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "rating-col",
+                "content": [
+                  {
+                    "elem": "rating-name",
+                    "content": "Качество:",
+                    "editable": true
+                  },
+                  {
+                    "elem": "rating",
+                    "content": [
+                      {
+                        "block": "rating-js",
+                        "content": [
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "item",
+                            "content": [
+                              {
+                                "elem": "icon"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "text",
+            "content": "Выбором холодильника доволен, выбирали долго и в несколькозаходов. В итоге остановились на немецкой марке и не зря. Работает тихо, неслышно никакого гудения и жужжания. У нас квартира-студия, так что это критерияочень важен. Никаких неприятных запахов в холодильнике нет, продукты несушатся, те же овощи и фрукты очень долго могут лежать в холодильнике и непортятся. Так что работает на пять баллов.",
+            "editable": "wysiwyg"
+          },
+          {
+            "elem": "person",
+            "content": [
+              {
+                "elem": "person-img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "person-text",
+                "content": [
+                  {
+                    "elem": "person-text-name",
+                    "content": "Валентин Добронравов",
+                    "editable": true
+                  },
+                  {
+                    "elem": "person-text-info",
+                    "content": "слесарь третьего разряда",
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "block": "m-pagination-arrow",
+        "mods": ["center"],
+        "utils": [
+          "one-line--top"
+        ],
+        "content": [
+          {
+            "elem": "arrow-left-end",
+            "link": true
+          },
+          {
+            "elem": "arrow-left",
+            "link": true
+          },
+          {
+            "elem": "number",
+            "link": true,
+            "content": "1",
+            "editable": true
+          },
+          {
+            "elem": "number",
+            "link": true,
+            "content": "2",
+            "editable": true
+          },
+          {
+            "elem": "number",
+            "link": true,
+            "content": "3",
+            "editable": true
+          },
+          {
+            "elem": "number",
+            "link": true,
+            "content": "4",
+            "editable": true
+          },
+          {
+            "elem": "arrow-right",
+            "link": true
+          },
+          {
+            "elem": "arrow-right-end",
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

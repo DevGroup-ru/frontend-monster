@@ -4,10 +4,16 @@ $m-pagination-border-width: $base-line-height/10;
 $m-pagination-border-color: #aaa;
 $m-pagination-border-color-active: #aaa;
 
+$m-pagination-arrow-right-end: "\e804";
+$m-pagination-arrow-right: "\e801";
+$m-pagination-arrow-left-end: "\e803";
+$m-pagination-arrow-left: "\e802";
+
 @include block(m-pagination-arrow) {
   text-align: left;
-  @include _($full-row-configuration);
+  @include _(12 12 8 4 4);
   @include type-setting(text);
+  overflow: hidden;
 
   @include modifier(center) {
     text-align: center;
@@ -19,7 +25,6 @@ $m-pagination-border-color-active: #aaa;
 
   @include element(number) {
     display: none;
-    float: left;
     margin-right: $gutter-standart / 2;
     text-decoration: none;
     background: $m-pagination-background;
@@ -34,13 +39,12 @@ $m-pagination-border-color-active: #aaa;
     }
 
     @include _(greater than mobile) {  
-      display: block;
+      display: inline-block;
     }
   }
 
-  @include element(arrow) {
-    display: block;
-    float: left;
+  @include element(arrow-left) {
+    display: inline-block;
     margin-right: $gutter-standart / 2;
     text-decoration: none;
     background: $m-pagination-background;
@@ -48,13 +52,67 @@ $m-pagination-border-color-active: #aaa;
     @include border-setting($m-pagination-border-width, $base-line-height * 2);
     min-width: $base-line-height * 6;
     text-align: center;
+
+    &:before {
+      @extend %basic-icon;
+      content: $m-pagination-arrow-left;
+    }
+  }
+
+  @include element(arrow-left-end) {
+    display: inline-block;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    &:before {
+      @extend %basic-icon;
+      content: $m-pagination-arrow-left-end;
+    }
+  }
+
+  @include element(arrow-right) {
+    display: inline-block;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    &:before {
+      @extend %basic-icon;
+      content: $m-pagination-arrow-right;
+    }
+  }
+
+  @include element(arrow-right-end) {
+    display: inline-block;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    &:before {
+      @extend %basic-icon;
+      content: $m-pagination-arrow-right-end;
+    }
   }
 }
 
 @include block(m-pagination-btn) {
   text-align: left;
-  @include _($full-row-configuration);
+  @include _(12 12 8 4 4);
   @include type-setting(text);
+  overflow: hidden;
 
   @include modifier(center) {
     text-align: center;
@@ -66,7 +124,6 @@ $m-pagination-border-color-active: #aaa;
 
   @include element(number) {
     display: none;
-    float: left;
     margin-right: $gutter-standart / 2;
     text-decoration: none;
     background: $m-pagination-background;
@@ -81,13 +138,12 @@ $m-pagination-border-color-active: #aaa;
     }
 
     @include _(greater than mobile) {  
-      display: block;
+      display: inline-block;
     }
   }
 
-  @include element(arrow) {
+  @include element(arrow-left) {
     display: none;
-    float: left;
     margin-right: $gutter-standart / 2;
     text-decoration: none;
     background: $m-pagination-background;
@@ -96,14 +152,78 @@ $m-pagination-border-color-active: #aaa;
     min-width: $base-line-height * 6;
     text-align: center;
 
+    &:before {
+      @extend %basic-icon;
+      content: $m-pagination-arrow-left;
+    }
+
     @include _(greater than mobile) {  
-      display: block;
+      display: inline-block;
+    }
+  }
+
+  @include element(arrow-left-end) {
+    display: none;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    &:before {
+      @extend %basic-icon;
+      content: $m-pagination-arrow-left-end;
+    }
+
+    @include _(greater than mobile) {  
+      display: inline-block;
+    }
+  }
+
+  @include element(arrow-right) {
+    display: none;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    &:before {
+      @extend %basic-icon;
+      content: $m-pagination-arrow-right;
+    }
+
+    @include _(greater than mobile) {  
+      display: inline-block;
+    }
+  }
+
+  @include element(arrow-right-end) {
+    display: none;
+    margin-right: $gutter-standart / 2;
+    text-decoration: none;
+    background: $m-pagination-background;
+    border: $m-pagination-border-width solid $m-pagination-border-color;
+    @include border-setting($m-pagination-border-width, $base-line-height * 2);
+    min-width: $base-line-height * 6;
+    text-align: center;
+
+    &:before {
+      @extend %basic-icon;
+      content: $m-pagination-arrow-right-end;
+    }
+
+    @include _(greater than mobile) {  
+      display: inline-block;
     }
   }
 
   @include element(show-more) {
-    display: block;
-    float: left;
+    display: inline-block;
     margin-right: $gutter-standart / 2;
     text-decoration: none;
     background: $m-pagination-background;

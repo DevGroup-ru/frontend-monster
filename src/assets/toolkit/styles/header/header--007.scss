@@ -2,6 +2,7 @@ $header007-fon: #3b8a91;
 $header007-top-fon: #33777d;
 $header007-user-fon: #eee;
 $header007-phone-button-fon: #fff;
+$header007-z-index: 5;
 $logo: 'logo.jpg';
 
 $header007-height: $base-line-height * 6;
@@ -23,7 +24,7 @@ $header007-top-height: $base-line-height * 9;
     width: 100%; 
     height: $header007-height-mobile;
     background: $header007-fon;
-    z-index: 5;
+    z-index: $header007-z-index;
 
     &:before {
       display: none;

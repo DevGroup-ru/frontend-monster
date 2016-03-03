@@ -1,0 +1,119 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "about002",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top"
+        ],
+        "content": "О компании",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "content": [
+          {
+            "elem": "left",
+            "content": [
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную. Интерлиньяж текста следует подбирать в зависимости от формата (модуля, плашки, текстового блока). Если строки в текстовом блоке короткие, то интерлиньяж можно сделать меньше. Если текстовый блок достаточно широкий и строки в нем длинные, то интерлиньяж следует сделать больше, иначе текст потеряет удобство чтения.",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "right",
+            "content": [
+              {
+                "elem": "accent-text",
+                "content": [
+                  {
+                    "elem": "accent-text-nested",
+                    "editableGroup": "accent-text-nested-1",
+                    "content": [
+                      {
+                        "elem": "accent-text-icon",
+                        "icon": true
+                      },
+                      {
+                        "elem": "accent-text-title",
+                        "content": "Преимущество в одну или две строчки",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "accent-text-nested",
+                    "editableGroup": "accent-text-nested-2",
+                    "content": [
+                      {
+                        "elem": "accent-text-icon",
+                        "icon": true
+                      },
+                      {
+                        "elem": "accent-text-title",
+                        "content": "Преимущество в одну или две строчки",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "accent-text-nested",
+                    "editableGroup": "accent-text-nested-3",
+                    "content": [
+                      {
+                        "elem": "accent-text-icon",
+                        "icon": true
+                      },
+                      {
+                        "elem": "accent-text-title",
+                        "content": "Преимущество в одну или две строчки",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "accent-text-nested",
+                    "editableGroup": "accent-text-nested-4",
+                    "content": [
+                      {
+                        "elem": "accent-text-icon",
+                        "icon": true
+                      },
+                      {
+                        "elem": "accent-text-title",
+                        "content": "Преимущество в одну или две строчки",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": [
+          "one-line--top"
+        ],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Подробнее",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

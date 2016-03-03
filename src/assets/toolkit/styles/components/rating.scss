@@ -1,6 +1,7 @@
 $rate-star-grey: #ddd;
 $rate-star-black: #000;
 $rate-star-gold: #ffd700;
+$rating-icon: "\e800";
 
 $rateitem: ".rating__item .rating__icon:before";
 
@@ -16,6 +17,8 @@ $rateitem: ".rating__item .rating__icon:before";
     position: relative;
 
     &:before {
+      @extend %basic-icon;
+      content: $rating-icon;
       font-size: $base-line-height * 2;
       line-height: $base-line-height * 2;
       color: $rate-star-grey;
@@ -52,6 +55,8 @@ $rateitem-css: ".rating-css__label .rating-css__icon:before";
     position: relative;
 
     &:before {
+      @extend %basic-icon;
+      content: $rating-icon;
       font-size: $base-line-height * 2;
       line-height: $base-line-height * 2;
       color: $rate-star-grey;
@@ -98,6 +103,8 @@ $rateitem-js: ".rating-js__icon:before";
     position: relative;
 
     &:before {
+      @extend %basic-icon;
+      content: $rating-icon;
       font-size: $base-line-height * 2;
       line-height: $base-line-height * 2;
       color: $rate-star-grey;

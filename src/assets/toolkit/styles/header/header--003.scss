@@ -1,5 +1,6 @@
 $header003-fon: #3b8a91;
 $header003-user-fon: #eee;
+$header003-z-index: 5;
 $logo: 'logo.jpg';
 
 $header003-height: $base-line-height * 8;
@@ -19,7 +20,7 @@ $header003-search: $base-line-height * 8;
     width: 100%; 
     background: $header003-fon;
     height: $header003-height;
-    z-index: 5;
+    z-index: $header003-z-index;
 
     @include element(wrap) {
       position: relative;   

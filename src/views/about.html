@@ -2,61 +2,14 @@
 fabricator: true
 ---
 
-<h1 data-f-toggle="labels">Выберите меню</h1>
-<div class="helper-check">
-    <label>
-        <input id="header002" type="checkbox" /> Header-002
-    </label>
-    <label>
-        <input id="header003" type="checkbox" /> Header-003
-    </label>
-    <label>
-        <input id="header004" type="checkbox" /> Header-004
-    </label>
-    <label>
-        <input id="header005" type="checkbox" /> Header-005
-    </label>
-    <label>
-        <input id="header006" type="checkbox" /> Header-006
-    </label>
-    <label>
-        <input id="header007" type="checkbox" /> Header-007
-    </label>
-    <label>
-        <input id="header008" type="checkbox" /> Header-008
-    </label>
-    <label>
-        <input id="header009" type="checkbox" /> Header-009
-    </label>
-    <label>
-        <input id="header010" type="checkbox" /> Header-010
-    </label>
-    <label>
-        <input id="header000 header000--beauty" type="checkbox" /> Header-000
-    </label>
-</div>
-<p>Чтобы изменить разрешение, при котором меню перестраивается в гамбургер:
-в header-common.scss - $header-mobile-breakpoint: desktop/tablet/mobile,
-в header.js - var headerMobileBreakpoint = 1200/960/640 </p>
-<p>Выпадающие меню влево (если выпадающее меню вправо по ховеру невозможно) - модификатор "sub-menu--right" к блоку "sub-menu"</p>
-<p>Меню в гамбургере справа - модификатор "mobile-right" к блоку "menu001" </p>
-<p>Мега-меню - к элементу меню первого уровня добавить класс "sub-mega-item", к самому меню - класс "sub-menu--mega" </p>
-<p>Если в мега-меню нужен скролл, то добавить класс "sub-menu--custom-scroll". Высота задается через переменную $sub-menu-custom-scroll (header--003)</p>
-<p>Мега-меню с вложенностью - к элементу меню первого уровня добавить класс "sub-title-mega-item", к самому меню - класс "sub-menu--title-mega" (подробнее - header--003)</p>
-<p>Акции в мега-меню - к элементу меню первого уровня добавить класс "sub-action" (header--003)</p>
-<p>Мега-меню в виде табов - к элементу меню первого уровня добавить класс "sub-tabs-item", к самому меню - класс "sub-menu--tabs". К активному пункту меню добавить класс "sub-item--show" (header--004)</p>
-<p>Пункты меню с image - добавить элементу меню класс "menu-photo-item" и новый элемент с классом "menu-photo-link" (header--004)</p>
-<p>Если нужно разбить пункты меню по колонкам - обернуть элементы меню в "menu-column". Добавить отступы у колонок - "menu-column--padding" (header--004)</p>
-<p>Поменять вид поиска: добавить модификатор "overmenu" ("mods": ["overmenu"]) к блоку "search" и к элементу "search-icon"</p>
+<h1 data-f-toggle="labels">About</h1>
 
-<p>Левое меню с табами (left-menu--002). Для табов с обводкой - модификатор "tabs-with-border" к блоку "left-menu002". Для табов с обводкой и отступом  - модификатор "tabs-with-border-padding" к блоку "left-menu002".</p>
-
-
-{{#each materials.header.items}}
+{{#each materials.about.items}}
 
 {{> f-item this}}
 
 {{/each}}
+
 <div class="m-container m-row--horisontal-rhythm-grid">
     <div class="m-row ">
         <div class="horisontal-rhythm-grid">
@@ -1706,3 +1659,4 @@ fabricator: true
     <div class="guide"></div>
 
 </div>
+

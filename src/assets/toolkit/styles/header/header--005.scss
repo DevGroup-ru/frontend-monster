@@ -2,6 +2,7 @@ $header005-fon: #3b8a91;
 $header005-top-fon: #33777d;
 $header005-user-fon: #eee;
 $header005-phone-button-fon: #fff;
+$header005-z-index: 5;
 $logo: 'logo.jpg';
 
 $header005-height: $base-line-height * 6;
@@ -22,7 +23,7 @@ $header005-top-height: $base-line-height * 9;
     width: 100%; 
     height: $header005-height-mobile;
     background: $header005-fon;
-    z-index: 5;
+    z-index: $header005-z-index;
 
     &:before {
       display: none;

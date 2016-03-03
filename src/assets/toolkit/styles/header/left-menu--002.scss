@@ -1,22 +1,28 @@
-$left-menu001-fon: #3b8a91;
-$left-menu001-item-hover: #33777d;
-$left-menu001-sub-fon: #fafafa;
-$left-menu001-sub-fon-hover: #aaa;
-$left-menu001-index: 4;
+$left-menu002-fon: #3b8a91;
+$left-menu002-item-hover: #33777d;
+$left-menu002-sub-fon: #fafafa;
+$left-menu002-sub-fon-hover: #aaa;
+$left-menu002-index: 3;
+$left-menu002-tabs-height: $base-line-height * 5;
+$left-menu002-tabs-active: #33777d;
+$left-menu002-tabs-border-width: $base-line-height / 5;
+$left-menu002-tabs-border-color: #33777d;
+$left-menu002-tabs-border-radius: 0;
+$left-menu002-tabs-border-padding: $base-line-height;
 
-$left-menu001-height-item: $base-line-height * 6; //menu-item's height
-$left-menu001-height-item-num: 5; //number of menu items
-$left-menu001-height: $base-line-height * 7 + $left-menu001-height-item * $left-menu001-height-item-num;
+$left-menu002-height-item: $base-line-height * 6; //menu-item's height
+$left-menu002-height-item-num: 7; //number of menu items
+$left-menu002-height: $base-line-height * 10 + $left-menu002-tabs-height + $left-menu002-height-item * $left-menu002-height-item-num;
 
-$left-menu001-arrow-left: "\e801";
-$left-menu001-arrow-down: "\e816";
-$left-menu001-arrow-up: "\e815";
+$left-menu002-arrow-left: "\e801";
+$left-menu002-arrow-down: "\e816";
+$left-menu002-arrow-up: "\e815";
 
-$left-menu001-mobile-breakpoint: desktop; 
+$left-menu002-mobile-breakpoint: desktop; 
 
-// @desc Left-menu 
+// @desc Left-menu - left multilevel menu with tabs
 // @group left-menu
-// @bemJson left-menu--001.json
+// @bemJson left-menu--002.json
 
 .m-wrapper {
 
@@ -36,28 +42,86 @@ $left-menu001-mobile-breakpoint: desktop;
       transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
     }
 
-    @include _(greater than $left-menu001-mobile-breakpoint) {  
+    @include _(greater than $left-menu002-mobile-breakpoint) {  
       opacity: 1;
       visibility: visible;
     }  
   }
 
-  @include block(left-menu001) {
+  @include block(left-menu002) {
     @include _(12 12 8 4 4); 
-    background: $left-menu001-fon;
+    background: $left-menu002-fon;
     position: relative;  
-    z-index: $left-menu001-index;
+    z-index: $left-menu002-index;
 
-    @include _(greater than $left-menu001-mobile-breakpoint) { 
+    @include _(greater than $left-menu002-mobile-breakpoint) { 
       @include _(3 4 8 4 4); 
+      height: $left-menu002-height;
+    }
+
+    @include element(tabs) {
+      text-align: center;
+    } 
+
+    @include element(tab-wrap) {
+      display: inline;
+      width: 100%;
+      font-size: 0px;
+    } 
+
+    @include element(header) {
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      width: calc((100% - #{$base-line-height * 4})/2);
+
+      &.active {
+        .left-menu002__header-text {
+          background: $left-menu002-tabs-active;
+        }
+      }
+    }
+
+    @include element(header-text) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include type-setting(text);
+      height: $left-menu002-tabs-height;
+      border-radius: $left-menu002-tabs-border-radius;
+    }
+
+
+    @include element(content) {
+      left: 0;
+      float: left;
+      width: 100%;
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;  
     }
 
     @include element(title) {
       @extend %section-type;
-      padding: $base-line-height * 2;    
+      padding: $base-line-height * 2;  
       display: flex;
       justify-content: space-between;
       position: relative;
+
+      &:before {
+        display: none;
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0 $base-line-height * 2;
+        border: $left-menu002-tabs-border-width solid $left-menu002-tabs-border-color;
+        border-radius: $left-menu002-tabs-border-radius;
+        width: calc(100% - #{$base-line-height * 4});
+        height: $left-menu002-tabs-height;
+      }
     } 
 
     @include element(1lvl-wrap) {
@@ -65,15 +129,15 @@ $left-menu001-mobile-breakpoint: desktop;
       top: 100%;
       left: 0;
       width: 100%;
-      height: $left-menu001-height-item * $left-menu001-height-item-num;
-      background: $left-menu001-fon;  
+      height: $left-menu002-height-item * $left-menu002-height-item-num;
+      background: $left-menu002-fon;  
       overflow: hidden;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) { 
+      @include _(greater than $left-menu002-mobile-breakpoint) { 
         position: static;
         width: 100%;
         height: auto;
-        background: $left-menu001-fon;  
+        background: $left-menu002-fon;  
         overflow: inherit;
       }
     } 
@@ -81,7 +145,7 @@ $left-menu001-mobile-breakpoint: desktop;
     @include element(menu) {
       position: relative;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) { 
+      @include _(greater than $left-menu002-mobile-breakpoint) { 
         position: static; 
         width: 100%;
         float: left;
@@ -96,7 +160,7 @@ $left-menu001-mobile-breakpoint: desktop;
       left: 0;
       overflow: hidden;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) { 
+      @include _(greater than $left-menu002-mobile-breakpoint) { 
         display: block;
         overflow: inherit;
         background: transparent;
@@ -125,22 +189,22 @@ $left-menu001-mobile-breakpoint: desktop;
         @include type-setting(text);
         text-decoration: none;
 
-        @include _(greater than $left-menu001-mobile-breakpoint) { 
+        @include _(greater than $left-menu002-mobile-breakpoint) { 
           display: flex;
           align-items: center;
           width: auto;
-          height: $left-menu001-height-item;
+          height: $left-menu002-height-item;
         }
 
         &:hover {
-          background: $left-menu001-item-hover;
+          background: $left-menu002-item-hover;
         }
       }
 
       &:hover {
-        background: $left-menu001-item-hover;
+        background: $left-menu002-item-hover;
 
-        @include _(greater than $left-menu001-mobile-breakpoint) {
+        @include _(greater than $left-menu002-mobile-breakpoint) {
           & > .sub-menu {
             opacity: 1;
             visibility: visible;
@@ -158,11 +222,11 @@ $left-menu001-mobile-breakpoint: desktop;
       left: 0;
       z-index: 2;
       width: 100%;
-      background: $left-menu001-sub-fon;
+      background: $left-menu002-sub-fon;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) {
+      @include _(greater than $left-menu002-mobile-breakpoint) {
         left: 100%;
-        height: $left-menu001-height;
+        height: $left-menu002-height;
         overflow: inherit;
         display: block;
         opacity: 0;
@@ -187,17 +251,17 @@ $left-menu001-mobile-breakpoint: desktop;
         @include type-setting(text);
         text-decoration: none;
         padding: $base-line-height * 2;
-        height: $left-menu001-height-item;
+        height: $left-menu002-height-item;
 
         &:hover {
-          background: $left-menu001-sub-fon-hover;
+          background: $left-menu002-sub-fon-hover;
         }
       }
 
       &:hover {
-        background: $left-menu001-sub-fon-hover;
+        background: $left-menu002-sub-fon-hover;
 
-        @include _(greater than $left-menu001-mobile-breakpoint) {
+        @include _(greater than $left-menu002-mobile-breakpoint) {
           & > .sub-menu {
             opacity: 1;
             visibility: visible;
@@ -211,7 +275,7 @@ $left-menu001-mobile-breakpoint: desktop;
     @include element(2lvl-item-back) {
       display: block;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) {  
+      @include _(greater than $left-menu002-mobile-breakpoint) {  
         display: none;
       }
     }
@@ -224,11 +288,11 @@ $left-menu001-mobile-breakpoint: desktop;
       width: 100%;
       z-index: 2;
       overflow: auto;
-      background: $left-menu001-sub-fon;
+      background: $left-menu002-sub-fon;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) {
+      @include _(greater than $left-menu002-mobile-breakpoint) {
         left: 100%;
-        height: $left-menu001-height;
+        height: $left-menu002-height;
         overflow: inherit;
         width: 100%;
       }
@@ -250,13 +314,13 @@ $left-menu001-mobile-breakpoint: desktop;
         @include type-setting(text);
         text-decoration: none;
         padding: $base-line-height * 2;
-        height: $left-menu001-height-item;
+        height: $left-menu002-height-item;
       }
 
       &:hover {
-        background: $left-menu001-sub-fon-hover;
+        background: $left-menu002-sub-fon-hover;
 
-        @include _(greater than $left-menu001-mobile-breakpoint) {
+        @include _(greater than $left-menu002-mobile-breakpoint) {
           & > .sub-menu {
             opacity: 1;
             visibility: visible;
@@ -269,7 +333,7 @@ $left-menu001-mobile-breakpoint: desktop;
     @include element(3lvl-item-back) {
       display: block;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) {  
+      @include _(greater than $left-menu002-mobile-breakpoint) {  
         display: none;
       }
     }
@@ -282,14 +346,14 @@ $left-menu001-mobile-breakpoint: desktop;
       width: 100%;
       z-index: 2;
       overflow: auto;
-      background: $left-menu001-sub-fon;
+      background: $left-menu002-sub-fon;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) {
+      @include _(greater than $left-menu002-mobile-breakpoint) {
         left: 100%;
         height: auto;
         overflow: inherit;
         width: 100%;
-        height: $left-menu001-height;
+        height: $left-menu002-height;
       }
     } 
 
@@ -309,14 +373,14 @@ $left-menu001-mobile-breakpoint: desktop;
         @include type-setting(text);
         text-decoration: none;
         padding: $base-line-height * 2;
-        height: $left-menu001-height-item;
+        height: $left-menu002-height-item;
       }
     }  
 
     @include element(4lvl-item-back) {
       display: block;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) {  
+      @include _(greater than $left-menu002-mobile-breakpoint) {  
         display: none;
       }
     }
@@ -325,7 +389,7 @@ $left-menu001-mobile-breakpoint: desktop;
       display: none;
       overflow: hidden;
 
-      @include _(greater than $left-menu001-mobile-breakpoint) {
+      @include _(greater than $left-menu002-mobile-breakpoint) {
         display: block;
         opacity: 0;
         visibility: hidden;
@@ -347,14 +411,14 @@ $left-menu001-mobile-breakpoint: desktop;
       &:after {
         display: inline-block;
         @extend %basic-icon;
-        content: $left-menu001-arrow-down;
+        content: $left-menu002-arrow-down;
         width: $base-line-height * 2;
         padding-left: $base-line-height * 2;
       }
 
       &:hover {
         &:after {
-          content: $left-menu001-arrow-left;
+          content: $left-menu002-arrow-left;
           text-decoration: none;
         }
       }
@@ -363,7 +427,7 @@ $left-menu001-mobile-breakpoint: desktop;
     @include block(sub-item) {
       &:hover > .sub-link {
         &:after {
-          content: $left-menu001-arrow-left;
+          content: $left-menu002-arrow-left;
           text-decoration: none;
         }
       }
@@ -371,36 +435,84 @@ $left-menu001-mobile-breakpoint: desktop;
 
     @include block(left-menu-btn) {
 
-      & + .left-menu001__tabs {
+      & + .left-menu002__tabs {
         display: none;
       }
 
       &:after {
         display: inline-block;
         @extend %basic-icon;
-        content: $left-menu001-arrow-down;
+        content: $left-menu002-arrow-down;
       }
 
       @include modifier(selected) {
 
-        & + .left-menu001__tabs {
+        & + .left-menu002__tabs {
           display: block;
         }
 
         &:after {
           display: inline-block;
           @extend %basic-icon;
-          content: $left-menu001-arrow-up;
+          content: $left-menu002-arrow-up;
         }
       }
 
-      @include _(greater than $left-menu001-mobile-breakpoint) { 
-        & + .left-menu001__tabs {
+      @include _(greater than $left-menu002-mobile-breakpoint) { 
+        & + .left-menu002__tabs {
           display: block;
         }
 
         &:after {
           display: none;
+        }
+      }
+    }
+
+    @include modifier(tabs-with-border) {
+      @include block(left-menu-btn) {
+        &:before {
+          display: none;
+        }
+
+        @include modifier(selected) {
+
+          &:before {
+            display: block;
+          }
+        }
+
+        @include _(greater than $left-menu002-mobile-breakpoint) { 
+          &:before {
+            display: block;
+          }
+        }
+      }
+    }
+
+    @include modifier(tabs-with-border-padding) {
+
+      .left-menu002__header {
+        padding: $left-menu002-tabs-border-padding / 2;
+      }
+
+      @include block(left-menu-btn) {
+        &:before {
+          display: none;
+          height: $left-menu002-tabs-height + $left-menu002-tabs-border-padding;
+        }
+
+        @include modifier(selected) {
+
+          &:before {
+            display: block;
+          }
+        }
+
+        @include _(greater than $left-menu002-mobile-breakpoint) { 
+          &:before {
+            display: block;
+          }
         }
       }
     }

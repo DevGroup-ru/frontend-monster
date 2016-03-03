@@ -1,0 +1,78 @@
+.m-wrapper {
+
+  // @desc About - blocks about company
+  // @group about
+  // @bemJson about--003.json
+
+  @include block(about003) {
+
+    @include element(nested) {
+      @include _(clear);
+      float: left;
+      margin-top: $base-line-height;
+      margin-bottom: $base-line-height;
+
+      @include _(greater than tablet) {  
+        margin-top: $base-line-height * 2;
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(left) {
+      @include _(8 8 8 4 4);
+      margin-bottom: $base-line-height * 2;
+
+      @include _(greater than tablet) {  
+        margin-bottom: 0;
+      }
+    }
+
+    @include element(right) {
+      @include _(4 4 8 4 4);
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+    }
+
+    @include element(accent-text-nested) {
+      margin-bottom: $base-line-height;
+      @include _(4 4 4 4 4, 4 4 8 4 4, $gutter: alpha);
+
+      @include _(greater than tablet) {  
+        @include _(4 4 4 4 4, 4 4 8 4 4, $gutter: row);
+      }
+    }
+
+    @include element(accent-text-icon) {
+      font-size: $base-line-height * 4;
+      width: $base-line-height * 4;
+      height: $base-line-height * 4;
+      line-height: $base-line-height * 4;
+      margin-right: $base-line-height * 2;
+      display: block;
+      float: left;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    @include element(accent-text-title) {
+      @include type-setting(text);
+      height: $base-line-height * 4;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+}

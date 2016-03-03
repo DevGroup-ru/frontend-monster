@@ -4,6 +4,10 @@ $review001-border-color: #aaa;
 
 .m-wrapper {
 
+  // @desc Review - review on full width
+  // @group reviews
+  // @bemJson review--001.json
+
   @include block(review001) {
     text-align: left;
 
