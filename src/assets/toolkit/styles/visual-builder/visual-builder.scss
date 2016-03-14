@@ -29,6 +29,7 @@ $editor-accent-color: #EC5035;
       height: $top-pane-height;
       padding-left: $left-pane-width;
       background: $editor-light-bg;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
 
@@ -130,7 +131,35 @@ $editor-accent-color: #EC5035;
     border: 0;
   }
 
+  @include block(materials-groups) {
+    list-style: none;
+    padding-left: 0;
+    li {
+      display: block;
+    }
 
+    @include element(switch-group) {
+      color: $editor-text-color;
+      padding: 1rem;
+      display: block;
+      border-left: 0.2rem solid $editor-light-bg;
+      @include modifier(active) {
+        font-weight: bold;
+        background: $editor-base-bg;
+        border-left: 0.2rem solid $editor-link-color;
 
+      }
+    }
+  }
+
+  @include block(materials-list) {
+    display: none;
+    padding-left: 0;
+
+    @include modifier(active) {
+      display: block;
+      list-style: none;
+    }
+  }
 
 }

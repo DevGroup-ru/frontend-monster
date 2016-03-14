@@ -8,9 +8,10 @@ class MaterialsEnvironment extends BaseEnvironment {
 
   initMaterialsSelector() {
     this.$materialsGroups = $(`<ul class="materials-groups"></ul>`);
+    this.$materialsList = [];
+
     for (const groupName in this.visualBuilder.settings.groups) {
       if (this.visualBuilder.settings.groups.hasOwnProperty(groupName)) {
-        console.log(groupName);
         const materials = this.visualBuilder.settings.groups[groupName];
         const i18nGroupName = typeof(polyglot) !== 'undefined' ? polyglot.t(groupName) : groupName;
         const $li = $(`
@@ -20,14 +21,62 @@ class MaterialsEnvironment extends BaseEnvironment {
         </a>
       </li>`);
         this.$materialsGroups.append($li);
+        const $list = $(`<ul class="materials-list"></ul>`);
+        const items = [];
+        for (const materialName of materials) {
+          // const material = this.visualBuilder.materialByName(materialName);
+          const i18nMaterialName = typeof(polyglot) !== 'undefined' ? polyglot.t(materialName) : materialName;
+          const $item = $(`
+  <li>
+    <a href="#" class="materials-list__item" data-material-name="${materialName}">${i18nMaterialName}</a>
+  </li>
+  `);
+          items.push($item);
+        }
+        $list.append(items);
+        $list.data('groupName', groupName);
+        this.$materialsList.push($list);
       }
     }
+
+    const that = this;
+    $(document).on('click', '.materials-groups__switch-group', function clickHandler() {
+      const $this = $(this);
+      const activeClass = 'materials-groups__switch-group--active';
+      $this.toggleClass(activeClass);
+      const groupName = $this.data('groupName');
+      if ($this.hasClass(activeClass)) {
+        $('.materials-groups__switch-group').removeClass(activeClass);
+        const materialsListActiveClass = 'materials-list--active';
+
+        $('.materials-list').each(function it() {
+          const $list = $(this);
+          if ($list.hasClass(materialsListActiveClass)) {
+            $list.removeClass(materialsListActiveClass);
+          }
+          if ($list.data('groupName') === groupName) {
+            $list.addClass(materialsListActiveClass);
+          }
+        });
+
+        $this.addClass(activeClass);
+        that.$materialsPane.show();
+      } else {
+        // that's just second click on the same group
+        that.$materialsPane.hide();
+      }
+      return false;
+    });
   }
 
   activate() {
     super.activate();
     this.$groupsPane = this.visualBuilder.createStackablePane();
     this.$groupsPane.append(this.$materialsGroups);
+
+    this.$materialsPane = this.visualBuilder.createStackablePane();
+    this.$materialsPane.append(this.$materialsList);
+    this.$materialsPane.hide();
   }
 }
 export default MaterialsEnvironment;

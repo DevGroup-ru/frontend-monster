@@ -14,10 +14,15 @@ class VisualBuilder {
       ['customization', new CustomizationEnvironment(this, 'customization')],
       ['action', new ActionEnvironment(this, 'action')],
     ]);
+
     this.currentEnvironment = 'structure';
     this.environmentSelector();
+
+    // select first environment by default
     this.switchEnvironment(this.currentEnvironment);
-    $('.monster-environment-selector__environment-link').first().addClass('monster-environment-selector__environment-link--active');
+    $('.monster-environment-selector__environment-link')
+      .first()
+      .addClass('monster-environment-selector__environment-link--active');
   }
 
   /**
@@ -84,6 +89,13 @@ class VisualBuilder {
     const $newPane = $(`<div class="${paneClass} ${modifier}"></div>`);
     this.$stackable.append($newPane);
     return $newPane;
+  }
+
+  materialByName(name) {
+    if (this.settings.materials.hasOwnProperty(name)) {
+      return this.settings.materials[name];
+    }
+    return null;
   }
 }
 

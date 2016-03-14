@@ -164,7 +164,9 @@ $(function() {
 
   //for beautiful scroll
   if (window.innerWidth > headerMobileBreakpoint) {
-    $('.sub-menu--custom-scroll').mCustomScrollbar();
+    if ($('.sub-menu--custom-scroll').mCustomScrollbar) {
+      $('.sub-menu--custom-scroll').mCustomScrollbar();
+    }
   }
 
 
