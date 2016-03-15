@@ -1,0 +1,141 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "block": "map001",
+    "content": [
+      {
+        "elem": "map-place"
+      },
+      {
+        "elem": "address-wrap",
+        "row": true,
+        "content": [
+          {
+            "elem": "address",
+            "content": [
+              {
+                "elem": "address-title",
+                "content": "Адреса наших филиалов",
+                "editable": true
+              },
+              {
+                "elem": "address-nested-wrap",
+                "content": [
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-1",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-2",
+                    "content": "ул. Красносвободная, д.117",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-3",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-4",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-5",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-6",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-7",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-8",
+                    "content": "ул. Красносвободная, д.117",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-9",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-10",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-11",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-12",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-13",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-14",
+                    "content": "ул. Красносвободная, д.117",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-15",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-16",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-17",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested",
+                    "editableGroup": "address-nested-18",
+                    "content": "ул. Набережная, д.4, офис 145",
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

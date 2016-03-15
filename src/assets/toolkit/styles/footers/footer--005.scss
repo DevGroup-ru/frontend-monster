@@ -1,0 +1,323 @@
+$footer005-fon-top: #777e8e;
+$footer005-fon-bottom: #444d60;
+$footer005-height-bottom: $base-line-height * 6;
+$footer005-menu-item-column: 4; //write the number of menu column
+$footer005-logo: 'logo.jpg';
+$footer005-logo-height: $base-line-height * 7;
+
+$footer005-facebook-icon: "\e812";
+$footer005-vk-icon: "\e811";
+$footer005-twitter-icon: "\e810";
+
+  // @desc Footer - simple footer with contacts info and buttons
+  // @group footer
+  // @bemJson footer--005.json
+
+.m-wrapper {
+
+  @include block(footer005) {
+    width: 100%; 
+
+    @include element(top-wrap) {
+      background: $footer005-fon-top;
+    }
+
+    @include element(top) {
+      position: relative;
+    }
+
+    @include element(top-menu) {
+      @include _(6 12 8 4 4); 
+      font-size: 0px; 
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(top-right) {
+      @include _(3 12 8 4 4, $gutter: row);
+      margin-bottom: $base-line-height * 3;
+
+      @include _(greater than mobile) {  
+        margin-bottom: $base-line-height * 2;
+      }
+
+      @include _(greater than desktop) {  
+        margin-top: $base-line-height * 2;
+      }
+    }
+
+    @include element(top-left) {
+      @include _(3 12 8 4 4, $gutter: row);
+      margin-top: $base-line-height * 3;
+
+      @include _(greater than mobile) {  
+        margin-top: $base-line-height * 2;
+      }
+
+      @include _(greater than desktop) {  
+        margin-bottom: $base-line-height * 2;
+        display: block;
+      }
+    }
+
+    @include element(logo-wrap) {
+      @include _(3 3 3 4 4, 3 12 8 4 4);
+    }
+
+    @include element(logo) {
+      display: block;
+      background-image: url('../images/' + $footer005-logo);
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: contain;
+      min-height: $footer005-logo-height; 
+      overflow: hidden;
+      text-indent: 9999px;
+    } 
+
+    @include element(phone-button-wrap) {
+      @include _(3 9 5 4 4, 3 12 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {  
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+      }    
+
+      @include _(greater than tablet) {  
+        min-height: $footer005-logo-height; 
+        flex-direction: row;
+        align-items: center;
+      } 
+
+      @include _(greater than desktop) {  
+        display: block;
+        min-height: none; 
+      }    
+    }
+
+    @include element(phone) {
+      @include type-setting(accent-text);
+      @include _(3 5 4 4 4, 3 9 5 4 4);
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than tablet) {  
+        margin-top: 0;
+      }  
+
+      @include _(greater than desktop) {  
+        margin-top: $base-line-height * 2;
+      }   
+    }
+
+    @include element(button-call-wrap) {
+      @include _(3 4 4 4 4, 3 9 5 4 4);
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        margin-top: $base-line-height;
+      } 
+
+      @include _(greater than desktop) {  
+        margin-top: $base-line-height * 2;
+      } 
+    }
+
+    @include element(button-call) {
+      display: block;
+    }
+    
+    @include element(address-days-wrap) {
+      @include _(3 6 4 4 4, 3 12 8 4 4);
+    }
+
+    @include element(address) {
+      @include type-setting(text);
+    }
+
+    @include element(days) {
+      @include type-setting(text);
+      margin-top: $base-line-height;
+    }
+
+    @include element(social) {
+      font-size: 0px;
+      @include _(3 6 4 4 4, 3 12 8 4 4);
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        margin-top: 0;
+      }
+
+      @include _(greater than desktop) {  
+        margin-top: $base-line-height * 2;
+      }
+    }
+
+    @include element(social-item) {
+      display: block;
+      float: left;
+      margin-right: $base-line-height;
+      font-size: $base-line-height * 2;
+      line-height: $base-line-height * 3;
+      width: $base-line-height * 3;
+      height: $base-line-height * 3;
+      text-align: center;
+      overflow: hidden;
+      text-decoration: none;
+
+      @include _(greater than mobile) {  
+        margin-left: $base-line-height;
+        margin-right: 0;
+        float: right;
+      }
+
+      @include _(greater than desktop) {  
+        margin-left: 0;
+        margin-right: $base-line-height;
+        float: left;
+      }
+
+      &:before{
+        @extend %basic-icon;
+      }
+
+      @include modifier(facebook) {
+        &:before{
+          content: $footer005-facebook-icon;
+        }
+      }
+
+      @include modifier(vk) {
+        &:before{
+          content: $footer005-vk-icon;
+        }
+      }
+
+      @include modifier(twitter) {
+        &:before{
+          content: $footer005-twitter-icon;
+        }
+      }
+    }
+
+    @include element(menu-item) {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+      text-align: left;
+      width: 100%;
+      vertical-align: middle;
+
+      @include _(greater than mobile) {  
+        max-width: 50%;
+      }
+
+      @include _(greater than tablet) {  
+        max-width: calculate-width($footer005-menu-item-column);      
+      }
+
+      @include _(greater than desktop) {  
+        position: relative;
+        max-width: 50%;
+      }
+    } 
+
+    @include element(menu-link) {
+      display: block;
+      padding: $base-line-height 0;
+      width: 100%;
+      height: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+
+      @include _(greater than mobile) { 
+        padding-right: $base-line-height * 2;
+      }
+
+      @include _(greater than desktop) { 
+        width: auto;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include element(bottom-wrap) {
+      background: $footer005-fon-bottom;
+    }
+
+    @include element(bottom) {
+      padding-top: $base-line-height * 2;
+      padding-bottom: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        padding-top: 0;
+        padding-bottom: 0;
+        height: $footer005-height-bottom;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @include element(bottom-left) {
+      @include _(6 6 4 4 4);
+    }
+
+    @include element(bottom-right) {
+      @include _(6 6 4 4 4);
+    }
+
+    @include element(copyright) {
+      @include type-setting('small-text');
+    }
+
+    @include element(pay-cards) {
+      font-size: 0px;
+      display: none;
+
+      @include _(greater than mobile) {  
+        text-align: right;
+        display: block;
+      }
+    }
+
+    @include element(pay-cards-text) {
+      @include type-setting('small-text');
+      line-height: $base-line-height * 3;
+      display: inline-block;
+    }
+
+    @include element(pay-card-item) {
+      display: block;
+      float: left;
+      margin-right: $base-line-height;
+      width: $base-line-height * 3;
+      height: $base-line-height * 3;
+      text-align: center;
+      overflow: hidden;
+      text-decoration: none;
+
+      @include _(greater than mobile) {  
+        margin-left: $base-line-height;
+        margin-right: 0;
+        float: right;
+      }
+
+      @include modifier(mastercard) {
+        @include sprite($s-icon-mastercard);
+      }
+
+      @include modifier(maestro) {
+        @include sprite($s-icon-maestro);
+      }
+
+      @include modifier(visa) {
+        @include sprite($s-icon-visa);
+      }
+    }
+  }
+}

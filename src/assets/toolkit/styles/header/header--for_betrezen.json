@@ -89,7 +89,7 @@
                             "editableGroup": "1lvl-item-1",
                             "content": [
                               {
-                                "elem": "1lvl-sub-link",
+                                "elem": "1lvl-link",
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-1",
                                 "content": "Аренда",
@@ -130,7 +130,7 @@
                                     "editableGroup": "2lvl-item-2",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "editableGroup": "2lvl-link-3",
                                         "content": "Бунгало",
                                         "link": true
@@ -142,7 +142,7 @@
                                     "editableGroup": "2lvl-item-2",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "editableGroup": "2lvl-link-4",
                                         "content": "Виллы",
                                         "link": true
@@ -154,7 +154,7 @@
                                     "editableGroup": "2lvl-item-2",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "editableGroup": "2lvl-link-5",
                                         "content": "Жилье",
                                         "link": true
@@ -166,7 +166,7 @@
                                     "editableGroup": "2lvl-item-2",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "editableGroup": "2lvl-link-6",
                                         "content": "Квартира",
                                         "link": true
@@ -178,7 +178,7 @@
                                     "editableGroup": "2lvl-item-2",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "editableGroup": "2lvl-link-7",
                                         "content": "Дома",
                                         "link": true
@@ -190,7 +190,7 @@
                                     "editableGroup": "2lvl-item-2",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "editableGroup": "2lvl-link-8",
                                         "content": "Квартиры на Кароне",
                                         "link": true
@@ -207,7 +207,7 @@
                             "editableGroup": "1lvl-item-2",
                             "content": [
                               {
-                                "elem": "1lvl-sub-link",
+                                "elem": "1lvl-link",
                                 "editableGroup": "1lvl-link-2",
                                 "content": "Продажа",
                                 "link": true
@@ -276,7 +276,7 @@
                             "editableGroup": "1lvl-item-3",
                             "content": [
                               {
-                                "elem": "1lvl-sub-link",
+                                "elem": "1lvl-link",
                                 "editableGroup": "1lvl-link-3",
                                 "content": "Премиум класс",
                                 "link": true
@@ -289,7 +289,7 @@
                             "editableGroup": "1lvl-item-4",
                             "content": [
                               {
-                                "elem": "1lvl-sub-link",
+                                "elem": "1lvl-link",
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-4",
                                 "content": "СКИДКИ!",
@@ -373,7 +373,7 @@
                             "editableGroup": "1lvl-item-7",
                             "content": [
                               {
-                                "elem": "1lvl-sub-link",
+                                "elem": "1lvl-link",
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-7",
                                 "content": "О Нас",
@@ -503,7 +503,7 @@
                             "editableGroup": "1lvl-item-8",
                             "content": [
                               {
-                                "elem": "1lvl-sub-link",
+                                "elem": "1lvl-link",
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-8",
                                 "content": "Таиланд",

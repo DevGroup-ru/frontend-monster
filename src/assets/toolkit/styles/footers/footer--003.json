@@ -1,0 +1,172 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "block": "footer003",
+    "content": [
+      {
+        "elem": "top-wrap",
+        "content": [
+          {
+            "elem": "top",
+            "row": true,
+            "content": [
+              {
+                "elem": "logo-wrap",
+                "content": [
+                  {
+                    "elem": "logo",
+                    "content": "Logo",
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "top-right",
+                "content": [
+                  {
+                    "elem": "button",
+                    "cls": "button-simple",
+                    "link": true,
+                    "content": "Заказать услугу",
+                    "editable": true
+                  }
+                ]
+              },  
+              {
+                "elem": "top-left",
+                "content": [
+                  {
+                    "elem": "menu",
+                    "content": [
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-1",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-1",
+                            "content": "Главная",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-2",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-2",
+                            "content": "О компании",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-3",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-3",
+                            "content": "Услуги",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-4",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-4",
+                            "content": "Портфолио",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-5",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-5",
+                            "content": "Прайс-лист",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-6",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-6",
+                            "content": "Контакты",
+                            "link": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }              
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "bottom-wrap",
+        "content": [
+          {
+            "elem": "bottom",
+            "row": true,
+            "content": [
+              {
+                "elem": "bottom-left",
+                "content": [
+                  {
+                    "elem": "copyright",
+                    "content": "© SKy Framework 2015",
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "bottom-right",
+                "content": [
+                  {
+                    "elem": "pay-cards",
+                    "content": [
+                      {
+                        "elem": "pay-cards-text",
+                        "content": "Мы принимаем к оплате:",
+                        "editable": true
+                      },
+                      {
+                        "elem": "pay-card-item",
+                        "mods": ["mastercard"]
+                      },
+                      {
+                        "elem": "pay-card-item",
+                        "mods": ["maestro"]
+                      },
+                      {
+                        "elem": "pay-card-item",
+                        "mods": ["visa"]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

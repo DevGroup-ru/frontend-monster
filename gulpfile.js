@@ -15,6 +15,7 @@ var reload = browserSync.reload;
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var spritesmith = require('gulp.spritesmith');
 var webpack = require('webpack');
 var bemBhCompiler = require('./bemBhCompiler');
 var debug = require('gulp-debug');
@@ -33,6 +34,7 @@ var config = {
 			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
+		imagesSprites: 'src/assets/toolkit/images/sprites/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
 	dest: 'dist'
@@ -117,6 +119,25 @@ gulp.task('fonts', function() {
 gulp.task('libs', function() {
   return gulp.src('./libs/**/*')
     .pipe(gulp.dest(config.dest + '/libs/'));
+});
+
+// sprites
+
+gulp.task('sprites', function () {
+  	var spriteData = 
+    gulp.src(config.src.imagesSprites)
+        .pipe(spritesmith({
+            imgName: 'sprite.png',
+            cssName: 'sprite.scss',
+            cssFormat: 'scss',
+            algorithm: 'binary-tree',
+            cssTemplate: 'src/assets/toolkit/styles/utils/sass.template.mustache',
+            cssVarMap: function(sprite) {
+                sprite.name = 's-' + sprite.name
+            }
+        }));
+  	spriteData.img.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
+  	spriteData.css.pipe(gulp.dest('./src/assets/toolkit/styles/typography/'));
 });
 
 // compile bemjson to html
@@ -210,6 +231,9 @@ gulp.task('serve', function () {
 	gulp.task('fonts:watch', ['fonts'], reload);
 	gulp.watch('fonts/*', ['fonts:watch']);
 
+	gulp.task('sprites:watch', ['sprites'], reload);
+	gulp.watch(config.src.imagesSprites, ['sprites:watch']);
+
 	gulp.task('libs:watch', ['libs'], reload);
 	gulp.watch('libs/*', ['libs:watch']);
 
@@ -226,6 +250,7 @@ gulp.task('default', ['clean'], function () {
 		'images',
 		'fonts',
 		'libs',
+		'sprites',
 		'assemble'
 	];
 

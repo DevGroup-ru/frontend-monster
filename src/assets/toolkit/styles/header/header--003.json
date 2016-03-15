@@ -92,7 +92,7 @@
                             "editableGroup": "1lvl-item-3",
                             "content": [
                               {
-                                "elem": "1lvl-sub-link",
+                                "elem": "1lvl-link",
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-3",
                                 "content": "Пункт 3",
@@ -122,7 +122,7 @@
                                     "editableGroup": "2lvl-item-11",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-14",
                                         "content": "Пункт 1",
@@ -228,7 +228,7 @@
                                     "editableGroup": "2lvl-item-12",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-15",
                                         "content": "Пункт 2",
@@ -310,7 +310,7 @@
                                     "editableGroup": "2lvl-item-13",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-16",
                                         "content": "Пункт 3",
@@ -416,7 +416,7 @@
                                     "editableGroup": "2lvl-item-14",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-17",
                                         "content": "Пункт 4",
@@ -526,7 +526,7 @@
                             "editableGroup": "1lvl-item-4",
                             "content": [
                               {
-                                "elem": "1lvl-sub-link",
+                                "elem": "1lvl-link",
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-4",
                                 "content": "Пункт 4",
@@ -556,7 +556,7 @@
                                     "editableGroup": "2lvl-item-11",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-14",
                                         "content": "Пункт 1",
@@ -662,7 +662,7 @@
                                     "editableGroup": "2lvl-item-12",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-15",
                                         "content": "Пункт 2",
@@ -744,7 +744,7 @@
                                     "editableGroup": "2lvl-item-13",
                                     "content": [
                                       {
-                                        "elem": "2lvl-sub-link",
+                                        "elem": "2lvl-link",
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-16",
                                         "content": "Пункт 3",

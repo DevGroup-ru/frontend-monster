@@ -112,31 +112,6 @@ $left-menu001-mobile-breakpoint: desktop;
       text-align: left;
       width: 100%;
 
-      a,
-      a:link,
-      a:hover,
-      a:visited,
-      a:active,
-      a:focus,
-      button {
-        display: block;
-        padding: $base-line-height * 2;
-        width: 100%;
-        @include type-setting(text);
-        text-decoration: none;
-
-        @include _(greater than $left-menu001-mobile-breakpoint) { 
-          display: flex;
-          align-items: center;
-          width: auto;
-          height: $left-menu001-height-item;
-        }
-
-        &:hover {
-          background: $left-menu001-item-hover;
-        }
-      }
-
       &:hover {
         background: $left-menu001-item-hover;
 
@@ -148,6 +123,25 @@ $left-menu001-mobile-breakpoint: desktop;
             transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
           }
         }
+      }
+    }
+
+    @include element(1lvl-link) {
+      display: block;
+      padding: $base-line-height * 2;
+      width: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+
+      @include _(greater than $left-menu001-mobile-breakpoint) { 
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: $left-menu001-height-item;
+      }
+
+      &:hover {
+        background: $left-menu001-item-hover;
       }
     }  
 
@@ -177,23 +171,6 @@ $left-menu001-mobile-breakpoint: desktop;
       list-style: none;
       text-align: left;
 
-      a,
-      a:link,
-      a:hover,
-      a:visited,
-      a:active,
-      a:focus,
-      button {
-        @include type-setting(text);
-        text-decoration: none;
-        padding: $base-line-height * 2;
-        height: $left-menu001-height-item;
-
-        &:hover {
-          background: $left-menu001-sub-fon-hover;
-        }
-      }
-
       &:hover {
         background: $left-menu001-sub-fon-hover;
 
@@ -207,6 +184,19 @@ $left-menu001-mobile-breakpoint: desktop;
         }
       }
     }
+
+    @include element(2lvl-link) {
+      display: block;
+      width: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+      padding: $base-line-height * 2;
+      height: $left-menu001-height-item;
+
+      &:hover {
+        background: $left-menu001-sub-fon-hover;
+      }
+    } 
 
     @include element(2lvl-item-back) {
       display: block;
@@ -240,19 +230,6 @@ $left-menu001-mobile-breakpoint: desktop;
       list-style: none;
       text-align: left;
 
-      a,
-      a:link,
-      a:hover,
-      a:visited,
-      a:active,
-      a:focus,
-      button {
-        @include type-setting(text);
-        text-decoration: none;
-        padding: $base-line-height * 2;
-        height: $left-menu001-height-item;
-      }
-
       &:hover {
         background: $left-menu001-sub-fon-hover;
 
@@ -265,6 +242,19 @@ $left-menu001-mobile-breakpoint: desktop;
         }
       }
     }  
+
+    @include element(3lvl-link) {
+      display: block;
+      width: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+      padding: $base-line-height * 2;
+      height: $left-menu001-height-item;
+
+      &:hover {
+        background: $left-menu001-sub-fon-hover;
+      }
+    } 
 
     @include element(3lvl-item-back) {
       display: block;
@@ -298,20 +288,20 @@ $left-menu001-mobile-breakpoint: desktop;
       margin: 0;
       list-style: none;
       text-align: left;
-
-      a,
-      a:link,
-      a:hover,
-      a:visited,
-      a:active,
-      a:focus,
-      button {
-        @include type-setting(text);
-        text-decoration: none;
-        padding: $base-line-height * 2;
-        height: $left-menu001-height-item;
-      }
     }  
+
+    @include element(4lvl-link) {
+      display: block;
+      width: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+      padding: $base-line-height * 2;
+      height: $left-menu001-height-item;
+
+      &:hover {
+        background: $left-menu001-sub-fon-hover;
+      }
+    } 
 
     @include element(4lvl-item-back) {
       display: block;

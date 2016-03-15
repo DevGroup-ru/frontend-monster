@@ -1,0 +1,275 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "block": "footer005",
+    "content": [
+      {
+        "elem": "top-wrap",
+        "content": [
+          {
+            "elem": "top",
+            "row": true,
+            "content": [
+              {
+                "elem": "top-left",
+                "content": [
+                  {
+                    "elem": "logo-wrap",
+                    "content": [
+                      {
+                        "elem": "logo",
+                        "content": "Logo",
+                        "link": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "phone-button-wrap",
+                    "content": [
+                      {
+                        "elem": "phone",
+                        "content": "+7 (495) 820-77-56",
+                        "editable": true
+                      },
+                      {
+                        "elem": "button-call-wrap",
+                        "content": [
+                          {
+                            "elem": "button-call",
+                            "cls": "button-simple",
+                            "link": true,
+                            "content": "Заказать услугу",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "top-menu",
+                "content": [
+                  {
+                    "elem": "menu",
+                    "content": [
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-2",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-2",
+                            "content": "О компании",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-3",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-3",
+                            "content": "Потребительские цели",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-4",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-4",
+                            "content": "Условия оплаты",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-5",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-5",
+                            "content": "Приобретение автомобиля",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-6",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-6",
+                            "content": "Портфолио",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-7",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-7",
+                            "content": "Продажа жилищного имущества",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-8",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-8",
+                            "content": "Прайс-лист",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-9",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-9",
+                            "content": "Гибкий подход к оформлению залога",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-10",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-10",
+                            "content": "Контакты",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-11",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-11",
+                            "content": "Другие цели и сферы",
+                            "link": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }, 
+              {
+                "elem": "top-right",
+                "content": [ 
+                  {
+                    "elem": "address-days-wrap",
+                    "content": [
+                      {
+                        "elem": "address",
+                        "content": "Г. Москва, ул. Петухова, д. 25/17, офис 13",
+                        "editable": true
+                      },
+                      {
+                        "elem": "days",
+                        "content": "Мы работаем без выходных",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "social",
+                    "content": [
+                      {
+                        "elem": "social-item",
+                        "mods": ["facebook"],
+                        "link": true
+                      },
+                      {
+                        "elem": "social-item",
+                        "mods": ["vk"],
+                        "link": true
+                      },
+                      {
+                        "elem": "social-item",
+                        "mods": ["twitter"],
+                        "link": true
+                      }
+                    ]
+                  }
+                ]
+              }             
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "bottom-wrap",
+        "content": [
+          {
+            "elem": "bottom",
+            "row": true,
+            "content": [
+              {
+                "elem": "bottom-left",
+                "content": [
+                  {
+                    "elem": "copyright",
+                    "content": "© SKy Framework 2015",
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "bottom-right",
+                "content": [
+                  {
+                    "elem": "pay-cards",
+                    "content": [
+                      {
+                        "elem": "pay-cards-text",
+                        "content": "Мы принимаем к оплате:",
+                        "editable": true
+                      },
+                      {
+                        "elem": "pay-card-item",
+                        "mods": ["mastercard"]
+                      },
+                      {
+                        "elem": "pay-card-item",
+                        "mods": ["maestro"]
+                      },
+                      {
+                        "elem": "pay-card-item",
+                        "mods": ["visa"]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

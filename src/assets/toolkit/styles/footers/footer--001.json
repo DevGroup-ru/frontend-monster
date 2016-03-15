@@ -1,0 +1,170 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "block": "footer001",
+    "content": [
+      {
+        "elem": "top-wrap",
+        "content": [
+          {
+            "elem": "top",
+            "row": true,
+            "content": [
+              {
+                "elem": "top-right",
+                "content": [
+                  {
+                    "elem": "phone",
+                    "content": "+7 (495) 820-77-56",
+                    "editable": true
+                  },
+                  {
+                    "elem": "button",
+                    "link": true,
+                    "cls": "button-simple",
+                    "content": "Заказать звонок",
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "top-left",
+                "content": [
+                  {
+                    "elem": "menu",
+                    "content": [
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-1",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-1",
+                            "content": "Главная",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-2",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-2",
+                            "content": "О компании",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-3",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-3",
+                            "content": "Услуги",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-4",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-4",
+                            "content": "Портфолио",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-5",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-5",
+                            "content": "Прайс-лист",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-item",
+                        "editableGroup": "menu-item-6",
+                        "content": [
+                          {
+                            "elem": "menu-link",
+                            "editableGroup": "menu-link-6",
+                            "content": "Контакты",
+                            "link": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }              
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "bottom-wrap",
+        "content": [
+          {
+            "elem": "bottom",
+            "row": true,
+            "content": [
+              {
+                "elem": "bottom-left",
+                "content": [
+                  {
+                    "elem": "copyright",
+                    "content": "© SKy Framework 2015",
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "bottom-right",
+                "content": [
+                  {
+                    "elem": "social",
+                    "content": [
+                      {
+                        "elem": "social-text",
+                        "content": "Мы в соц.сетях:",
+                        "editable": true
+                      },
+                      {
+                        "elem": "social-item",
+                        "mods": ["facebook"],
+                        "link": true
+                      },
+                      {
+                        "elem": "social-item",
+                        "mods": ["vk"],
+                        "link": true
+                      },
+                      {
+                        "elem": "social-item",
+                        "mods": ["twitter"],
+                        "link": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

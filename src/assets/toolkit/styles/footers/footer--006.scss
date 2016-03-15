@@ -1,0 +1,288 @@
+$footer006-fon-top: #777e8e;
+$footer006-height-top: $base-line-height * 9;
+$footer006-fon-bottom: #444d60;
+$footer006-height-bottom: $base-line-height * 5;
+$footer006-menu-item-column: 4; //write the number of menu column
+$footer006-logo: 'logo.jpg';
+$footer006-logo-height: $base-line-height * 7;
+
+$footer006-facebook-icon: "\e812";
+$footer006-vk-icon: "\e811";
+$footer006-twitter-icon: "\e810";
+
+$footer006-arrow-left: "\e801";
+$footer006-arrow-down: "\e816";
+
+  // @desc Footer - footer with map
+  // @group footer
+  // @bemJson footer--006.json
+
+.m-wrapper {
+
+  @include block(footer006) {
+    width: 100%; 
+
+    @include element(top-wrap) {
+      background: $footer006-fon-top;
+    }
+
+    @include element(top-main) {
+      @include _(clear);
+      margin-top: $base-line-height * 3;
+      margin-bottom: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        margin-top: $base-line-height * 2;
+      }
+    }
+
+    @include element(top-main-left) {
+      @include _(6 6 8 4 4, $gutter: row);
+    }
+
+    @include element(logo-wrap) {
+      @include _(3 3 4 4 4, 6 6 8 4 4);
+    }
+
+    @include element(logo) {
+      display: block;
+      background-image: url('../images/' + $footer006-logo);
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: contain;
+      min-height: $footer006-logo-height; 
+      overflow: hidden;
+      text-indent: 9999px;
+    } 
+
+    @include element(phone) {
+      @include type-setting(accent-text);
+      @include _(3 3 4 4 4, 6 6 8 4 4);
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        min-height: $footer006-logo-height; 
+      }
+    }
+
+    @include element(top-main-right) {
+      @include _(6 6 8 4 4, $gutter: row);
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than tablet) {  
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        min-height: $footer006-logo-height; 
+      }
+    }
+
+    @include element(button-service-wrap) {
+      @include _(3 3 4 4 4, 6 6 8 4 4);
+    }
+
+    @include element(button-service) {
+      display: block;
+    }
+
+    @include element(button-call-wrap) {
+      @include _(3 3 4 4 4, 6 6 8 4 4);
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        margin-top: 0;
+      }
+    }
+
+    @include element(button-call) {
+      display: block;
+    }
+
+    @include element(top-menu) {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(menu-1lvl-item) {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      @include _(3 3 8 4 4);
+
+      @include modifier(sub) {
+        &:after {
+          position: absolute;
+          top: $base-line-height;
+          right: 0;
+          display: block;
+          @extend %basic-icon;
+          content: $footer006-arrow-left;
+          width: $base-line-height * 2;
+          text-align: right;
+          font-size: $base-line-height * 2;
+        }
+
+        &:hover {
+
+          &:after {
+            content: $footer006-arrow-down;
+            text-decoration: none;
+          }
+        }
+
+        @include _(greater than tablet) {  
+          &:after {
+            display: none;
+          }
+        }
+      }
+    } 
+
+    @include element(menu-1lvl-link) {
+      display: block;
+      padding: $base-line-height 0;
+      width: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include _(greater than tablet) {  
+        padding-right: $base-line-height;
+      }
+    }
+
+    @include element(menu-2lvl) {
+      display: none;
+
+      @include _(greater than tablet) {  
+        display: block;
+        margin-top: $base-line-height;
+      }
+    }
+
+    @include element(menu-2lvl-item) {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    } 
+
+    @include element(menu-2lvl-link) {
+      display: block;
+      padding: $base-line-height 0;
+      width: 100%;
+      height: 100%;
+      @include type-setting(text);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include element(bottom-wrap) {
+      background: $footer006-fon-bottom;
+    }
+
+    @include element(bottom) {
+      padding-top: $base-line-height * 2;
+      padding-bottom: $base-line-height * 2;
+
+      @include _(greater than mobile) {  
+        padding-top: 0;
+        padding-bottom: 0;
+        height: $footer006-height-bottom;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @include element(bottom-left) {
+      @include _(6 6 4 4 4);
+      margin-bottom: $base-line-height;
+
+      @include _(greater than mobile) {  
+        margin-bottom: 0;
+      }
+    }
+
+    @include element(bottom-right) {
+      @include _(6 6 4 4 4);
+    }
+
+    @include element(copyright) {
+      @include type-setting('small-text');
+    }
+
+    @include element(social) {
+      font-size: 0px;
+
+      @include _(greater than mobile) {  
+        text-align: right;
+      }
+    }
+
+    @include element(social-text) {
+      display: none;
+      @include type-setting('small-text');
+      line-height: $base-line-height * 3;
+
+      @include _(greater than mobile) {  
+        display: inline-block;
+      }
+    }
+
+    @include element(social-item) {
+      display: block;
+      float: left;
+      margin-right: $base-line-height;
+      font-size: $base-line-height * 2;
+      line-height: $base-line-height * 3;
+      width: $base-line-height * 3;
+      height: $base-line-height * 3;
+      text-align: center;
+      overflow: hidden;
+      text-decoration: none;
+
+      @include _(greater than mobile) {  
+        margin-left: $base-line-height;
+        margin-right: 0;
+        float: right;
+      }
+
+      &:before{
+        @extend %basic-icon;
+      }
+
+      @include modifier(facebook) {
+        &:before{
+          content: $footer006-facebook-icon;
+        }
+      }
+
+      @include modifier(vk) {
+        &:before{
+          content: $footer006-vk-icon;
+        }
+      }
+
+      @include modifier(twitter) {
+        &:before{
+          content: $footer006-twitter-icon;
+        }
+      }
+    }
+  }
+}

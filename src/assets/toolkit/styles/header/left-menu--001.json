@@ -26,7 +26,7 @@
                     "editableGroup": "1lvl-item-1",
                     "content": [
                       {
-                        "elem": "1lvl-sub-link",
+                        "elem": "1lvl-link",
                         "cls": "sub-link",
                         "editableGroup": "1lvl-link-1",
                         "content": "Пункт 1",
@@ -68,7 +68,7 @@
                             "editableGroup": "2lvl-item-2",
                             "content": [
                               {
-                                "elem": "2lvl-sub-link",
+                                "elem": "2lvl-link",
                                 "cls": "sub-link",
                                 "editableGroup": "2lvl-link-3",
                                 "content": "Пункт 2-2",
@@ -110,7 +110,7 @@
                                     "editableGroup": "3lvl-item-2",
                                     "content": [
                                       {
-                                        "elem": "3lvl-sub-link",
+                                        "elem": "3lvl-link",
                                         "cls": "sub-link",
                                         "editableGroup": "3lvl-link-3",
                                         "content": "Пункт 3-2",
@@ -332,7 +332,7 @@
                     "editableGroup": "1lvl-item-2",
                     "content": [
                       {
-                        "elem": "1lvl-sub-link",
+                        "elem": "1lvl-link",
                         "cls": "sub-link",
                         "editableGroup": "1lvl-link-2",
                         "content": "Пункт 2",
@@ -414,7 +414,7 @@
                     "editableGroup": "1lvl-item-3",
                     "content": [
                       {
-                        "elem": "1lvl-sub-link",
+                        "elem": "1lvl-link",
                         "cls": "sub-link",
                         "editableGroup": "1lvl-link-3",
                         "content": "Пункт 3",
@@ -520,7 +520,7 @@
                     "editableGroup": "1lvl-item-4",
                     "content": [
                       {
-                        "elem": "1lvl-sub-link",
+                        "elem": "1lvl-link",
                         "cls": "sub-link",
                         "editableGroup": "1lvl-link-4",
                         "content": "Пункт 4",

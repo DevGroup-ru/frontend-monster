@@ -1,0 +1,588 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "block": "footer006",
+    "content": [
+      {
+        "block": "map001",
+        "content": [
+          {
+            "elem": "map-place"
+          },
+          {
+            "elem": "address-wrap",
+            "row": true,
+            "content": [
+              {
+                "elem": "address",
+                "content": [
+                  {
+                    "elem": "address-title",
+                    "content": "Адреса наших филиалов",
+                    "editable": true
+                  },
+                  {
+                    "elem": "address-nested-wrap",
+                    "content": [
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-1",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-2",
+                        "content": "ул. Красносвободная, д.117",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-3",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-4",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-5",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-6",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-7",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-8",
+                        "content": "ул. Красносвободная, д.117",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-9",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-10",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-11",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-12",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-13",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-14",
+                        "content": "ул. Красносвободная, д.117",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-15",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-16",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-17",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      },
+                      {
+                        "elem": "address-nested",
+                        "editableGroup": "address-nested-18",
+                        "content": "ул. Набережная, д.4, офис 145",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "top-wrap",
+        "content": [
+          {
+            "elem": "top",
+            "row": true,
+            "content": [
+              {
+                "elem": "top-main",
+                "content": [
+                  {
+                    "elem": "top-main-left",
+                    "content": [
+                      {
+                        "elem": "logo-wrap",
+                        "content": [
+                          {
+                            "elem": "logo",
+                            "content": "Logo",
+                            "link": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "phone",
+                        "content": "+7 (495) 820-77-56",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "top-main-right",
+                    "content": [
+                      {
+                        "elem": "button-service-wrap",
+                        "content": [
+                          {
+                            "elem": "button-service",
+                            "cls": "button-simple",
+                            "link": true,
+                            "content": "Заказать услугу",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "button-call-wrap",
+                        "content": [
+                          {
+                            "elem": "button-call",
+                            "cls": "button-simple",
+                            "link": true,
+                            "content": "Заказать звонок",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "top-menu",
+                "content": [
+                  {
+                    "elem": "menu",
+                    "content": [
+                      {
+                        "elem": "menu-1lvl-item",
+                        "mods": ["sub"],
+                        "editableGroup": "menu-1lvl-item-1",
+                        "content": [
+                          {
+                            "elem": "menu-1lvl-link",
+                            "editableGroup": "menu-1lvl-link-1",
+                            "content": "О компании",
+                            "link": true
+                          },
+                          {
+                            "elem": "menu-2lvl",
+                            "editableGroup": "menu-2lvl-1",
+                            "content": [
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-1",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-1",
+                                    "content": "О компании",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-2",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-2",
+                                    "content": "Условия оплаты",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-3",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-3",
+                                    "content": "Портфолио",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-4",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-4",
+                                    "content": "Прайс-лист",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-5",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-5",
+                                    "content": "Контакты",
+                                    "link": true
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-1lvl-item",
+                        "mods": ["sub"],
+                        "editableGroup": "menu-1lvl-item-2",
+                        "content": [
+                          {
+                            "elem": "menu-1lvl-link",
+                            "editableGroup": "menu-1lvl-link-2",
+                            "content": "Наши услуги",
+                            "link": true
+                          },
+                          {
+                            "elem": "menu-2lvl",
+                            "editableGroup": "menu-2lvl-2",
+                            "content": [
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-6",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-6",
+                                    "content": "Потребительские цели",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-7",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-7",
+                                    "content": "Приобретение автомобиля",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-8",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-8",
+                                    "content": "Продажа жилищного имущества",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-9",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-9",
+                                    "content": "Гибкий подход к оформлению залога",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-10",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-10",
+                                    "content": "Другие цели и сферы",
+                                    "link": true
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-1lvl-item",
+                        "mods": ["sub"],
+                        "editableGroup": "menu-1lvl-item-3",
+                        "content": [
+                          {
+                            "elem": "menu-1lvl-link",
+                            "editableGroup": "menu-1lvl-link-3",
+                            "content": "Сервисы компании",
+                            "link": true
+                          },
+                          {
+                            "elem": "menu-2lvl",
+                            "editableGroup": "menu-2lvl-3",
+                            "content": [
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-11",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-11",
+                                    "content": "История нашей фирмы",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-12",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-12",
+                                    "content": "Конфеденциальная информация",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-13",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-13",
+                                    "content": "Портфолио и картинки",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-14",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-14",
+                                    "content": "Цены на все услуги",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-15",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-15",
+                                    "content": "Другая инфа",
+                                    "link": true
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "menu-1lvl-item",
+                        "mods": ["sub"],
+                        "editableGroup": "menu-1lvl-item-4",
+                        "content": [
+                          {
+                            "elem": "menu-1lvl-link",
+                            "editableGroup": "menu-1lvl-link-4",
+                            "content": "Сервисы компании",
+                            "link": true
+                          },
+                          {
+                            "elem": "menu-2lvl",
+                            "editableGroup": "menu-2lvl-4",
+                            "content": [
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-16",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-16",
+                                    "content": "История нашей фирмы",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-17",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-17",
+                                    "content": "Конфеденциальная информация",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-18",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-18",
+                                    "content": "Портфолио и картинки",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-19",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-19",
+                                    "content": "Цены на все услуги",
+                                    "link": true
+                                  }
+                                ]
+                              },
+                              {
+                                "elem": "menu-2lvl-item",
+                                "editableGroup": "menu-2lvl-item-20",
+                                "content": [
+                                  {
+                                    "elem": "menu-2lvl-link",
+                                    "editableGroup": "menu-2lvl-link-20",
+                                    "content": "Другая инфа",
+                                    "link": true
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }         
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "bottom-wrap",
+        "content": [
+          {
+            "elem": "bottom",
+            "row": true,
+            "content": [
+              {
+                "elem": "bottom-left",
+                "content": [
+                  {
+                    "elem": "copyright",
+                    "content": "© SKy Framework 2015",
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "bottom-right",
+                "content": [
+                  {
+                    "elem": "social",
+                    "content": [
+                      {
+                        "elem": "social-text",
+                        "content": "Мы в соц.сетях:",
+                        "editable": true
+                      },
+                      {
+                        "elem": "social-item",
+                        "mods": ["facebook"],
+                        "link": true
+                      },
+                      {
+                        "elem": "social-item",
+                        "mods": ["vk"],
+                        "link": true
+                      },
+                      {
+                        "elem": "social-item",
+                        "mods": ["twitter"],
+                        "link": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

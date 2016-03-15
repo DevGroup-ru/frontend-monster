@@ -1,0 +1,58 @@
+$map001-height: $base-line-height * 46;
+$map001-height-tablet: $base-line-height * 35;
+$map001-height-mobile: $base-line-height * 30;
+$map001-address-fon: #fff;
+
+.m-wrapper {
+
+  // @desc Map - map with address
+  // @group maps
+  // @bemJson map--001.json
+
+  @include block(map001) {
+    height: $map001-height-mobile;
+    position: relative;
+
+    @include _(greater than mobile) {  
+      height: $map001-height-tablet;
+    } 
+
+    @include _(greater than tablet) {  
+      height: $map001-height;
+    } 
+
+    @include element(map-place) {
+      height: 100%;
+      background: #000; //this style can remove, this area for map
+    }
+
+    @include element(address-wrap) {
+      display: none;
+
+      @include _(greater than tablet) {  
+        display: block;
+      } 
+    }
+
+    @include element(address) {
+      @include _(4 5 4 4 4);
+      padding: $base-line-height * 3;
+      background: $map001-address-fon;
+      margin-top: -$map001-height + $base-line-height * 6;
+    }
+
+    @include element(address-nested-wrap) {
+      height: $base-line-height * 4 * 6;
+    }
+
+    @include element(address-title) {
+      @include type-setting(accent-text);
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(address-nested) {
+      @include type-setting(text);
+      padding: $base-line-height 0;
+    }
+  }
+}
