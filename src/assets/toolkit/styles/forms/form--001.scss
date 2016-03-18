@@ -1,29 +1,44 @@
 $form001-fon: lightblue;
-$form001-input-border-width: $base-line-height / 10;
-$form001-input-border-color: #aaa;
+
+$form001-icon-close: "\e808";
+$form001-icon-close-size: $base-line-height * 2;
+
+$tabs001-header-item: 2; 
 
 .m-wrapper {
+
+  // @desc Form - simple form (modal or static)
+  // @group forms
+  // @bemJson form--001.json
 
   @include block(form001) {
     text-align: left;
     position: relative;
     background: $form001-fon;
     padding: $base-line-height * 3;
+    padding-top:  $base-line-height * 4;
     @include _(3 4 4 4 4);
 
     @include element(title) {
       @include type-setting(section);
-      margin-bottom: $base-line-height * 2;
+      padding-right:  $base-line-height * 2;
+      margin-bottom: $base-line-height;
     }
 
     @include element(close) {
 	    position: absolute;
-	    top: $base-line-height;
-	    right: $base-line-height;
-	    font-size: $base-line-height * 2;
+	    top: $base-line-height * 2;
+	    right: $base-line-height * 2;
 	    background: none;
 	    outline: none;
 	    border: none;
+      text-decoration: none;
+
+      &:before{
+        @extend %basic-icon;
+        content: $form001-icon-close;
+        font-size: $form001-icon-close-size;
+      }  
     }
 
     @include element(line) {
@@ -31,36 +46,12 @@ $form001-input-border-color: #aaa;
     }
 
     @include element(col) {
+      overflow: hidden;
       margin-top: $base-line-height * 2;
-      line-height: 0;
-    }
 
-    @include element(label) {
-    	display: block;
-      margin-bottom: $base-line-height;
-      @include type-setting(text);
-    }
-
-     @include element(input) {
-      resize: vertical;
-      outline: none;
-      @include type-setting(text);
-      padding: $base-line-height - $form001-input-border-width;
-      border: $form001-input-border-width solid $form001-input-border-color;
-      width: 100%;
-
-      @include placeholder {
-        @include type-setting(text);
-        text-overflow: ellipsis;
+      @include modifier(label-left) {
+        @extend %form-label-left;
       }
-
-      @include placeholder-focus {
-        color: transparent;
-      }
-    }
-
-    textarea {
-      min-height: $base-line-height * 6;
     }
 
     @include element(button) {

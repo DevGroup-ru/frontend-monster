@@ -1,0 +1,49 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "form005",
+        "content": [
+          {
+            "elem": "title",
+            "utils": [
+              "no-margin--top"
+            ],
+            "content": "Подписаться на рассылку новостей",
+            "editable": true
+          },
+          {
+            "elem": "line",
+            "editableGroup": "line-1",
+            "content": [
+              {
+                "elem": "col",
+                "editableGroup": "col-1",
+                "editable": true,
+                "html": "<input class='form-input' type='text' placeholder='Ваш e-mail'>"
+              },
+              {
+                "elem": "col",
+                "editableGroup": "col-2",
+                "content": [
+                  {
+                    "elem": "button",
+                    "cls": "button-simple",
+                    "content": "Отправить заявку",
+                    "link": true,
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -3,6 +3,10 @@ $form004-input-border-color: #aaa;
 
 .m-wrapper {
 
+  // @desc Form - simple form (modal or static)
+  // @group forms
+  // @bemJson form--004.json
+
   @include block(form004) {
     text-align: left;
     position: relative;  
@@ -25,9 +29,16 @@ $form004-input-border-color: #aaa;
 
     @include element(col) {
       @include _(3 3 4 4 4);
-      line-height: 0;
       overflow: hidden;
       margin-top: $base-line-height * 2;
+
+      @include modifier(label-left) {
+        @extend %form-label-left;
+      }
+
+       @include modifier(label-left-margin) {
+        @extend %form-label-left-margin;
+      }
     }
 
     @include element(label) {
@@ -55,6 +66,7 @@ $form004-input-border-color: #aaa;
     }
 
     textarea {
+      display: block;
       min-height: $base-line-height * 6;
     }
 

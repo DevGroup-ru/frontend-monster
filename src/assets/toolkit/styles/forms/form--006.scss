@@ -1,6 +1,7 @@
 $form006-input-border-width: $base-line-height / 10;
 $form006-input-border-color: #aaa;
-$form006-nav-color: #aaa;
+$form006-nav-color: #fff;
+$form006-nav-color-hover: #aaa;
 $form006-nav-color-active: #000;
 
 .m-wrapper {
@@ -32,9 +33,16 @@ $form006-nav-color-active: #000;
     }
 
     @include element(col) {
-      line-height: 0;
       overflow: hidden;
       margin-top: $base-line-height;
+
+      @include modifier(label-left) {
+        @extend %form-label-left;
+      }
+
+       @include modifier(label-left-margin) {
+        @extend %form-label-left-margin;
+      }
 
       @include _(greater than tablet) {
         margin-top: $base-line-height * 2;
@@ -70,6 +78,7 @@ $form006-nav-color-active: #000;
     }
 
     textarea {
+      display: block;
       min-height: $base-line-height * 6;
     }
 
@@ -91,6 +100,12 @@ $form006-nav-color-active: #000;
       margin: 0 $base-line-height;
       background: $form006-nav-color;
       margin-top: $base-line-height;
+      transition: background 0.3s ease-out 0s;
+
+      &:hover {
+        background: $form006-nav-color-active;
+        transition: background 0.3s ease-out 0s;
+      }
 
       @include _(greater than tablet) {
         margin-top: $base-line-height * 2;
@@ -98,6 +113,7 @@ $form006-nav-color-active: #000;
 
       @include modifier(active) {
         background: $form006-nav-color-active;
+        transition: background 0.3s ease-out 0s;
       }
     }
   }

@@ -1,0 +1,134 @@
+$form-input-border-width: $base-line-height / 10;
+$form-input-border-color: #aaa;
+$form-input-fon: #fff;
+
+.m-wrapper {
+
+  @include block(form-hide-line) {
+    display: none;
+  }
+
+  @include block(form-label) {
+    display: block;
+    margin-bottom: $base-line-height;
+    @include type-setting(text);
+  }
+
+  @include block(form-input) {
+    display: block;
+    resize: vertical;
+    outline: none;
+    @include type-setting(text);
+    padding: $base-line-height - $form-input-border-width;
+    border: $form-input-border-width solid $form-input-border-color;
+    background: $form-input-fon;
+    width: 100%;
+
+    @include placeholder {
+      @include type-setting(text);
+      text-overflow: ellipsis;
+    }
+
+    @include placeholder-focus {
+      color: transparent;
+    }
+  }
+
+  @include block(form-textarea) { 
+    display: block;
+    resize: vertical;
+    outline: none;
+    @include type-setting(text);
+    padding: $base-line-height - $form-input-border-width;
+    border: $form-input-border-width solid $form-input-border-color;
+    background: $form-input-fon;
+    width: 100%;
+    min-height: $base-line-height * 8;
+
+    @include placeholder {
+      @include type-setting(text);
+      text-overflow: ellipsis;
+    }
+
+    @include placeholder-focus {
+      color: transparent;
+    }
+  }
+
+  %form-label-left {
+
+    @include block(form-label) {
+      margin-bottom: $base-line-height;
+      @include _(4 4 2 4 4, $gutter: row);
+
+      @include _(greater than mobile) {  
+        padding: $base-line-height 0;
+        margin-bottom: 0;
+        @include _(4 4 2 4 4, $gutter: alpha);
+      }
+    }
+
+    @include block(form-input) {
+      @include _(8 8 6 4 4, $gutter: row);
+
+      @include _(greater than mobile) {  
+        @include _(8 8 6 4 4, $gutter: omega);
+      }
+    }
+
+    @include block(form-textarea) { 
+      @include _(8 8 6 4 4, $gutter: row);
+
+      @include _(greater than mobile) {  
+        @include _(8 8 6 4 4, $gutter: omega);
+      }
+    }
+
+
+    @include block(quantity) {
+      @include _(8 8 6 4 4, $gutter: row);
+
+      input {
+        width: 100%;
+      }
+
+      @include _(greater than mobile) {  
+        @include _(8 8 6 4 4, $gutter: omega);
+      }
+    }
+  }
+
+  %form-label-left-margin {
+
+    @include _(greater than tablet) { 
+      padding-top: $base-line-height * 3;
+    }
+
+    @include block(form-label) {
+      margin-bottom: $base-line-height;
+      @include _(4 4 8 4 4, $gutter: row);
+
+      @include _(greater than tablet) {  
+        padding: $base-line-height 0;
+        margin-bottom: 0;
+        @include _(4 4 8 4 4, $gutter: alpha);
+      }
+    }
+
+    @include block(form-input) {
+      @include _(8 8 8 4 4, $gutter: row);
+
+      @include _(greater than tablet) {  
+        @include _(8 8 8 4 4, $gutter: omega);
+      }
+    }
+
+    @include block(form-textarea) { 
+      @include _(8 8 8 4 4, $gutter: row);
+
+      @include _(greater than tablet) {  
+        @include _(8 8 8 4 4, $gutter: omega);
+      }
+    }
+  }
+}

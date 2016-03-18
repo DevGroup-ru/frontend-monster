@@ -18,9 +18,16 @@ $form005-input-border-color: #aaa;
 
     @include element(col) {
       @include _(3 6 4 4 4);
-      line-height: 0;
       overflow: hidden;
       margin-top: $base-line-height * 2;
+
+      @include modifier(label-left) {
+        @extend %form-label-left;
+      }
+
+       @include modifier(label-left-margin) {
+        @extend %form-label-left-margin;
+      }
 
       @include _(greater than desktop) {
         margin-top: 0;
@@ -52,6 +59,7 @@ $form005-input-border-color: #aaa;
     }
 
     textarea {
+      display: block;
       min-height: $base-line-height * 6;
     }
 

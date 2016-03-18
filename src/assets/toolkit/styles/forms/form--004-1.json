@@ -1,0 +1,70 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "form004",
+        "content": [
+          {
+            "elem": "title",
+            "utils": [
+              "no-margin--top",
+              "text--center"
+            ],
+            "content": "Подписаться на рассылку новостей",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "utils": [
+              "text--center"
+            ],
+            "content": "Товарищи! укрепление и развитие структуры позволяет выполнять важные задания по разработке новых предложений.",
+            "editable": true
+          },
+          {
+            "elem": "line",
+            "editableGroup": "line-1",
+            "content": [
+              {
+                "elem": "col",
+                "editableGroup": "col-1",
+                "editable": true,
+                "html": "<input class='form-input' type='text' placeholder='Ваше имя'>"
+              },
+              {
+                "elem": "col",
+                "editableGroup": "col-2",
+                "editable": true,
+                "html": "<input class='form-input' type='text' placeholder='Ваш телефон'>"
+              },
+              {
+                "elem": "col",
+                "editableGroup": "col-3",
+                "editable": true,
+                "html": "<input class='form-input' type='text' placeholder='Ваш e-mail'>"
+              },
+              {
+                "elem": "col",
+                "editableGroup": "col-4",
+                "content": [
+                  {
+                    "elem": "button",
+                    "cls": "button-simple",
+                    "content": "Отправить заявку",
+                    "link": true,
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

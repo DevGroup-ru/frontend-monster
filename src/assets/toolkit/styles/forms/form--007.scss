@@ -1,0 +1,180 @@
+$form007-fon: lightblue;
+$form007-input-border-width: $base-line-height / 10;
+$form007-input-border-color: #aaa;
+
+$form007-icon-close: "\e808";
+$form007-icon-close-size: $base-line-height * 2;
+
+.m-wrapper {
+
+  // @desc Form - simple form (modal or static)
+  // @group forms
+  // @bemJson form--007.json
+
+  @include block(form007) {
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    padding: $base-line-height;
+    @include _(3 4 4 4 4);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background: $form007-fon;
+      z-index: -1;
+      transition: width 0.3s ease-out 0.3s;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $form007-fon;
+      z-index: -1;
+    }
+
+    @include element(short-form) {
+      @include _(3 4 4 4 4, 3 4 4 4 4);
+      background: $form007-fon;
+    }
+
+    @include element(full-form-nested) {
+      height: 0px;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
+      @include _(3 6 4 4 4);
+
+      @include modifier(half) {
+        @include _(6 12 8 4 4);
+      }
+    }
+
+    @include element(head) {
+      @include _(3 4 4 4 4, 3 4 4 4 4);
+      padding-top:  $base-line-height * 4;
+      padding-bottom: $base-line-height;
+      background: $form007-fon;
+    }
+
+    @include element(title) {
+      @include type-setting(section);
+      margin-bottom: $base-line-height;
+    }
+
+    @include element(form-open) {
+
+      @include modifier(hide) {
+        display: none;
+      }
+    }
+
+    @include element(close) {
+      position: absolute;
+      top: $base-line-height * 2;
+      right: $base-line-height * 2;
+      background: none;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.1s ease-out 0s, visibility 0.1s ease-out 0s;
+
+      &:before{
+        @extend %basic-icon;
+        content: $form007-icon-close;
+        font-size: $form007-icon-close-size;
+      }  
+    }
+
+    @include modifier(show-full-form) {
+      @include _(12 12 8 4 4);
+
+      &:before {
+        width: 100%;
+        transition: width 0.3s ease-out 0s;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      .form007__head {
+        background: transparent;
+        @include _(12 12 8 4 4, 12 12 8 4 4);
+      }
+
+      .form007__close {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease-out 0.3s, visibility 0.3s ease-out 0.3s;
+      }
+
+      .form007__button-wrap {
+        background: transparent;
+        @include _(12 12 8 4 4, 12 12 8 4 4, $gutter: row);
+      }
+
+      .form007__button {
+        @include _(3 4 4 4 4, 12 12 8 4 4);
+      }
+
+      .form007__full-form-nested {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease-out 0.3s, visibility 0.3s ease-out 0.3s;
+      }
+
+      .form007__short-form {
+        background: transparent;
+        @include _(3 6 4 4 4, 12 12 8 4 4);
+      }
+    }
+
+    @include element(line) {
+      @include _(clear);
+    }
+
+    @include element(col) {
+      margin-top: $base-line-height * 2;
+
+      @include modifier(label-left) {
+        @extend %form-label-left;
+      }
+
+       @include modifier(label-left-margin) {
+        @extend %form-label-left-margin;
+      }
+    }
+
+    @include element(label) {
+    	display: block;
+      margin-bottom: $base-line-height;
+      @include type-setting(text);
+    }
+
+    @include element(button-wrap) {
+      @include _(3 4 4 4 4, 3 4 4 4 4, $gutter: row);
+      padding: $base-line-height * 3 0;
+      background: $form007-fon;
+      overflow: hidden;
+    }
+
+    @include element(button) {
+    	display: block;
+      @include _(3 4 4 4 4, 3 4 4 4 4);
+    }
+  }
+}
+

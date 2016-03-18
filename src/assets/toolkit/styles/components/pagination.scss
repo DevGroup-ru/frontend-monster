@@ -25,12 +25,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(number) {
     display: none;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     @include modifier(active) {
@@ -45,12 +45,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(arrow-left) {
     display: inline-block;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     &:before {
@@ -61,12 +61,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(arrow-left-end) {
     display: inline-block;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     &:before {
@@ -77,12 +77,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(arrow-right) {
     display: inline-block;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     &:before {
@@ -93,12 +93,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(arrow-right-end) {
     display: inline-block;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     &:before {
@@ -124,12 +124,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(number) {
     display: none;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     @include modifier(active) {
@@ -144,12 +144,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(arrow-left) {
     display: none;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     &:before {
@@ -164,12 +164,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(arrow-left-end) {
     display: none;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     &:before {
@@ -184,12 +184,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(arrow-right) {
     display: none;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     &:before {
@@ -204,12 +204,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(arrow-right-end) {
     display: none;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     &:before {
@@ -224,12 +224,12 @@ $m-pagination-arrow-left: "\e802";
 
   @include element(show-more) {
     display: inline-block;
-    margin-right: $gutter-standart / 2;
+    margin-right: $gutter-standart / 4;
     text-decoration: none;
     background: $m-pagination-background;
     border: $m-pagination-border-width solid $m-pagination-border-color;
-    @include border-setting($m-pagination-border-width, $base-line-height * 2);
-    min-width: $base-line-height * 6;
+    @include border-setting($m-pagination-border-width, $base-line-height);
+    min-width: $base-line-height * 4;
     text-align: center;
 
     @include _(greater than mobile) {  

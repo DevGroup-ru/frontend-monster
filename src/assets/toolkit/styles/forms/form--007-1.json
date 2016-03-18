@@ -1,0 +1,180 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "form007",
+        "content": [
+          {
+            "elem": "head",
+            "content": [
+              {
+                "elem": "title",
+                "utils": [
+                  "no-margin--top"
+                ],
+                "content": "Форма",
+                "editable": true
+              },
+              {
+                "elem": "full-form-open",
+                "content": "Подробная форма",
+                "link": true,
+                "editable": true
+              },
+              {
+                "elem": "close",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "short-form",
+            "content": [
+              {
+                "elem": "line",
+                "editableGroup": "line-1",
+                "content": [
+                  {
+                    "elem": "col",
+                    "editableGroup": "col-1",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-2",
+                "content": [
+                  {
+                    "elem": "col",
+                    "editableGroup": "col-2",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-3",
+                "content": [
+                  {
+                    "elem": "col",
+                    "editableGroup": "col-3",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваш e-mail</label><input class='form-input' type='text' placeholder='Ваш e-mail'>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "full-form-nested",
+            "editableGroup": "full-form-nested-1",
+            "content": [
+              {
+                "elem": "line",
+                "editableGroup": "line-4",
+                "content": [
+                  {
+                    "elem": "col",
+                    "editableGroup": "col-4",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-5",
+                "content": [
+                  {
+                    "elem": "col",
+                    "editableGroup": "col-5",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваш e-mail</label><input class='form-input' type='text' placeholder='Ваш e-mail'>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-6",
+                "content": [
+                  {
+                    "elem": "col",
+                    "editableGroup": "col-6",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "full-form-nested",
+            "editableGroup": "full-form-nested-2",
+            "mods": ["half"],
+            "content": [
+              {
+                "elem": "line",
+                "editableGroup": "line-7",
+                "content": [
+                  {
+                    "elem": "col",
+                    "mods": ["label-left-margin"],
+                    "editableGroup": "col-7",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-8",
+                "content": [
+                  {
+                    "elem": "col",
+                    "mods": ["label-left-margin"],
+                    "editableGroup": "col-8",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваш e-mail</label><input class='form-input' type='text' placeholder='Ваш e-mail'>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-9",
+                "content": [
+                  {
+                    "elem": "col",
+                    "mods": ["label-left-margin"],
+                    "editableGroup": "col-9",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "button-wrap",
+            "content": [
+              {
+                "elem": "button",
+                "cls": "button-simple",
+                "content": "Отправить заявку",
+                "link": true,
+                "editable": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

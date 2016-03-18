@@ -1,0 +1,45 @@
+$quantity-button-plus-border-width: $base-line-height / 10;
+$quantity-button-plus-border-color: #000;
+$quantity-button-plus-fon: #aaa;
+
+$quantity-button-minus-border-width: $base-line-height / 10;
+$quantity-button-minus-border-color: #000;
+$quantity-button-minus-fon: #aaa;
+
+@include block(quantity) {
+	position: relative;
+
+	@include element(minus) {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    line-height: $base-line-height * 4;
+	    width: $base-line-height * 4;
+	    text-align: center;
+	    cursor: pointer;
+	    background: $quantity-button-minus-fon;
+	    border: $quantity-button-minus-border-width solid $quantity-button-minus-border-color;
+	}
+
+	@include element(plus) {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    height: 100%;
+	    line-height: $base-line-height * 4;
+	    width: $base-line-height * 4;
+	    text-align: center;
+	    cursor: pointer;
+	    border: $quantity-button-plus-border-width solid $quantity-button-plus-border-color;
+	    background: $quantity-button-plus-fon;
+	}
+
+	@include element(amount) {
+
+		input {
+		    padding: 0 $base-line-height * 4;
+		    text-align: center;
+		}
+	}
+}

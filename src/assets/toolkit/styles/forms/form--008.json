@@ -1,0 +1,288 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "form002",
+        "content": [
+          {
+            "elem": "title",
+            "utils": [
+              "no-margin--top"
+            ],
+            "content": "Форма",
+            "editable": true
+          },
+          {
+            "elem": "close",
+            "link": true
+          },
+          {
+            "cls": "tabs001 accordion-tabs",
+            "content": [
+              {
+                "cls": "tabs001__tab-wrap accordion-tabs__wrap",
+                "content": [
+                  {
+                    "cls": "tabs001__header accordion-tabs__header active",
+                    "content": [
+                      {
+                        "cls": "tabs001__header-text",
+                        "content": [
+                          {
+                            "cls": "tabs001__header-span",
+                            "content": "По бренду",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "cls": "tabs001__content accordion-tabs__content active",
+                    "content": [
+                      {
+                        "elem": "line",
+                        "editableGroup": "line-1",
+                        "content": [
+                          {
+                            "elem": "col",
+                            "mods": ["half-left"],
+                            "editableGroup": "col-1",
+                            "editable": true,
+                            "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
+                          },
+                          {
+                            "elem": "col",
+                            "mods": ["half-right"],
+                            "editableGroup": "col-2",
+                            "editable": true,
+                            "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "line",
+                        "editableGroup": "line-3",
+                        "content": [
+                          {
+                            "elem": "col",
+                            "mods": ["half-left"],
+                            "editableGroup": "col-1",
+                            "editable": true,
+                            "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
+                          },
+                          {
+                            "elem": "col",
+                            "mods": ["half-right"],
+                            "editableGroup": "col-3",
+                            "editable": true,
+                            "content": [
+                              {
+                                "html": "<label class='form-label'>Сумма</label>"
+                              },
+                              {
+                                "block": "quantity",
+                                "content": [
+                                  {
+                                    "elem": "minus",
+                                    "content": "-"
+                                  },
+                                  {
+                                    "elem": "amount",
+                                    "html": "<input class='form-input' type='text' value='1'>"
+                                  },
+                                  {
+                                    "elem": "plus",
+                                    "content": "+"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "line",
+                        "editableGroup": "line-5",
+                        "content": [
+                          {
+                            "elem": "col",
+                            "editableGroup": "col-5",
+                            "content": [
+                              {
+                                "elem": "button",
+                                "cls": "button-simple",
+                                "content": "Отправить заявку",
+                                "link": true,
+                                "editable": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "cls": "tabs001__tab-wrap accordion-tabs__wrap",
+                "content": [
+                  {
+                    "cls": "tabs001__header accordion-tabs__header",
+                    "content": [
+                      {
+                        "cls": "tabs001__header-text",
+                        "content": [
+                          {
+                            "cls": "tabs001__header-span",
+                            "content": "По типу",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "cls": "tabs001__content accordion-tabs__content",
+                    "content": [
+                      {
+                        "elem": "line",
+                        "editableGroup": "line-1",
+                        "content": [
+                          {
+                            "elem": "col",
+                            "editableGroup": "col-1",
+                            "editable": true,
+                            "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "line",
+                        "editableGroup": "line-2",
+                        "content": [
+                          {
+                            "elem": "col",
+                            "editableGroup": "col-2",
+                            "editable": true,
+                            "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "line",
+                        "editableGroup": "line-5",
+                        "content": [
+                          {
+                            "elem": "col",
+                            "editableGroup": "col-5",
+                            "content": [
+                              {
+                                "elem": "button",
+                                "cls": "button-simple",
+                                "content": "Отправить заявку",
+                                "link": true,
+                                "editable": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "block": "content007",
+        "cls": "grid-full__half grid-full__half--no-gutter",
+        "content": [
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "utils": [
+              "grid-nested--half"
+            ],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Классное преимущество, всем нравится",
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+                "editable": "wysiwyg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
