@@ -67,6 +67,9 @@ class MaterialsEnvironment extends BaseEnvironment {
       }
       return false;
     });
+    $(document).on('click', '.materials-list__item', function clickHandler() {
+      that.sendMessage('hello', [$(this).data('materialName')]);
+    });
   }
 
   activate() {

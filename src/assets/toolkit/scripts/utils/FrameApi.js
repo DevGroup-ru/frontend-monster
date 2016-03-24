@@ -1,7 +1,7 @@
 class FrameApi {
   static get isIe() {
     /* global is */
-    if (is !== undefined) {
+    if (typeof(is) !== 'undefined') {
       return is.ie() || is.edge();
     }
 
@@ -18,7 +18,7 @@ class FrameApi {
       }
 
       if (listener[message.func]) {
-        listener[message.func].apply(this, message.args);
+        listener[message.func].apply(listener, message.args);
       }
     };
 
@@ -37,7 +37,7 @@ class FrameApi {
     };
     const message = FrameApi.isIe ? JSON.stringify(data) : data;
 
-    target.postMessage(message);
+    target.postMessage(message, '*');
   }
 }
 

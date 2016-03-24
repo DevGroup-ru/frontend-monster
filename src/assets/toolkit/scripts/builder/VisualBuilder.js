@@ -2,6 +2,7 @@ import StructureEnvironment from './environments/StructureEnvironment';
 import MaterialsEnvironment from './environments/MaterialsEnvironment';
 import CustomizationEnvironment from './environments/CustomizationEnvironment';
 import ActionEnvironment from './environments/ActionEnvironment';
+import FrameApi from './../utils/FrameApi';
 
 class VisualBuilder {
   constructor() {
@@ -23,6 +24,7 @@ class VisualBuilder {
     $('.monster-environment-selector__environment-link')
       .first()
       .addClass('monster-environment-selector__environment-link--active');
+    FrameApi.bindMessageListener(this);
   }
 
   /**
@@ -96,6 +98,18 @@ class VisualBuilder {
       return this.settings.materials[name];
     }
     return null;
+  }
+
+  get frameContentWindow() {
+    return $(this.settings['frame-selector'])[0].contentWindow;
+  }
+
+  serialize() {
+    FrameApi.sendMessage(this.frameContentWindow, 'serializeContent', ['log']);
+  }
+
+  log(result) {
+    console.log(result);
   }
 }
 

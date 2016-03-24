@@ -1,7 +1,10 @@
+import FrameApi from './../utils/FrameApi';
+
 class BaseEnvironment {
   constructor(visualBuilder, name) {
     this.visualBuilder = visualBuilder;
     this.name = name;
+    this.target = $(this.visualBuilder.settings['frame-selector'])[0].contentWindow;
   }
 
   activate() {
@@ -15,6 +18,10 @@ class BaseEnvironment {
   deactivate() {
     console.log('Deactivate called for: ', this.name);
     this.visualBuilder.clearStackable();
+  }
+
+  sendMessage(func, args) {
+    return FrameApi.sendMessage(this.target, func, args);
   }
 }
 
