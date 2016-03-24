@@ -1,13 +1,12 @@
 $header-search-input-border-width: $base-line-height / 10;
 $header-search-input-border-color: #aaa;
 
-$header-search-icon: "\e81a";
-$header-search-icon-close: "\e808";
-
-// @desc Header - search for header
-// @group header
+$header-search-icon: $icon-search;
+$header-search-icon-close: $icon-cancel;
 
 .m-wrapper {
+  // @desc Header - search for header
+  // @group header
 
   @include block(header-search-icon) {
     &:before{

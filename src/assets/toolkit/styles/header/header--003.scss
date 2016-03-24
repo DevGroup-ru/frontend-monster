@@ -6,11 +6,10 @@ $logo: 'logo.jpg';
 $header003-height: $base-line-height * 8;
 $header003-search: $base-line-height * 8;
 
+.m-wrapper {
   // @desc Header - header with title mega menu (3lvl), search and button of personal account (menu--001)
   // @group header
   // @bemJson header--003.json
-
-.m-wrapper {
 
   @include block(header003) {
     text-align: center;

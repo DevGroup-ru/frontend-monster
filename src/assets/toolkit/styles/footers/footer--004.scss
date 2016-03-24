@@ -8,11 +8,10 @@ $footer004-menu-item-column: 4; //write the number of menu column
 $footer004-logo: 'logo.jpg';
 $footer004-logo-height: $base-line-height * 7;
 
+.m-wrapper {
   // @desc Footer - simple footer with contacts info and buttons
   // @group footer
   // @bemJson footer--004.json
-
-.m-wrapper {
 
   @include block(footer004) {
     width: 100%; 

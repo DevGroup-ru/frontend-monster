@@ -2,11 +2,10 @@ $form007-fon: lightblue;
 $form007-input-border-width: $base-line-height / 10;
 $form007-input-border-color: #aaa;
 
-$form007-icon-close: "\e808";
+$form007-icon-close: $icon-cancel;
 $form007-icon-close-size: $base-line-height * 2;
 
 .m-wrapper {
-
   // @desc Form - simple form (modal or static)
   // @group forms
   // @bemJson form--007.json
@@ -16,7 +15,7 @@ $form007-icon-close-size: $base-line-height * 2;
     position: relative;
     overflow: hidden;
     padding: $base-line-height;
-    @include _(3 4 4 4 4);
+    @include _(3 4 8 4 4);
 
     &:before {
       content: "";
@@ -42,7 +41,7 @@ $form007-icon-close-size: $base-line-height * 2;
     }
 
     @include element(short-form) {
-      @include _(3 4 4 4 4, 3 4 4 4 4);
+      @include _(3 4 8 4 4, 3 4 8 4 4);
       background: $form007-fon;
     }
 
@@ -56,11 +55,19 @@ $form007-icon-close-size: $base-line-height * 2;
 
       @include modifier(half) {
         @include _(6 12 8 4 4);
+
+        .form007__col--label-left-margin {
+          padding-top: 0;
+
+          @include _(greater than desktop) { 
+            padding-top: $base-line-height * 3;
+          }
+        }
       }
     }
 
     @include element(head) {
-      @include _(3 4 4 4 4, 3 4 4 4 4);
+      @include _(3 4 8 4 4, 3 4 8 4 4);
       padding-top:  $base-line-height * 4;
       padding-bottom: $base-line-height;
       background: $form007-fon;
@@ -71,7 +78,7 @@ $form007-icon-close-size: $base-line-height * 2;
       margin-bottom: $base-line-height;
     }
 
-    @include element(form-open) {
+    @include element(full-form-open) {
 
       @include modifier(hide) {
         display: none;
@@ -99,6 +106,15 @@ $form007-icon-close-size: $base-line-height * 2;
 
     @include modifier(show-full-form) {
       @include _(12 12 8 4 4);
+      z-index: 1;
+
+      @include _(greater than tablet) {
+        margin-right: -66.5%;
+      } 
+
+      @include _(greater than desktop) {
+        margin-right: -75%;
+      } 
 
       &:before {
         width: 100%;
@@ -165,7 +181,7 @@ $form007-icon-close-size: $base-line-height * 2;
     }
 
     @include element(button-wrap) {
-      @include _(3 4 4 4 4, 3 4 4 4 4, $gutter: row);
+      @include _(3 4 8 4 4, 3 4 8 4 4, $gutter: row);
       padding: $base-line-height * 3 0;
       background: $form007-fon;
       overflow: hidden;
@@ -173,7 +189,7 @@ $form007-icon-close-size: $base-line-height * 2;
 
     @include element(button) {
     	display: block;
-      @include _(3 4 4 4 4, 3 4 4 4 4);
+      @include _(3 4 8 4 4, 3 4 8 4 4);
     }
   }
 }

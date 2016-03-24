@@ -1,11 +1,11 @@
+$employees002-facebook-icon: $icon-facebook;
+$employees002-vk-icon: $icon-vkontakte;
+$employees002-twitter-icon: $icon-twitter;
+
 .m-wrapper {
   // @desc Employees - blocks without time of work
   // @group employees
   // @bemJson employees--002.json
-
-  $employees002-facebook-icon: "\e812";
-  $employees002-vk-icon: "\e811";
-  $employees002-twitter-icon: "\e810";
 
   @include block(employees002) {
     text-align: center;

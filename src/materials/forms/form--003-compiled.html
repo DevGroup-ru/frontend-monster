@@ -1,4 +1,4 @@
-<div class="m-container" data-bem-match="m-container"><div class="m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom"><div class="form003" data-bem-match="form003"><div class="form003__title g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top g__no-margin--top" data-bem-match="form003__title">Форма</div><a class="form003__close" href="#" data-bem-match="form003__close"></a><div class="form003__line" data-bem-match="form003__line"><div class="form003__col form003__col--label-left" data-bem-match="form003__col"><label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'></div></div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col form003__col--label-left" data-bem-match="form003__col"><label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'></div></div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col form003__col--label-left" data-bem-match="form003__col"><div><label class='form-label'>Сумма</label></div><div class="quantity" data-bem-match="quantity"><div class="quantity__minus" data-bem-match="quantity__minus">-</div><div class="quantity__amount" data-bem-match="quantity__amount"><input class='form-input' type='text' value='1'></div><div class="quantity__plus" data-bem-match="quantity__plus">+</div></div></div></div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col" data-bem-match="form003__col"><label class='form-label'>Текст комментария</label><textarea class='form-textarea' type='text' placeholder='Текст комментария'></textarea></div></div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col" data-bem-match="form003__col"><a class="form003__button button-simple" href="#" data-bem-match="form003__button">Отправить заявку</a></div></div></div></div></div>
+<div class="m-container" data-bem-match="m-container"><div class="m-row g__one-line--top-bottom m-row g__one-line--top-bottom m-row g__one-line--top-bottom"><div class="form003" data-bem-match="form003"><div class="form003__form" data-bem-match="form003__form"><div class="form003__title g__no-margin--top g__no-margin--top g__no-margin--top" data-bem-match="form003__title">Форма</div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col form003__col--label-left" data-bem-match="form003__col"><label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'></div></div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col form003__col--label-left" data-bem-match="form003__col"><label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'></div></div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col form003__col--label-left" data-bem-match="form003__col"><div><label class='form-label'>Сумма</label></div><div class="quantity" data-bem-match="quantity"><div class="quantity__minus" data-bem-match="quantity__minus">-</div><div class="quantity__amount" data-bem-match="quantity__amount"><input class='form-input' type='text' value='1'></div><div class="quantity__plus" data-bem-match="quantity__plus">+</div></div></div></div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col" data-bem-match="form003__col"><label class='form-label'>Текст комментария</label><textarea class='form-textarea' type='text' placeholder='Текст комментария'></textarea></div></div><div class="form003__line" data-bem-match="form003__line"><div class="form003__col" data-bem-match="form003__col"><a class="form003__button button-simple" href="#" data-bem-match="form003__button">Отправить заявку</a></div></div></div></div></div></div>
 <div class="f-item-code" data-f-toggle="code">BEM JSON<pre class=" language-markup">{
   "block": "m-container",
   "content": {
@@ -10,104 +10,105 @@
       {
         "block": "form003",
         "content": [
-          {
-            "elem": "title",
-            "utils": [
-              "no-margin--top"
-            ],
-            "content": "Форма",
-            "editable": true
-          },
-          {
-            "elem": "close",
-            "link": true
-          },
-          {
-            "elem": "line",
-            "editableGroup": "line-1",
+         {
+            "elem": "form",
             "content": [
               {
-                "elem": "col",
-                "mods": ["label-left"],
-                "editableGroup": "col-1",
-                "editable": true,
-                "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
-              }
-            ]
-          },
-          {
-            "elem": "line",
-            "editableGroup": "line-2",
-            "content": [
+                "elem": "title",
+                "utils": [
+                  "no-margin--top"
+                ],
+                "content": "Форма",
+                "editable": true
+              },
               {
-                "elem": "col",
-                "mods": ["label-left"],
-                "editableGroup": "col-2",
-                "editable": true,
-                "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
-              }
-            ]
-          },
-          {
-            "elem": "line",
-            "editableGroup": "line-3",
-            "content": [
-              {
-                "elem": "col",
-                "mods": ["label-left"],
-                "editableGroup": "col-3",
-                "editable": true,
+                "elem": "line",
+                "editableGroup": "line-1",
                 "content": [
                   {
-                    "html": "<label class='form-label'>Сумма</label>"
-                  },
+                    "elem": "col",
+                    "mods": ["label-left"],
+                    "editableGroup": "col-1",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-2",
+                "content": [
                   {
-                    "block": "quantity",
+                    "elem": "col",
+                    "mods": ["label-left"],
+                    "editableGroup": "col-2",
+                    "editable": true,
+                    "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-3",
+                "content": [
+                  {
+                    "elem": "col",
+                    "mods": ["label-left"],
+                    "editableGroup": "col-3",
+                    "editable": true,
                     "content": [
                       {
-                        "elem": "minus",
-                        "content": "-"
+                        "html": "<label class='form-label'>Сумма</label>"
                       },
                       {
-                        "elem": "amount",
-                        "html": "<input class='form-input' type='text' value='1'>"
-                      },
-                      {
-                        "elem": "plus",
-                        "content": "+"
+                        "block": "quantity",
+                        "content": [
+                          {
+                            "elem": "minus",
+                            "content": "-"
+                          },
+                          {
+                            "elem": "amount",
+                            "html": "<input class='form-input' type='text' value='1'>"
+                          },
+                          {
+                            "elem": "plus",
+                            "content": "+"
+                          }
+                        ]
                       }
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "elem": "line",
-            "editableGroup": "line-4",
-            "content": [
+              },
               {
-                "elem": "col",
-                "editableGroup": "col-4",
-                "editable": true,
-                "html": "<label class='form-label'>Текст комментария</label><textarea class='form-textarea' type='text' placeholder='Текст комментария'></textarea>"
-              }
-            ]
-          },
-          {
-            "elem": "line",
-            "editableGroup": "line-5",
-            "content": [
-              {
-                "elem": "col",
-                "editableGroup": "col-5",
+                "elem": "line",
+                "editableGroup": "line-4",
                 "content": [
                   {
-                    "elem": "button",
-                    "cls": "button-simple",
-                    "content": "Отправить заявку",
-                    "link": true,
-                    "editable": true
+                    "elem": "col",
+                    "editableGroup": "col-4",
+                    "editable": true,
+                    "html": "<label class='form-label'>Текст комментария</label><textarea class='form-textarea' type='text' placeholder='Текст комментария'></textarea>"
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-5",
+                "content": [
+                  {
+                    "elem": "col",
+                    "editableGroup": "col-5",
+                    "content": [
+                      {
+                        "elem": "button",
+                        "cls": "button-simple",
+                        "content": "Отправить заявку",
+                        "link": true,
+                        "editable": true
+                      }
+                    ]
                   }
                 ]
               }

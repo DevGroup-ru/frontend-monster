@@ -7,7 +7,7 @@
     ],
     "content": [
       {
-        "block": "tabs001",
+        "block": "tabs-accordion001",
         "mods": ["header-left"],
         "cls": "accordion-tabs",
         "content": [

@@ -6,9 +6,11 @@ $select-single-border-width: $base-line-height / 10;
 $select-single-border-color: #aaa;
 $select-single-color: #000;
 $select-single-color-h: #000;
+
+$select-single-arr-icon-down: $icon-arr-down;
+$select-single-arr-icon-up: $icon-arr-up;
 $select-single-arr-color: #000;
-$select-single-arr-width: $base-line-height / 10;
-$select-single-arr-size: $base-line-height;
+$select-single-arr-size: $base-line-height * 2;
 
 $select-result-fon: #eee;
 $select-result-fon-h: #a89;
@@ -41,7 +43,9 @@ a:visited,
 a:active,
 a:focus {
   &.chosen-single {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     width: 100%;
     @include type-setting(text);
@@ -60,13 +64,14 @@ a:focus {
 
     b {
       display: block;
-      height: $select-single-arr-size;
-      width: $select-single-arr-size;
-      border-top: $select-single-arr-width solid $select-single-arr-color;
-      border-right: $select-single-arr-width solid $select-single-arr-color;
-      transform: rotate(135deg);
+      color: $select-single-arr-color;
+      font-size: $select-single-arr-size;
       cursor: pointer;
-      margin-top: - $base-line-height;
+
+      &:after {
+        @extend %basic-icon;
+        content: $select-single-arr-icon-down;
+      }
     }
 
     span {
@@ -163,8 +168,8 @@ a:focus {
     }
   }
 
-  a.chosen-single b {
-    transform: rotate(-45deg);
+  a.chosen-single b:after {
+    content: $select-single-arr-icon-up;
     margin-top: 0;
   }
 

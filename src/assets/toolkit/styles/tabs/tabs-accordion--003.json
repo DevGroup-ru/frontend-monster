@@ -1,0 +1,186 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "cls": "grid-full",
+        "content": [
+          {
+            "block": "tabs-accordion001",
+            "cls": "accordion-tabs",
+            "content": [
+              {
+                "elem": "tab-wrap",
+                "editableGroup": "tab-wrap-1",
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "mods": ["fix-width", "line-bottom", "fix-height"],
+                    "editableGroup": "header-1",
+                    "cls": "accordion-tabs__header active",
+                    "content": [
+                      {
+                        "elem": "header-text",
+                        "content": [
+                          {
+                            "elem": "header-icon",
+                            "content": [
+                              {
+                                "icon": true
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "header-span",
+                            "content": "Очень длинный таб",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "mods": ["fon"],
+                    "editableGroup": "content-1",
+                    "cls": "accordion-tabs__content active",
+                    "content": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "tab-wrap",
+                "editableGroup": "tab-wrap-2",
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "mods": ["fix-width", "line-bottom", "fix-height"],
+                    "editableGroup": "header-2",
+                    "cls": "accordion-tabs__header",
+                    "content": [
+                      {
+                        "elem": "header-text",
+                        "content": [
+                          {
+                            "elem": "header-icon",
+                            "content": [
+                              {
+                                "icon": true
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "header-span",
+                            "content": "Очень длинный таб",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "mods": ["fon"],
+                    "editableGroup": "content-2",
+                    "cls": "accordion-tabs__content",
+                    "content": "2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "tab-wrap",
+                "editableGroup": "tab-wrap-3",
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "mods": ["fix-width", "line-bottom", "fix-height"],
+                    "editableGroup": "header-3",
+                    "cls": "accordion-tabs__header",
+                    "content": [
+                      {
+                        "elem": "header-text",
+                        "content": [
+                          {
+                            "elem": "header-icon",
+                            "content": [
+                              {
+                                "icon": true
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "header-span",
+                            "content": "Длинный таб",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "mods": ["fon"],
+                    "editableGroup": "content-3",
+                    "cls": "accordion-tabs__content",
+                    "content": "3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "tab-wrap",
+                "editableGroup": "tab-wrap-4",
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "mods": ["fix-width", "line-bottom", "fix-height"],
+                    "editableGroup": "header-4",
+                    "cls": "accordion-tabs__header",
+                    "content": [
+                      {
+                        "elem": "header-text",
+                        "content": [
+                          {
+                            "elem": "header-icon",
+                            "content": [
+                              {
+                                "icon": true
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "header-span",
+                            "content": "Длинный таб",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "mods": ["fon"],
+                    "editableGroup": "content-4",
+                    "cls": "accordion-tabs__content",
+                    "content": "4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

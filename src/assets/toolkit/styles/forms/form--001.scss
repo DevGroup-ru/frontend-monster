@@ -1,9 +1,9 @@
 $form001-fon: lightblue;
 
-$form001-icon-close: "\e808";
+$form001-icon-close: $icon-cancel;
 $form001-icon-close-size: $base-line-height * 2;
 
-$tabs001-header-item: 2; 
+$form001-breakpoint-in-modal: desktop; 
 
 .m-wrapper {
 
@@ -12,12 +12,16 @@ $tabs001-header-item: 2;
   // @bemJson form--001.json
 
   @include block(form001) {
-    text-align: left;
-    position: relative;
-    background: $form001-fon;
-    padding: $base-line-height * 3;
-    padding-top:  $base-line-height * 4;
-    @include _(3 4 4 4 4);
+    @include _(3 4 8 4 4, $gutter: row);
+    
+    @include element(form) {
+      position: relative;
+      text-align: left;
+      background: $form001-fon;
+      padding: $base-line-height * 3;
+      padding-top:  $base-line-height * 4;
+      @include _(3 4 8 4 4, 3 4 8 4 4);
+    }
 
     @include element(title) {
       @include type-setting(section);
@@ -26,6 +30,7 @@ $tabs001-header-item: 2;
     }
 
     @include element(close) {
+      display: none;
 	    position: absolute;
 	    top: $base-line-height * 2;
 	    right: $base-line-height * 2;
@@ -46,7 +51,6 @@ $tabs001-header-item: 2;
     }
 
     @include element(col) {
-      overflow: hidden;
       margin-top: $base-line-height * 2;
 
       @include modifier(label-left) {
@@ -57,6 +61,49 @@ $tabs001-header-item: 2;
     @include element(button) {
     	display: block;
     }
+
+    @include element(popup-button) {
+      display: block;
+      @include _(3 4 4 4 4);
+    }
+
+    @include modifier(transform-in-modal) {
+      @include _(12 12 8 4 4, $gutter: row);
+
+      .form001__form {
+        display: none;
+      }
+
+      .form001__popup-button {
+        display: block;
+      }
+
+      @include _(greater than $form001-breakpoint-in-modal) {  
+        @include _(3 4 8 4 4, $gutter: row);  
+
+        .form001__form {
+          display: block;
+        }
+
+        .form001__popup-button {
+          display: none;
+        }
+      }
+    }
+
+    @include modifier(modal) {
+      display: none;
+    }
   }
 }
 
+@include block(popup_wrapper) {
+  .form001__form {
+    @include _(4 4 6 4 4);
+    float: none;
+
+    .close-modal {
+      display: block;
+    }
+  }
+}

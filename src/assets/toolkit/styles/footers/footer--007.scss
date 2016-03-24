@@ -5,11 +5,10 @@ $footer007-menu-item-column: 5; //write the number of menu column
 $footer007-logo: 'logo.jpg';
 $footer007-logo-height: $base-line-height * 7;
 
+.m-wrapper {
   // @desc Footer - simple footer without buttons and phones
   // @group footer
   // @bemJson footer--007.json
-
-.m-wrapper {
 
   @include block(footer007) {
     width: 100%; 

@@ -14,17 +14,16 @@ $left-menu002-height-item: $base-line-height * 6; //menu-item's height
 $left-menu002-height-item-num: 7; //number of menu items
 $left-menu002-height: $base-line-height * 10 + $left-menu002-tabs-height + $left-menu002-height-item * $left-menu002-height-item-num;
 
-$left-menu002-arrow-left: "\e801";
-$left-menu002-arrow-down: "\e816";
-$left-menu002-arrow-up: "\e815";
+$left-menu002-arrow-left: $icon-arr-right;
+$left-menu002-arrow-down: $icon-arr-down;
+$left-menu002-arrow-up: $icon-arr-up;
 
 $left-menu002-mobile-breakpoint: desktop; 
 
-// @desc Left-menu - left multilevel menu with tabs
-// @group left-menu
-// @bemJson left-menu--002.json
-
 .m-wrapper {
+  // @desc Left-menu - left multilevel menu with tabs
+  // @group left-menu
+  // @bemJson left-menu--002.json
 
   @include block(left-menu-mobile) {
     display: none;

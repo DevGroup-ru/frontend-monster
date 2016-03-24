@@ -7,7 +7,22 @@
     ],
     "content": [
       {
+        "cls": "popup-button button-simple",
+        "link": true,
+        "attrs": 
+          {
+            "data-button": "form006-modal"
+          },
+        "content": "Зарегистрироваться",
+        "editable": true
+      },
+      {
         "block": "form006",
+        "mods": ["modal"],
+        "attrs": 
+          {
+            "data-modal": "form006-modal"
+          },
         "content": [
           {
             "elem": "wrap",

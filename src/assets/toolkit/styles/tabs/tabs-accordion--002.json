@@ -10,7 +10,7 @@
         "cls": "grid-full",
         "content": [
           {
-            "block": "tabs001",
+            "block": "tabs-accordion001",
             "cls": "accordion-tabs",
             "content": [
               {

@@ -7,25 +7,23 @@ $menu001-sub-fon-hover: #aaa;
 
 $sub-menu-custom-scroll: $base-line-height * 38; //height of beautiful scroll
 
-$header-burger-icon: "\e818";
-$header-burger-icon-close: "\e808";
+$header-burger-icon: $icon-menu;
+$header-burger-icon-close: $icon-cancel;
 
-$header-user-icon: "\e81b";
+$header-user-icon: $icon-lock;
 
-$header-arrow-left: "\e801";
-$header-arrow-down: "\e816";
+$header-arrow-left: $icon-arr-right;
+$header-arrow-down: $icon-arr-down;
 
-$header-button-icon: "\e814";
+$header-button-icon: $icon-mail-alt;
 
-$header-phone-icon: "\e819";
+$header-phone-icon: $icon-phone;
 
 $header-mobile-breakpoint: desktop; 
 
-
-// @desc Header - common elements for header and menu
-// @group header
-
 .m-wrapper {
+  // @desc Header - common elements for header and menu
+  // @group header
 
   @include block(menu-mobile) {
     display: none;

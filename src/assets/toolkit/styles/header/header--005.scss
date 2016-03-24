@@ -9,11 +9,11 @@ $header005-height: $base-line-height * 6;
 $header005-height-mobile: $base-line-height * 8;
 $header005-top-height: $base-line-height * 9;
 
+
+.m-wrapper {
   // @desc Header - header with menu, search, top line and block with phone and button 
   // @group header
   // @bemJson header--005.json
-
-.m-wrapper {
 
   @include block(header005) {
     text-align: center;

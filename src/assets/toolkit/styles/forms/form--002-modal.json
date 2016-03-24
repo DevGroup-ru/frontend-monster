@@ -8,9 +8,31 @@
     "content": [
       {
         "block": "form002",
+        "mods": ["in-modal"],
         "content": [
           {
+            "elem": "popup-button-wrap",
+            "content": [ 
+              {
+                "elem": "popup-button",
+                "cls": "form-popup-button button-simple", 
+                "content": "Отправить заявку",
+                "editable": true,
+                "attrs": 
+                  {
+                    "data-button": "form002-modal"
+                  },
+                "link": true
+              }
+            ]
+          },
+          {
             "elem": "form",
+            "cls": "popup-scale",
+            "attrs": 
+              {
+                "data-modal": "form002-modal"
+              },
             "content": [
               {
                 "elem": "title",
@@ -19,6 +41,11 @@
                 ],
                 "content": "Форма",
                 "editable": true
+              },
+              {
+                "elem": "close",
+                "cls": "close-modal",
+                "link": true
               },
               {
                 "elem": "line",

@@ -4,10 +4,10 @@ $m-pagination-border-width: $base-line-height/10;
 $m-pagination-border-color: #aaa;
 $m-pagination-border-color-active: #aaa;
 
-$m-pagination-arrow-right-end: "\e804";
-$m-pagination-arrow-right: "\e801";
-$m-pagination-arrow-left-end: "\e803";
-$m-pagination-arrow-left: "\e802";
+$m-pagination-arrow-right-end: $icon-arr-right-end;
+$m-pagination-arrow-right: $icon-arr-right;
+$m-pagination-arrow-left-end: $icon-arr-left-end;
+$m-pagination-arrow-left: $icon-arr-left;
 
 @include block(m-pagination-arrow) {
   text-align: left;
