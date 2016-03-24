@@ -55,28 +55,7 @@
                     "elem": "col",
                     "editableGroup": "col-2",
                     "editable": true,
-                    "content": [
-                      {
-                        "html": "<label class='form-label'>Сумма</label>"
-                      },
-                      {
-                        "block": "quantity",
-                        "content": [
-                          {
-                            "elem": "minus",
-                            "content": "-"
-                          },
-                          {
-                            "elem": "amount",
-                            "html": "<input class='form-input' type='text' value='1'>"
-                          },
-                          {
-                            "elem": "plus",
-                            "content": "+"
-                          }
-                        ]
-                      }
-                    ]
+                    "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
                   }
                 ]
               },
@@ -210,6 +189,14 @@
             ]
           }
         ]
+      },
+      {
+        "block": "grid-full__col-9",
+        "utils": [
+          "one-line--top-bottom"
+        ],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+        "editable": "wysiwyg"
       }
     ]
   }

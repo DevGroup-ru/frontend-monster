@@ -1,8 +1,18 @@
 $form-input-border-width: $base-line-height / 10;
 $form-input-border-color: #aaa;
 $form-input-fon: #fff;
+$form-input-color: #000;
+
+$form-input-border-width-focus: $base-line-height / 10;
+$form-input-border-color-focus: #aaa;
+$form-input-fon-focus: #fff;
+$form-input-color-focus: #000;
+
+$popup-alone-wrap-fon: #fff;
 
 .m-wrapper {
+  // @desc Form - common styles for forms
+  // @group forms
 
   @include block(form-hide-line) {
     display: none;
@@ -22,15 +32,43 @@ $form-input-fon: #fff;
     padding: $base-line-height - $form-input-border-width;
     border: $form-input-border-width solid $form-input-border-color;
     background: $form-input-fon;
+    color: $form-input-color;
     width: 100%;
 
     @include placeholder {
       @include type-setting(text);
       text-overflow: ellipsis;
+      color: $form-input-color;
     }
 
     @include placeholder-focus {
       color: transparent;
+    }
+
+    &:focus {
+      padding: $base-line-height - $form-input-border-width-focus;
+      border: $form-input-border-width-focus solid $form-input-border-color-focus;
+      background: $form-input-fon-focus;
+      color: $form-input-color-focus;
+    }
+  }
+
+  @include block(chosen-single) {
+    @include type-setting(text);
+    padding: $base-line-height - $form-input-border-width;
+    border: $form-input-border-width solid $form-input-border-color;
+    background: $form-input-fon;
+    color: $form-input-color;
+
+    span {
+      color: $form-input-color;
+    }
+
+    &:focus {
+      padding: $base-line-height - $form-input-border-width-focus;
+      border: $form-input-border-width-focus solid $form-input-border-color-focus;
+      background: $form-input-fon-focus;
+      color: $form-input-color-focus;
     }
   }
 
@@ -42,16 +80,25 @@ $form-input-fon: #fff;
     padding: $base-line-height - $form-input-border-width;
     border: $form-input-border-width solid $form-input-border-color;
     background: $form-input-fon;
+    color: $form-input-color;
     width: 100%;
     min-height: $base-line-height * 8;
 
     @include placeholder {
       @include type-setting(text);
       text-overflow: ellipsis;
+      color: $form-input-color;
     }
 
     @include placeholder-focus {
       color: transparent;
+    }
+
+    &:focus {
+      padding: $base-line-height - $form-input-border-width-focus;
+      border: $form-input-border-width-focus solid $form-input-border-color-focus;
+      background: $form-input-fon-focus;
+      color: $form-input-color-focus;
     }
   }
 
@@ -90,6 +137,7 @@ $form-input-fon: #fff;
 
       input {
         width: 100%;
+        margin: 0;
       }
 
       @include _(greater than mobile) {  
@@ -132,3 +180,33 @@ $form-input-fon: #fff;
     }
   }
 }
+
+.popup_wrapper .popup-scale {
+  transform: scale(0.8);
+}
+
+.popup_visible .popup-scale {
+  transform: scale(1);
+}
+
+.popup_wrapper .popup-slide {
+  transform: translateX(0) translateY(-40%);
+}
+
+.popup_visible .popup-slide {
+  transform: translateX(0) translateY(0);
+}
+
+.popup-alone-wrap{
+  background: $popup-alone-wrap-fon;
+  opacity: 1;
+}
+
+.popup_wrapper .popup-alone{
+  transform: scale(0.8);
+}
+
+.popup_visible .popup-alone {
+  transform: scale(1);
+}
+

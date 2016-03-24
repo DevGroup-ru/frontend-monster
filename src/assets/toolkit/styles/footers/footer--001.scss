@@ -4,15 +4,14 @@ $footer001-fon-bottom: #444d60;
 $footer001-height-bottom: $base-line-height * 5;
 $footer001-menu-item-column: 4; //write the number of menu column
 
-$footer001-facebook-icon: "\e812";
-$footer001-vk-icon: "\e811";
-$footer001-twitter-icon: "\e810";
+$footer001-facebook-icon: $icon-facebook;
+$footer001-vk-icon: $icon-vkontakte;
+$footer001-twitter-icon: $icon-twitter;
 
+.m-wrapper {
   // @desc Footer - simple footer without logo
   // @group footer
   // @bemJson footer--001.json
-
-.m-wrapper {
 
   @include block(footer001) {
     width: 100%; 

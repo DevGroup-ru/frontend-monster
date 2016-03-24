@@ -7,10 +7,32 @@
     ],
     "content": [
       {
-        "block": "form002",
+        "block": "form003",
+        "mods": ["in-modal"],
         "content": [
           {
+            "elem": "popup-button-wrap",
+            "content": [ 
+              {
+                "elem": "popup-button",
+                "cls": "form-popup-button button-simple", 
+                "content": "Отправить заявку",
+                "editable": true,
+                "attrs": 
+                  {
+                    "data-button": "form003-modal"
+                  },
+                "link": true
+              }
+            ]
+          },
+          {
             "elem": "form",
+            "cls": "popup-slide",
+            "attrs": 
+              {
+                "data-modal": "form003-modal"
+              },
             "content": [
               {
                 "elem": "title",
@@ -21,19 +43,30 @@
                 "editable": true
               },
               {
+                "elem": "close",
+                "cls": "close-modal",
+                "link": true
+              },
+              {
                 "elem": "line",
                 "editableGroup": "line-1",
                 "content": [
                   {
                     "elem": "col",
-                    "mods": ["half-left"],
+                    "mods": ["label-left"],
                     "editableGroup": "col-1",
                     "editable": true,
                     "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
-                  },
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-2",
+                "content": [
                   {
                     "elem": "col",
-                    "mods": ["half-right"],
+                    "mods": ["label-left"],
                     "editableGroup": "col-2",
                     "editable": true,
                     "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
@@ -46,17 +79,43 @@
                 "content": [
                   {
                     "elem": "col",
-                    "mods": ["half-left"],
+                    "mods": ["label-left"],
                     "editableGroup": "col-3",
                     "editable": true,
-                    "html": "<label class='form-label'>Ваш e-mail</label><input class='form-input' type='text' placeholder='Ваш e-mail'>"
-                  },
+                    "content": [
+                      {
+                        "html": "<label class='form-label'>Сумма</label>"
+                      },
+                      {
+                        "block": "quantity",
+                        "content": [
+                          {
+                            "elem": "minus",
+                            "content": "-"
+                          },
+                          {
+                            "elem": "amount",
+                            "html": "<input class='form-input' type='text' value='1'>"
+                          },
+                          {
+                            "elem": "plus",
+                            "content": "+"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "line",
+                "editableGroup": "line-4",
+                "content": [
                   {
                     "elem": "col",
-                    "mods": ["half-right"],
                     "editableGroup": "col-4",
                     "editable": true,
-                    "html": "<label class='form-label'>Время приема</label><select data-placeholder='...' class='chosen-select' tabindex='1' name='' id=''><option value='9:00'>9:00</option><option value='10:00'>10:00</option><option value='11:00'>11:00</option><option value='12:00'>12:00</option><option value='13:00'>13:00</option><option value='14:00'>14:00</option><option value='15:00'>15:00</option><option value='16:00'>16:00</option><option value='17:00'>17:00</option><option value='18:00'>18:00</option></select>"
+                    "html": "<label class='form-label'>Текст комментария</label><textarea class='form-textarea' type='text' placeholder='Текст комментария'></textarea>"
                   }
                 ]
               },
@@ -67,18 +126,6 @@
                   {
                     "elem": "col",
                     "editableGroup": "col-5",
-                    "editable": true,
-                    "html": "<label class='form-label'>Текст комментария</label><textarea class='form-textarea' type='text' placeholder='Текст комментария'></textarea>"
-                  }
-                ]
-              },
-              {
-                "elem": "line",
-                "editableGroup": "line-6",
-                "content": [
-                  {
-                    "elem": "col",
-                    "editableGroup": "col-6",
                     "content": [
                       {
                         "elem": "button",

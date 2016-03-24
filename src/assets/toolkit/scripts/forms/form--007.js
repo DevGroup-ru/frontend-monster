@@ -8,7 +8,7 @@ $(function() {
   });
 
   $('.form007__close').click(function(){
-    $(this).removeClass('form007__full-form-open--hide');
+    $(this).parents('.form007').find('.form007__full-form-open').removeClass('form007__full-form-open--hide');
     $(this).parents('.form007').removeClass('form007--show-full-form');
     return false;
   });

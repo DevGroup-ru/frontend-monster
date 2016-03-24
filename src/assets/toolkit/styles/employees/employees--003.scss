@@ -1,13 +1,13 @@
 $employees003-text-on-photo: #eee;
 
+$employees003-facebook-icon: $icon-facebook;
+$employees003-vk-icon: $icon-vkontakte;
+$employees003-twitter-icon: $icon-twitter;
+
 .m-wrapper {
   // @desc Employees - blocks with info on photo
   // @group employees
   // @bemJson employees--003.json
-
-  $employees003-facebook-icon: "\e812";
-  $employees003-vk-icon: "\e811";
-  $employees003-twitter-icon: "\e810";
 
   @include block(employees003) {
     text-align: center;

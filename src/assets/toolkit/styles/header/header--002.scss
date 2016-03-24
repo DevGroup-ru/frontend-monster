@@ -4,12 +4,11 @@ $logo: 'logo.jpg';
 
 $header002-height: $base-line-height * 8;
 
+.m-wrapper {
   // @desc Header - header with simple menu (4-lvl)
   // @group header
   // @bemJson header--002.json
-
-.m-wrapper {
-
+  
   @include block(header002) {
     text-align: center;
     position: fixed;

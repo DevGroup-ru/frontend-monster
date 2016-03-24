@@ -1,15 +1,28 @@
+$form006-fon: #fff;
 $form006-input-border-width: $base-line-height / 10;
 $form006-input-border-color: #aaa;
-$form006-nav-color: #fff;
+$form006-nav-color: #eee;
 $form006-nav-color-hover: #aaa;
 $form006-nav-color-active: #000;
 
 .m-wrapper {
+  // @desc Form - simple form (modal or static)
+  // @group forms
+  // @bemJson form--006.json
 
   @include block(form006) {
-    text-align: center;
     position: relative;  
     @include _(4 4 4 4 4, $gutter: center);
+
+    @include element(wrap) { 
+      text-align: center;
+    }
+
+    @include modifier(modal) {
+      display: none;
+      padding: $base-line-height * 3;
+      background: $form006-fon;
+    }
 
     @include element(title) {
       @include type-setting(sub-heading);
@@ -33,7 +46,6 @@ $form006-nav-color-active: #000;
     }
 
     @include element(col) {
-      overflow: hidden;
       margin-top: $base-line-height;
 
       @include modifier(label-left) {

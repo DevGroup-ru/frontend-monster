@@ -6,18 +6,17 @@ $footer006-menu-item-column: 4; //write the number of menu column
 $footer006-logo: 'logo.jpg';
 $footer006-logo-height: $base-line-height * 7;
 
-$footer006-facebook-icon: "\e812";
-$footer006-vk-icon: "\e811";
-$footer006-twitter-icon: "\e810";
+$footer006-facebook-icon: $icon-facebook;
+$footer006-vk-icon: $icon-vkontakte;
+$footer006-twitter-icon: $icon-twitter;
 
-$footer006-arrow-left: "\e801";
-$footer006-arrow-down: "\e816";
+$footer006-arrow-left: $icon-arr-right;
+$footer006-arrow-down: $icon-arr-down;
 
+.m-wrapper {
   // @desc Footer - footer with map
   // @group footer
   // @bemJson footer--006.json
-
-.m-wrapper {
 
   @include block(footer006) {
     width: 100%; 
@@ -137,6 +136,18 @@ $footer006-arrow-down: "\e816";
             content: $footer006-arrow-down;
             text-decoration: none;
           }
+        }
+
+        @include _(greater than tablet) {  
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      @include modifier(active) {
+        &:after {
+          content: $footer006-arrow-down;
         }
 
         @include _(greater than tablet) {  

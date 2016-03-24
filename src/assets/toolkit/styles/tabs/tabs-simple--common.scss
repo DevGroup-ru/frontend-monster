@@ -16,38 +16,33 @@ $tabs001-header-border-color-hover: transparent;
 $tabs001-header-fon-active: #aaa;
 $tabs001-header-border-color-active: #000;
 
-$tab-arrow: "\e801";
-$tab-arrow-hover: "\e816";
+$tabs001-arrow: $icon-arr-right;
+$tabs001-arrow-hover: $icon-arr-down;
 
-$tabs001-header-item: 4;  //write the number of tabs items
+$tabs001-header-item: 3;  //write the number of tabs items
 
 .m-wrapper {
 
-  // @desc Tabs - other simple tabs
+  // @desc Tabs - simple tabs
   // @group tabs
-  // @bemJson tabs--001.json, tabs--002.json, tabs--003.json, tabs--004.json, tabs--005.json, tabs--006.json
+  // @bemJson tabs--001.json
 
   @include block(tabs001) {
     text-align: left;
     position: relative;
     @include _(clear);
 
-    @include element(tab-wrap) {
-      display: block;
-      vertical-align: middle;
+    @include element(header-wrap) {
       font-size: 0px;
-
-      @include _(greater than tablet) {  
-        display: inline;
-        width: 100%;
-      }
     }
 
     @include element(header) {
-      width: 100%;
       cursor: pointer;
       overflow: hidden;
-      display: block;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: $base-line-height;
+      margin-top: $base-line-height; 
       padding: $base-line-height - $tabs001-header-border-width;
       @include type-setting(text);
       background: $tabs001-header-fon;
@@ -63,17 +58,10 @@ $tabs001-header-item: 4;  //write the number of tabs items
         border: $tabs001-header-border-width solid $tabs001-header-border-color-active;
       }
 
-      @include _(greater than tablet) {  
-        display: inline-block;
-        vertical-align: top;
-        width: auto;
-        margin-right: $base-line-height * 2;
-      }
-
       @include modifier(fix-width) {
         max-width: 100%;
 
-        @include _(greater than tablet) {  
+        @include _(greater than mobile) {  
           width: calculate-width($tabs001-header-item);
           max-width: calculate-width($tabs001-header-item);
           margin-right: 0;
@@ -83,7 +71,7 @@ $tabs001-header-item: 4;  //write the number of tabs items
       @include modifier(full-width) {
         max-width: 100%;
 
-        @include _(greater than tablet) {  
+        @include _(greater than mobile) {  
           width: 100%;
           max-width: 100%;
           margin-right: 0;
@@ -117,7 +105,7 @@ $tabs001-header-item: 4;  //write the number of tabs items
           &:after {
             display: inline-block;
             @extend %basic-icon;
-            content: $tab-arrow;
+            content: $tabs001-arrow;
             width: $base-line-height * 2;
             padding: 0 $base-line-height * 2;
           }
@@ -130,7 +118,7 @@ $tabs001-header-item: 4;  //write the number of tabs items
         &:hover, &.active {
           .tabs001__header-text {
             &:after {
-              content: $tab-arrow-hover;
+              content: $tabs001-arrow-hover;
               text-decoration: none;
             }
           }
@@ -154,44 +142,15 @@ $tabs001-header-item: 4;  //write the number of tabs items
     }
 
     @include element(content) {
-      left: 0;
       float: left;
       width: 100%;
       padding: $base-line-height * 2 0;
       @include type-setting(text);
 
-      @include _(greater than tablet) {  
-        top: 100%;
-      }
-
       @include modifier(fon) {
         background: $tabs001-content-fon;
         border: $tabs001-content-border-width solid $tabs001-content-border-color;
         padding: $base-line-height * 2 - $tabs001-content-border-width;
-      }
-    }
-
-    @include modifier(header-left) {
-      .tabs001__header {
-        @include _(4 4 8 4 4);
-        float: none;
-
-        @include _(greater than tablet) {  
-          display: block;
-          max-width: 100%;
-          @include _(4 4 8 4 4);
-          float: none;
-        }
-      }
-
-      .tabs001__content {
-        @include _(8 8 8 4 4);
-
-        @include _(greater than tablet) { 
-          position: absolute; 
-          top: 0;
-          left: 33.3%;
-        }
       }
     }
   }

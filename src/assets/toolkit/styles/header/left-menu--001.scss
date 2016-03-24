@@ -8,17 +8,16 @@ $left-menu001-height-item: $base-line-height * 6; //menu-item's height
 $left-menu001-height-item-num: 5; //number of menu items
 $left-menu001-height: $base-line-height * 7 + $left-menu001-height-item * $left-menu001-height-item-num;
 
-$left-menu001-arrow-left: "\e801";
-$left-menu001-arrow-down: "\e816";
-$left-menu001-arrow-up: "\e815";
+$left-menu001-arrow-left: $icon-arr-right;
+$left-menu001-arrow-down: $icon-arr-down;
+$left-menu001-arrow-up: $icon-arr-up;
 
 $left-menu001-mobile-breakpoint: desktop; 
 
-// @desc Left-menu 
-// @group left-menu
-// @bemJson left-menu--001.json
-
 .m-wrapper {
+  // @desc Left-menu 
+  // @group left-menu
+  // @bemJson left-menu--001.json
 
   @include block(left-menu-mobile) {
     display: none;

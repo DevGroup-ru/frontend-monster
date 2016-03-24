@@ -1,7 +1,7 @@
 $stepbar001-line-width: $base-line-height / 10;
 $stepbar001-line-color: #000;
 
-$stepbar001-arrow: "\e816";
+$stepbar001-arrow: $icon-arr-down;
 $stepbar001-arrow-size: $base-line-height * 3;
 $stepbar001-arrow-top: -$stepbar001-arrow-size / 2 - $base-line-height / 2;
 

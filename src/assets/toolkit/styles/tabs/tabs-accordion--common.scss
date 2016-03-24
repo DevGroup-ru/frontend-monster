@@ -1,0 +1,199 @@
+$tabs-accordion001-content-fon: #fff;
+$tabs-accordion001-content-border-width: 0;
+$tabs-accordion001-content-border-color: #aaa;
+
+$tabs-accordion001-header-height: $base-line-height * 8;
+
+$tabs-accordion001-header-icon-size: $base-line-height * 4;
+
+$tabs-accordion001-header-fon: #eee;
+$tabs-accordion001-header-border-width: $base-line-height / 5;
+$tabs-accordion001-header-border-color: transparent;
+
+$tabs-accordion001-header-fon-hover: #aaa;
+$tabs-accordion001-header-border-color-hover: transparent;
+
+$tabs-accordion001-header-fon-active: #aaa;
+$tabs-accordion001-header-border-color-active: #000;
+
+$tabs-accordion001-arrow: $icon-arr-right;
+$tabs-accordion001-arrow-hover: $icon-arr-down;
+
+$tabs-accordion001-header-item: 4;  //write the number of tabs items
+
+.m-wrapper {
+
+  // @desc Tabs - tabs transfrom in accordion
+  // @group tabs
+  // @bemJson tabs-accordion--001.json
+
+  @include block(tabs-accordion001) {
+    text-align: left;
+    position: relative;
+    @include _(clear);
+
+    @include element(tab-wrap) {
+      display: block;
+      vertical-align: middle;
+      font-size: 0px;
+
+      @include _(greater than tablet) {  
+        display: inline;
+        width: 100%;
+      }
+    }
+
+    @include element(header) {
+      width: 100%;
+      cursor: pointer;
+      overflow: hidden;
+      display: block;
+      padding: $base-line-height - $tabs-accordion001-header-border-width;
+      @include type-setting(text);
+      background: $tabs-accordion001-header-fon;
+      border: $tabs-accordion001-header-border-width solid $tabs-accordion001-header-border-color;
+
+      &:hover {
+        background: $tabs-accordion001-header-fon-hover;
+        border: $tabs-accordion001-header-border-width solid $tabs-accordion001-header-border-color-hover;
+      }
+
+      &.active {
+        background: $tabs-accordion001-header-fon-active;
+        border: $tabs-accordion001-header-border-width solid $tabs-accordion001-header-border-color-active;
+      }
+
+      @include _(greater than tablet) {  
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        margin-right: $base-line-height * 2;
+      }
+
+      @include modifier(fix-width) {
+        max-width: 100%;
+
+        @include _(greater than tablet) {  
+          width: calculate-width($tabs-accordion001-header-item);
+          max-width: calculate-width($tabs-accordion001-header-item);
+          margin-right: 0;
+        }
+      }
+
+      @include modifier(full-width) {
+        max-width: 100%;
+
+        @include _(greater than tablet) {  
+          width: 100%;
+          max-width: 100%;
+          margin-right: 0;
+        }
+      }
+
+      @include modifier(line-bottom) {
+        border: none;
+        border-bottom: $tabs-accordion001-header-border-width solid $tabs-accordion001-header-border-color;
+        padding: $base-line-height * 2 - $tabs-accordion001-header-border-width / 2;
+
+        &:hover {
+          border: none;
+          border-bottom: $tabs-accordion001-header-border-width solid $tabs-accordion001-header-border-color-hover;
+        }
+
+        &.active {
+          border: none;
+          border-bottom: $tabs-accordion001-header-border-width solid $tabs-accordion001-header-border-color-active;
+        }
+      }
+
+      @include modifier(fix-height) {
+        padding: 0 $base-line-height * 2 - $tabs-accordion001-header-border-width;
+        height: $tabs-accordion001-header-height;
+      }
+
+      @include modifier(is-arrow) {
+
+        .tabs-accordion001__header-text {
+          &:after {
+            display: inline-block;
+            @extend %basic-icon;
+            content: $tabs-accordion001-arrow;
+            width: $base-line-height * 2;
+            padding: 0 $base-line-height * 2;
+          }
+        }
+
+        .tabs001__header-span {
+          width: calc(100% -  #{$base-line-height * 8});
+        }
+
+        &:hover, &.active {
+          .tabs-accordion001__header-text {
+            &:after {
+              content: $tabs-accordion001-arrow-hover;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    @include element(header-text) {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    @include element(header-icon) {
+      display: block;
+      float: left;
+      padding-right: $base-line-height;
+      font-size: $tabs-accordion001-header-icon-size;
+      width: $base-line-height * 7;
+      text-align: center;
+    }
+
+    @include element(content) {
+      left: 0;
+      float: left;
+      width: 100%;
+      padding: $base-line-height * 2 0;
+      @include type-setting(text);
+
+      @include _(greater than tablet) {  
+        top: 100%;
+      }
+
+      @include modifier(fon) {
+        background: $tabs-accordion001-content-fon;
+        border: $tabs-accordion001-content-border-width solid $tabs-accordion001-content-border-color;
+        padding: $base-line-height * 2 - $tabs-accordion001-content-border-width;
+      }
+    }
+
+    @include modifier(header-left) {
+      .tabs-accordion001__header {
+        @include _(4 4 8 4 4);
+        float: none;
+
+        @include _(greater than tablet) {  
+          display: block;
+          max-width: 100%;
+          @include _(4 4 8 4 4);
+          float: none;
+        }
+      }
+
+      .tabs-accordion001__content {
+        @include _(8 8 8 4 4);
+
+        @include _(greater than tablet) { 
+          position: absolute; 
+          top: 0;
+          left: 33.3%;
+        }
+      }
+    }
+  }
+}
+
