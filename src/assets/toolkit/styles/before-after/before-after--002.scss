@@ -1,0 +1,156 @@
+$before-after002-img-height: $base-line-height * 50;
+$before-after002-arrow-line-height: $base-line-height / 5; //thickness line of the arrow
+$before-after002-arrow-width: $base-line-height * 2; //width line
+$before-after002-arrow-fon: #000;
+$before-after002-arrow-title-fon: #eee;
+
+.m-wrapper {
+
+  // @desc Before-after - simple blocks with several arrows
+  // @group before-after
+  // @bemJson before-after--002.json
+
+  @include block(before-after002) {
+
+    @include element(nested) {
+      position: relative;
+    	margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      width: 100%;
+      float: left;
+      @include _(clear);
+    }
+
+    @include element(nested-left) {
+      @include _(4 4 4 4 4);
+      position: relative;
+      z-index: 1;
+    }
+
+    @include element(nested-center) {
+      @include _(4 4 4 4 4);
+
+      @include _(greater than tablet) {  
+        height: $before-after002-img-height;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    @include element(nested-right) {
+      @include _(4 4 4 4 4);
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include _(greater than tablet) {  
+        position: static;
+      }
+
+      @include modifier(show) {
+        z-index: 2;
+      }
+    }
+
+    @include element(arrow-wrap) {
+      margin-top: $base-line-height * 3;
+
+      @include _(greater than mobile) {  
+        margin-top: 0;
+        margin-bottom: $base-line-height * 2;
+      }
+
+      @include _(greater than tablet) {  
+        margin-top: $base-line-height * 2;
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(arrow) {
+      display: none;
+      height: $before-after002-arrow-line-height;
+      background: $before-after002-arrow-fon;
+      margin-bottom: -$base-line-height * 2 - $before-after002-arrow-line-height / 2;
+      position: relative;
+
+      @if $before-after002-arrow-line-height < $base-line-height {
+        width: 100%;
+      } @else {
+        width: calc(100% - #{$before-after002-arrow-line-height});
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: $before-after002-arrow-line-height / 2;
+        width: $before-after002-arrow-width;
+        height: $before-after002-arrow-width;
+        border-top: $before-after002-arrow-line-height solid $before-after002-arrow-fon;
+        border-right: $before-after002-arrow-line-height solid $before-after002-arrow-fon;
+        transform: rotate(45deg);
+        transform-origin: 100% 0;
+
+        @if $before-after002-arrow-line-height < $base-line-height {
+          right: 0;
+        } @else {
+          right: - $before-after002-arrow-line-height;
+        }
+      }
+
+      @include _(greater than tablet) {  
+        display: block;
+      }
+    }
+
+    @include element(arrow-title) {
+      position: relative;
+      display: block;
+      @include type-setting(accent-text);
+
+      @include _(greater than tablet) {
+        display: inline-block;  
+        background: $before-after002-arrow-title-fon;
+        padding: $base-line-height $base-line-height * 2;
+        margin: 0 $before-after002-arrow-width * 2;
+      }
+    }
+
+    @include element(arrow-text) {
+      @include type-setting(text);
+      margin-top: $base-line-height;
+    }
+
+    @include element(img) {
+	    display: block;
+	    height: $before-after002-img-height;
+	    overflow: hidden;
+	    position: relative;
+
+	    img {
+	    	position: absolute;
+	    	margin: auto;
+	    	top: 0;
+	    	bottom: 0;
+	    	left: 50%;
+	    	right: 0;
+	    	height: auto;
+	    	min-height: 100%;
+	    	min-width: 100%;
+	    	transform: translateX(-50%);
+	    }
+    }
+
+    @include element(button-wrap) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than tablet) {
+        display: none;  
+      }
+    }
+  }
+}
+

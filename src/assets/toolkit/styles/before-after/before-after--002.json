@@ -1,0 +1,128 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "before-after002",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "nested-left",
+            "editableGroup": "nested-left-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/250/300"
+                  }
+                ]
+              },
+              {
+                "elem": "button-wrap",
+                "content": [
+                  {
+                    "elem": "button-show-before",
+                    "cls": "button-simple",
+                    "link": true,
+                    "content": "До",
+                    "editable": true
+                  },
+                  {
+                    "elem": "button-show-after",
+                    "cls": "button-simple",
+                    "link": true,
+                    "content": "После",
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested-center",
+            "editableGroup": "nested-center-1",
+            "content": [
+              {
+                "elem": "arrow-wrap",
+                "editableGroup": "arrow-wrap-1",
+                "content": [
+                  {
+                    "elem": "arrow"
+                  },
+                  {
+                    "elem": "arrow-title",
+                    "content": "Фон",
+                    "editable": true
+                  },
+                  {
+                    "elem": "arrow-text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "arrow-wrap",
+                "editableGroup": "arrow-wrap-2",
+                "content": [
+                  {
+                    "elem": "arrow"
+                  },
+                  {
+                    "elem": "arrow-title",
+                    "content": "Фон",
+                    "editable": true
+                  },
+                  {
+                    "elem": "arrow-text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "arrow-wrap",
+                "editableGroup": "arrow-wrap-3",
+                "content": [
+                  {
+                    "elem": "arrow"
+                  },
+                  {
+                    "elem": "arrow-title",
+                    "content": "Общая картинка",
+                    "editable": true
+                  },
+                  {
+                    "elem": "arrow-text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested-right",
+            "editableGroup": "nested-right-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

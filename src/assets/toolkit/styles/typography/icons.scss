@@ -7,30 +7,31 @@ $font-color-path-5: rgb(156, 156, 157);
 $font-color-path-6: rgb(156, 156, 157);
 $font-color-path-7: rgb(156, 156, 157);
 
-$icon-star: "\e800";
-$icon-arr-right: "\e801";
-$icon-arr-left: "\e802";
-$icon-arr-right-end: "\e804";
-$icon-arr-left-end: "\e803";
-$icon-arr-up: "\e815";
-$icon-arr-down: "\e816";
-$icon-basket: "\e805";
-$icon-right: "\e806";
-$icon-left: "\e807";
-$icon-cancel: "\e808";
-$icon-help-circled: "\e809";
-$icon-info-circled: "\e80d";
-$icon-twitter: "\e810";
-$icon-vkontakte: "\e811";
+$icon-star: "\e801";
+$icon-arr-right: "\e809";
+$icon-arr-left: "\e808";
+$icon-arr-right-end: "\e80d";
+$icon-arr-left-end: "\e80c";
+$icon-arr-up: "\e80a";
+$icon-arr-down: "\e80b";
+$icon-arr-long-right: "\e80f";
+$icon-arr-long-left: "\e80e";
+$icon-basket: "\e807";
+$icon-cancel: "\e819";
+$icon-help-circled: "\e802";
+$icon-info-circled: "\e803";
+$icon-twitter: "\e815";
+$icon-vkontakte: "\e816";
 $icon-facebook: "\e812";
 $icon-gplus: "\e813";
-$icon-mail-alt: "\e814";
-$icon-download: "\e817";
-$icon-menu: "\e818";
-$icon-phone: "\e819";
-$icon-search: "\e81a";
-$icon-lock: "\e81b";
+$icon-mail-alt: "\e800";
+$icon-download: "\e81b";
+$icon-menu: "\e817";
+$icon-phone: "\e806";
+$icon-search: "\e818";
+$icon-lock: "\e81a";
 $icon-zoom: "\e81c";
+$icon-braille: "\e81d";
 
 @font-face {
   font-family: "basic";
@@ -151,11 +152,11 @@ $icon-zoom: "\e81c";
 }
 
 .icon-basic-right:before {
-  content: $icon-right;
+  content: $icon-arr-long-right;
 }
 
 .icon-basic-left:before {
-  content: $icon-left;
+  content: $icon-arr-long-left;
 }
 
 .icon-basic-cancel:before {

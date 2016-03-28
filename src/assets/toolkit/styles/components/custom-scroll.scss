@@ -1,6 +1,9 @@
 $scroll-width: $base-line-height; //vertical
+$scroll-border-radius: 0;
+$scroll-width-rail: $base-line-height; //vertical
+$scroll-rail-border-radius: 0;
 $scroll-fon: #000;
-$scroll-drag-fon: #eee;
+$scroll-rail-fon: #eee;
 $scroll-height: $base-line-height; //horizontal
 
 .mCSB_scrollTools {
@@ -12,10 +15,11 @@ $scroll-height: $base-line-height; //horizontal
   top: 0;
   right: 0;
   bottom: 0;
-  background: $scroll-drag-fon;
 
   .mCSB_draggerRail {
-    width: $scroll-width;
+    width: $scroll-width-rail;
+    background: $scroll-rail-fon;
+    border-radius: $scroll-rail-border-radius;
     height: 100%;
     margin: 0 auto;
   }
@@ -33,6 +37,7 @@ $scroll-height: $base-line-height; //horizontal
     margin: 0 auto;
     text-align: center;
     background: $scroll-fon;
+    border-radius: $scroll-border-radius;
   }
 
   .mCSB_draggerContainer {
@@ -108,7 +113,7 @@ $scroll-height: $base-line-height; //horizontal
 }
 
 .mCSB_inside > .mCSB_container {
-  margin-right: $base-line-height;
+  margin-right: $scroll-width + $base-line-height;
 }
 
 .mCS-dir-rtl > .mCSB_inside > .mCSB_container {
