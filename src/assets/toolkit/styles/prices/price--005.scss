@@ -1,0 +1,109 @@
+$price005-head-fon: #626dca;
+$price005-head-border-width: $base-line-height / 10;
+$price005-head-border-color: #fff;
+$price005-content-fon: #fff;
+$price005-border-width: $base-line-height / 10;
+$price005-border-color: #aaa;
+$price005-btn-fon: #aaa;
+$price005-btn-fon-hover: #83818f;
+
+.m-wrapper {
+  // @desc Prices- simple price
+  // @group prices
+  // @bemJson price--005.json
+
+  @include block(price005) {
+
+    @include element(nested) {
+      @include _(4 6 4 4 4);
+      margin-top: $base-line-height * 2 - $price005-border-width;
+      margin-bottom: $base-line-height * 2 - $price005-border-width;
+      border: $price005-border-width solid $price005-border-color;
+      background: $price005-content-fon;
+      overflow: hidden;    
+    }
+
+    @include element(content) {
+      display: table;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    @include element(content-line) {   
+      display: table-row;
+    }
+
+    @include element(content-line-option-wrap) {
+      display: table-cell;
+      border-right: $price005-border-width solid $price005-border-color;
+      background: $price005-content-fon;
+    }
+
+    @include element(content-line-option) {
+      @include type-setting(text);
+      padding: $base-line-height - $price005-border-width / 2 $base-line-height * 2;
+      border-top: $price005-border-width solid $price005-border-color;
+    }
+
+    @include element(content-line-value-wrap) {
+      display: table-cell;
+      background: $price005-content-fon;
+    }
+
+    @include element(content-line-value) {
+      @include type-setting(text);
+      padding: $base-line-height - $price005-border-width / 2 $base-line-height * 2;
+      border-top: $price005-border-width solid $price005-border-color;
+    }
+
+    @include element(content-line-head) {   
+      display: table-caption;
+
+      @include _(greater than mobile) {
+        display: table-row;
+      }
+    }
+
+    @include element(content-line-name) {
+      @include type-setting(accent-text);
+      padding: $base-line-height $base-line-height * 2;
+      padding-bottom: 0;
+      background: $price005-head-fon;
+
+      @include _(greater than mobile) { 
+        display: table-cell;
+        padding-bottom: $base-line-height $base-line-height * 2;
+        border-right: $price005-head-border-width solid $price005-head-border-color;
+      }
+    }
+
+    @include element(content-line-price) {
+      padding: $base-line-height $base-line-height * 2;
+      background: $price005-head-fon;
+
+      @include _(greater than mobile) { 
+        display: table-cell;
+      }
+    }
+
+    @include element(content-line-num) {
+      @include type-setting(sub-heading);
+      white-space: nowrap;
+    }
+
+    @include element(content-line-nominal) {
+      @include type-setting(small-text);
+    }
+
+    @include element(btn) {
+      display: block;
+      @include type-setting(text);
+      background: $price005-btn-fon;
+      padding: $base-line-height * 2;
+
+      &:hover {
+        background: $price005-btn-fon-hover;
+      }
+    }
+  }
+}

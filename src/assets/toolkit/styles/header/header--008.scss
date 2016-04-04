@@ -217,14 +217,14 @@ $header008-top-height: $base-line-height * 9;
       position: absolute;
       left: 0;
       top: $header008-height-mobile;
-      @include _(4 4 1 1 1);
+      @include _(4 4 4 4 4);
       justify-content: flex-start;
       align-items: center;
       padding: $base-line-height * 2;
       background: $header008-phone-button-fon;
 
       @include _(greater than $header-mobile-breakpoint) {  
-        @include _(4 4 1 1 1);
+        @include _(4 4 4 4 4);
         display: flex;
         top: -$header008-top-height;
         height: $header008-top-height;

@@ -274,7 +274,7 @@ $header006-top-height: $base-line-height * 9;
 
       @include _(greater than $header-mobile-breakpoint) {
         position: absolute;  
-        @include _(3 3 1 1 1);
+        @include _(3 4 8 4 4);
         left: 25%;
         top: -$header006-top-height;
         display: flex;

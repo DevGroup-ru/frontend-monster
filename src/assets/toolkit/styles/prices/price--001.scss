@@ -1,0 +1,150 @@
+$price001-options-fon: #fff;
+$price001-options-border-width: $base-line-height / 5;
+$price001-options-border-color: #000;
+
+$price001-values-head-fon: #fff;
+$price001-values-border-width: $base-line-height / 5;
+$price001-values-border-color: #aaa;
+$price001-values-content-fon: #fff;
+$price001-values-bottom-fon: #fff;
+
+.m-wrapper {
+  // @desc Prices- price with options and horizontal scroll
+  // @group prices
+  // @bemJson price--001.json
+
+  @include block(price001) {
+    @include _(12 12 8 4 4);
+    position: relative;
+
+    @include element(options) {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include _(greater than desktop) {  
+        position: static;
+        @include _(3 12 8 4 4, $gutter: row);
+      }
+    }
+
+    @include element(options-nested) {
+      text-align: center;
+      @include type-setting(text);
+      background: $price001-options-fon;
+      border: $price001-options-border-width solid $price001-options-border-color;
+      padding: $base-line-height * 2 - $price001-options-border-width;
+
+      @include _(greater than desktop) {  
+        border-right: none;
+        text-align: left;
+
+        & + .price001__options-nested {
+          border-top: none;
+          padding: $base-line-height * 2 - $price001-options-border-width / 2;
+        }
+      }
+    }
+
+    @include element(values-wrap) {
+      @include _(9 12 8 4 4, $gutter: row);
+      border-left: $price001-values-border-width solid $price001-values-border-color;
+      border-right: $price001-values-border-width solid $price001-values-border-color;
+    }
+
+    @include element(values) {
+      width: 100%;
+    }
+
+    @include element(values-nested) {
+      float: left;
+      max-width: 298px;
+      text-align: center;
+
+      @include _(greater than mobile) {  
+        width: 204px;
+        min-width: auto;
+        max-width: none;
+      }
+
+      @include _(greater than tablet) {  
+        width: 299px;
+      }
+
+      @include _(greater than desktop) {  
+        width: 283px;
+      }
+
+      @include _(greater than desktop-wide) {  
+        width: 318px;
+      }
+    }
+
+    @include element(values-head) {
+      background: $price001-values-head-fon;
+      border: $price001-values-border-width solid $price001-values-border-color;
+      padding: $base-line-height * 2 - $price001-values-border-width / 2;
+      border-bottom: none;
+      border-left: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include element(values-head-title) {
+      @include type-setting(accent-text);
+    }
+
+    @include element(values-head-price) {
+      @include type-setting(sub-heading);
+      margin-top: $base-line-height * 2;
+    }
+
+    @include element(values-content-line) {
+      background: $price001-values-content-fon;
+      border: $price001-values-border-width solid $price001-values-border-color;
+      padding: $base-line-height * 2 - $price001-values-border-width;
+      border-left: none;
+      border-top: none;
+      border-bottom: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include _(greater than desktop) { 
+        padding: $base-line-height * 2 - $price001-values-border-width; 
+        border-top: $price001-values-border-width solid $price001-values-border-color;
+        border-bottom: $price001-values-border-width solid $price001-values-border-color;
+
+        & + .price001__values-content-line {
+          border-top: none;
+          padding: $base-line-height * 2 - $price001-values-border-width / 2;
+        }
+      }
+    }
+
+    @include element(values-bottom) {
+      background: $price001-values-bottom-fon;
+      border: $price001-values-border-width solid $price001-values-border-color;
+      padding: $base-line-height * 2 - $price001-values-border-width / 2;
+      border-left: none;
+      border-top: none;
+    }
+
+    @include element(values-bottom-price) {
+      @include type-setting(accent-text);
+    }
+
+    @include element(values-bottom-btn) {
+      margin-top: $base-line-height * 2;
+    }
+
+    .price001__values-nested:last-child .price001__values-head,
+    .price001__values-nested:last-child .price001__values-content-line,
+    .price001__values-nested:last-child .price001__values-bottom {
+      border-right: none;
+    } 
+  }
+}

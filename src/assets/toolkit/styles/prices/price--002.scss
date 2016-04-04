@@ -1,0 +1,151 @@
+$price002-head-fon: #626dca;
+$price002-border-width: $base-line-height / 5;
+$price002-border-color: #aaa;
+$price002-content-fon: #fff;
+$price002-bottom-fon: #f4f5fb;
+$price002-hover-shadow-size: $base-line-height * 2;
+$price002-hover-shadow-color: rgba(0,0,0,1);
+$price002-head-border-width: $base-line-height / 5;
+$price002-head-border-color: #aaa;
+$price002-bottom-border-width: $base-line-height / 5;
+$price002-bottom-border-color: #aaa;
+
+.m-wrapper {
+  // @desc Prices- simple price
+  // @group prices
+  // @bemJson price--002.json
+
+  @include block(price002) {
+    @include _(12 12 8 4 4);
+
+    @include element(nested) {
+      @include _(3 3 4 4 4, $gutter: row);
+      border: $price002-border-width solid $price002-border-color;
+      margin-top: -$price002-border-width;
+      margin-bottom: -$price002-border-width;
+
+      &:before {
+        display: none;
+      } 
+
+      @include _(greater than mobile) {  
+        border-right: none;
+
+        &:before {
+          display: block;
+        } 
+
+        &:nth-child(even) {
+          border-right: $price002-border-width solid $price002-border-color;
+
+          &:before {
+            display: none;
+          } 
+        }
+      }
+
+      @include _(greater than tablet) {  
+        border-right: none;
+
+        &:nth-child(even) {
+          border-right: none;      
+
+          &:before {
+            display: block;
+          }        
+        }
+
+        &:last-child { 
+          border-right: $price002-border-width solid $price002-border-color;
+
+          &:before {
+            display: none;
+          } 
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 0 $price002-hover-shadow-size $price002-hover-shadow-color;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          position: absolute;
+          border-right: $price002-border-width solid $price002-border-color;
+          height: 100%;
+          top: 0;
+          right: 0;
+          width: $price002-border-width;
+        }        
+      } 
+    }
+
+    @include element(head) {
+      background: $price002-head-fon;
+      border-bottom: $price002-head-border-width solid $price002-head-border-color;
+      padding: $base-line-height * 2 - $price002-head-border-width / 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include element(head-title) {
+      @include type-setting(accent-text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+    }
+
+    @include element(content) {
+      background: $price002-content-fon;
+      padding: $base-line-height * 2;
+      padding-top: $base-line-height;
+      text-align: center;
+    }
+
+    @include element(content-line) {
+      @include type-setting(text);
+      margin-top: $base-line-height;
+      display: block;
+    }
+
+    @include element(bottom) {
+      text-align: center;
+      background: $price002-bottom-fon;
+      border-top: $price002-bottom-border-width solid $price002-bottom-border-color;
+      padding: $base-line-height * 2 - $price002-bottom-border-width / 2;
+      padding-bottom: $base-line-height * 3 - $price002-bottom-border-width / 2;
+    }
+
+    @include element(bottom-price) {
+      @include type-setting(accent-text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+    }
+
+    @include element(bottom-btn) {
+      margin-top: $base-line-height * 2;
+    }
+
+    @include block(owl-controls) {
+      margin-top: $base-line-height * 2;
+    }   
+
+    a,
+    a:link,
+    a:hover,
+    a:visited,
+    a:active,
+    a:focus,
+    button {
+      &.price002__content-line {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    } 
+  }
+}

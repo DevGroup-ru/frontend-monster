@@ -37,7 +37,6 @@ $footer001-twitter-icon: $icon-twitter;
         align-items: center;
         height: 100%;
         margin-bottom: 0;
-        @include _(7.5 6 8 4 4);
       }
     }
 
@@ -55,7 +54,6 @@ $footer001-twitter-icon: $icon-twitter;
       }
 
       @include _(greater than desktop) {  
-        @include _(4.5 6 8 4 4, $gutter: row);
         float: right;
         margin-top: 0;
         margin-bottom: 0;    
@@ -116,10 +114,6 @@ $footer001-twitter-icon: $icon-twitter;
     @include element(phone) {
       @include type-setting(accent-text);
       @include _(2.5 3 4 4 4, 4.5 12 8 4 4);
-
-      @include _(greater than desktop) {  
-        @include _(2.5 3 4 4 4, 4.5 6 8 4 4);
-      }
     }
 
     @include element(button) {
@@ -128,10 +122,6 @@ $footer001-twitter-icon: $icon-twitter;
 
       @include _(greater than mobile) {  
         margin-top: 0;
-      }
-
-      @include _(greater than desktop) {  
-        @include _(2 3 4 4 4, 4.5 6 8 4 4);
       }
     }
 

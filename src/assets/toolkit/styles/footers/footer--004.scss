@@ -54,7 +54,6 @@ $footer004-logo-height: $base-line-height * 7;
       }
 
       @include _(greater than desktop) {  
-        @include _(2 4 8 4 4);
         float: right;
         min-height: auto; 
         margin-bottom: $base-line-height * 2;
@@ -106,7 +105,7 @@ $footer004-logo-height: $base-line-height * 7;
       margin-top: $base-line-height * 3;
       margin-bottom: $base-line-height * 3;
       @include _(4 3 2 4 4, 6 6 8 4 4); 
-      min-height: $footer004-logo-height;
+      height: $footer004-logo-height;
       align-items: center; 
       
       @include _(greater than desktop) {  
@@ -139,7 +138,7 @@ $footer004-logo-height: $base-line-height * 7;
       margin-bottom: $base-line-height * 3;
 
       @include _(greater than desktop) {  
-        min-height: $base-line-height * 7; 
+        height: $base-line-height * 7; 
         display: flex;
         align-items: center;
         text-align: right;
@@ -292,11 +291,11 @@ $footer004-logo-height: $base-line-height * 7;
     }
 
     @include element(bottom-left) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 3 4 4);
     }
 
     @include element(bottom-right) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 5 4 4);
     }
 
     @include element(copyright) {

@@ -24,3 +24,5 @@ require('./header/header--000');
 require('./footers/footer--006');
 require('./before-after/before-after--002');
 require('./before-after/before-after--003');
+require('./prices/price--common');
+require('./prices/price--001');
