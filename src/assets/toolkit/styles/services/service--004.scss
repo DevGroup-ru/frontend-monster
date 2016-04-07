@@ -1,0 +1,92 @@
+$service004-hide-breakpoints: desktop;
+
+.m-wrapper {
+  // @desc Service - list of services
+  // @group services
+  // @bemJson service--004.json
+
+  @include block(service004) {
+
+    @include element(nested-wrap) {
+      @include _(12 12 8 4 4);
+      font-size: 0px;
+    }
+
+    @include element(nested) {
+      @include _(3 3 4 4 4, $gutter: row);
+      text-align: left;
+      float: none;
+      display: inline-block;
+      padding: $base-line-height 0;
+      padding-right: $base-line-height * 2;
+      vertical-align: top;
+
+      @include _(greater than tablet) {
+        padding: $base-line-height;      
+        padding-left: 0;
+      }
+    }
+
+    @include element(wrap-hidden) {
+      display: none;
+
+      @include modifier(on-brekpoint) {      
+        @include _(greater than $service004-hide-breakpoints) {  
+          display: block;
+        }
+      }
+    }
+
+    @include element(show-more) {
+      width: 100%;
+      overflow: hidden;
+      @include _(clear);
+      display: block;
+
+      @include modifier(on-brekpoint) {       
+        @include _(greater than $service004-hide-breakpoints) {  
+          display: none;
+        }
+      }
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(title-nested) {
+      @include type-setting(text);
+    }
+
+    @include element(show-more-btn) { 
+      @include type-setting(text);
+      float: left;
+      margin-top: $base-line-height * 2;
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.service004__title-nested {
+      @extend .service004__title-nested;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

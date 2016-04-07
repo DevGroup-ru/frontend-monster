@@ -1,0 +1,135 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "service006",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": "Услуги",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "title-nested",
+            "content": "Стирка белья с порошком",
+            "link": true,
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "title-nested",
+            "content": "Стирка белья с порошком",
+            "link": true,
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-3",
+        "content": [
+          {
+            "elem": "title-nested",
+            "content": "Существенная порча гладильной доски",
+            "link": true,
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-4",
+        "content": [
+          {
+            "elem": "title-nested",
+            "content": "Длинное название предоставляемой услуги",
+            "link": true,
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-5",
+        "content": [
+          {
+            "elem": "title-nested",
+            "content": "Длинное название предоставляемой услуги",
+            "link": true,
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-6",
+        "content": [
+          {
+            "elem": "title-nested",
+            "content": "Длинное название предоставляемой услуги",
+            "link": true,
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+            "editable": "wysiwyg"
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все услуги",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

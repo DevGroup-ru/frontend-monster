@@ -1,0 +1,146 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "service010",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": [
+          {
+            "elem": "title-text",
+            "content": "Услуги",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "nested-left",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested-right",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную. Интерлиньяж текста следует подбирать в зависимости от формата (модуля, плашки, текстового блока).",
+                "editable": "wysiwyg"
+              },
+              {
+                "elem": "btn-price-wrap",
+                "content": [
+                  {
+                    "elem": "price",
+                    "content": "от 349 рублей/кг",
+                    "editable": true
+                  },
+                  
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "nested-left",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested-right",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную. Интерлиньяж текста следует подбирать в зависимости от формата (модуля, плашки, текстового блока).",
+                "editable": "wysiwyg"
+              },
+              {
+                "elem": "btn-price-wrap",
+                "content": [
+                  {
+                    "elem": "price",
+                    "content": "от 349 рублей/кг",
+                    "editable": true
+                  },
+                  
+                  {
+                    "elem": "link-full",
+                    "cls": "button-simple",
+                    "content": "Подробнее",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все услуги",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

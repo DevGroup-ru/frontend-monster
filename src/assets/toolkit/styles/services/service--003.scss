@@ -1,0 +1,104 @@
+$service003-hide-breakpoints: desktop;
+
+.m-wrapper {
+  // @desc Service - list of services with icon
+  // @group services
+  // @bemJson service--003.json
+
+  @include block(service003) {
+
+    @include element(nested-wrap) {
+      @include _(12 12 8 4 4);
+      font-size: 0px;
+    }    
+
+    @include element(wrap-hidden) {
+      display: none;
+
+      @include modifier(on-brekpoint) {      
+        @include _(greater than $service003-hide-breakpoints) {  
+          display: block;
+        }
+      }
+    }
+
+    @include element(show-more) {
+      width: 100%;
+      overflow: hidden;
+      @include _(clear);
+      display: block;
+
+      @include modifier(on-brekpoint) {       
+        @include _(greater than $service003-hide-breakpoints) {  
+          display: none;
+        }
+      }
+    }
+
+    @include element(nested) {
+      @include _(3 3 4 4 4, $gutter: row);
+      text-align: left;
+      float: none;
+      display: inline-block;
+      padding: $base-line-height 0;
+      padding-right: $base-line-height * 2;
+      vertical-align: top;
+
+      @include _(greater than tablet) {
+        padding: $base-line-height;      
+        padding-left: 0;
+      }
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(title-nested) {
+      @include type-setting(text);
+      padding-left: $base-line-height * 6;
+    }
+
+    @include element(icon) {
+      font-size: $base-line-height * 4;
+      width: $base-line-height * 4;
+      height: $base-line-height * 4;
+      line-height: $base-line-height * 4;
+      margin-right: $base-line-height * 2;
+      display: block;
+      float: left;
+      overflow: hidden;
+    }
+
+    @include element(show-more-btn) { 
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;
+      float: left;
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.service003__title-nested {
+      @extend .service003__title-nested;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

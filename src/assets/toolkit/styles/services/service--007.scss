@@ -1,0 +1,94 @@
+$service007-hide-breakpoints: desktop;
+
+.m-wrapper {
+  // @desc Service - services in three column
+  // @group services
+  // @bemJson service--007.json
+
+  @include block(service007) {
+
+    @include element(nested) {
+      @include _(4 6 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(wrap-hidden) {
+      display: none;
+
+      @include modifier(on-brekpoint) {      
+        @include _(greater than $service007-hide-breakpoints) {  
+          display: block;
+        }
+      }
+    }
+
+    @include element(show-more) {
+      @include _($full-row-configuration);
+      overflow: hidden;
+      @include _(clear);
+      display: block;
+
+      @include modifier(on-brekpoint) {       
+        @include _(greater than $service007-hide-breakpoints) {  
+          display: none;
+        }
+      }
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(title-nested) {
+      @include type-setting(accent-text);
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 2;
+      overflow: hidden;
+
+      @include _(greater than tablet) {  
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      overflow: hidden;
+
+      @include _(greater than tablet) {  
+        height: $base-line-height * 6;
+      }
+    }
+
+    @include element(show-more-btn) { 
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;
+      float: left;
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.service007__title-nested {
+      @extend .service007__title-nested;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
