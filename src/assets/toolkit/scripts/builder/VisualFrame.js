@@ -12,6 +12,8 @@ class VisualFrame {
     this.parentWindow = window.parent;
     /** @var FrontendMonster */
     this.parentMonster = this.parentWindow.FrontendMonster;
+    this.currentMonsterContent = false;
+    this.makeItMove();
   }
 
   get $monsterContent() {
@@ -19,12 +21,33 @@ class VisualFrame {
       return this.$monsterContentCache;
     }
 
-    this.$monsterContentCache = {};
+    this.refreshMonsterContentCache();
 
-    $(this.settings['monster-content-selector']).each(function iter() {
-      this.$monsterContentCache[$(this).data('uniqueContentId')] = $(this);
-    });
     return this.$monsterContentCache;
+  }
+
+  refreshMonsterContentCache() {
+    this.$monsterContentCache = {};
+    const that = this;
+    $(this.settings['monster-content-selector']).each(function iter() {
+      if (!that.currentMonsterContent) {
+        that.currentMonsterContent = $(this).data('uniqueContentId');
+      }
+      that.$monsterContentCache[$(this).data('uniqueContentId')] = $(this);
+    });
+  }
+
+  static makeItMove() {
+    this.$handlers = $(`<div class="monster-block-handlers"></div>`);
+    
+    $(this.settings['monster-content-selector']).on({
+      mouseenter: function hoverIn() {
+
+      },
+      mouseleave: function hoverOut() {
+
+      },
+    }, '[data-monster-block]');
   }
 
   serializeContent(callback) {
@@ -63,15 +86,28 @@ class VisualFrame {
       }
     }
     this.settings = settings;
-    console.log(this.settings);
   }
 
   sendToBuilder(func, args) {
     FrameApi.sendMessage(this.parentWindow, func, args);
   }
 
-  hello(name) {
-    alert(`Hello, ${name}!`);
+  newBlock(blockName, newBlockUrl) {
+    const that = this;
+    $.ajax({
+      url: newBlockUrl,
+      method: 'POST',
+      cache: false,
+      data: {
+        block: blockName,
+        uniqueContentId: this.currentMonsterContent,
+      },
+    }).done(function ok(data) {
+      const $element = $(data);
+      that.$monsterContent[that.currentMonsterContent].append($element);
+      /* global smoothScroll:false */
+      smoothScroll.animateScroll($element[0].offsetTop);
+    });
   }
 }
 

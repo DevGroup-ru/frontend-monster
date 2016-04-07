@@ -20,6 +20,7 @@ var webpack = require('webpack');
 var bemBhCompiler = require('./bemBhCompiler');
 var debug = require('gulp-debug');
 var watch = require('gulp-watch');
+var concat = require('gulp-concat');
 
 // configuration
 var config = {
@@ -118,7 +119,8 @@ gulp.task('fonts', function() {
 
 gulp.task('libs', function() {
   return gulp.src('./libs/**/*')
-    .pipe(gulp.dest(config.dest + '/libs/'));
+    .pipe(concat('libs.js'))
+    .pipe(gulp.dest(config.dest + '/assets/toolkit/libs/'));
 });
 
 // sprites

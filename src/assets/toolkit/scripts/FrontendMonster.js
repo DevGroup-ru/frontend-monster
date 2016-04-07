@@ -13,6 +13,8 @@ class FrontendMonster {
         this.VisualFrame = new VisualFrame();
       }
     }
+    /** globals: smoothScroll*/
+    smoothScroll.init();
   }
 
   /**

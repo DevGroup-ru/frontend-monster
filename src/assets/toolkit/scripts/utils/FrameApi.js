@@ -2,7 +2,7 @@ class FrameApi {
   static get isIe() {
     /* global is */
     if (typeof(is) !== 'undefined') {
-      return is.ie() || is.edge();
+      return is.ie();// || is.edge();
     }
 
     return true;

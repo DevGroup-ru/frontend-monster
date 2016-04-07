@@ -39,6 +39,7 @@ class VisualBuilder {
       'materials': {},
       'groups': {},
       'stackable-container-class': 'monster-stackable-container',
+      'new-block-url': '/monster/visual-builder/new-block',
     };
     for (const key in userSettings) {
       if (userSettings.hasOwnProperty(key)) {
