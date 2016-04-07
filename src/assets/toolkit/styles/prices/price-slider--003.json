@@ -1,0 +1,403 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "price003",
+        "cls": "price",
+        "content": [
+          {
+            "elem": "carousel",
+            "content": [
+              {
+                "elem": "nested",
+                "editableGroup": "nested-1",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": "Услуга первая классная",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Вторая не менее хорошая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Третья непостижимая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Четвертая супер лучшая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Ну и пятая какая-то",
+                        "link": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": "114 500 р.",
+                        "editable": true
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-2",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": "Услуга первая классная",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Вторая не менее хорошая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Третья непостижимая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Четвертая супер лучшая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Ну и пятая какая-то",
+                        "link": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": "114 500 р.",
+                        "editable": true
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-3",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": "Услуга первая классная",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Вторая не менее хорошая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Третья непостижимая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Четвертая супер лучшая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Ну и пятая какая-то",
+                        "link": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": "114 500 р.",
+                        "editable": true
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-4",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": "Услуга первая классная",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Вторая не менее хорошая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Третья непостижимая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Четвертая супер лучшая",
+                        "link": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": "114 500 р.",
+                        "editable": true
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-5",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": "Услуга первая классная",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Вторая не менее хорошая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Третья непостижимая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Четвертая супер лучшая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Ну и пятая какая-то",
+                        "link": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": "114 500 р.",
+                        "editable": true
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-6",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": "Услуга первая классная",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Вторая не менее хорошая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Третья непостижимая",
+                        "link": true
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": "Четвертая супер лучшая",
+                        "link": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": "114 500 р.",
+                        "editable": true
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

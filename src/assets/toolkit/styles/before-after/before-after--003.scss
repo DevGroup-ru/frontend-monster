@@ -1,0 +1,138 @@
+$before-after003-img-height: $base-line-height * 45;
+
+$before-after003-dragme-width: $base-line-height;
+$before-after003-dragme-bar-width: $base-line-height * 4;
+$before-after003-dragme-bar-height: $base-line-height * 10;
+$before-after003-dragme-fon: #fff;
+$before-after003-dragme-bar-fon: red;
+$before-after003-dragme-bar-icon: $icon-braille;
+$before-after003-dragme-bar-icon-color: #fff;
+
+$before-after003-border-width: $base-line-height;
+$before-after003-border-color: #000;
+
+
+.m-wrapper {
+
+  // @desc Before-after - simple blocks with arrow
+  // @group before-after
+  // @bemJson before-after--003.json
+
+  @include block(before-after003) {
+
+    @include element(nested) {
+      position: relative;
+    	margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      width: 100%;
+      float: left;
+      @include _(clear);
+    }
+
+    @include element(nested-left) {
+      @include _(8 8 8 4 4);
+      position: relative;
+      height: $before-after003-img-height;
+      margin-bottom: $base-line-height * 2; 
+      padding: -$before-after003-border-width;
+      border: $before-after003-border-width solid $before-after003-border-color;
+
+      @include _(greater than tablet) {
+        margin-bottom: 0; 
+      }
+    }
+
+    @include element(nested-right) {
+      @include _(4 4 8 4 4);
+    }
+
+    @include element(title) {
+      @extend %heading;
+    }
+
+    @include element(title-change) {
+      @include type-setting(accent-text);
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      margin-top: $base-line-height;
+    }
+
+    @include element(img-wrap) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $before-after003-img-height - $before-after003-border-width * 2;
+      overflow: hidden;
+
+      @include modifier (before) {
+        z-index: 1;
+      }
+    }
+
+    @include element(img) {
+	    display: block;
+	    height: $before-after003-img-height - $before-after003-border-width * 2;;
+	    overflow: hidden;
+	    position: relative;
+
+      img {
+        max-width: 1000px;
+      }
+    }
+
+    @include element(button-wrap) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than tablet) {
+        display: none;  
+      }
+    }
+
+    @include element(change-wrap) {
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than tablet) {
+        margin-top: $base-line-height * 3; 
+      }
+    }
+
+    @include element(dragme) {
+      position: absolute;
+      width: $before-after003-dragme-width;
+      height: 100%;
+      top: 0px;
+      left: calc(50% - #{$before-after003-dragme-width}/2);
+      background: $before-after003-dragme-fon;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    @include element(dragme-bar) {
+      position: absolute;
+      width: $before-after003-dragme-bar-width;
+      height: $before-after003-dragme-bar-height;
+      margin: 0 - $before-after003-dragme-bar-width / 2 + $before-after003-dragme-width / 2;
+      border-radius: $before-after003-dragme-bar-height / 2;
+      top: calc(50% - #{$before-after003-dragme-bar-height} / 2);
+      background: $before-after003-dragme-bar-fon;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        content: "";
+        font-size: $base-line-height * 3;
+        color: $before-after003-dragme-bar-icon-color;
+        @extend %basic-icon;
+        content: $before-after003-dragme-bar-icon;
+      }
+    }
+  }
+}
+

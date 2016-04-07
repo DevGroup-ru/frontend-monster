@@ -1,0 +1,122 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "before-after003",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "nested-left",
+            "editableGroup": "nested-left-1",
+            "content": [
+              {
+                "elem": "img-wrap",
+                "mods": ["before"],
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "{{baseurl}}/assets/toolkit/images/cat-before.jpg"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "img-wrap",
+                "mods": ["after"],
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "{{baseurl}}/assets/toolkit/images/cat-after.jpg"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "dragme",
+                "content": [
+                  {
+                    "elem": "dragme-bar"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested-right",
+            "editableGroup": "nested-right-1",
+            "content": [
+              {
+                "elem": "title",
+                "content": "Мы оживили машину",
+                "utils": [
+                  "no-margin--top"
+                ],
+                "editable": true
+              },
+              {
+                "elem": "change-wrap",
+                "editableGroup": "change-wrap-1",
+                "content": [
+                  {
+                    "elem": "title-change",
+                    "content": "Фон",
+                    "editable": true
+                  },
+                  {
+                    "elem": "text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "change-wrap",
+                "editableGroup": "change-wrap-2",
+                "content": [
+                  {
+                    "elem": "title-change",
+                    "content": "Фон",
+                    "editable": true
+                  },
+                  {
+                    "elem": "text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "change-wrap",
+                "editableGroup": "change-wrap-3",
+                "content": [
+                  {
+                    "elem": "title-change",
+                    "content": "Фон",
+                    "editable": true
+                  },
+                  {
+                    "elem": "text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

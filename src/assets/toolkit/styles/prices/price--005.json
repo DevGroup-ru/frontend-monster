@@ -1,0 +1,590 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "price005",
+        "cls": "price",
+        "content": [
+          {
+            "elem": "nested",
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "content",
+                "cls": "price-height",
+                "content": [
+                  {
+                    "elem": "content-line-head",
+                    "content": [
+                      {
+                        "elem": "content-line-name",
+                        "content": "Начальный план",
+                        "editable": true
+                      },
+                      {
+                        "elem": "content-line-price",
+                        "content": [
+                          {
+                            "elem": "content-line-num",
+                            "content": "32 000",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-nominal",
+                            "content": "в месяц",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Большая память в механизме",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Да",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Несколько поддоменов",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Да",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Безлимитная часть",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Да",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "btn-wrap",
+                "content": [
+                  {
+                    "elem": "btn",
+                    "link": true,
+                    "cls": "button-simple",
+                    "content": "Подробнее о тарифном плане",
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "content",
+                "cls": "price-height",
+                "content": [
+                  {
+                    "elem": "content-line-head",
+                    "content": [
+                      {
+                        "elem": "content-line-name",
+                        "content": "Начальный план",
+                        "editable": true
+                      },
+                      {
+                        "elem": "content-line-price",
+                        "content": [
+                          {
+                            "elem": "content-line-num",
+                            "content": "32 000",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-nominal",
+                            "content": "в месяц",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Большая память в механизме",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Да",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Безлимитная часть",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Да",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "btn-wrap",
+                "content": [
+                  {
+                    "elem": "btn",
+                    "link": true,
+                    "cls": "button-simple",
+                    "content": "Подробнее о тарифном плане",
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "content",
+                "cls": "price-height",
+                "content": [
+                  {
+                    "elem": "content-line-head",
+                    "content": [
+                      {
+                        "elem": "content-line-name",
+                        "content": "Начальный план",
+                        "editable": true
+                      },
+                      {
+                        "elem": "content-line-price",
+                        "content": [
+                          {
+                            "elem": "content-line-num",
+                            "content": "32 000",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-nominal",
+                            "content": "в месяц",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Большая память в механизме",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Да",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Несколько поддоменов",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Да",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Безлимитная часть",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Да",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content-line",
+                    "content": [
+                      {
+                        "elem": "content-line-option-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-option",
+                            "content": "Поддержка чат общения",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line-value-wrap",
+                        "content": [
+                          {
+                            "elem": "content-line-value",
+                            "content": "Нет",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "btn-wrap",
+                "content": [
+                  {
+                    "elem": "btn",
+                    "cls": "button-simple",
+                    "link": true,
+                    "content": "Подробнее о тарифном плане",
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

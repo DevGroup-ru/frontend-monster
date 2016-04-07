@@ -24,7 +24,7 @@ $footer002-logo-height: $base-line-height * 7;
       @include _(greater than desktop) {  
         display: flex;
         align-items: center;
-        min-height: $footer002-logo-height; 
+        height: $footer002-logo-height; 
         @include _(7.5 8 8 4 4);
         margin-top: $base-line-height * 2;
       }
@@ -41,13 +41,12 @@ $footer002-logo-height: $base-line-height * 7;
         float: right;
         display: flex;
         align-items: center;
-        min-height: $footer002-logo-height; 
+        height: $footer002-logo-height; 
         margin-top: $base-line-height * 2;
         margin-bottom: $base-line-height;
       }
 
       @include _(greater than desktop) {  
-        @include _(2.5 4 8 4 4, $gutter: row);
         float: right;
         flex-direction: column;
         justify-content: center; 
@@ -177,11 +176,11 @@ $footer002-logo-height: $base-line-height * 7;
     }
 
     @include element(bottom-left) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 3 4 4);
     }
 
     @include element(bottom-right) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 5 4 4);
     }
 
     @include element(copyright) {

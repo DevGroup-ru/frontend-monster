@@ -84,14 +84,14 @@ $footer005-twitter-icon: $icon-twitter;
       }    
 
       @include _(greater than tablet) {  
-        min-height: $footer005-logo-height; 
+        height: $footer005-logo-height; 
         flex-direction: row;
         align-items: center;
       } 
 
       @include _(greater than desktop) {  
         display: block;
-        min-height: none; 
+        height: auto; 
       }    
     }
 
@@ -263,11 +263,11 @@ $footer005-twitter-icon: $icon-twitter;
     }
 
     @include element(bottom-left) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 3 4 4);
     }
 
     @include element(bottom-right) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 5 4 4);
     }
 
     @include element(copyright) {

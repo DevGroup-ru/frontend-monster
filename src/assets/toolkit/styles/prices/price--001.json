@@ -1,0 +1,873 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "price001",
+        "content": [
+          {
+            "elem": "options",
+            "content": [
+              {
+                "elem": "options-nested",
+                "editableGroup": "options-nested-1",
+                "content": "Средней длины предложение",
+                "editable": true
+              },
+              {
+                "elem": "options-nested",
+                "editableGroup": "options-nested-2",
+                "content": "Коротенькое название пункта столбца, в две строки",
+                "editable": true
+              },
+              {
+                "elem": "options-nested",
+                "editableGroup": "options-nested-3",
+                "content": "Какое-то название для пункта",
+                "editable": true
+              },
+              {
+                "elem": "options-nested",
+                "editableGroup": "options-nested-4",
+                "content": "Средней длины текста",
+                "editable": true
+              },
+              {
+                "elem": "options-nested",
+                "editableGroup": "options-nested-5",
+                "content": "Средней длины предложение",
+                "editable": true
+              },
+              {
+                "elem": "options-nested",
+                "editableGroup": "options-nested-6",
+                "content": "Коротенькое название пункта столбца, в две строки",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "values-wrap",
+            "content": [
+              {
+                "elem": "values",            
+                "cls": "m-scroll-horiz",
+                "content": [
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-1",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-2",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность Капитан очевидность Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-3",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-4",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-5",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-6",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-7",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-8",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-9",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-10",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-11",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "values-nested",
+                    "editableGroup": "values-nested-12",
+                    "content": [
+                      {
+                        "elem": "values-head",
+                        "content": [
+                          {
+                            "elem": "values-head-title",
+                            "content": "Капитан очевидность",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-head-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-content",
+                        "content": [
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          },
+                          {
+                            "elem": "values-content-line",
+                            "content": "Безлимитно"
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "values-bottom",
+                        "content": [
+                          {
+                            "elem": "values-bottom-price",
+                            "content": "114 500 р.",
+                            "editable": true
+                          },
+                          {
+                            "elem": "values-bottom-btn",
+                            "link": true,
+                            "cls": "button-simple",
+                            "content": "Заказать",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

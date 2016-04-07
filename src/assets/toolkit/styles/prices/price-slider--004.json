@@ -1,0 +1,423 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "price004",
+        "cls": "price",
+        "content": [
+          {
+            "elem": "carousel",
+            "content": [
+              {
+                "elem": "nested",
+                "editableGroup": "nested-1",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Первый пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 постоянных пользователей нашей сети",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Второй пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 пользователей",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": [
+                          {
+                            "elem": "bottom-price-num",
+                            "content": "114 500",
+                            "editable": true
+                          },
+                          {
+                            "elem": "bottom-price-nominal",
+                            "content": "рублей в месяц",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-2",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Первый пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 постоянных пользователей нашей сети",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Второй пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 пользователей",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": [
+                          {
+                            "elem": "bottom-price-num",
+                            "content": "114 500",
+                            "editable": true
+                          },
+                          {
+                            "elem": "bottom-price-nominal",
+                            "content": "рублей в месяц",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-3",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Первый пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 постоянных пользователей нашей сети",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Второй пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 пользователей",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": [
+                          {
+                            "elem": "bottom-price-num",
+                            "content": "114 500",
+                            "editable": true
+                          },
+                          {
+                            "elem": "bottom-price-nominal",
+                            "content": "рублей в месяц",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-4",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Первый пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 постоянных пользователей нашей сети",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Второй пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 пользователей",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": [
+                          {
+                            "elem": "bottom-price-num",
+                            "content": "114 500",
+                            "editable": true
+                          },
+                          {
+                            "elem": "bottom-price-nominal",
+                            "content": "рублей в месяц",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-5",
+                "mods": ["for-slider"],
+                "content": [
+                  {
+                    "elem": "head",
+                    "content": [
+                      {
+                        "elem": "head-title", 
+                        "content": "Начальный план",
+                        "editable": true
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "cls": "price-height",
+                    "content": [
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Первый пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 постоянных пользователей нашей сети",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "content-line",
+                        "content": [
+                          {
+                            "elem": "content-line-title",
+                            "content": "Второй пункт",
+                            "editable": true
+                          },
+                          {
+                            "elem": "content-line-text",
+                            "content": "35 000 пользователей",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "bottom",
+                    "content": [
+                      {
+                        "elem": "bottom-price",
+                        "content": [
+                          {
+                            "elem": "bottom-price-num",
+                            "content": "114 500",
+                            "editable": true
+                          },
+                          {
+                            "elem": "bottom-price-nominal",
+                            "content": "рублей в месяц",
+                            "editable": true
+                          }
+                        ]
+                      },
+                      {
+                        "elem": "bottom-btn",
+                        "link": true,
+                        "cls": "button-simple",
+                        "content": "Заказать тариф",
+                        "editable": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

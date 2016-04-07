@@ -60,7 +60,7 @@ $footer007-logo-height: $base-line-height * 7;
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
       @include _(3 3 3 4 4, 6 6 8 4 4);
-      min-height: $footer007-logo-height; 
+      height: $footer007-logo-height; 
       align-items: center; 
       
       @include _(greater than desktop) {  
@@ -70,9 +70,9 @@ $footer007-logo-height: $base-line-height * 7;
 
     @include element(menu) {
       width: 100%;
-      min-height: $footer007-logo-height; 
 
       @include _(greater than tablet) {  
+        height: $footer007-logo-height; 
         display: flex;
         align-items: center; 
         justify-content: flex-end;
@@ -144,11 +144,11 @@ $footer007-logo-height: $base-line-height * 7;
     }
 
     @include element(bottom-left) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 3 4 4);
     }
 
     @include element(bottom-right) {
-      @include _(6 6 4 4 4);
+      @include _(6 6 5 4 4);
     }
 
     @include element(copyright) {

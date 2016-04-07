@@ -1,9 +1,8 @@
-$stepbar001-line-width: $base-line-height / 10;
+$stepbar001-line-width: $base-line-height / 5;
+$stepbar001-line-height: $base-line-height * 4;
 $stepbar001-line-color: #000;
 
-$stepbar001-arrow: $icon-arr-down;
 $stepbar001-arrow-size: $base-line-height * 3;
-$stepbar001-arrow-top: -$stepbar001-arrow-size / 2 - $base-line-height / 2;
 
 $stepbar001-number-fon: #eee;
 $stepbar001-number-fon-width: $base-line-height * 4;
@@ -37,8 +36,8 @@ $stepbar001-number-fon-circle: $stepbar001-number-fon-width / 2;
 	    }
 
       	@include _(greater than mobile) {
-      		padding-top: $base-line-height * 3;
-      		padding-bottom: $base-line-height * 3;
+      		padding-top: $stepbar001-line-height;
+      		padding-bottom: $stepbar001-line-height;
 
 	      	&:after {
 	      		content: "";
@@ -103,20 +102,20 @@ $stepbar001-number-fon-circle: $stepbar001-number-fon-width / 2;
 	      	&:after {
 	      		content: "";
 	      		position: absolute;
-	      		bottom: - $base-line-height * 3;
+	      		bottom: - $stepbar001-line-height;
 	      		left: 50%;
 	      		width: $stepbar001-line-width;
-	      		height: $base-line-height * 3;
+	      		height: $stepbar001-line-height;
 		      	background: $stepbar001-line-color;
 		    }
 
 		    &:before {
 	      		content: "";
 	      		position: absolute;
-	      		top: - $base-line-height * 3;
+	      		top: calc(-#{$stepbar001-line-height} - #{$stepbar001-line-width});
 	      		left: 50%;
 	      		width: $stepbar001-line-width;
-	      		height: $base-line-height * 3;
+	      		height: $stepbar001-line-height;
 		      	background: $stepbar001-line-color;
 		    }
 		}
@@ -141,17 +140,18 @@ $stepbar001-number-fon-circle: $stepbar001-number-fon-width / 2;
       	&:after {
       		content: "";
       		position: absolute;
-      		bottom: - $base-line-height * 2;
-      		left: calc(50% - #{$stepbar001-arrow-size / 2});
-      		@extend %basic-icon;
-      		font-size: $stepbar001-arrow-size;
+      		bottom: calc(-#{$stepbar001-arrow-size} - #{$base-line-height} * 2);
+      		left: calc(50% - #{$stepbar001-arrow-size} + #{$stepbar001-line-width} / 2);
       		width: $stepbar001-arrow-size;
       		height: $stepbar001-arrow-size;
-      		content: $stepbar001-arrow;
+	      	border-top: $stepbar001-line-width solid $stepbar001-line-color;
+	        border-right: $stepbar001-line-width solid $stepbar001-line-color;
+	        transform: rotate(135deg);
+	        transform-origin: 100% 0;
 
       		@include _(greater than mobile) {
       			bottom: inherit;
-      			top: $stepbar001-arrow-top;
+      			top: 0;
       		}
 	    }
     }

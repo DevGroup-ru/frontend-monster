@@ -1,0 +1,93 @@
+$before-after001-arrow: $icon-arr-long-right;
+$before-after001-arrow-size: $base-line-height * 6;
+$before-after001-img-height: $base-line-height * 20;
+
+.m-wrapper {
+
+  // @desc Before-after - simple blocks with arrow
+  // @group before-after
+  // @bemJson before-after--001.json
+
+  @include block(before-after001) {
+
+    @include element(nested) {
+    	margin-top: $base-line-height * 2;
+    	margin-bottom: $base-line-height * 2;
+    	width: 100%;
+    	float: left;
+    	@include _(clear);
+    }
+
+    @include element(nested-left) {
+      @include _(5 5 3 4 4);
+    }
+
+    @include element(nested-center) {
+    	@include _(2 2 2 4 4);
+    	overflow: hidden;
+    	margin-top: $base-line-height * 2;
+    	margin-bottom: $base-line-height * 2;
+
+    	@include _(greater than mobile) {  
+        margin-top: 0;
+    		margin-bottom: 0;
+	    }
+    }
+
+    @include element(nested-right) {
+      @include _(5 5 3 4 4);
+    }
+
+    @include element(arrow) {
+		  display: flex;
+	    align-items: center;
+	    justify-content: center;
+
+      &:before {
+      	@extend %basic-icon;
+      	content: $icon-arr-long-right;
+      	font-size: $before-after001-arrow-size;
+      	transform: rotate(90deg);
+	    }
+
+	    @include _(greater than mobile) {  
+	       height: $before-after001-img-height;
+
+	    	&:before {
+		      transform: rotate(0);
+		    }
+	    }
+    }
+
+    @include element(title) {
+      @include type-setting(accent-text);
+      margin-top: $base-line-height * 2;
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;
+    }
+
+    @include element(img) {
+	    display: block;
+	    height: $before-after001-img-height;
+	    overflow: hidden;
+	    position: relative;
+
+	    img {
+	    	position: absolute;
+	    	margin: auto;
+	    	top: 0;
+	    	bottom: 0;
+	    	left: 50%;
+	    	right: 0;
+	    	height: auto;
+	    	min-height: 100%;
+	    	min-width: 100%;
+	    	transform: translateX(-50%);
+	    }
+    }
+  }
+}
+

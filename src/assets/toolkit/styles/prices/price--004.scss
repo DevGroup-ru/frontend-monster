@@ -1,0 +1,114 @@
+$price004-head-fon: #626dca;
+$price004-border-width: $base-line-height / 10;
+$price004-border-color: #aaa;
+$price004-content-fon: #fff;
+$price004-head-border-width: $base-line-height / 10;
+$price004-head-border-color: #aaa;
+$price004-bottom-border-width: $base-line-height / 10;
+$price004-bottom-border-color: #aaa;
+
+.m-wrapper {
+  // @desc Prices- simple price
+  // @group prices
+  // @bemJson price--004.json
+
+  @include block(price004) {
+
+    @include element(nested) {
+      @include _(3 6 8 4 4);
+      margin-top: $base-line-height * 2 - $price004-border-width;
+      margin-bottom: $base-line-height * 2 - $price004-border-width;
+      border: $price004-border-width solid $price004-border-color;
+      background: $price004-content-fon;
+      overflow: hidden;
+
+      @include modifier(for-slider) {
+        @include _(3 6 8 4 4, 3 6 8 4 4);
+      } 
+    }
+
+    @include element(carousel) {
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(head) {
+      background: $price004-head-fon;
+      border-bottom: $price004-head-border-width solid $price004-head-border-color;
+      padding: $base-line-height * 2 - $price004-head-border-width / 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include element(head-title) {
+      @include type-setting(accent-text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+    }
+
+    @include element(content) {
+      @include _(3 6 4 4 4, 3 6 8 4 4, $gutter: row);
+      background: $price004-content-fon;
+      padding: $base-line-height $base-line-height * 2;
+      text-align: center;
+
+      @include _(greater than mobile) { 
+        padding: $base-line-height * 2;
+        padding-top: $base-line-height;
+      }
+
+      @include _(greater than tablet) { 
+        padding: $base-line-height $base-line-height * 2;
+      }
+    }
+
+    @include element(content-line) {
+      margin-top: $base-line-height;
+    }
+
+    @include element(content-line-title) {
+      @include type-setting(text);
+    }
+
+    @include element(content-line-text) {
+      @include type-setting(small-text);
+    }
+
+    @include element(bottom) {
+      @include _(3 6 4 4 4, 3 6 8 4 4, $gutter: row);
+      text-align: center;
+      padding: $base-line-height * 2;
+      padding-bottom: $base-line-height * 3;
+
+      @include _(greater than mobile) { 
+        border-left: $price004-bottom-border-width solid $price004-bottom-border-color;
+      }
+
+      @include _(greater than tablet) { 
+        padding-bottom: $base-line-height * 2;
+        margin-bottom: 0;
+        border-left: none;
+      }
+    }
+
+    @include element(bottom-price) {
+      margin-bottom: $base-line-height;
+      height: $base-line-height * 6;
+      overflow: hidden;
+    }
+
+    @include element(bottom-price-num) {
+      @include type-setting(heading);
+      white-space: nowrap;
+    }
+
+    @include element(bottom-price-nominal) {
+      @include type-setting(small-text);
+    }
+
+    @include element(nested-bottom-btn) {
+      margin-top: $base-line-height * 2;
+    } 
+  }
+}

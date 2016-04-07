@@ -1,0 +1,158 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "before-after001",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "nested-left",
+            "editableGroup": "nested-left-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/250/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title",
+                    "content": "Черно-белая картинка",
+                    "editable": true
+                  },
+                  {
+                    "elem": "text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested-center",
+            "editableGroup": "nested-center-1",
+            "content": [
+              {
+                "elem": "arrow"
+              }
+            ]
+          },
+          {
+            "elem": "nested-right",
+            "editableGroup": "nested-right-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title",
+                    "content": "Цветная картинка",
+                    "editable": true
+                  },
+                  {
+                    "elem": "text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "nested-left",
+            "editableGroup": "nested-left-2",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/250/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title",
+                    "content": "Черно-белая картинка",
+                    "editable": true
+                  },
+                  {
+                    "elem": "text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested-center",
+            "editableGroup": "nested-center-2",
+            "content": [
+              {
+                "elem": "arrow"
+              }
+            ]
+          },
+          {
+            "elem": "nested-right",
+            "editableGroup": "nested-right-2",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "text-wrap",
+                "content": [
+                  {
+                    "elem": "title",
+                    "content": "Цветная картинка",
+                    "editable": true
+                  },
+                  {
+                    "elem": "text",
+                    "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий скорее вредна, и что высоту строки текста и отступов лучше настраивать вручную.",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

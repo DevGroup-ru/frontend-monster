@@ -1,7 +1,11 @@
 $scroll-width: $base-line-height; //vertical
+$scroll-border-radius: 0;
+$scroll-width-rail: $base-line-height; //vertical
+$scroll-rail-border-radius: 0;
 $scroll-fon: #000;
-$scroll-drag-fon: #eee;
-$scroll-height: $base-line-height; //horizontal
+$scroll-rail-fon: #eee;
+$scroll-hor-height: $base-line-height; //horizontal
+$scroll-hor-height-rail: $base-line-height; //horizontal
 
 .mCSB_scrollTools {
   z-index: 100;
@@ -12,10 +16,11 @@ $scroll-height: $base-line-height; //horizontal
   top: 0;
   right: 0;
   bottom: 0;
-  background: $scroll-drag-fon;
 
   .mCSB_draggerRail {
-    width: $scroll-width;
+    width: $scroll-width-rail;
+    background: $scroll-rail-fon;
+    border-radius: $scroll-rail-border-radius;
     height: 100%;
     margin: 0 auto;
   }
@@ -33,6 +38,7 @@ $scroll-height: $base-line-height; //horizontal
     margin: 0 auto;
     text-align: center;
     background: $scroll-fon;
+    border-radius: $scroll-border-radius;
   }
 
   .mCSB_draggerContainer {
@@ -50,11 +56,19 @@ $scroll-height: $base-line-height; //horizontal
 
   &.mCSB_scrollTools_horizontal {
     width: auto;
-    height: $scroll-height;
+    height: $scroll-hor-height;
     top: auto;
     right: 0;
     bottom: 0;
     left: 0;
+
+    .mCSB_draggerContainer {
+
+      @if ($scroll-hor-height > $scroll-hor-height-rail) {
+        display: flex;
+        align-items: center;
+      }
+    }
 
     a + .mCSB_draggerContainer {
       margin: 0 $base-line-height * 2;
@@ -62,19 +76,19 @@ $scroll-height: $base-line-height; //horizontal
 
     .mCSB_draggerRail {
       width: 100%;
-      height: $base-line-height / 5;
-      margin: $base-line-height 0;
+      height: $scroll-hor-height-rail;
     }
 
     .mCSB_dragger {
       width: $base-line-height * 3;
       height: 100%;
       left: 0;
+      top: 0;
     }
 
     .mCSB_dragger_bar {
       width: 100%;
-      height: $scroll-height;
+      height: $scroll-hor-height;
       margin: 0 auto;
     }
   }
@@ -108,7 +122,7 @@ $scroll-height: $base-line-height; //horizontal
 }
 
 .mCSB_inside > .mCSB_container {
-  margin-right: $base-line-height;
+  margin-right: $scroll-width + $base-line-height;
 }
 
 .mCS-dir-rtl > .mCSB_inside > .mCSB_container {
@@ -157,7 +171,7 @@ $scroll-height: $base-line-height; //horizontal
 
 .mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
 .mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
-  bottom: -$base-line-height * 3;
+  bottom: -$base-line-height * 4;
 }
 
 .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
@@ -170,4 +184,8 @@ $scroll-height: $base-line-height; //horizontal
 .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
   height: $base-line-height;
   margin: $base-line-height / 2 0;
+}
+
+.mCSB_horizontal.mCSB_outside + .mCSB_scrollTools {
+  right: 0;
 }

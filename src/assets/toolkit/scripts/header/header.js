@@ -71,8 +71,8 @@ $(function() {
     e.preventDefault();
   });
 
-  $('.menu-mobile').click(function(){
-    menuMobileCl = true;  
+  $('.menu001').click(function(){
+    menuMobileCl = true; 
   });
 
   $(document).on('click tap', function (){
@@ -93,8 +93,8 @@ $(function() {
         $('.menu-mobile').removeClass('menu-mobile--show').removeClass('menu-mobile--show-one');
         menuBurgerCl = false; 
       };
-      menuMobileCl = false; 
-    }
+      menuMobileCl = false;
+    } 
   });
 
 
