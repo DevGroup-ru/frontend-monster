@@ -78,7 +78,7 @@
 	fabricator.test = {};
 
 	// test for sessionStorage
-	fabricator.test.sessionStorage = (function () {
+	fabricator.test.sessionStorage = function () {
 		var test = '_f';
 		try {
 			sessionStorage.setItem(test, test);
@@ -87,7 +87,7 @@
 		} catch (e) {
 			return false;
 		}
-	})();
+	}();
 
 	// create storage object if it doesn't exist; store options
 	if (fabricator.test.sessionStorage) {
