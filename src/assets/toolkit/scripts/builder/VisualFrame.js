@@ -62,7 +62,7 @@ class VisualFrame {
       mouseenter: function hoverIn() {
         const $this = $(this);
         $this.addClass('m-monster-content__material--highlighted');
-        that.popper = new Popper($this[0], $this.$handlers[0]);
+        that.popper = new Popper($this[0], that.$handlers[0]);
       },
       mouseleave: function hoverOut() {
         const $this = $(this);

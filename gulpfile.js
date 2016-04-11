@@ -119,7 +119,9 @@ gulp.task('fonts', function() {
 
 gulp.task('libs', function() {
   return gulp.src('./libs/**/*')
+    .pipe(sourcemaps.init())
     .pipe(concat('libs.js'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.dest + '/assets/toolkit/libs/'));
 });
 
