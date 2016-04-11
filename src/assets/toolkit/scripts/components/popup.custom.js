@@ -5,7 +5,7 @@ $(function() {
 	    var dataBModal = $(this).attr('data-button');
 	    $(this).addClass(dataBModal + "_open");
 	    var $item = $('[data-modal="'+dataBModal+'"]');
-	    $item.children(".close-modal").addClass(dataBModal + "_close");  
+	    $item.find(".close-modal").addClass(dataBModal + "_close");  
 	    if ($item.hasClass("popup-alone")) {
 	    	$item.attr('id', dataBModal).popup({
 			  	transition: 'all 0.3s 0s',
@@ -24,7 +24,7 @@ $(function() {
 	    var dataBModal = $(this).attr('data-button');
 	    $(this).addClass(dataBModal + "_open");
 	    var $item = $('[data-modal="'+dataBModal+'"]');
-	    $item.children(".close-modal").addClass(dataBModal + "_close");  
+	    $item.find(".close-modal").addClass(dataBModal + "_close");  
 	    if ($item.hasClass("popup-alone")) {
 	        $item.attr('id', dataBModal).popup({
 	        	transition: 'all 0.3s',

@@ -1,0 +1,157 @@
+$service011-fon: #fff;
+$service011-icon-size: $base-line-height * 5;
+$service011-hide-breakpoints: desktop;
+
+.m-wrapper {
+  // @desc Service - services with icon on full width
+  // @group services
+  // @bemJson service--011.json
+
+  @include block(service011) {
+
+    @include element(nested) {
+      @include _(12 12 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      background: $service011-fon;  
+      padding: $base-line-height * 3;
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(wrap-hidden) {
+      display: none;
+
+      @include modifier(on-brekpoint) {      
+        @include _(greater than $service011-hide-breakpoints) {  
+          display: block;
+        }
+      }
+    }
+
+    @include element(show-more) {
+      @include _($full-row-configuration);
+      overflow: hidden;
+      @include _(clear);
+      display: block;
+
+      @include modifier(on-brekpoint) {       
+        @include _(greater than $service011-hide-breakpoints) {  
+          display: none;
+        }
+      }
+    }
+
+    @include element(icon-wrap) {
+      width: $base-line-height * 6;
+      height: $base-line-height * 6;
+      float: left;
+    }
+
+    @include element(icon) {
+      font-size: $service011-icon-size;
+      line-height: $service011-icon-size;
+      margin-bottom: $base-line-height;
+      display: block;
+
+      @include _(greater than tablet) {
+        margin-bottom: $base-line-height * 2;
+      }
+    }
+
+    @include element(text-wrap) {
+      @include _(greater than mobile) {
+        margin-left: $base-line-height * 8;
+      }
+    }
+
+    @include element(title-nested) {
+      @include type-setting(accent-text);
+      margin-bottom: $base-line-height;
+      min-height: $base-line-height * 6;
+      margin-left: $base-line-height * 8;
+
+      @include _(greater than mobile) {
+        min-height: auto;
+        margin-left: 0;
+      }
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+    }
+
+    @include element(nested-top) { 
+      @include _(clear);
+    }
+
+    @include element(service-wrap) { 
+      
+      @include modifier(hidden) {
+        display: none;
+      }
+    }
+
+    @include element(service-item) { 
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;
+      @include _(3 3 4 4 4, $gutter: alpha);
+    }
+
+    @include element(service-show-more) { 
+      width: 100%;
+      overflow: hidden;
+      @include _(clear);
+    }
+
+    @include element(service-show-more-btn) { 
+      @include type-setting(text);
+      @include _(3 3 4 4 4, $gutter: alpha);
+      float: right;
+      margin-top: $base-line-height * 2;
+    }
+
+    @include element(show-more-btn) { 
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;
+      float: left;
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.service011__title-nested {
+      @extend .service011__title-nested;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.service011__service-item {
+      @extend .service011__service-item;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

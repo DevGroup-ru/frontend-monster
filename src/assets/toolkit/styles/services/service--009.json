@@ -1,0 +1,124 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "service009",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": [
+          {
+            "elem": "title-text",
+            "content": "Услуги",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "img",
+            "link": true,
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "wrap-text",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "price",
+                "content": "от 349 рублей/кг",
+                "editable": true
+              },
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+                "editable": "wysiwyg"
+              },
+              {
+                "elem": "link-full",
+                "cls": "button-simple",
+                "content": "Подробнее",
+                "editable": true,
+                "link": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-2",
+        "content": [
+          {
+            "elem": "img",
+            "link": true,
+            "content": [
+              {
+                "image": "http://lorempixel.com/200/300"
+              }
+            ]
+          },
+          {
+            "elem": "wrap-text",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Краткий заголовок, умещающийся в 2-3 строки",
+                "editable": true,
+                "link": true
+              },
+              {
+                "elem": "price",
+                "content": "от 349 рублей/кг",
+                "editable": true
+              },
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+                "editable": "wysiwyg"
+              },
+              {
+                "elem": "link-full",
+                "cls": "button-simple",
+                "content": "Подробнее",
+                "editable": true,
+                "link": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все услуги",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

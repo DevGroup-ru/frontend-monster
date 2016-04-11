@@ -26,3 +26,4 @@ require('./before-after/before-after--002');
 require('./before-after/before-after--003');
 require('./prices/price--common');
 require('./prices/price--001');
+require('./services/service');

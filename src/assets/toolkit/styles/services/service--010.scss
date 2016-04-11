@@ -1,0 +1,172 @@
+$service010-fon: #fff;
+$service010-hide-breakpoints: desktop;
+
+.m-wrapper {
+
+  // @desc Service - services with image on full width
+  // @group services
+  // @bemJson service--010.json
+
+  @include block(service010) {
+    text-align: left;
+
+    @include element(nested) {
+      @include _(12 12 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      background: $service010-fon;
+      padding: $base-line-height * 3;
+    }
+
+    @include element(wrap-hidden) {
+      display: none;
+
+      @include modifier(on-brekpoint) {      
+        @include _(greater than $service010-hide-breakpoints) {  
+          display: block;
+        }
+      }
+    }
+
+    @include element(show-more) {
+      @include _($full-row-configuration);
+      overflow: hidden;
+      @include _(clear);
+      display: block;
+
+      @include modifier(on-brekpoint) {       
+        @include _(greater than $service010-hide-breakpoints) {  
+          display: none;
+        }
+      }
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(title-text) {
+      float: left;
+    }
+
+    @include element(nested-left) {
+      @include _(2 3 4 4 4, $gutter: row);
+
+      @include _(greater than mobile) {
+        @include _(2 3 4 4 4, 12 12 8 4 4, $gutter: alpha);
+      }
+    }
+
+    @include element(img) {
+      display: block;
+      height: $base-line-height * 22;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translateX(-50%);
+      }
+
+      @include _(greater than desktop) {
+        height: $base-line-height * 12;
+      }
+    }
+
+    @include element(title-nested) {
+      @include type-setting(accent-text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+      display: block;
+
+      @include _(greater than mobile) {
+        @include _(9 9 4 4 4, 9 9 4 4 4, $gutter: omega);
+      }
+    }
+
+    @include element(nested-right) {
+      @include _(10 9 4 4 4, $gutter: row);
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than mobile) {
+        @include _(10 9 4 4 4, 12 12 8 4 4, $gutter: row);
+        margin-top: 0;
+      }
+    }
+
+    @include element(text) {
+      @include _(7 9 4 4 4, $gutter: row);
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;
+      overflow: hidden;
+
+      @include _(greater than mobile) {
+        height: $base-line-height * 8;
+        @include _(7 9 4 4 4, 9 9 4 4 4, $gutter: omega);
+      }
+    }
+
+    @include element(btn-price-wrap) {
+      @include _(2 9 4 4 4, $gutter: row);
+
+      @include _(greater than mobile) {
+        @include _(2 9 4 4 4, 9 9 4 4 4, $gutter: omega);
+      }
+    }
+
+    @include element(price) {
+      @include type-setting(text);
+      height: $base-line-height * 2;
+      margin-top: $base-line-height * 2;
+      overflow: hidden;
+    }
+
+    @include element(link-full) {
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than desktop) {      
+        display: block;
+      }
+    }
+
+    @include element(show-more-btn) { 
+      @include type-setting(text);
+      margin-top: $base-line-height * 2;
+      float: left;
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.service010__title-nested {
+      @extend .service010__title-nested;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+

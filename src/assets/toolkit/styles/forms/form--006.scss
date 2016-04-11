@@ -5,6 +5,9 @@ $form006-nav-color: #eee;
 $form006-nav-color-hover: #aaa;
 $form006-nav-color-active: #000;
 
+$form006-icon-close: $icon-cancel;
+$form006-icon-close-size: $base-line-height * 2;
+
 .m-wrapper {
   // @desc Form - simple form (modal or static)
   // @group forms
@@ -16,6 +19,7 @@ $form006-nav-color-active: #000;
 
     @include element(wrap) { 
       text-align: center;
+      position: relative;
     }
 
     @include modifier(modal) {
@@ -24,9 +28,26 @@ $form006-nav-color-active: #000;
       background: $form006-fon;
     }
 
+    @include element(close) {
+      position: absolute;
+      top: -$base-line-height;
+      right: -$base-line-height;
+      background: none;
+      outline: none;
+      border: none;
+      text-decoration: none;
+
+      &:before{
+        @extend %basic-icon;
+        content: $form006-icon-close;
+        font-size: $form006-icon-close-size;
+      } 
+    }
+
     @include element(title) {
       @include type-setting(sub-heading);
       margin-bottom: $base-line-height;
+      padding: 0 $base-line-height;
 
       @include _(greater than tablet) {
         margin-bottom: $base-line-height * 2;

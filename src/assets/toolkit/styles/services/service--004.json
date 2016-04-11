@@ -1,0 +1,200 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "service004",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": "Услуги",
+        "editable": true
+      },
+      {
+        "elem": "nested-wrap",
+        "content": [
+          {
+            "elem": "nested",
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Стирка белья с порошком",
+                "link": true,
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Стирка белья с порошком",
+                "link": true,
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-3",
+            "content": [  
+              {
+                "elem": "title-nested",
+                "content": "Существенная порча гладильной доски",
+                "link": true,
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Длинное название предоставляемой услуги",
+                "link": true,
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-5",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Стирка белья с порошком",
+                "link": true,
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-6",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Супер розыгрыш на кухне в несколько строчек",
+                "link": true,
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-7",
+            "content": [  
+              {
+                "elem": "title-nested",
+                "content": "Существенная порча гладильной доски",
+                "link": true,
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-8",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Длинное название предоставляемой услуги",
+                "link": true,
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "wrap-hidden",
+            "cls": "service__wrap--hidden",
+            "content": [
+              {
+                "elem": "nested",
+                "editableGroup": "nested-9",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Стирка белья с порошком",
+                    "link": true,
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-10",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Стирка белья с порошком",
+                    "link": true,
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-11",
+                "content": [  
+                  {
+                    "elem": "title-nested",
+                    "content": "Существенная порча гладильной доски",
+                    "link": true,
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "editableGroup": "nested-12",
+                "content": [
+                  {
+                    "elem": "title-nested",
+                    "content": "Длинное название предоставляемой услуги",
+                    "link": true,
+                    "editable": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "show-more",
+            "content": [
+              {
+                "elem": "show-more-btn",
+                "cls": "service__show-more-btn",
+                "content": "Показать все",
+                "editable": true,
+                "link": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все услуги",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

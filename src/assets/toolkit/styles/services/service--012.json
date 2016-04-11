@@ -1,0 +1,156 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "service012",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": "Услуги",
+        "editable": true
+      },
+      {
+        "elem": "nested",
+        "editableGroup": "nested-1",
+        "content": [
+          {
+            "elem": "nested-left",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Стирка белья с порошком",
+                "link": true,
+                "editable": true
+              },
+              {
+                "elem": "text",
+                "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+                "editable": "wysiwyg"
+              }
+            ]
+          },
+          {
+            "elem": "nested-right",
+            "content": [
+              {
+                "elem": "service-wrap",
+                "content": [
+                  {
+                    "elem": "service-item",
+                    "content": "Стирка белья с порошком",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Порча гладильной доски",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Розыгрыш на кухне",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Стирка белья с порошком",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Стирка белья с порошком",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Порча гладильной доски",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Розыгрыш на кухне",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Стирка белья с порошком",
+                    "link": true,
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "service-wrap",
+                "mods": ["hidden"],
+                "cls": "service__wrap--hidden",
+                "content": [
+                  {
+                    "elem": "service-item",
+                    "content": "Стирка белья с порошком",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Порча гладильной доски",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Розыгрыш на кухне",
+                    "link": true,
+                    "editable": true
+                  },
+                  {
+                    "elem": "service-item",
+                    "content": "Стирка белья с порошком",
+                    "link": true,
+                    "editable": true
+                  }
+                ]
+              },
+              {
+                "elem": "service-show-more",
+                "content": [
+                  {
+                    "elem": "service-show-more-btn",
+                    "cls": "service__show-more-btn",
+                    "content": "Показать все",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Все услуги",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}
