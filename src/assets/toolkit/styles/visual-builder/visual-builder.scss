@@ -23,7 +23,7 @@ $editor-accent-color: #EC5035;
     @include element(top-pane) {
       position: fixed;
       top: 0;
-      right:0;
+      right: 0;
       left: 0;
       line-height: $top-pane-height;
       height: $top-pane-height;
@@ -161,5 +161,14 @@ $editor-accent-color: #EC5035;
       list-style: none;
     }
   }
-
+  @include block(m-monster-content) {
+    @include element(material) {
+      @include modifier(highlighted) {
+        box-shadow: inset 0 0 0 2px $editor-link-color;
+      }
+      @include modifier(active) {
+        box-shadow: inset 0 0 0 2px $editor-section-color;
+      }
+    }
+  }
 }

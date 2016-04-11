@@ -37,17 +37,39 @@ class VisualFrame {
     });
   }
 
-  static makeItMove() {
-    this.$handlers = $(`<div class="monster-block-handlers"></div>`);
-    
+  makeItMove() {
+    this.$handlers = $(`
+<div class="monster-block-handlers">
+    <a href="#" class="monster-block-handlers__configure">
+        <i class="fa fa-cog"></i>
+    </a>
+    <span class="monster-block-handlers__block-name">Block name here</span>
+    <a href="#" class="monster-block-handlers__move-up">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <a href="#" class="monster-block-handlers__move-down">
+        <i class="fa fa-angle-down"></i>
+    </a>
+    <a href="#" class="monster-block-handlers__clone">
+        <i class="fa fa-clone"></i>
+    </a>
+    <a href="#" class="monster-block-handlers__remove">
+        <i class="fa fa-times"></i>
+    </a>
+</div>`);
+    const that = this;
     $(this.settings['monster-content-selector']).on({
       mouseenter: function hoverIn() {
-
+        const $this = $(this);
+        $this.addClass('m-monster-content__material--highlighted');
+        that.popper = new Popper($this[0], $this.$handlers[0]);
       },
       mouseleave: function hoverOut() {
-
+        const $this = $(this);
+        $this.removeClass('m-monster-content__material--highlighted');
+        that.popper.destroy();
       },
-    }, '[data-monster-block]');
+    }, '[data-is-material]');
   }
 
   serializeContent(callback) {
