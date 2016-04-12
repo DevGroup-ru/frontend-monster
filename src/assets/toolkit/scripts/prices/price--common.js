@@ -25,48 +25,4 @@ $(function() {
 	    });
 	});
 
-	$('.price003__carousel').owlCarousel({
-	  	loop:true,
-	  	nav:false,
-  		responsive:{
-	        320:{
-	            items:1
-	        },
-	        640:{
-	            items:2
-	        },
-	        960:{
-	            items:2
-	        },
-	        1200:{
-	            items:4
-	        },
-	        1344:{
-	            items:4
-	        }
-	    }
-	});
-
-	$('.price004__carousel').owlCarousel({
-	  	loop:true,
-	  	nav:false,
-  		responsive:{
-	        320:{
-	            items:1
-	        },
-	        640:{
-	            items:1
-	        },
-	        960:{
-	            items:2
-	        },
-	        1200:{
-	            items:4
-	        },
-	        1344:{
-	            items:4
-	        }
-	    }
-	});
-
 });

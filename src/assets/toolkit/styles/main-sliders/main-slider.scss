@@ -1,5 +1,8 @@
 $carousel-nav-color: #aaa;
 $carousel-nav-color-hover: #666;
+$carousel-nav-size: $base-line-height * 4;
+$carousel-nav-left: $icon-arr-left;
+$carousel-nav-right: $icon-arr-right;
 
 $carousel-dot-fon: #eee;
 $carousel-dot-fon-hover: #aaa;
@@ -31,25 +34,45 @@ $carousel-dot-fon-active: #000;
 
 	    .owl-nav {
 	    	@include _($full-row-configuration);
+	    	position: absolute;
+    		top: 0;
+    		left: 0;
+    		display: none;
+    		font-size: 0;
 
 	      	.owl-prev, 
 	      	.owl-next {
-	        	display: block;
-	        	float: left;
-	        	color: $carousel-nav-color;
+	        	display: inline-block;
 
-		        i{
-		          font-size: $base-line-height * 3;
-		          line-height:  $base-line-height * 2;
-		        }
+	        	&:after {
+		    		color: $carousel-nav-color;
+			      	display: inline-block;
+			      	font-size: $carousel-nav-size;
+		          	line-height: $carousel-nav-size;
+			      	@extend %basic-icon;
+			    }
 
 		        &:hover {
-	      			color: $carousel-nav-color-hover;
+
+		        	&:after {
+	      				color: $carousel-nav-color-hover;
+	      			}
 	      		}
+		    }
+
+		    .owl-next {
+
+		    	&:after {
+			      	content: $carousel-nav-right;
+			    }
 		    }
 
 		    .owl-prev {
 		    	margin-right: $base-line-height;
+
+		    	&:after {
+			      	content: $carousel-nav-left;
+			    }
 		    }
       	}
 
@@ -77,5 +100,22 @@ $carousel-dot-fon-active: #000;
 	      		}
 	      	}
       	}
+
+      	@include modifier(with-nav-left) {
+      		padding-top: $carousel-nav-size;
+
+			.owl-nav {
+				display: block;
+			}
+		}
+
+		@include modifier(with-nav-right) {
+			padding-top: $carousel-nav-size;
+
+			.owl-nav {
+				display: block;
+				text-align: right;
+			}			
+		}
 	}
 }

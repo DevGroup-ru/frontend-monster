@@ -72,7 +72,7 @@ $price004-bottom-border-color: #aaa;
     }
 
     @include element(content-line-text) {
-      @include type-setting(small-text);
+      @include type-setting(smallest-text);
     }
 
     @include element(bottom) {
@@ -104,7 +104,7 @@ $price004-bottom-border-color: #aaa;
     }
 
     @include element(bottom-price-nominal) {
-      @include type-setting(small-text);
+      @include type-setting(smallest-text);
     }
 
     @include element(nested-bottom-btn) {

@@ -83,12 +83,16 @@
   }
 
   @include tag(h6) {
-    @include type-setting('small-text');
+    @include type-setting('smallest-text');
     margin: 0;
   }
-  
+
   .small-text {
     @include type-setting('small-text');
+  }
+  
+  .smallest-text {
+    @include type-setting('smallest-text');
   }
 
 

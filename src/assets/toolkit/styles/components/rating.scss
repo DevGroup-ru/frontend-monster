@@ -27,7 +27,6 @@ $rateitem: ".rating__item .rating__icon:before";
 
   @include element(item) {
     display: inline-block;
-    cursor: pointer;  
 
     &.rating__item--chosen .rating__icon:before,
     &.rating__item--chosen ~ #{$rateitem} {
@@ -86,6 +85,12 @@ $rateitem-css: ".rating-css__label .rating-css__icon:before";
     &.rating-css__input--active:hover ~ #{$rateitem-css},
     &.rating-css__input--active:disabled ~ #{$rateitem-css} {
       color: $rate-star-gold;
+    }
+  }
+
+  @include modifier(noselect) {
+    .rating-css__label {
+      cursor: inherit;
     }
   }
 }
