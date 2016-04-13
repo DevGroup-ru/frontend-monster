@@ -152,7 +152,7 @@ $footer007-logo-height: $base-line-height * 7;
     }
 
     @include element(copyright) {
-      @include type-setting('small-text');
+      @include type-setting('smallest-text');
     }
 
     @include element(pay-cards) {
@@ -166,7 +166,7 @@ $footer007-logo-height: $base-line-height * 7;
     }
 
     @include element(pay-cards-text) {
-      @include type-setting('small-text');
+      @include type-setting('smallest-text');
       line-height: $base-line-height * 3;
       display: inline-block;
     }

@@ -28,6 +28,11 @@
             "elem": "wrap",
             "content": [
               {
+                "elem": "close",
+                "cls": "close-modal",
+                "link": true
+              },
+              {
                 "elem": "title",
                 "content": "Регистрация",
                 "editable": true

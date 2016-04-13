@@ -92,7 +92,7 @@ $price005-btn-fon-hover: #83818f;
     }
 
     @include element(content-line-nominal) {
-      @include type-setting(small-text);
+      @include type-setting(smallest-text);
     }
 
     @include element(btn) {

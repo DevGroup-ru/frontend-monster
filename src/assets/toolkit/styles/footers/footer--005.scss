@@ -271,7 +271,7 @@ $footer005-twitter-icon: $icon-twitter;
     }
 
     @include element(copyright) {
-      @include type-setting('small-text');
+      @include type-setting('smallest-text');
     }
 
     @include element(pay-cards) {
@@ -285,7 +285,7 @@ $footer005-twitter-icon: $icon-twitter;
     }
 
     @include element(pay-cards-text) {
-      @include type-setting('small-text');
+      @include type-setting('smallest-text');
       line-height: $base-line-height * 3;
       display: inline-block;
     }

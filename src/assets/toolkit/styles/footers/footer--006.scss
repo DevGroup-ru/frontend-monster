@@ -234,7 +234,7 @@ $footer006-arrow-down: $icon-arr-down;
     }
 
     @include element(copyright) {
-      @include type-setting('small-text');
+      @include type-setting('smallest-text');
     }
 
     @include element(social) {
@@ -247,7 +247,7 @@ $footer006-arrow-down: $icon-arr-down;
 
     @include element(social-text) {
       display: none;
-      @include type-setting('small-text');
+      @include type-setting('smallest-text');
       line-height: $base-line-height * 3;
 
       @include _(greater than mobile) {  

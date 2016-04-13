@@ -1,0 +1,128 @@
+$article001-fon: #fff;
+
+.m-wrapper {
+
+  // @desc Articles - articles with photo
+  // @group articles
+  // @bemJson article--001.json
+
+  @include block(article001) {
+    text-align: left;
+    position: relative;
+
+    @include element(nested) {
+      @include _(4 4 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+      background: $article001-fon;
+
+      @include modifier(for-slider) {
+        @include _(4 4 8 4 4, 4 4 8 4 4);
+      }
+    }
+
+    @include element(carousel) {
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(title-nested) {
+      @include type-setting(accent-text);
+      height: $base-line-height * 4;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+      margin-bottom: $base-line-height * 2; 
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    @include element(category) {
+      @include type-setting(small-text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    @include element(img) {
+      display: block;
+      height: $base-line-height * 18;
+      overflow: hidden;
+      position: relative;
+      @include _(4 4 4 4 4, 4 4 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {  
+        height: $base-line-height * 34;
+      }
+
+      @include _(greater than tablet) {  
+        height: $base-line-height * 23;
+      }
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include element(text-wrap) {
+      padding: $base-line-height * 2;
+      overflow: hidden;
+      @include _(4 4 4 4 4, 4 4 8 4 4, $gutter: row);
+
+      @include _(greater than mobile) {  
+        padding: $base-line-height * 3;
+      }
+    }
+
+    @include element(author) {
+      @include type-setting(small-text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+      display: block;
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      margin-top: $base-line-height * 2; 
+      overflow: hidden;
+      display: block;
+      height: $base-line-height * 10;
+    }
+
+    @include element(link-full) {
+      margin-top: $base-line-height * 2;
+      display: block;
+
+      @include _(greater than mobile) {  
+        display: inline-block;
+      }
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+}
+

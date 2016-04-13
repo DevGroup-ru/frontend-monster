@@ -6,8 +6,12 @@ $font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $debug-vertical-rhythm: false;
 
 $type-settings: (
-  small-text: (
+  smallest-text: (
     font-size: 0.75rem,
+    line-height: $base-line-height * 2,
+  ),
+  small-text: (
+    font-size: 0.875rem,
     line-height: $base-line-height * 2,
   ),
   text-bold: (
@@ -23,11 +27,11 @@ $type-settings: (
   ),
   accent-text: (
     font-size: 1rem,
-    font-size-desktop: 1.25rem,
+    font-size-desktop: 1.1875rem,
     line-height: $base-line-height * 2,
   ),
   section: (
-    font-size: 1.25rem,
+    font-size: 1.1875rem,
     font-size-desktop: 1.5rem,
     line-height: $base-line-height * 2,
     line-height-desktop-wide: $base-line-height * 3,

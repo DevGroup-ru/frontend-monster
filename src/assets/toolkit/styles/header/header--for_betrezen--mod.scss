@@ -42,7 +42,7 @@ $header-bg--beauty: 'header-bg--beauty.png';
 			}
 
 			.sub-menu{
-				width: 320px;
+				//width: 320px;
 
 				&--right{
 					right: 0;
@@ -210,7 +210,6 @@ $header-bg--beauty: 'header-bg--beauty.png';
 			.sub-link:hover{
 				&:after{
 					text-decoration: none;
-					content: '\e801';
 				}
 			}
 
