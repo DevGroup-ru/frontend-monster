@@ -57,19 +57,40 @@ class VisualFrame {
         <i class="fa fa-times"></i>
     </a>
 </div>`);
+    $('body').append(this.$handlers);
+    this.$handlers.hide();
     const that = this;
     $(this.settings['monster-content-selector']).on({
       mouseenter: function hoverIn() {
         const $this = $(this);
+        that.$handlers.show();
         $this.addClass('m-monster-content__material--highlighted');
-        that.popper = new Popper($this[0], that.$handlers[0]);
       },
       mouseleave: function hoverOut() {
         const $this = $(this);
         $this.removeClass('m-monster-content__material--highlighted');
-        that.popper.destroy();
+      },
+      click: function clickHandler() {
+        const $this = $(this);
+        that.selectMaterial($this);
       },
     }, '[data-is-material]');
+  }
+
+  selectMaterial($material) {
+    if (this.$selectedMaterial === $material) {
+      return;
+    }
+    if (this.popper) {
+      this.popper.destroy();
+    }
+    if (this.$selectedMaterial) {
+      this.$selectedMaterial.removeClass('m-monster-content__material--active');
+    }
+    /* global Popper: false */
+    this.popper = new Popper($material[0], this.$handlers[0], {boundariesPadding: 50});
+    $material.addClass('m-monster-content__material--active');
+    this.$selectedMaterial = $material;
   }
 
   serializeContent(callback) {

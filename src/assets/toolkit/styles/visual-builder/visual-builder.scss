@@ -171,4 +171,14 @@ $editor-accent-color: #EC5035;
       }
     }
   }
+
+}
+
+@include block(monster-block-handlers) {
+  position: absolute;
+  background-color: $editor-section-color;
+  color: $editor-text-color;
+  min-width: 150px;
+  text-align: center;
+  line-height: $base-line-height*3;
 }

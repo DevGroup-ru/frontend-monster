@@ -1,0 +1,62 @@
+$default-popper-color: #E6E6E6;
+.popper {
+    position: absolute;
+    background: $default-popper-color;
+    color: black;
+    width: 150px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    .popper__arrow {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        margin: 5px;
+    }
+    &[x-placement^="top"] {
+         margin-bottom: 5px;
+        .popper__arrow {
+            border-width: 5px 5px 0 5px;
+            border-color: $default-popper-color transparent transparent transparent;
+            bottom: -5px;
+            left: calc(50% - 5px);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &[x-placement^="bottom"] {
+         margin-top: 5px;
+        .popper__arrow {
+            border-width: 0 5px 5px 5px;
+            border-color: transparent transparent $default-popper-color transparent;
+            top: -5px;
+            left: calc(50% - 5px);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    &[x-placement^="right"] {
+         margin-left: 5px;
+        .popper__arrow {
+            border-width: 5px 5px 5px 0;
+            border-color: transparent $default-popper-color transparent transparent;
+            left: -5px;
+            top: calc(50% - 5px);
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &[x-placement^="left"] {
+         margin-right: 5px;
+        .popper__arrow {
+            border-width: 5px 0 5px 5px;
+            border-color: transparent transparent transparent $default-popper-color;
+            right: -5px;
+            top: calc(50% - 5px);
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
