@@ -1,10 +1,6 @@
 $employees005-border-width: $base-line-height/10;
 $employees005-border-color: #000;
 
-$employees005-facebook-icon: $icon-facebook;
-$employees005-vk-icon: $icon-vkontakte;
-$employees005-twitter-icon: $icon-twitter;
-
 .m-wrapper {
   // @desc Employees - big blocks
   // @group employees
@@ -127,24 +123,6 @@ $employees005-twitter-icon: $icon-twitter;
 
       &:before{
         @extend %basic-icon;
-      }
-
-      @include modifier(facebook) {
-        &:before{
-          content: $employees005-facebook-icon;
-        }
-      }
-
-      @include modifier(vk) {
-        &:before{
-          content: $employees005-vk-icon;
-        }
-      }
-
-      @include modifier(twitter) {
-        &:before{
-          content: $employees005-twitter-icon;
-        }
       }
     }
 

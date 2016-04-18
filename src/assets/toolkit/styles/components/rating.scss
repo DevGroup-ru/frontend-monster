@@ -134,4 +134,47 @@ $rateitem-js: ".rating-js__icon:before";
   }
 }
 
+@include block(rating-tooltip) {
+  text-align: center;    
+
+  &:hover {
+    .rating-tooltip__popper {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+
+  @include element(line) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include type-setting(text);
+    margin: $base-line-height 0;
+    cursor: pointer;
+  }
+
+  @include element(rate-text) {
+    margin-left: $base-line-height * 2;
+  }
+
+  @include element(popper) {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out 0s;
+
+    &[x-placement^="top"] {
+       margin-bottom: 0;
+    }
+
+    &[x-placement^="bottom"] {
+      margin-top: 0;
+    }
+  }
+
+  @include element(rel) {
+    padding: $base-line-height 0;
+  }
+}
+
 

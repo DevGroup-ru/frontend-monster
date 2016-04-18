@@ -1,7 +1,3 @@
-$employees004-facebook-icon: $icon-facebook;
-$employees004-vk-icon: $icon-vkontakte;
-$employees004-twitter-icon: $icon-twitter;
-
 .m-wrapper {
   // @desc Employees - blocks with photo on left
   // @group employees
@@ -129,24 +125,6 @@ $employees004-twitter-icon: $icon-twitter;
 
       &:before{
         @extend %basic-icon;
-      }
-
-      @include modifier(facebook) {
-        &:before{
-          content: $employees004-facebook-icon;
-        }
-      }
-
-      @include modifier(vk) {
-        &:before{
-          content: $employees004-vk-icon;
-        }
-      }
-
-      @include modifier(twitter) {
-        &:before{
-          content: $employees004-twitter-icon;
-        }
       }
     }
 

@@ -1,7 +1,3 @@
-$employees001-facebook-icon: $icon-facebook;
-$employees001-vk-icon: $icon-vkontakte;
-$employees001-twitter-icon: $icon-twitter;
-
 .m-wrapper {
   // @desc Employees - blocks with time of work
   // @group employees
@@ -153,24 +149,6 @@ $employees001-twitter-icon: $icon-twitter;
 
       &:before{
         @extend %basic-icon;
-      }
-
-      @include modifier(facebook) {
-        &:before{
-          content: $employees001-facebook-icon;
-        }
-      }
-
-      @include modifier(vk) {
-        &:before{
-          content: $employees001-vk-icon;
-        }
-      }
-
-      @include modifier(twitter) {
-        &:before{
-          content: $employees001-twitter-icon;
-        }
       }
     }
 

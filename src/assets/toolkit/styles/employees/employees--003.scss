@@ -1,9 +1,5 @@
 $employees003-text-on-photo: #eee;
 
-$employees003-facebook-icon: $icon-facebook;
-$employees003-vk-icon: $icon-vkontakte;
-$employees003-twitter-icon: $icon-twitter;
-
 .m-wrapper {
   // @desc Employees - blocks with info on photo
   // @group employees
@@ -146,24 +142,6 @@ $employees003-twitter-icon: $icon-twitter;
 
       &:before{
         @extend %basic-icon;
-      }
-
-      @include modifier(facebook) {
-        &:before{
-          content: $employees003-facebook-icon;
-        }
-      }
-
-      @include modifier(vk) {
-        &:before{
-          content: $employees003-vk-icon;
-        }
-      }
-
-      @include modifier(twitter) {
-        &:before{
-          content: $employees003-twitter-icon;
-        }
       }
     }
 

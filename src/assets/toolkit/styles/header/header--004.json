@@ -68,6 +68,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-1",
                                 "content": "Пункт 1",
@@ -110,6 +111,7 @@
                                     "content": [
                                       {
                                         "elem": "2lvl-link",
+                                        "mods": ["sub"],
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-3",
                                         "content": "Пункт 2-2",
@@ -292,6 +294,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-2",
                                 "content": "Пункт 2",
@@ -374,6 +377,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-3",
                                 "content": "Пункт 3",
@@ -404,6 +408,7 @@
                                     "content": [
                                       {
                                         "elem": "2lvl-link",
+                                        "mods": ["sub"],
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-14",
                                         "content": "Пункт 1",
@@ -504,32 +509,6 @@
                                                   {
                                                     "elem": "3lvl-link",
                                                     "editableGroup": "3lvl-link-15",
-                                                    "content": "Наименование крутой работы из портфолио клиента",
-                                                    "link": true
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                "elem": "3lvl-item",
-                                                "editableGroup": "3lvl-item-7",
-                                                "cls": "menu-photo-item",
-                                                "content": [
-                                                  {
-                                                    "elem": "3lvl-photo-link",
-                                                    "editableGroup": "3lvl-photo-link-2",
-                                                    "cls": "menu-photo-link",
-                                                    "link": true,
-                                                    "content": [
-                                                      {
-                                                        "elem": "3lvl-photo",
-                                                        "editableGroup": "3lvl-photo-2",
-                                                        "image": "http://lorempixel.com/200/300"
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "elem": "3lvl-link",
-                                                    "editableGroup": "3lvl-link-16",
                                                     "content": "Наименование крутой работы из портфолио клиента",
                                                     "link": true
                                                   }
@@ -654,6 +633,7 @@
                                     "content": [
                                       {
                                         "elem": "2lvl-link",
+                                        "mods": ["sub"],
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-15",
                                         "content": "Пункт 2",
@@ -824,6 +804,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-4",
                                 "content": "Пункт 4",

@@ -5,10 +5,6 @@ $footer005-menu-item-column: 4; //write the number of menu column
 $footer005-logo: 'logo.jpg';
 $footer005-logo-height: $base-line-height * 7;
 
-$footer005-facebook-icon: $icon-facebook;
-$footer005-vk-icon: $icon-vkontakte;
-$footer005-twitter-icon: $icon-twitter;
-
 .m-wrapper {
   // @desc Footer - simple footer with contacts info and buttons
   // @group footer
@@ -179,24 +175,6 @@ $footer005-twitter-icon: $icon-twitter;
 
       &:before{
         @extend %basic-icon;
-      }
-
-      @include modifier(facebook) {
-        &:before{
-          content: $footer005-facebook-icon;
-        }
-      }
-
-      @include modifier(vk) {
-        &:before{
-          content: $footer005-vk-icon;
-        }
-      }
-
-      @include modifier(twitter) {
-        &:before{
-          content: $footer005-twitter-icon;
-        }
       }
     }
 

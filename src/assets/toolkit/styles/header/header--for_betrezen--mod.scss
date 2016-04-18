@@ -114,7 +114,7 @@ $header-bg--beauty: 'header-bg--beauty.png';
 			align-items: center;
 			 -webkit-justify-content: center;
 			justify-content: center;
-			flex-direction: row;
+			flex-direction: column;
 
 	      	@include _(greater than $header-mobile-breakpoint) {  
 	      		display: -webkit-box;

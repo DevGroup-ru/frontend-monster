@@ -4,10 +4,6 @@ $footer001-fon-bottom: #444d60;
 $footer001-height-bottom: $base-line-height * 5;
 $footer001-menu-item-column: 4; //write the number of menu column
 
-$footer001-facebook-icon: $icon-facebook;
-$footer001-vk-icon: $icon-vkontakte;
-$footer001-twitter-icon: $icon-twitter;
-
 .m-wrapper {
   // @desc Footer - simple footer without logo
   // @group footer
@@ -114,6 +110,10 @@ $footer001-twitter-icon: $icon-twitter;
     @include element(phone) {
       @include type-setting(accent-text);
       @include _(2.5 3 4 4 4, 4.5 12 8 4 4);
+
+      @include _(greater than desktop) { 
+        text-align: right;
+      }
     }
 
     @include element(button) {
@@ -198,24 +198,6 @@ $footer001-twitter-icon: $icon-twitter;
 
       &:before{
         @extend %basic-icon;
-      }
-
-      @include modifier(facebook) {
-        &:before{
-          content: $footer001-facebook-icon;
-        }
-      }
-
-      @include modifier(vk) {
-        &:before{
-          content: $footer001-vk-icon;
-        }
-      }
-
-      @include modifier(twitter) {
-        &:before{
-          content: $footer001-twitter-icon;
-        }
       }
     }
   }

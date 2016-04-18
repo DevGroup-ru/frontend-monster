@@ -1,0 +1,342 @@
+$header011-fon: #f2f2f2;
+$header011-top-fon: #fff;
+$header011-user-fon: #eee;
+$header011-phone-button-fon: #fff;
+$header011-z-index: 5;
+$logo: 'logo.jpg';
+
+$header011-height: $base-line-height * 6;
+$header011-height-mobile: $base-line-height * 8;
+$header011-top-height: $base-line-height * 9;
+
+$header-mail-icon: $icon-mail-alt;
+
+.m-wrapper {
+  // @desc Header - header with menu, search, button of personal account and top line
+  // @group header
+  // @bemJson header--011.json
+
+  @include block(header011) {
+    text-align: center;
+    position: fixed;
+    //position: static;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: $header011-height-mobile;
+    background: $header011-fon;
+    z-index: $header011-z-index;
+
+    &:before {
+      display: none;
+      content: "";
+      background: $header011-top-fon;
+      height: $header011-top-height;
+      width: 100%;
+    }
+
+    @include _(greater than $header-mobile-breakpoint) {  
+      height: $header011-height + $header011-top-height;
+      overflow: inherit;
+
+      &:before {
+        display: block;
+      }
+    }
+
+    @include element(wrap) {
+      position: relative;   
+    }   
+
+    @include element(burger) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      z-index: 10;
+      @include _(3 1 1 1 1);
+      height: $header011-height-mobile;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: none;
+      }
+
+      &:before {
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than mobile) {  
+          font-size: $base-line-height * 4; 
+        }
+      }      
+    }
+
+    @include element(logo-wrap) {
+      position: absolute;
+      top: 0;
+      @include _(3 3 3 2 2);
+      margin: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include _(greater than mobile) {  
+        @include _(3 3 3 2 2, $gutter: row);
+      }
+
+      @include _(greater than $header-mobile-breakpoint) {
+        transform: translateX(0);  
+        top: -$header011-top-height;
+        left: 0;
+        @include _(3 3 3 2 2);
+      }
+    }
+
+    @include element(logo) {
+      display: block;
+      background-image: url('../images/' + $logo);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      max-width: $base-line-height * 300;
+      min-height: $header011-height-mobile - $base-line-height * 2; 
+      margin-top: $base-line-height; 
+      margin-bottom: $base-line-height; 
+      overflow: hidden;
+      text-indent: 9999px;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        top: -$header011-top-height;
+        min-height: $header011-top-height - $base-line-height * 2;
+      }
+    }
+
+    @include element(menu) {
+      position: absolute;
+      top: $header011-height-mobile;
+      left: 0;
+      @include _(12 4 4 4 4);
+      float: none;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        top: 0;
+        @include _(12 12 4 4 4);
+        margin: 0;
+
+        & > div{
+          margin: 0 25% 0 0;
+        }
+
+        .menu001__1lvl-link,
+        .menu001__1lvl-sub-link {
+          height: $header011-height;
+          overflow: hidden;
+        }
+      }
+
+      .menu-mobile {
+        height: calc(100vh - #{$header011-height-mobile});
+        overflow: auto;
+      }
+    }
+
+    @include element(user-icon) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include _(1 1 1 1 1);
+      text-decoration: none;
+      z-index: 10;
+      height: $header011-height-mobile;
+
+      &:before {
+        font-size: $base-line-height * 2;
+      }    
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -$header011-top-height;
+        height: $header011-top-height;
+      }
+    }
+
+    @include element(phone-button-icon) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include _(1 1 1 1 1);
+      text-decoration: none;
+      height: $header011-height-mobile;
+
+      &:before {
+        @extend %basic-icon;
+        content: $header-phone-icon;
+        font-size: $base-line-height * 3; 
+
+        @include _(greater than mobile) {  
+          font-size: $base-line-height * 4; 
+        }
+      }
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        display: none;
+      }
+    }
+
+    @include element(phone-button-wrap) {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: $header010-height-mobile;
+      @include _(5 4 4 4 4, 12 12 8 4 4);
+      justify-content: space-between;
+      align-items: center;
+      padding: $base-line-height * 2;
+      background: $header011-phone-button-fon;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        @include _(5 9 4 4 4, 12 12 8 4 4);
+        display: flex;
+        top: 0;
+        right: 0;
+        top: -$header011-top-height;
+        height: $header011-top-height;
+        background: transparent;
+        padding: 0;
+      }
+    }
+
+    @include element(phone-days-wrap) {
+      padding-right: 0; 
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        padding-right: $base-line-height * 3;
+        text-align: right;
+      }
+    }
+
+    @include element(phone) {
+      @include type-setting(accent-text);
+
+      &:before {
+        @extend %basic-icon;
+        content: $header-phone-icon;
+        font-size: $base-line-height * 3; 
+        vertical-align: middle;
+        padding-right: $base-line-height;
+      }
+    }
+
+    @include element(button-call) {
+      margin-top: $base-line-height * 2;
+
+      @include _(greater than $header-mobile-breakpoint) {  
+        margin-top: 0;
+        min-width: 220px;
+      }
+
+      @include _(greater than desktop-wide) {  
+        margin-top: 0;
+        min-width: 245px;
+      }
+    }
+
+    @include block(block-bottom-menu) {
+
+      @include element(mail-wrap) {    
+        padding: $base-line-height * 2;  
+
+        @include _(greater than $header-mobile-breakpoint) {  
+          @include _(3 3 1 1 1, 12 12 8 4 4);
+          padding: 0;
+          display: flex;
+          text-align: right;
+          position: absolute;
+          right: 41%;
+          top: -$header011-top-height;
+          height: $header011-top-height;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+
+      @include element(mail) {
+        @include type-setting(accent-text);
+        text-decoration: none;
+
+        &:before {
+          @extend %basic-icon;
+          content: $header-mail-icon;
+          font-size: $base-line-height * 3; 
+          vertical-align: middle;
+          padding-right: $base-line-height;
+        }
+      }
+
+      @include element(mail-text) {
+        @include type-setting(text);
+        margin-bottom: $base-line-height;
+
+        @include _(greater than $header-mobile-breakpoint) {  
+          display: none;
+        }
+      }
+
+      @include element(button-wrap) {
+        
+        @include _(greater than $header-mobile-breakpoint) {  
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: $header011-height;
+          @include _(3 3 1 1 1, 12 12 8 4 4, $gutter: omega);
+        }
+      }
+
+      @include element(button) {
+        display: block;  
+        padding: $base-line-height * 2;
+
+        @include _(greater than $header-mobile-breakpoint) {  
+          padding: $base-line-height;
+          min-width: 220px;
+        }
+
+        @include _(greater than desktop-wide) {  
+          margin-top: 0;
+          min-width: 245px;
+        }
+      }
+    } 
+
+    @include block(sub-menu) {
+
+      @include modifier(title-mega) {
+
+        @include _(greater than $header-mobile-breakpoint) {
+          .menu001__2lvl-item {
+            $menu001-sub-item-num: 3;
+            width: calculate-width($menu001-sub-item-num);
+          }
+        }
+      }
+
+      @include modifier(custom-scroll) {
+
+        @include _(greater than $header-mobile-breakpoint) {
+          max-height: $base-line-height * 30;
+        }
+      }
+    }
+  }
+}

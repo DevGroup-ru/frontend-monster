@@ -89,18 +89,33 @@
                 "content": [
                   {
                     "elem": "social-item",
-                    "mods": ["facebook"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-facebook'></i>",
+                        "editable": true
+                      }
+                    ]
                   },
                   {
                     "elem": "social-item",
-                    "mods": ["vk"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-vkontakte'></i>",
+                        "editable": true
+                      }
+                    ]
                   },
                   {
                     "elem": "social-item",
-                    "mods": ["twitter"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-twitter'></i>",
+                        "editable": true
+                      }
+                    ]
                   }
                 ]
               },
@@ -178,18 +193,33 @@
                 "content": [
                   {
                     "elem": "social-item",
-                    "mods": ["facebook"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-facebook'></i>",
+                        "editable": true
+                      }
+                    ]
                   },
                   {
                     "elem": "social-item",
-                    "mods": ["vk"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-vkontakte'></i>",
+                        "editable": true
+                      }
+                    ]
                   },
                   {
                     "elem": "social-item",
-                    "mods": ["twitter"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-twitter'></i>",
+                        "editable": true
+                      }
+                    ]
                   }
                 ]
               },
@@ -267,18 +297,33 @@
                 "content": [
                   {
                     "elem": "social-item",
-                    "mods": ["facebook"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-facebook'></i>",
+                        "editable": true
+                      }
+                    ]
                   },
                   {
                     "elem": "social-item",
-                    "mods": ["vk"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-vkontakte'></i>",
+                        "editable": true
+                      }
+                    ]
                   },
                   {
                     "elem": "social-item",
-                    "mods": ["twitter"],
-                    "link": true
+                    "link": true,
+                    "content": [
+                      {
+                        "html": "<i class='employees001__social-item-icon icon-basic-twitter'></i>",
+                        "editable": true
+                      }
+                    ]
                   }
                 ]
               },

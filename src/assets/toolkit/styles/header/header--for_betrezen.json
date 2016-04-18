@@ -90,6 +90,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-1",
                                 "content": "Аренда",
@@ -208,6 +209,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "editableGroup": "1lvl-link-2",
                                 "content": "Продажа",
                                 "link": true
@@ -290,6 +292,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-4",
                                 "content": "СКИДКИ!",
@@ -374,6 +377,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-7",
                                 "content": "О Нас",
@@ -504,6 +508,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-8",
                                 "content": "Таиланд",

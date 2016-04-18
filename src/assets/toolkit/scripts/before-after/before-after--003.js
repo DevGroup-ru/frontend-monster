@@ -22,21 +22,25 @@ $(function() {
     positionStart(dragMeStart);
 
 	var widthContainer = $container.width();
-	var widthImg = $viewImg.width();
-	var imgWidthCenter = (widthImg - widthContainer) / 2;
-	var heightContainer = $container.height();
-	var heightImg = $viewImg.height();
-	var imgHeightCenter = (heightImg - heightContainer) / 2;
-	imgStart(imgWidthCenter, imgHeightCenter);    
+    var heightContainer = $container.height();
+
+    $viewImg.load(function() {  
+       var widthImg = $(this).width();
+       var heightImg = $(this).height();
+       var imgWidthCenter = (widthImg - widthContainer) / 2;
+       var imgHeightCenter = (heightImg - heightContainer) / 2;
+       imgStart(imgWidthCenter, imgHeightCenter);   
+    });
+	
 
 	$(window).resize(function() {
-	    var dragMeStart = $container.width() / 2;
+	    dragMeStart = $container.width() / 2;
 	    positionStart(dragMeStart);   
 
-        var widthContainer = $container.width();
+        widthContainer = $container.width();
+        heightContainer = $container.height();
         var widthImg = $viewImg.width();
         var imgWidthCenter = (widthImg - widthContainer) / 2;
-        var heightContainer = $container.height();
         var heightImg = $viewImg.height();
         var imgHeightCenter = (heightImg - heightContainer) / 2;
         imgStart(imgWidthCenter, imgHeightCenter);   

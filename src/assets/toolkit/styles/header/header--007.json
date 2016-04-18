@@ -51,6 +51,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-1",
                                 "content": "Пункт 1",
@@ -93,6 +94,7 @@
                                     "content": [
                                       {
                                         "elem": "2lvl-link",
+                                        "mods": ["sub"],
                                         "cls": "sub-link",
                                         "editableGroup": "2lvl-link-3",
                                         "content": "Пункт 2-2",
@@ -275,6 +277,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-2",
                                 "content": "Пункт 2",
@@ -357,6 +360,7 @@
                               "content": [
                                 {
                                   "elem": "1lvl-link",
+                                  "mods": ["sub"],
                                   "cls": "sub-link",
                                   "editableGroup": "1lvl-link-3",
                                   "content": "Пункт 3",
@@ -463,6 +467,7 @@
                             "content": [
                               {
                                 "elem": "1lvl-link",
+                                "mods": ["sub"],
                                 "cls": "sub-link",
                                 "editableGroup": "1lvl-link-4",
                                 "content": "Пункт 4",

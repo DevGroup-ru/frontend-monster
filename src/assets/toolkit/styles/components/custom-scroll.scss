@@ -122,7 +122,7 @@ $scroll-hor-height-rail: $base-line-height; //horizontal
 }
 
 .mCSB_inside > .mCSB_container {
-  margin-right: $scroll-width + $base-line-height;
+  margin-right: $scroll-width;
 }
 
 .mCS-dir-rtl > .mCSB_inside > .mCSB_container {
