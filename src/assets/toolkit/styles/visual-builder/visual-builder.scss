@@ -143,6 +143,7 @@ $editor-accent-color: #EC5035;
       padding: 1rem;
       display: block;
       border-left: 0.2rem solid $editor-light-bg;
+      text-decoration: none;
       @include modifier(active) {
         font-weight: bold;
         background: $editor-base-bg;

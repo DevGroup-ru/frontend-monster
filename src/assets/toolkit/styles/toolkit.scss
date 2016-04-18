@@ -3,9 +3,12 @@
  */
 
 @import "bootstrap";
-@import "thirdparty/popper";
-
-@import "library/library";
+@import "../../../../bower_components/owl.carousel/src/scss/owl.carousel";
+@import "../../../../bower_components/owl.carousel/src/scss/owl.animate";
+@import "../../../../bower_components/owl.carousel/src/scss/owl.lazyload";
+@import "../../../../bower_components/owl.carousel/src/scss/owl.theme.default";
+@import "../../../../bower_components/owl.carousel/src/scss/owl.video";
+//@import "library/library";
 
 @import "components/components";
 

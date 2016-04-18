@@ -1,7 +1,8 @@
-import StructureEnvironment from './environments/StructureEnvironment';
+import SiteStructureEnvironment from './environments/SiteStructureEnvironment';
 import MaterialsEnvironment from './environments/MaterialsEnvironment';
 import CustomizationEnvironment from './environments/CustomizationEnvironment';
 import ActionEnvironment from './environments/ActionEnvironment';
+import PageStructureEnvironment from './environments/PageStructureEnvironment';
 import FrameApi from './../utils/FrameApi';
 
 class VisualBuilder {
@@ -10,17 +11,17 @@ class VisualBuilder {
     this.resolutionSwitcher();
 
     this.environments = new Map([
-      ['structure', new StructureEnvironment(this, 'structure')],
+      ['site-structure', new SiteStructureEnvironment(this, 'site-structure')],
+      ['page-structure', new PageStructureEnvironment(this, 'page-structure')],
       ['materials', new MaterialsEnvironment(this, 'materials')],
       ['customization', new CustomizationEnvironment(this, 'customization')],
       ['action', new ActionEnvironment(this, 'action')],
     ]);
 
-    this.currentEnvironment = 'structure';
     this.environmentSelector();
 
     // select first environment by default
-    this.switchEnvironment(this.currentEnvironment);
+    this.switchEnvironment('structure');
     $('.monster-environment-selector__environment-link')
       .first()
       .addClass('monster-environment-selector__environment-link--active');
@@ -70,8 +71,13 @@ class VisualBuilder {
     const activeModifier = `${bemElem}--active`;
     const $sectionLinks = $(`.${bemElem}`);
     $sectionLinks.click(function callback() {
+      const environmentName = $(this).data('environmentName');
+      if (that.currentEnvironment === environmentName) {
+        return false;
+      }
+
       $sectionLinks.removeClass(activeModifier);
-      that.switchEnvironment($(this).data('environmentName'));
+      that.switchEnvironment(environmentName);
       $(this).addClass(activeModifier);
       return false;
     });

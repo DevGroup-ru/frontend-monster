@@ -14,7 +14,7 @@ module.exports = function(fabricatorConfig) {
 			path: path.resolve(__dirname, fabricatorConfig.dest, 'assets'),
 			filename: '[name].js'
 		},
-    devtool: 'source-map',
+    devtool: fabricatorConfig.dev ? 'source-map' : '',
 		module: {
 			loaders: [
 				{

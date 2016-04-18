@@ -8,7 +8,6 @@ class FrontendMonster {
     this.visualBulder = null;
     this.hashApi = new HashApi();
     if (window.parent !== window && window.parent.FrontendMonster) {
-
       if (window.parent.FrontendMonster.hasBuilder) {
         this.VisualFrame = new VisualFrame();
       }

@@ -26,6 +26,49 @@
     "tests"
   ],
   "devDependencies": {
-    "flint": "~2.3.7"
+    "flint": "~2.3.7",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.1.3",
+    "jqueryui-touch-punch": "*",
+    "chosen": "^1.5.1",
+    "is_js": "^0.7.6",
+    "malihu-custom-scrollbar-plugin": "^3.1.3",
+    "jquery-popup-overlay": "^1.6.0",
+    "owl.carousel": "^2.0.0-beta.3"
+  },
+  "overrides": {
+    "flint": {
+      "ignore": [
+        "*"
+      ]
+    },
+    "owl.carousel": {
+      "main": [
+        "dist/owl.carousel.js"
+      ]
+    },
+    "malihu-custom-scrollbar-plugin": {
+      "main": [
+        "./jquery.mCustomScrollbar.js"
+      ]
+    },
+    "chosen": {
+      "main": [
+        "chosen.jquery.js"
+      ]
+    },
+    "jquery-popup-overlay": {
+      "main": [
+        "jquery.popupoverlay.js"
+      ]
+    },
+    "jquery": {
+      "main": []
+    },
+    "jquery-ui": {
+      "main": []
+    },
+    "jquery-mousewheel": {
+      "main": []
+    }
   }
 }

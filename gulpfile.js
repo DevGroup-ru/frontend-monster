@@ -21,6 +21,8 @@ var bemBhCompiler = require('./bemBhCompiler');
 var debug = require('gulp-debug');
 var watch = require('gulp-watch');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var mainBowerFiles = require('main-bower-files');
 
 // configuration
 var config = {
@@ -67,11 +69,11 @@ gulp.task('styles:fabricator', function () {
 
 gulp.task('styles:toolkit', function () {
 	gulp.src(config.src.styles.toolkit)
-		.pipe(sourcemaps.init())
+		.pipe(gulpif(config.dev, sourcemaps.init()))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('last 1 version'))
 		.pipe(gulpif(!config.dev, csso()))
-		.pipe(sourcemaps.write())
+		.pipe(gulpif(config.dev, sourcemaps.write()))
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
@@ -118,9 +120,19 @@ gulp.task('fonts', function() {
 //libs
 
 gulp.task('libs', function() {
-  return gulp.src('./libs/**/*')
+  return gulp.src(mainBowerFiles({
+      checkExistence: true,
+      debugging: true,
+      includeDev: true,
+      paths: {
+        bowerDirectory: 'bower_components',
+        bowerrc: '.bowerrc',
+        bowerJson: 'bower.json'
+      }
+    }))
     .pipe(sourcemaps.init())
     .pipe(concat('libs.js'))
+    .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.dest + '/assets/toolkit/libs/'));
 });
@@ -239,7 +251,7 @@ gulp.task('serve', function () {
 	gulp.watch(config.src.imagesSprites, ['sprites:watch']);
 
 	gulp.task('libs:watch', ['libs'], reload);
-	gulp.watch('libs/*', ['libs:watch']);
+	gulp.watch('bower_components/*', ['libs:watch']);
 
 });
 

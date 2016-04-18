@@ -72,7 +72,7 @@ class MaterialsEnvironment extends BaseEnvironment {
         'newBlock',
         [
           $(this).data('materialName'),
-          that.visualBuilder.settings['new-block-url']
+          that.visualBuilder.settings['new-block-url'],
         ]
       );
     });

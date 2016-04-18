@@ -1,9 +1,10 @@
 var through = require('through2');
 var File = require('vinyl');
-var bh = new (require('bh').BH);
-bh.setOptions({ delimMod: '--' });
+
 
 module.exports = function() {
+  var bh = new (require('bh').BH);
+  bh.setOptions({ delimMod: '--' });
   bh.match('$before', function(ctx, json) {
     // convert listed mods to mod->true
     if (json.mods) {

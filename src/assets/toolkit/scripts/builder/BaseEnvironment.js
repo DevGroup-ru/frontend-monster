@@ -12,7 +12,9 @@ class BaseEnvironment {
     if (this.name === this.visualBuilder.currentEnvironment) {
       return;
     }
-    this.visualBuilder.environments.get(this.visualBuilder.currentEnvironment).deactivate();
+    if (this.visualBuilder.currentEnvironment) {
+      this.visualBuilder.environments.get(this.visualBuilder.currentEnvironment).deactivate();
+    }
   }
 
   deactivate() {
