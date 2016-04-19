@@ -1,7 +1,7 @@
 $(function() {
   "use strict";	
 try {
-	$('.main-carousel--001').owlCarousel({
+	$('.main-carousel--001').addClass('owl-carousel').owlCarousel({
 	  loop:true,
 	  margin:10,
 	  nav:true,
@@ -12,7 +12,7 @@ try {
 	  items: 1
 	});
 
-	$('.carousel--full').owlCarousel({
+	$('.carousel--full').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
   		nav:true,
   		navText: [
@@ -22,7 +22,7 @@ try {
 	  	items: 1
 	});
 
-	$('.carousel--two-items').owlCarousel({
+	$('.carousel--two-items').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
 	  	nav:true,
 		navText: [
@@ -48,7 +48,7 @@ try {
 	    }
 	});
 
-	$('.carousel--four-items').owlCarousel({
+	$('.carousel--four-items').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
 	  	nav:true,
 		navText: [
@@ -74,7 +74,7 @@ try {
 	    }
 	});
 
-	$('.news008__slider').owlCarousel({
+	$('.news008__slider').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
 	  	margin:0,
 	  	nav:true,
@@ -102,7 +102,7 @@ try {
 	    }
 	});
 
-	$('.price003__carousel').owlCarousel({
+	$('.price003__carousel').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
 	  	nav:true,
 		navText: [
@@ -128,7 +128,7 @@ try {
 	    }
 	});
 
-	$('.price004__carousel').owlCarousel({
+	$('.price004__carousel').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
 	  	nav:true,
 		navText: [
@@ -154,7 +154,7 @@ try {
 	    }
 	});
 
-	$('.article001__carousel').owlCarousel({
+	$('.article001__carousel').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
 	  	nav:true,
 		navText: [
@@ -180,7 +180,7 @@ try {
 	    }
 	});
 
-	$('.article002__carousel').owlCarousel({
+	$('.article002__carousel').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
 	  	nav:true,
 		navText: [
@@ -206,7 +206,7 @@ try {
 	    }
 	});
 
-	$('.article004__carousel').owlCarousel({
+	$('.article004__carousel').addClass('owl-carousel').owlCarousel({
 	  	loop:true,
 	  	nav:true,
 		navText: [
