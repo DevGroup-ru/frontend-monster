@@ -214,7 +214,7 @@ $(function() {
         $('.sub-menu--custom-scroll').mCustomScrollbar();
       }
     } else {
-      if ($('.sub-menu--custom-scroll').mCustomScrollbar) {
+      if ($('.sub-menu--custom-scroll').mCustomScrollbar && $('div').is('.sub-menu--custom-scroll')) {
         $('.sub-menu--custom-scroll').mCustomScrollbar("destroy");
       }
     }
