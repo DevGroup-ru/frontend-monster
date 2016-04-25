@@ -231,6 +231,84 @@ try {
 	        }
 	    }
 	});
+
+	$('.certificate003__carousel').addClass('owl-carousel').owlCarousel({
+	  	loop:true,
+	  	nav:true,
+		navText: [
+		    "",
+		    ""
+		],
+  		responsive:{
+	        320:{
+	            items:1
+	        },
+	        640:{
+	            items:2
+	        },
+	        960:{
+	            items:2
+	        },
+	        1200:{
+	            items:3
+	        },
+	        1344:{
+	            items:3
+	        }
+	    }
+	});
+
+	$('.certificate004__carousel').addClass('owl-carousel').owlCarousel({
+	  	loop:true,
+	  	nav:true,
+		navText: [
+		    "",
+		    ""
+		],
+  		responsive:{
+	        320:{
+	            items:1
+	        },
+	        640:{
+	            items:2
+	        },
+	        960:{
+	            items:3
+	        },
+	        1200:{
+	            items:3
+	        },
+	        1344:{
+	            items:3
+	        }
+	    }
+	});
+
+	$('.certificate005__carousel').addClass('owl-carousel').owlCarousel({
+	  	loop:true,
+	  	nav:true,
+		navText: [
+		    "",
+		    ""
+		],
+  		responsive:{
+	        320:{
+	            items:1
+	        },
+	        640:{
+	            items:2
+	        },
+	        960:{
+	            items:2
+	        },
+	        1200:{
+	            items:2
+	        },
+	        1344:{
+	            items:2
+	        }
+	    }
+	});
 	
 } catch (e) {
 }

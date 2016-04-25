@@ -1,0 +1,102 @@
+.m-wrapper {
+
+  // @desc Certificate - only image
+  // @group certificate
+  // @bemJson certificate--004.json
+
+  @include block(certificate004) {
+    position: relative;
+
+    @include element(info-block) {
+      @include _(3 3 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(nested) {
+      @include _(3 3 4 4 4, 9 9 8 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+
+      @include modifier(for-slider) {
+        @include _(3 3 4 4 4, 3 3 4 4 4);
+      }
+    }    
+
+    @include element(nested-wrap) {
+      @include _(9 9 8 4 4, $gutter: row);
+    }
+
+    @include element(carousel) {
+      @include _(9 9 8 4 4, $gutter: row);
+      clear: none;
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(img) {
+      width: 100%;
+      height: 100%;
+      display: block;
+      height: $base-line-height * 30;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include element(info-title) {
+      @include type-setting(accent-text);
+      margin-bottom: $base-line-height * 2;
+
+      @include _(greater than tablet) {  
+        height: $base-line-height * 4;
+        overflow: hidden;
+      }
+    }
+
+    @include element(info-text) {
+      @include type-setting(text);
+      margin-bottom: $base-line-height * 2;
+
+      @include _(greater than tablet) {  
+        height: $base-line-height * 6;
+        overflow: hidden;
+      }
+    }
+
+  }
+
+  a,
+  a:link,
+  a:hover,
+  a:visited,
+  a:active,
+  a:focus,
+  button {
+    &.certificate004__info-title {
+      @extend .certificate004__info-title;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,73 @@
+.m-wrapper {
+
+  // @desc Certificate - only image
+  // @group certificate
+  // @bemJson certificate--003.json
+
+  @include block(certificate003) {
+    text-align: center;
+    position: relative;
+    
+    @include element(nested) {
+      @include _(3 6 4 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+
+      @include modifier(for-slider) {
+        @include _(3 6 4 4 4, 3 6 4 4 4);
+      }
+    }
+
+    @include element(carousel) {
+      margin-bottom: $base-line-height * 2;
+      @include _(10 10 8 4 4, 12 12 8 4 4, $gutter: row);
+      position: static;
+
+      .owl-nav {
+        display: none;
+      }
+
+      @include _(greater than tablet) {  
+        @include _(10 10 8 4 4, 12 12 8 4 4, $gutter: center);
+
+        .owl-nav {
+          display: block;
+        }
+      }
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(img) {
+      width: 100%;
+      height: 100%;
+      display: block;
+      height: $base-line-height * 30;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+}
+

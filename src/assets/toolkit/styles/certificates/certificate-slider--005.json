@@ -1,0 +1,112 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "certificate005",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": "Сертификаты",
+        "editable": true
+      },
+      {
+        "elem": "info-block",
+        "content": [
+          {
+            "elem": "info-title",
+            "content": "Классное преимущество, всем нравится",
+            "link": true
+          },
+          {
+            "elem": "info-text",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos suscipit officia quod quam illo in et beatae amet fuga, laudantium!",
+            "editable": "wysiwyg"
+          },
+          {
+            "elem": "info-link",
+            "cls": "button-simple",
+            "content": "Посмотреть все сертификаты",
+            "editable": true,
+            "link": true
+          }
+        ]
+      },
+      {
+        "elem": "carousel",
+        "content": [
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

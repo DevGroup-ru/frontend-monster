@@ -1,0 +1,61 @@
+$tooltip-fon: #eee;
+$tooltip-arrow-size: $base-line-height / 2;
+
+@include block(tooltip) {  
+  position: relative;  
+
+  &:hover {
+    .tooltip__popup {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+
+  @include element(popup) {
+    position: absolute;
+    left: 50%;
+    min-width: 245px;
+    background: $tooltip-fon;
+    transform: translateX(-50%);
+    padding: $base-line-height * 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out 0s;
+
+    @include modifier(top) {
+      bottom: 100%;
+    }
+
+    @include modifier(bottom) {
+      top: 100%;
+    }
+  }
+
+  @include element(arrow) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+
+    @include modifier(top) {
+      border-width: $tooltip-arrow-size $tooltip-arrow-size 0 $tooltip-arrow-size;
+      border-color: $tooltip-fon transparent transparent transparent;
+      bottom: -$tooltip-arrow-size;
+      left: calc(50% - #{$tooltip-arrow-size});
+    }
+
+    @include modifier(bottom) {
+      border-width: 0 $tooltip-arrow-size $tooltip-arrow-size $tooltip-arrow-size;
+      border-color:  transparent transparent $tooltip-fon transparent;
+      top: -$tooltip-arrow-size;
+      left: calc(50% - #{$tooltip-arrow-size});
+    }
+  }
+
+  @include element(rel) {
+    padding: $base-line-height 0;
+  }
+}
+
+

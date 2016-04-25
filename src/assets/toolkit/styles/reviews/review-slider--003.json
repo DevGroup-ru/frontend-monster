@@ -16,7 +16,7 @@
         "editable": true
       },
       {
-        "cls": "carousel--full",
+        "cls": "carousel--full owl-carousel--with-nav-top-center",
         "content": [
           {
             "elem": "nested",

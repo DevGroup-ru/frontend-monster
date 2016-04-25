@@ -7,11 +7,12 @@ import FrontendMonster from './FrontendMonster';
 
 window.FrontendMonster = new FrontendMonster();
 
-require('./components/rating');
 require('./components/tabs');
 require('./components/tabs-accordion');
 require('./components/owl.carousel.custom');
+require('./components/rating');
 require('./components/popup.custom');
+require('./components/tooltip');
 require('./components/chosen.custom');
 require('./components/scroll.custom');
 require('./components/quantity');
@@ -27,4 +28,3 @@ require('./before-after/before-after--003');
 require('./prices/price--common');
 require('./prices/price--001');
 require('./services/service');
-require('./tooltip/tooltip');

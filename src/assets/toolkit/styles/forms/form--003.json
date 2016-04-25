@@ -29,7 +29,7 @@
                     "mods": ["label-left"],
                     "editableGroup": "col-1",
                     "editable": true,
-                    "html": "<label class='form-label'>Ваше имя</label><input class='form-input' type='text' placeholder='Ваше имя'>"
+                    "html": "<label class='form-label'>Ваше имя</label><div class='form-input-icon'><i class='form-icon icon-basic-user'></i><input class='form-input' type='text' placeholder='Ваше имя'></div>"
                   }
                 ]
               },
@@ -42,7 +42,7 @@
                     "mods": ["label-left"],
                     "editableGroup": "col-2",
                     "editable": true,
-                    "html": "<label class='form-label'>Ваш телефон</label><input class='form-input' type='text' placeholder='Ваш телефон'>"
+                    "html": "<label class='form-label'>Ваш телефон</label><div class='form-input-icon'><i class='form-icon icon-basic-phone'></i><input class='form-input' type='text' placeholder='Ваш телефон'></div>"
                   }
                 ]
               },

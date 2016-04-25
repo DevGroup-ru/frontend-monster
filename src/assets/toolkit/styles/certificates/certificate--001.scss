@@ -1,13 +1,13 @@
-$portfolio001-fon: rgba(0,0,0,0.5);
-$portfolio001-text-color: #fff;
+$certificate001-fon: rgba(0,0,0,0.5);
+$certificate001-icon-zoom: $icon-zoom;
 
 .m-wrapper {
 
-  // @desc Portfolio - only image and text on hover
-  // @group portfolio
-  // @bemJson portfolio--001.json
+  // @desc Certificate - image with zoom-icon
+  // @group certificate
+  // @bemJson certificate--001.json
 
-  @include block(portfolio001) {
+  @include block(certificate001) {
     position: relative;
     text-align: center;
 
@@ -15,7 +15,7 @@ $portfolio001-text-color: #fff;
       @include _(3 3 4 4 4);
       margin-top: $base-line-height * 2;
       margin-bottom: $base-line-height * 2;
-      height: $base-line-height * 23;
+      height: $base-line-height * 30;
       overflow: hidden;
       position: relative;
 
@@ -24,7 +24,7 @@ $portfolio001-text-color: #fff;
       }
 
       &:hover {
-        .portfolio001__text-wrap {
+        .certificate001__link {
           opacity: 1;
           visibility: visible;
           transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
@@ -39,28 +39,6 @@ $portfolio001-text-color: #fff;
     @include element(title) {
       @extend %heading;
       @include _($full-row-configuration);
-    }
-
-    @include element(title-nested) {
-      @include type-setting(accent-text);
-      height: $base-line-height * 4;
-      overflow: hidden;
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      color: $portfolio001-text-color;
-
-      &:hover{
-        text-decoration: underline;
-      }
-
-      @include _(greater than tablet) {  
-        height: $base-line-height * 6;
-      }
-
-      @include _(greater than desktop) {  
-        height: $base-line-height * 4;
-      }
     }
 
     @include element(img) {
@@ -79,33 +57,26 @@ $portfolio001-text-color: #fff;
       }
     }
 
-    @include element(text-wrap) {
+    @include element(link) {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      padding: $base-line-height * 2;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: $portfolio001-fon;
+      background: $certificate001-fon;
       opacity: 0;
       visibility: hidden;
+      text-decoration: none;
       transition: opacity 0.3s ease-out 0s, visibility 0.3s ease-out 0s;
 
-      @include _(greater than tablet) {  
-        padding: $base-line-height * 3;
-      }
-    }
-
-    @include element(link-full) {
-      margin-top: $base-line-height * 2;
-      display: block;
-
-      @include _(greater than tablet) {  
-        margin-top: $base-line-height * 3;
+      &:before{
+        @extend %basic-icon;
+        content: $certificate001-icon-zoom;
+        font-size:  $base-line-height * 3;
       }
     }
 

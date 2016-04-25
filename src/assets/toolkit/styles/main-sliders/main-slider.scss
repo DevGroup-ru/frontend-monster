@@ -101,6 +101,24 @@ $carousel-dot-fon-active: #000;
 	      	}
       	}
 
+      	@include modifier(with-nav-top-center) {
+
+			.owl-nav {
+				top: calc(50% - #{$carousel-nav-size}/2);
+				display: block;
+			}
+
+			.owl-prev {
+				position: absolute;
+				left: 0;
+			}
+
+			.owl-next{
+				position: absolute;
+				right: 0;
+			}
+		}
+
       	@include modifier(with-nav-left) {
       		padding-top: $carousel-nav-size;
 

@@ -1,0 +1,134 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "certificate001",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": "Сертификаты",
+        "editable": true
+      },
+      {
+        "elem": "carousel",
+        "cls": "carousel--four-items",
+        "content": [
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "link",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "link",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "link",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "link",
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["for-slider"],
+            "editableGroup": "nested-5",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "link",
+                "link": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Посмотреть все сертификаты",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}
