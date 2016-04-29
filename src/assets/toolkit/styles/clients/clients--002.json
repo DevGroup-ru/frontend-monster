@@ -1,0 +1,190 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "clients002",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "title",
+        "utils": [
+          "no-margin--top",
+          "text--center"
+        ],
+        "content": "Наши партнеры",
+        "editable": true
+      },
+      {
+        "elem": "nested-wrap",
+        "content": [
+          {
+            "elem": "carousel owl-carousel--with-nav-top-center",
+            "content": [
+              {
+                "elem": "nested",
+                "mods": ["for-slider"],
+                "editableGroup": "nested-1",
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "http://lorempixel.com/200/300"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "name",
+                    "content": "Название компании",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "mods": ["for-slider"],
+                "editableGroup": "nested-2",
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "http://lorempixel.com/200/300"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "name",
+                    "content": "Название компании",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "mods": ["for-slider"],
+                "editableGroup": "nested-3",
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "http://lorempixel.com/200/300"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "name",
+                    "content": "Название компании",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "mods": ["for-slider"],
+                "editableGroup": "nested-4",
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "http://lorempixel.com/200/300"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "name",
+                    "content": "Название компании",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "mods": ["for-slider"],
+                "editableGroup": "nested-5",
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "http://lorempixel.com/200/300"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "name",
+                    "content": "Название компании",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "mods": ["for-slider"],
+                "editableGroup": "nested-6",
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "http://lorempixel.com/200/300"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "name",
+                    "content": "Название компании",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              },
+              {
+                "elem": "nested",
+                "mods": ["for-slider"],
+                "editableGroup": "nested-7",
+                "content": [
+                  {
+                    "elem": "img",
+                    "content": [
+                      {
+                        "image": "http://lorempixel.com/200/300"
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "name",
+                    "content": "Название компании",
+                    "editable": true,
+                    "link": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "btn-wrap",
+        "utils": ["one-line--top"],
+        "content": [
+          {
+            "cls": "button-simple",
+            "content": "Посмотреть все сертификаты",
+            "editable": true,
+            "link": true
+          }
+        ]
+      }
+    ]
+  }
+}

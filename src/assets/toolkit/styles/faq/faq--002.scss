@@ -1,0 +1,35 @@
+.m-wrapper {
+  // @desc Faq - blocks with show/hide content
+  // @group faq
+  // @bemJson faq--002.json
+
+  @include block(faq002) {
+
+    @include element(nested) {
+      margin-top: $base-line-height * 4;
+      margin-bottom: $base-line-height * 4;
+    }
+
+    @include element(title-nested) {
+      @include type-setting(accent-text);
+      margin-bottom: $base-line-height * 2;
+      height: $base-line-height * 2;
+      overflow: hidden;
+    }
+
+    @include element(text) {
+      @include type-setting(text);
+      height: $base-line-height * 6;
+      overflow: hidden;
+
+      @include modifier(hide) {
+        display: none;
+      }
+    }
+
+    @include element(link) {
+      margin-top: $base-line-height * 2;
+      display: inline-block;
+    }
+  }
+}

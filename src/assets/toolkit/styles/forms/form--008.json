@@ -224,7 +224,7 @@
       },
       {
         "block": "content007",
-        "cls": "grid-full__half grid-full__half--no-gutter",
+        "cls": "grid-full__half-after-tablet grid-full__half--no-gutter",
         "content": [
           {
             "elem": "nested",

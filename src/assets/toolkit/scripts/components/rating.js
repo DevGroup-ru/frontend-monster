@@ -35,9 +35,10 @@ $(function() {
 
   $('.rating-tooltip__line').click(function(){
     var rateSelect = $(this).attr('data-rate');
-    var rateNum = $('.rating-tooltip__rel .rating__item').length;
-    $('.rating-tooltip__rel .rating__item').removeClass('rating__item--chosen');
-    $(this).parents('.rating-tooltip').find('.rating-tooltip__rel .rating__item').eq(rateNum - rateSelect).addClass('rating__item--chosen');
+    var rateParents = $(this).parents('.rating-tooltip').find('.rating-tooltip__rel .rating__item');
+    var rateNum = rateParents.length;
+    rateParents.removeClass('rating__item--chosen');
+    rateParents.eq(rateNum - rateSelect).addClass('rating__item--chosen');
     return false;
   });
 
