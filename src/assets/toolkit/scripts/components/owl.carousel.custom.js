@@ -309,6 +309,94 @@ try {
 	        }
 	    }
 	});
+
+	$('.clients001__carousel').addClass('owl-carousel').owlCarousel({
+	  	loop:true,
+	  	nav:true,
+		navText: [
+		    "",
+		    ""
+		],
+  		responsive:{
+	        320:{
+	            items:1
+	        },
+	        640:{
+	            items:2
+	        },
+	        960:{
+	            items:4
+	        },
+	        1200:{
+	            items:6
+	        },
+	        1344:{
+	            items:6
+	        }
+	    }
+	});
+
+	$('.clients002__carousel').addClass('owl-carousel').owlCarousel({
+	  	loop:true,
+	  	nav:true,
+		navText: [
+		    "",
+		    ""
+		],
+  		responsive:{
+	        320:{
+	            items:1
+	        },
+	        640:{
+	            items:2
+	        },
+	        960:{
+	            items:3
+	        },
+	        1200:{
+	            items:5
+	        },
+	        1344:{
+	            items:5
+	        }
+	    }
+	});
+
+	$('.clients003__carousel').addClass('owl-carousel').owlCarousel({
+	  	loop:true,
+	  	nav:true,
+		navText: [
+		    "",
+		    ""
+		],
+  		responsive:{
+	        320:{
+	            items:1
+	        },
+	        640:{
+	            items:2
+	        },
+	        960:{
+	            items:2
+	        },
+	        1200:{
+	            items:4
+	        },
+	        1344:{
+	            items:4
+	        }
+	    }
+	});
+
+	$('.slider001__carousel').addClass('owl-carousel').owlCarousel({
+	  	items:1,
+	  	loop:true,
+	  	nav:true,
+		navText: [
+		    "",
+		    ""
+		]
+	});
 	
 } catch (e) {
 }

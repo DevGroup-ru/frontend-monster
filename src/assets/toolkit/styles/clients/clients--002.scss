@@ -1,0 +1,99 @@
+$clients002-image-height-mobile: $base-line-height * 15;
+$clients002-image-height: $base-line-height * 9;
+
+.m-wrapper {
+
+  // @desc Сlients - only image and text on hover
+  // @group clients
+  // @bemJson clients--002.json
+
+  @include block(clients002) {
+    text-align: center;
+    position: relative;
+    
+    @include element(nested) {
+      @include _(2 6 4 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+
+      @include modifier(for-slider) {
+        @include _(2 6 4 4 4, 2 6 4 4 4);
+      }
+    }
+
+    @include element(carousel) {
+      margin-bottom: $base-line-height * 2;
+      @include _(10 10 8 4 4, 12 12 8 4 4, $gutter: row);
+      position: static;
+
+      .owl-nav {
+        display: none;
+      }
+
+      @include _(greater than tablet) {  
+        @include _(10 10 8 4 4, 12 12 8 4 4, $gutter: center);
+
+        .owl-nav {
+          display: block;
+          top: calc(#{$clients002-image-height} / 2);
+        }
+      }
+    }
+
+    @include element(nested-wrap) {
+      position: relative;
+      @include _(clear);
+      clear: both;
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(name) {
+      @include type-setting(text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    @include element(img) {
+      margin-bottom: $base-line-height * 2;
+      width: 100%;
+      display: block;
+      height: $clients002-image-height-mobile;
+      overflow: hidden;
+      position: relative;
+
+      @include _(greater than tablet) {  
+        height: $clients002-image-height;
+      }
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+}
+

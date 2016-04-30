@@ -1,0 +1,215 @@
+{
+  "block": "m-container",
+  "content": {
+    "block": "clients003",
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "elem": "text-wrap",
+        "content": [
+          {
+            "elem": "title",
+            "utils": [
+              "no-margin--top"
+            ],
+            "content": "Наши партнеры",
+            "editable": true
+          },
+          {
+            "elem": "text",
+            "content": "В совете о работе с межстрочным расстоянием в блоках с разным размером текста Артем Горбунов говорит о том, что сетка базовых линий.",
+            "editable": "wysiwyg"
+          },
+          {
+            "elem": "btn-wrap",
+            "content": [
+              {
+                "cls": "button-simple",
+                "content": "Все партнеры",
+                "editable": true,
+                "link": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "carousel",
+        "cls": "owl-carousel--with-nav-right",
+        "content": [
+          {
+            "elem": "nested",
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "name",
+                "content": "Название компании",
+                "editable": true,
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "name",
+                "content": "Название компании",
+                "editable": true,
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-3",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "name",
+                "content": "Название компании",
+                "editable": true,
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-4",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "name",
+                "content": "Название компании",
+                "editable": true,
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-5",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "name",
+                "content": "Название компании",
+                "editable": true,
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-6",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "name",
+                "content": "Название компании",
+                "editable": true,
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-7",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "name",
+                "content": "Название компании",
+                "editable": true,
+                "link": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-8",
+            "content": [
+              {
+                "elem": "img",
+                "link": true,
+                "content": [
+                  {
+                    "image": "http://lorempixel.com/200/300"
+                  }
+                ]
+              },
+              {
+                "elem": "name",
+                "content": "Название компании",
+                "editable": true,
+                "link": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

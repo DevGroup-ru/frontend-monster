@@ -1,0 +1,122 @@
+<div class="m-container" data-bem-match="m-container"><div class="m-row g__one-line--top-bottom"><div class="grid-full__half-after-tablet"><div class="tabs-accordion001 accordion-tabs" data-bem-match="tabs-accordion001"><div class="tabs-accordion001__tab-wrap accordion-tabs__wrap" data-bem-match="tabs-accordion001__tab-wrap"><div class="tabs-accordion001__header tabs-accordion001__header--full-width tabs-accordion001__header--is-arrow tabs-accordion001__header--fix-height accordion-tabs__header active" data-bem-match="tabs-accordion001__header"><div class="tabs-accordion001__header-text" data-bem-match="tabs-accordion001__header-text"><div class="tabs-accordion001__header-span" data-bem-match="tabs-accordion001__header-span">Здесь пишем вопрос, на который нужен ответ, в две строчки можно</div></div></div><div class="tabs-accordion001__content tabs-accordion001__content--fon accordion-tabs__content active" data-bem-match="tabs-accordion001__content">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin</div></div><div class="tabs-accordion001__tab-wrap accordion-tabs__wrap" data-bem-match="tabs-accordion001__tab-wrap"><div class="tabs-accordion001__header tabs-accordion001__header--full-width tabs-accordion001__header--is-arrow tabs-accordion001__header--fix-height accordion-tabs__header" data-bem-match="tabs-accordion001__header"><div class="tabs-accordion001__header-text" data-bem-match="tabs-accordion001__header-text"><div class="tabs-accordion001__header-span" data-bem-match="tabs-accordion001__header-span">Здесь пишем вопрос, на который нужен ответ, в две строчки можно</div></div></div><div class="tabs-accordion001__content tabs-accordion001__content--fon accordion-tabs__content" data-bem-match="tabs-accordion001__content">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin</div></div><div class="tabs-accordion001__tab-wrap accordion-tabs__wrap" data-bem-match="tabs-accordion001__tab-wrap"><div class="tabs-accordion001__header tabs-accordion001__header--full-width tabs-accordion001__header--is-arrow tabs-accordion001__header--fix-height accordion-tabs__header" data-bem-match="tabs-accordion001__header"><div class="tabs-accordion001__header-text" data-bem-match="tabs-accordion001__header-text"><div class="tabs-accordion001__header-span" data-bem-match="tabs-accordion001__header-span">Здесь пишем вопрос</div></div></div><div class="tabs-accordion001__content tabs-accordion001__content--fon accordion-tabs__content" data-bem-match="tabs-accordion001__content">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin</div></div></div></div></div></div>
+<div class="f-item-code" data-f-toggle="code">BEM JSON<pre class=" language-markup">{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "cls": "grid-full__half-after-tablet",
+        "content": [
+          {
+            "block": "tabs-accordion001",
+            "cls": "accordion-tabs",
+            "content": [
+              {
+                "elem": "tab-wrap",
+                "editableGroup": "tab-wrap-1",
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "mods": ["full-width", "is-arrow", "fix-height"],
+                    "editableGroup": "header-1",
+                    "cls": "accordion-tabs__header active",
+                    "content": [
+                      {
+                        "elem": "header-text",
+                        "content": [
+                          {
+                            "elem": "header-span",
+                            "content": "Здесь пишем вопрос, на который нужен ответ, в две строчки можно",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "mods": ["fon"],
+                    "editableGroup": "content-1",
+                    "cls": "accordion-tabs__content active",
+                    "content": "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "tab-wrap",
+                "editableGroup": "tab-wrap-2",
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "mods": ["full-width", "is-arrow", "fix-height"],
+                    "editableGroup": "header-2",
+                    "cls": "accordion-tabs__header",
+                    "content": [
+                      {
+                        "elem": "header-text",
+                        "content": [
+                          {
+                            "elem": "header-span",
+                            "content": "Здесь пишем вопрос, на который нужен ответ, в две строчки можно",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "mods": ["fon"],
+                    "editableGroup": "content-2",
+                    "cls": "accordion-tabs__content",
+                    "content": "2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              },
+              {
+                "elem": "tab-wrap",
+                "editableGroup": "tab-wrap-3",
+                "cls": "accordion-tabs__wrap",
+                "content": [
+                  {
+                    "elem": "header",
+                    "mods": ["full-width", "is-arrow", "fix-height"],
+                    "editableGroup": "header-3",
+                    "cls": "accordion-tabs__header",
+                    "content": [
+                      {
+                        "elem": "header-text",
+                        "content": [
+                          {
+                            "elem": "header-span",
+                            "content": "Здесь пишем вопрос",
+                            "editable": true
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elem": "content",
+                    "mods": ["fon"],
+                    "editableGroup": "content-3",
+                    "cls": "accordion-tabs__content",
+                    "content": "3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin",
+                    "editable": "wysiwyg"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}</pre></div>

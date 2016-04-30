@@ -59,6 +59,7 @@ html, body, .m-container {
 // Variables for most usable grid configurations
 $full-row-configuration: 12 12 8 4 4;
 $half-row-configuration: 6 6 4 4 4;
+$half-row-after-tablet-configuration: 6 6 8 4 4;
 $col-9-configuration: 9 8 8 4 4;
 
 // Reusable standard grid blocks
@@ -126,6 +127,10 @@ $col-9-configuration: 9 8 8 4 4;
 
     @include element(col-9) {
       @include standard-column-modifiers($col-9-configuration);
+    }
+
+    @include element(half-after-tablet) {
+      @include standard-column-modifiers($half-row-after-tablet-configuration);
     }
   }
 }

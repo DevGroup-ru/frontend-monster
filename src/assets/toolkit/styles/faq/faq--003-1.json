@@ -1,0 +1,50 @@
+{
+  "block": "m-container",
+  "content": {
+    "row": true,
+    "utils": [
+      "one-line--top-bottom"
+    ],
+    "content": [
+      {
+        "block": "faq003",
+        "content": [
+          {
+            "elem": "nested",
+            "mods": ["fon", "nested-half"],
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Здесь пишем вопрос, на который нужен ответ, в две строчки можно",
+                "editable": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.",
+                "editable": true
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "mods": ["fon", "nested-half"],
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "title-nested",
+                "content": "Здесь пишем вопрос, на который нужен ответ, в две строчки можно",
+                "editable": true
+              },
+              {
+                "elem": "text",
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.",
+                "editable": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

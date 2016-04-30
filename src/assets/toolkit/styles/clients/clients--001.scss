@@ -1,0 +1,75 @@
+.m-wrapper {
+
+  // @desc Сlients - only image and text on hover
+  // @group clients
+  // @bemJson clients--001.json
+
+  @include block(clients001) {
+    position: relative;
+    text-align: center;
+
+    @include element(nested) {
+      @include _(2 3 4 4 4);
+      margin-top: $base-line-height * 2;
+      margin-bottom: $base-line-height * 2;
+
+      @include modifier(for-slider) {
+        @include _(2 3 4 4 4, 2 3 4 4 4);
+      }
+    }
+
+    @include element(carousel) {
+      margin-bottom: $base-line-height * 2;
+    }
+
+    @include element(title) {
+      @extend %heading;
+      @include _($full-row-configuration);
+    }
+
+    @include element(name) {
+      @include type-setting(text);
+      height: $base-line-height * 2;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    @include element(img) {
+      margin-bottom: $base-line-height * 2;
+      width: 100%;
+      display: block;
+      height: $base-line-height * 15;
+      overflow: hidden;
+      position: relative;
+
+      @include _(greater than tablet) {  
+        height: $base-line-height * 9;
+      }
+
+      img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include element(btn-wrap) {
+      text-align: center;
+      @include _(clear);
+      @include _($full-row-configuration);
+    }
+  }
+}
+

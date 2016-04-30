@@ -102,6 +102,8 @@ $tabs001-header-item: 3;  //write the number of tabs items
       @include modifier(is-arrow) {
 
         .tabs001__header-text {
+          justify-content: space-between;
+
           &:after {
             display: inline-block;
             @extend %basic-icon;
@@ -113,6 +115,7 @@ $tabs001-header-item: 3;  //write the number of tabs items
 
         .tabs001__header-span {
           width: calc(100% -  #{$base-line-height * 8});
+          flex-grow: 1;
         }
 
         &:hover, &.active {

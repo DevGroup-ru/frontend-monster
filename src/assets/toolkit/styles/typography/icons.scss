@@ -25,14 +25,16 @@ $icon-vkontakte: "\e816";
 $icon-facebook: "\e812";
 $icon-gplus: "\e813";
 $icon-mail-alt: "\e800";
-$icon-download: "\e81b";
+$icon-download: "\e81a";
 $icon-menu: "\e817";
 $icon-phone: "\e806";
 $icon-search: "\e818";
-$icon-lock: "\e81a";
-$icon-zoom: "\e81c";
-$icon-braille: "\e81d";
-$icon-user: "\e81e";
+$icon-lock: "\e81e";
+$icon-zoom: "\e81b";
+$icon-braille: "\e81c";
+$icon-user: "\e81d";
+$icon-question: "\e81f";
+$icon-ok: "\e820";
 
 @font-face {
   font-family: "basic";
@@ -221,6 +223,14 @@ $icon-user: "\e81e";
 }
 
 .icon-basic-user:before {
+  content: $icon-user;
+}
+
+.icon-basic-question:before {
+  content: $icon-question;
+}
+
+.icon-basic-ok:before {
   content: $icon-user;
 }
 
