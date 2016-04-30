@@ -21,7 +21,7 @@ class VisualBuilder {
     this.environmentSelector();
 
     // select first environment by default
-    this.switchEnvironment('structure');
+    this.switchEnvironment('site-structure');
     $('.monster-environment-selector__environment-link')
       .first()
       .addClass('monster-environment-selector__environment-link--active');
