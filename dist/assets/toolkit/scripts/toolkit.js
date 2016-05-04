@@ -8652,14 +8652,12 @@
 	      if (this.$selectedMaterial === $material) {
 	        return;
 	      }
-	      if (this.popper) {
-	        this.popper.destroy();
-	      }
+	
 	      if (this.$selectedMaterial) {
 	        this.$selectedMaterial.removeClass('m-monster-content__material--active');
 	      }
-	      /* global Popper: false */
-	      this.popper = new Popper($material[0], this.$handlers[0], { boundariesPadding: 50 });
+	      // align handlers
+	      this.$handlers.css('top', $material.position().top + $material.height() - this.$handlers.height());
 	      $material.addClass('m-monster-content__material--active');
 	      this.$selectedMaterial = $material;
 	    }
@@ -8721,7 +8719,8 @@
 	        cache: false,
 	        data: {
 	          block: blockName,
-	          uniqueContentId: this.currentMonsterContent
+	          uniqueContentId: this.currentMonsterContent,
+	          materialIndex: that.$monsterContent[that.currentMonsterContent].find('[data-is-material=\'1\']').length
 	        }
 	      }).done(function ok(data) {
 	        var $element = $(data);
