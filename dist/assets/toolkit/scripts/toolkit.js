@@ -8666,10 +8666,12 @@
 	    value: function serializeContent(callback) {
 	      var result = {};
 	      var that = this;
-	
-	      this.$monsterContent.each(function iter() {
-	        result[$(this).data('uniqueContentId')] = that.serializeUniqueContent($(this));
-	      });
+	      for (var uniqueContentId in this.$monsterContent) {
+	        if (this.$monsterContent.hasOwnProperty(uniqueContentId)) {
+	          var $monster = this.$monsterContent[uniqueContentId];
+	          result[$monster.data('uniqueContentId')] = that.serializeUniqueContent($monster);
+	        }
+	      }
 	      this.sendToBuilder(callback, [result]);
 	    }
 	  }, {

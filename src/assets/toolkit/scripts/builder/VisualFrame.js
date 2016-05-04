@@ -94,10 +94,12 @@ class VisualFrame {
   serializeContent(callback) {
     const result = {};
     const that = this;
-
-    this.$monsterContent.each( function iter() {
-      result[$(this).data('uniqueContentId')] = that.serializeUniqueContent($(this));
-    });
+    for (const uniqueContentId in this.$monsterContent) {
+      if (this.$monsterContent.hasOwnProperty(uniqueContentId)) {
+        const $monster = this.$monsterContent[uniqueContentId];
+        result[$monster.data('uniqueContentId')] = that.serializeUniqueContent($monster);
+      }
+    }
     this.sendToBuilder(callback, [result]);
   }
 
