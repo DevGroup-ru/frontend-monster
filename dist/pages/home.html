@@ -8,17 +8,23 @@
 
 	<title></title>
 
-	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+
+    
 
 	<!-- toolkit styles -->
 	<link rel="stylesheet" href="../assets/toolkit/styles/toolkit.css">
 	<!-- /toolkit styles -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="../assets/toolkit/libs/libs.js"></script>
 
 </head>
 <body>
+    <input type="checkbox" class="bootstrap-switcher" value="1" />
 
 
-
+    <div class="m-wrapper">
 	<h1>Hello, World!</h1>
 
 <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
@@ -35,12 +41,45 @@
 		
 		<button class="button-ghost button-ghost--round">Submit</button></form></div>
 
+    </div>
 
 
 
 	<!-- toolkit scripts -->
 	<script src="../assets/toolkit/scripts/toolkit.js"></script>
 	<!-- /toolkit scripts -->
+    <style type="text/css">
+        .bootstrap-switcher {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            right: 0;
+            top: 0;
+            border: 1px solid #666;
+            color: #666;
+            background: #eee;
+            z-index: 999999;
+        }
+        .f-control-bar {
+            position: fixed;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $(".bootstrap-switcher").change(function(){
+                if ($(this).prop('checked') === true) {
+                    var link = $('<link>')
+                        .attr('rel', 'stylesheet')
+                        .attr('href','https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css')
+                        .attr('id', 'bootstrap-css');
+                    $('head').append(link);
+                } else {
+                    $('head > #bootstrap-css').remove();
+                }
+            })
+        })
+    </script>
+
 
 </body>
 </html>

@@ -38,11 +38,12 @@ $flint: (
     "max-width": false,
     "center-container": true,
     "border-box-sizing": true,
-    "instance-maps": true,
+    "instance-maps": false,
     "support-syntax": "bem",
     "debug-mode": false // debug mode fails on nested grids(flint bug)
   ),
 );
+$default-context: 12 12 8 4 4;
 html:after {
   opacity: 0.09;
 }

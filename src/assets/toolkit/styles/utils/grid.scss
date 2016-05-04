@@ -73,22 +73,22 @@ $col-9-configuration: 9 8 8 4 4;
 }
 
 @mixin standard-column-modifiers($row-configuration) {
-  @include _($row-configuration, auto);
+  @include _($row-configuration, $full-row-configuration);
 
   @include modifier(no-gutter) {
-    @include _($row-configuration, auto, $gutter: row);
+    @include _($row-configuration, $full-row-configuration, $gutter: row);
   }
 
   @include modifier(no-gutter-left) {
-    @include _($row-configuration, auto, $gutter: alpha);
+    @include _($row-configuration, $full-row-configuration, $gutter: alpha);
   }
 
   @include modifier(no-gutter-right) {
-    @include _($row-configuration, auto, $gutter: omega);
+    @include _($row-configuration, $full-row-configuration, $gutter: omega);
   }
 
   @include modifier(center) {
-    @include _($row-configuration, auto, $gutter: center);
+    @include _($row-configuration, $full-row-configuration, $gutter: center);
   }
 }
 .m-wrapper {
