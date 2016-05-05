@@ -18,7 +18,6 @@ class BaseEnvironment {
   }
 
   deactivate() {
-    console.log('Deactivate called for: ', this.name);
     this.visualBuilder.clearStackable();
   }
 
