@@ -13,7 +13,7 @@ var prefix = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var reload = browserSync.reload;
 var runSequence = require('run-sequence');
-var sass = require('./gulp-sass-forked');
+var scss = require('gulp-scss');
 var sourcemaps = require('gulp-sourcemaps');
 var spritesmith = require('gulp.spritesmith');
 var webpack = require('webpack');
@@ -58,7 +58,7 @@ gulp.task('clean', function () {
 gulp.task('styles:fabricator', function () {
 	gulp.src(config.src.styles.fabricator)
 		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
+        .pipe(scss().on('error', function(error) {console.log(error);}))
 		.pipe(prefix('last 1 version'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(rename('f.css'))
@@ -70,7 +70,7 @@ gulp.task('styles:fabricator', function () {
 gulp.task('styles:toolkit', function () {
 	gulp.src(config.src.styles.toolkit)
 		.pipe(gulpif(config.dev, sourcemaps.init()))
-		.pipe(sass().on('error', sass.logError))
+		.pipe(scss().on('error', function(error) {console.log(error);}))
 		.pipe(prefix('last 1 version'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(gulpif(config.dev, sourcemaps.write()))
