@@ -21,7 +21,7 @@ class MaterialsEnvironment extends BaseEnvironment {
         </a>
       </li>`);
         this.$materialsGroups.append($li);
-        const $list = $(`<ul class="materials-list"></ul>`);
+        const $list = $(`<ul class="materials-list" data-group-name="${groupName}"></ul>`);
         const items = [];
         for (const materialName of materials) {
           // const material = this.visualBuilder.materialByName(materialName);
@@ -34,7 +34,6 @@ class MaterialsEnvironment extends BaseEnvironment {
           items.push($item);
         }
         $list.append(items);
-        $list.data('groupName', groupName);
         this.$materialsList.push($list);
       }
     }
