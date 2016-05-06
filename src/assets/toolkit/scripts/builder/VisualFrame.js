@@ -16,6 +16,11 @@ class VisualFrame
         this.parentMonster = this.parentWindow.FrontendMonster;
         this.currentMonsterContent = false;
         this.makeItMove();
+        var that = this;
+        $(window).resize(function() {
+            that.updateHandlers();
+            return true;
+        });
     }
 
     get $monsterContent()
@@ -53,6 +58,17 @@ class VisualFrame
         }
         this.lastMaterialIndex++;
         return this.lastMaterialIndex;
+    }
+
+    updateHandlers()
+    {
+        if (this.$selectedMaterial && this.$handlers) {
+            this.$handlers.css(
+                'top',
+                this.$selectedMaterial.position().top + this.$selectedMaterial.height() - this.$handlers.height()
+            );
+            this.$selectedMaterial.addClass('m-monster-content__material--active');
+        }
     }
 
     makeItMove()
@@ -99,7 +115,7 @@ class VisualFrame
                 var $prev = that.$selectedMaterial.prev('[data-is-material]');
                 if ($prev.length == 1) {
                     that.$selectedMaterial.insertBefore($prev);
-                    that.selectMaterial(that.$selectedMaterial, true);
+                    that.updateHandlers();
                 }
             }
             return false;
@@ -108,7 +124,7 @@ class VisualFrame
                 var $next = that.$selectedMaterial.next('[data-is-material]');
                 if ($next.length == 1) {
                     that.$selectedMaterial.insertAfter($next);
-                    that.selectMaterial(that.$selectedMaterial, true);
+                    that.updateHandlers();
                 }
             }
             return false;
@@ -131,19 +147,16 @@ class VisualFrame
         });
     }
 
-    selectMaterial($material, force = false)
+    selectMaterial($material)
     {
-        if (this.$selectedMaterial === $material && force === false) {
+        if (this.$selectedMaterial === $material) {
             return;
         }
-
         if (this.$selectedMaterial) {
             this.$selectedMaterial.removeClass('m-monster-content__material--active');
         }
-        // align handlers
-        this.$handlers.css('top', $material.position().top + $material.height() - this.$handlers.height());
-        $material.addClass('m-monster-content__material--active');
         this.$selectedMaterial = $material;
+        this.updateHandlers();
     }
 
     serializeContent(callback)
