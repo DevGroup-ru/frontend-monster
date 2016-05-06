@@ -98,7 +98,6 @@ class VisualFrame
         $(this.settings['monster-content-selector']).on({
                 mouseenter: function hoverIn() {
                 const $this = $(this);
-                that.$handlers.show();
                 $this.addClass('m-monster-content__material--highlighted');
             },
             mouseleave: function hoverOut() {
@@ -157,6 +156,7 @@ class VisualFrame
         }
         this.$selectedMaterial = $material;
         this.updateHandlers();
+        this.$handlers.show();
     }
 
     serializeContent(callback)
