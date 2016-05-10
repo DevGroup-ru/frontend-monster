@@ -7,6 +7,7 @@ $carousel-nav-right: $icon-arr-right;
 $carousel-dot-fon: #eee;
 $carousel-dot-fon-hover: #aaa;
 $carousel-dot-fon-active: #000;
+$carousel-dot-size: $base-line-height * 2;
 
 .m-wrapper{
 	@include block(owl-carousel) {
@@ -85,9 +86,9 @@ $carousel-dot-fon-active: #000;
 	      	.owl-dot {
 	      		display: block;
 	      		float: left;
-				width: $base-line-height * 2;
-				height: $base-line-height * 2;
-				border-radius: $base-line-height;
+				width: $carousel-dot-size;
+				height: $carousel-dot-size;
+				border-radius: $carousel-dot-size / 2;
 	      		background: $carousel-dot-fon;
 	      		margin: 0 $base-line-height / 2;
 

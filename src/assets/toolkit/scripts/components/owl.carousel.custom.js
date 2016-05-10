@@ -388,15 +388,7 @@ try {
 	    }
 	});
 
-	$('.slider001__carousel').addClass('owl-carousel').owlCarousel({
-	  	items:1,
-	  	loop:true,
-	  	nav:true,
-		navText: [
-		    "",
-		    ""
-		]
-	});
+
 	
 } catch (e) {
 }

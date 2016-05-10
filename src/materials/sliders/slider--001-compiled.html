@@ -1,0 +1,152 @@
+<div class="m-container" data-bem-match="m-container"><div class="slider001 slider001--arrows-hide slider001--dots-left" data-bem-match="slider001"><div class="slider001__carousel" data-bem-match="slider001__carousel"><div class="slider001__nested" data-bem-match="slider001__nested"><div class="slider001__img" data-bem-match="slider001__img"><img src="{{baseurl}}/assets/toolkit/images/slide-1.jpg"/></div><div class="slider001__content" data-bem-match="slider001__content"><div class="m-row"><div class="slider001__text-wrap" data-bem-match="slider001__text-wrap"><span class="slider001__icon icon-project-color-001-consultation" data-bem-match="slider001__icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></span><a class="slider001__title" href="#" data-bem-match="slider001__title">Дизайнерская сетка</a><div class="slider001__text" data-bem-match="slider001__text">Дизайнеру нужно создать лейаут, который будет учитывать не только баннерную рекламу, но и другие не менее значимые элементы и типы контента</div><div class="slider001__btn-wrap" data-bem-match="slider001__btn-wrap"><a class="slider001__btn button-simple" href="#" data-bem-match="slider001__btn">Узнать подробнее</a></div></div></div></div></div><div class="slider001__nested" data-bem-match="slider001__nested"><div class="slider001__img" data-bem-match="slider001__img"><img src="{{baseurl}}/assets/toolkit/images/slide-2.jpg"/></div><div class="slider001__content" data-bem-match="slider001__content"><div class="m-row"><div class="slider001__text-wrap" data-bem-match="slider001__text-wrap"><div class="slider001__text-img" data-bem-match="slider001__text-img"><img src="{{baseurl}}/assets/toolkit/images/slide-1-img.png"/></div><a class="slider001__title" href="#" data-bem-match="slider001__title">Дизайнерская сетка</a><div class="slider001__text" data-bem-match="slider001__text">Дизайнеру нужно создать лейаут, который будет учитывать не только баннерную рекламу, но и другие не менее значимые элементы и типы контента</div><div class="slider001__btn-wrap" data-bem-match="slider001__btn-wrap"><a class="slider001__btn button-simple" href="#" data-bem-match="slider001__btn">Узнать подробнее</a></div></div></div></div></div></div><div class="slider001__carousel-nav" data-bem-match="slider001__carousel-nav"><div class="m-row owl-nav"></div></div><div class="slider001__carousel-dot" data-bem-match="slider001__carousel-dot"><div class="m-row owl-dots"></div></div></div></div>
+<div class="f-item-code" data-f-toggle="code">BEM JSON<pre class=" language-markup">{
+  "block": "m-container",
+  "content": 
+  {
+    "block": "slider001",
+    "mods": ["arrows-hide", "dots-left"],
+    "content": [
+      {
+        "elem": "carousel",
+        "content": [
+          {
+            "elem": "nested",
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "{{baseurl}}/assets/toolkit/images/slide-1.jpg"
+                  }
+                ]
+              },
+              {
+                "elem": "content",
+                "content": [
+                  {
+                    "row": true,
+                    "content": [
+                      {
+                        "elem": "text-wrap",
+                        "content": [
+                          {
+                            "elem": "icon",
+                            "icon": true
+                          },
+                          {
+                            "elem": "title",
+                            "content": "Дизайнерская сетка",
+                            "link": true,
+                            "editable": true
+                          },
+                          {
+                            "elem": "text",
+                            "content": "Дизайнеру нужно создать лейаут, который будет учитывать не только баннерную рекламу, но и другие не менее значимые элементы и типы контента",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "btn-wrap",
+                            "content": [
+                              {
+                                "elem": "btn",
+                                "editableGroup": "btn-1",
+                                "cls": "button-simple",
+                                "content": "Узнать подробнее",
+                                "editable": true,
+                                "link": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "{{baseurl}}/assets/toolkit/images/slide-2.jpg"
+                  }
+                ]
+              },
+              {
+                "elem": "content",
+                "content": [
+                  {
+                    "row": true,
+                    "content": [
+                      {
+                        "elem": "text-wrap",
+                        "content": [
+                          {
+                            "elem": "text-img",
+                            "content": [
+                              {
+                                "image": "{{baseurl}}/assets/toolkit/images/slide-1-img.png"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "title",
+                            "content": "Дизайнерская сетка",
+                            "link": true,
+                            "editable": true
+                          },
+                          {
+                            "elem": "text",
+                            "content": "Дизайнеру нужно создать лейаут, который будет учитывать не только баннерную рекламу, но и другие не менее значимые элементы и типы контента",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "btn-wrap",
+                            "content": [
+                              {
+                                "elem": "btn",
+                                "editableGroup": "btn-1",
+                                "cls": "button-simple",
+                                "content": "Узнать подробнее",
+                                "editable": true,
+                                "link": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },  
+      {
+        "elem": "carousel-nav", 
+        "content": [
+          {
+            "row": true,
+            "cls": "owl-nav"
+          }
+        ]
+      },  
+      {
+        "elem": "carousel-dot", 
+        "content": [
+          {
+            "row": true,
+            "cls": "owl-dots"
+          }
+        ]
+      }
+    ]
+  }
+}</pre></div>

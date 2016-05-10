@@ -29,3 +29,5 @@ require('./prices/price--common');
 require('./prices/price--001');
 require('./services/service');
 require('./faq/faq--002');
+require('./sliders/slider--001');
+require('./sliders/slider--002');

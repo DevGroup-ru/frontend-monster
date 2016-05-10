@@ -1,0 +1,150 @@
+{
+  "block": "m-container",
+  "content": 
+  {
+    "block": "slider002",
+    "content": [
+      {
+        "elem": "carousel",
+        "content": [
+          {
+            "elem": "nested",
+            "editableGroup": "nested-1",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "{{baseurl}}/assets/toolkit/images/slide-1.jpg"
+                  }
+                ]
+              },
+              {
+                "elem": "content",
+                "content": [
+                  {
+                    "row": true,
+                    "content": [
+                      {
+                        "elem": "text-wrap",
+                        "content": [
+                          {
+                            "elem": "icon",
+                            "icon": true
+                          },
+                          {
+                            "elem": "title",
+                            "content": "Дизайнерская сетка",
+                            "link": true,
+                            "editable": true
+                          },
+                          {
+                            "elem": "text",
+                            "content": "Дизайнеру нужно создать лейаут, который будет учитывать не только баннерную рекламу, но и другие не менее значимые элементы и типы контента",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "btn-wrap",
+                            "content": [
+                              {
+                                "elem": "btn",
+                                "editableGroup": "btn-1",
+                                "cls": "button-simple",
+                                "content": "Узнать подробнее",
+                                "editable": true,
+                                "link": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elem": "nested",
+            "editableGroup": "nested-2",
+            "content": [
+              {
+                "elem": "img",
+                "content": [
+                  {
+                    "image": "{{baseurl}}/assets/toolkit/images/slide-2.jpg"
+                  }
+                ]
+              },
+              {
+                "elem": "content",
+                "content": [
+                  {
+                    "row": true,
+                    "content": [
+                      {
+                        "elem": "text-wrap",
+                        "content": [
+                          {
+                            "elem": "text-img",
+                            "content": [
+                              {
+                                "image": "{{baseurl}}/assets/toolkit/images/slide-1-img.png"
+                              }
+                            ]
+                          },
+                          {
+                            "elem": "title",
+                            "content": "Дизайнерская сетка",
+                            "link": true,
+                            "editable": true
+                          },
+                          {
+                            "elem": "text",
+                            "content": "Дизайнеру нужно создать лейаут, который будет учитывать не только баннерную рекламу, но и другие не менее значимые элементы и типы контента",
+                            "editable": "wysiwyg"
+                          },
+                          {
+                            "elem": "btn-wrap",
+                            "content": [
+                              {
+                                "elem": "btn",
+                                "editableGroup": "btn-1",
+                                "cls": "button-simple",
+                                "content": "Узнать подробнее",
+                                "editable": true,
+                                "link": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elem": "carousel-nav", 
+        "content": [
+          {
+            "row": true,
+            "cls": "owl-nav"
+          }
+        ]
+      },  
+      {
+        "elem": "carousel-dot", 
+        "content": [
+          {
+            "row": true,
+            "cls": "owl-dots"
+          }
+        ]
+      }
+    ]
+  }
+}
